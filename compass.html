@@ -8,14 +8,9 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
   <!--
-    OpenElectionCompass CSS & JS (CDN)
-    For production: download and self-host these files.
-    Latest release: https://github.com/open-election-compass/client/releases
+    OpenElectionCompass JS — served locally (CSS is bundled inside the JS)
+    Source: @open-election-compass/client@1.0.0-beta.13
   -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/@open-election-compass/client@1.2.2/dist/lib/open-election-compass.css"
-  />
 
   <style>
     /* Thin wrapper styles – OEC renders everything else */
@@ -154,11 +149,8 @@
     }());
   </script>
 
-  <!-- OEC library — async so it loads in parallel with the config fetch -->
-  <script
-    src="https://unpkg.com/@open-election-compass/client@1.2.2/dist/lib/open-election-compass.umd.min.js"
-    async
-  ></script>
+  <!-- OEC library — local copy, async so it loads in parallel with the config fetch -->
+  <script src="assets/open-election-compass.umd.min.js" async></script>
 
 </body>
 </html>
