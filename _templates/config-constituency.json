@@ -1,0 +1,145 @@
+{
+  "_comment": "Constituency-level compass template. At constituency level, the 'parties' array represents INDIVIDUAL CANDIDATES (one entry per candidate). Use 'name' for the candidate's full name + party, 'short' for candidate surname + party abbreviation, and 'description' for their background. Theses should include both local constituency issues AND relevant state/national issues.",
+
+  "version": "1",
+  "algorithm": "hybrid",
+
+  "languages": [
+    { "name": "English",             "code": "en" },
+    { "name": "NATIVE LANGUAGE",     "code": "LANG_CODE" }
+  ],
+
+  "title": {
+    "en": "{Constituency Name} Constituency Compass {Year}",
+    "LANG_CODE": "{Translation}"
+  },
+
+  "subtitle": {
+    "en": "Compare candidates standing for Constituency No. {N} – {Constituency Name} in the {Year} Tamil Nadu Assembly elections",
+    "LANG_CODE": "{Translation}"
+  },
+
+  "introduction": {
+    "heading": {
+      "en": "{Constituency Name}: Know Your Candidates",
+      "LANG_CODE": "{Translation}"
+    },
+    "text": {
+      "en": "Describe the constituency: location, demographics, key industries, voter profile. State that this compass compares local candidates (not parties) on local and regional issues. Note data sources.",
+      "LANG_CODE": "{Translation}"
+    }
+  },
+
+  "parties": [
+    {
+      "_comment": "One entry per CANDIDATE. The 'alias' field is used as the key in thesis positions. Use a readable slug like 'cand-dmk', 'cand-aiadmk', 'cand-ind'.",
+      "alias": "cand-dmk",
+      "name":  { "en": "Candidate Full Name (Party)",       "LANG_CODE": "{Translation}" },
+      "short": { "en": "Surname / Party Abbr.",             "LANG_CODE": "{Translation}" },
+      "description": {
+        "en": "Background: profession, previous roles, community work. Core campaign focus areas. 2-3 sentences.",
+        "LANG_CODE": "{Translation}"
+      }
+    },
+    {
+      "alias": "cand-aiadmk",
+      "name":  { "en": "Candidate Full Name (AIADMK)",      "LANG_CODE": "{Translation}" },
+      "short": { "en": "Surname / AIADMK",                  "LANG_CODE": "{Translation}" },
+      "description": {
+        "en": "Background and campaign focus.",
+        "LANG_CODE": "{Translation}"
+      }
+    },
+    {
+      "_comment": "Add more candidates as needed. Include independents if they are significant.",
+      "alias": "cand-ind",
+      "name":  { "en": "Candidate Full Name (Independent)", "LANG_CODE": "{Translation}" },
+      "short": { "en": "Surname / Ind.",                    "LANG_CODE": "{Translation}" },
+      "description": {
+        "en": "Background and campaign focus.",
+        "LANG_CODE": "{Translation}"
+      }
+    }
+  ],
+
+  "theses": [
+    {
+      "_comment": "Include 5-8 LOCAL issues specific to this constituency (roads, water, markets, slums, schools, hospitals etc.) and 3-5 STATE/NATIONAL issues representative of the broader election.",
+
+      "title": {
+        "en": "Local Issue: {Short Label}",
+        "LANG_CODE": "{Translation}"
+      },
+      "statement": {
+        "en": "Specific, actionable local policy statement. E.g. 'The {constituency} market should be relocated to decongest {street} and provide hygienic stalls for all 200 vendors displaced by the 2023 fire.'",
+        "LANG_CODE": "{Translation}"
+      },
+      "positions": {
+        "cand-dmk": {
+          "position": "approve",
+          "_position_values": "approve | neutral | reject | skip",
+          "explanation": {
+            "en": "What has this candidate specifically said or done about this? Cite a public statement, door-step commitment, petition filed, motion in council, etc.",
+            "LANG_CODE": "{Translation}"
+          }
+        },
+        "cand-aiadmk": {
+          "position": "neutral",
+          "explanation": {
+            "en": "Candidate's stance with evidence.",
+            "LANG_CODE": "{Translation}"
+          }
+        },
+        "cand-ind": {
+          "position": "approve",
+          "explanation": {
+            "en": "Candidate's stance with evidence.",
+            "LANG_CODE": "{Translation}"
+          }
+        }
+      }
+    },
+    {
+      "_comment": "State/national issue carried over from the state-level compass for context.",
+      "title": {
+        "en": "State Issue: {Short Label}",
+        "LANG_CODE": "{Translation}"
+      },
+      "statement": {
+        "en": "Use the same statement wording as in the state-level config.json for consistency.",
+        "LANG_CODE": "{Translation}"
+      },
+      "positions": {
+        "cand-dmk":    { "position": "approve", "explanation": { "en": "Party position. Individual candidate may amplify or moderate — note any deviation.", "LANG_CODE": "{Translation}" } },
+        "cand-aiadmk": { "position": "reject",  "explanation": { "en": "Party position with candidate-specific nuance if any.", "LANG_CODE": "{Translation}" } },
+        "cand-ind":    { "position": "approve", "explanation": { "en": "Independent's personal stance.", "LANG_CODE": "{Translation}" } }
+      }
+    }
+  ],
+
+  "footer-links": [
+    {
+      "text": { "en": "All {State} Constituencies", "LANG_CODE": "{Translation}" },
+      "href": { "en": "../../constituencies/index.html", "LANG_CODE": "../../constituencies/index.html" }
+    },
+    {
+      "text": { "en": "{State} State Compass", "LANG_CODE": "{Translation}" },
+      "href": { "en": "../../../compass.html?config=elections/{state}/2026-state/config.json", "LANG_CODE": "../../../compass.html?config=elections/{state}/2026-state/config.json" }
+    },
+    {
+      "text": { "en": "All Elections",    "LANG_CODE": "{Translation}" },
+      "href": { "en": "../../../index.html", "LANG_CODE": "../../../index.html" }
+    }
+  ],
+
+  "_deployment_note": "Place at: elections/{state}/constituencies/{constituency-slug}/config.json. URL: compass.html?config=elections/{state}/constituencies/{slug}/config.json. Add a card to elections/{state}/constituencies/index.html.",
+
+  "_data_quality_checklist": [
+    "All candidate names are spelled correctly",
+    "All positions (approve/neutral/reject/skip) are backed by a cited source in the explanation",
+    "No explanation is blank — if unknown, use 'skip' and note why in a code comment",
+    "Both language keys are present for every multilingual field",
+    "Candidate descriptions are factual, not promotional",
+    "The introduction notes the data collection date and sources"
+  ]
+}

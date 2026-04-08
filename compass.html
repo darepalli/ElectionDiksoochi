@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="India Election Compass" />
+  <title>Election Compass</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+
+  <!--
+    OpenElectionCompass CSS & JS (CDN)
+    For production: download and self-host these files.
+    Latest release: https://github.com/open-election-compass/client/releases
+  -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@open-election-compass/client@1.2.2/dist/lib/open-election-compass.css"
+  />
+
+  <style>
+    /* Thin wrapper styles – OEC renders everything else */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; }
+
+    /* Back-to-hub bar */
+    .back-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background: rgba(192, 57, 43, 0.95);
+      padding: 6px 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .back-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: .82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .back-bar a:hover { text-decoration: underline; }
+    .back-bar .sep { color: rgba(255,255,255,.5); }
+    .back-bar .current-label {
+      font-size: .82rem;
+      color: rgba(255,255,255,.85);
+    }
+
+    /* Push OEC content below the back-bar */
+    #oec-wrapper { padding-top: 36px; }
+
+    /* Error state */
+    .error-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 1rem;
+      color: #374151;
+      text-align: center;
+      padding: 2rem;
+    }
+    .error-page h1 { font-size: 1.5rem; color: #c0392b; }
+    .error-page p  { max-width: 480px; color: #6b7280; }
+    .error-page a  { color: #c0392b; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- Back navigation bar -->
+  <div class="back-bar">
+    <a href="../index.html">← All Elections</a>
+    <span class="sep">|</span>
+    <span class="current-label" id="back-label">Election Compass</span>
+  </div>
+
+  <!-- OEC mount point – load-url set dynamically by script below -->
+  <div id="oec-wrapper">
+    <div id="open-election-compass">
+      <!-- Placeholder replaced by script; OEC mounts here -->
+    </div>
+  </div>
+
+  <!--
+    Dynamic config loader
+    ──────────────────────────────────────────────────────────────────
+    Usage:  compass.html?config=elections/tn/2026-state/config.json
+    Security: only relative paths inside elections/ are accepted.
+    ──────────────────────────────────────────────────────────────────
+  -->
+  <script>
+    (function () {
+      var SAFE_CONFIG_RE = /^elections\/[a-z]{2,}\/[a-z0-9._/-]+\/config\.json$/;
+
+      var params     = new URLSearchParams(window.location.search);
+      var configPath = params.get('config') || '';
+
+      var oecMount = document.getElementById('open-election-compass');
+
+      if (!configPath || !SAFE_CONFIG_RE.test(configPath)) {
+        // Show a friendly error — do NOT expose the raw param in an error msg
+        oecMount.innerHTML =
+          '<div class="error-page">' +
+          '  <h1>No Election Selected</h1>' +
+          '  <p>Please choose an election from the hub to launch the compass.</p>' +
+          '  <a href="../index.html">← Back to India Election Compass</a>' +
+          '</div>';
+        return;
+      }
+
+      // Build a title label from the path for the back-bar
+      // e.g. "elections/tn/2026-state/config.json" → "TN · 2026 State"
+      var parts = configPath.split('/');
+      var state = (parts[1] || '').toUpperCase();
+      var level = (parts[2] || '').replace(/-/g, ' ').replace(/\b\w/g, function(c){ return c.toUpperCase(); });
+      var label = state + ' · ' + level;
+      var backLabel = document.getElementById('back-label');
+      if (backLabel) backLabel.textContent = label;
+      document.title = label + ' | India Election Compass';
+
+      // Mount the OEC component with load-url
+      oecMount.innerHTML =
+        '<open-election-compass load-url="' + configPath + '" />';
+    }());
+  </script>
+
+  <!-- OEC library (deferred — runs after DOM is parsed) -->
+  <script
+    src="https://unpkg.com/@open-election-compass/client@1.2.2/dist/lib/open-election-compass.umd.min.js"
+    defer
+  ></script>
+
+</body>
+</html>

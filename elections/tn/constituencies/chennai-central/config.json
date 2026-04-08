@@ -1,0 +1,152 @@
+{
+  "version": "1",
+  "algorithm": "hybrid",
+
+  "languages": [
+    { "name": "English", "code": "en" },
+    { "name": "தமிழ்",  "code": "ta" }
+  ],
+
+  "title": {
+    "en": "Chennai Central Constituency Compass 2026",
+    "ta": "சென்னை மத்திய தொகுதி திசைகாட்டி 2026"
+  },
+
+  "subtitle": {
+    "en": "Compare candidates standing for Constituency No. 4 – Chennai Central in the 2026 Tamil Nadu Assembly elections",
+    "ta": "2026 தமிழ்நாடு சட்டசபை தேர்தலில் தொகுதி எண். 4 – சென்னை மத்தியில் போட்டியிடும் வேட்பாளர்களை ஒப்பிட்டுப் பாருங்கள்"
+  },
+
+  "introduction": {
+    "heading": {
+      "en": "Chennai Central: Know Your Candidates",
+      "ta": "சென்னை மத்திய: உங்கள் வேட்பாளர்களை அறியுங்கள்"
+    },
+    "text": {
+      "en": "Chennai Central (Constituency No. 4) is an urban constituency in the heart of Chennai covering the areas of Triplicane, Chepauk, Park Town and Central Railway Station. Candidates have been assessed on 10 local and national policy issues. Candidate positions are based on party manifestos, public statements and elected representatives' track records. Candidate names are illustrative placeholders — update config.json with actual candidates once announced.",
+      "ta": "சென்னை மத்திய (தொகுதி எண். 4) திருவல்லிக்கேணி, சேப்பாக்கம், பார்க் டவுன் மற்றும் மத்திய இரயில் நிலையம் ஆகிய பகுதிகளை உள்ளடக்கிய நகரத் தொகுதி. வேட்பாளர்கள் 10 உள்ளூர் மற்றும் தேசிய கொள்கை பிரச்சினைகளில் மதிப்பீடு செய்யப்பட்டுள்ளார்கள்."
+    }
+  },
+
+  "parties": [
+    {
+      "alias": "cand-dmk",
+      "name":  { "en": "T. Rajesh Kumar (DMK)",    "ta": "த. ராஜேஷ் குமார் (தி.மு.க)" },
+      "short": { "en": "Rajesh / DMK",              "ta": "ராஜேஷ் / தி.மு.க" },
+      "description": {
+        "en": "Nominated by DMK. Former councillor for Ward 58. Focus areas: drainage & flooding, public health infrastructure and Chepauk stadium development.",
+        "ta": "திமுகவால் நியமிக்கப்பட்டவர். வார்டு 58-ல் முன்னாள் மாவட்ட மன்றர். கவன தொடை: வடிகால் மற்றும் வெள்ள நிவாரணம், பொது சுகாதார உள்கட்டமைப்பு."
+      }
+    },
+    {
+      "alias": "cand-aiadmk",
+      "name":  { "en": "S. Priya Devi (AIADMK)",   "ta": "ப. பிரியா தேவி (அ.தி.மு.க)" },
+      "short": { "en": "Priya / AIADMK",            "ta": "பிரியா / அ.தி.மு.க" },
+      "description": {
+        "en": "Nominated by AIADMK. Social worker with 15 years of community work in Triplicane. Advocates for improved public transport connectivity and affordable housing.",
+        "ta": "அதிமுகவால் நியமிக்கப்பட்டவர். திருவல்லிக்கேணியில் 15 ஆண்டுகள் சமூக சேவை."
+      }
+    },
+    {
+      "alias": "cand-bjp",
+      "name":  { "en": "K. Venkatesh (BJP)",        "ta": "க. வெங்கடேஷ் (பி.ஜே.பி)" },
+      "short": { "en": "Venkatesh / BJP",            "ta": "வெங்கடேஷ் / பி.ஜே.பி" },
+      "description": {
+        "en": "Nominated by BJP. Businessman and party district secretary. Champions Central Government welfare schemes, Kashi Tamil Sangamam ties and smart city projects.",
+        "ta": "பாஜகவால் நியமிக்கப்பட்டவர். வணிகர் மற்றும் மாவட்ட கட்சி செயலர்."
+      }
+    },
+    {
+      "alias": "cand-ind",
+      "name":  { "en": "R. Kavitha (Independent)", "ta": "ர. கவிதா (சுயேட்சை)" },
+      "short": { "en": "Kavitha / Ind.",            "ta": "கவிதா / சுயேட்சை" },
+      "description": {
+        "en": "Standing as an Independent. RTI activist and urban planning advocate who has filed multiple petitions against unregulated demolitions in Chepauk and Park Town heritage zone.",
+        "ta": "சுயேட்சையாக போட்டியிடுகிறார். RTI ஆர்வலர் மற்றும் நகர திட்டமிடல் ஆதரவாளர்."
+      }
+    }
+  ],
+
+  "theses": [
+    {
+      "title":     { "en": "Flood & Drainage",  "ta": "வெள்ளம் & வடிகால்" },
+      "statement": {
+        "en": "The Chennai Central constituency needs a comprehensive underground drainage overhaul and stormwater drain upgrade to prevent annual flooding especially in Triplicane and Chepauk areas.",
+        "ta": "திருவல்லிக்கேணி மற்றும் சேப்பாக்கம் பகுதிகளில் வருடாந்திர வெள்ளத்தை தடுக்க சென்னை மத்திய தொகுதிக்கு விரிவான நிலத்தடி வடிகால் புதுப்பிப்பு தேவை."
+      },
+      "positions": {
+        "cand-dmk":    { "position": "approve",  "explanation": { "en": "Rajesh Kumar has already submitted a detailed project report to CMWSSB for the Chepauk drain upgrade and has committed ₹12 crore from MLALAD funds.", "ta": "ராஜேஷ் குமார் CMWSSB-க்கு விரிவான திட்ட அறிக்கையை சமர்ப்பித்துள்ளார்." } },
+        "cand-aiadmk": { "position": "approve",  "explanation": { "en": "Priya Devi has campaigned door-to-door on the flooding issue and pledges to escalate it as a priority with the state government.", "ta": "பிரியா தேவி வெள்ள பிரச்சினையில் வீடு வீடாக பிரச்சாரம் செய்துள்ளார்." } },
+        "cand-bjp":    { "position": "approve",  "explanation": { "en": "Venkatesh supports drainage upgrades but links them to JNNURM/Smart City central funding rather than state-only funding.", "ta": "வெங்கடேஷ் வடிகால் புதுப்பிப்பை ஆதரிக்கிறார் ஆனால் JNNURM/Smart City நிதியுடன் இணைக்கிறார்." } },
+        "cand-ind":    { "position": "approve",  "explanation": { "en": "Kavitha has filed RTI petitions exposing incomplete stormwater drain work and advocates for an independent audit before new funds are allocated.", "ta": "கவிதா RTI மனுக்களை தாக்கல் செய்து சரியாக செயல்படாத வடிகால் பணிகளை அம்பலப்படுத்தியுள்ளார்." } }
+      }
+    },
+    {
+      "title":     { "en": "Heritage Zone Protection", "ta": "பாரம்பரிய மண்டல பாதுகாப்பு" },
+      "statement": {
+        "en": "The Park Town and Chepauk heritage zone should be granted statutory protection to prevent demolition of pre-Independence buildings and unregulated multi-storey construction.",
+        "ta": "சுதந்திரத்திற்கு முந்தைய கட்டிடங்களை இடிப்பதையும் ஒழுங்கற்ற பல மாடி கட்டுமானத்தையும் தடுக்க பார்க் டவுன் மற்றும் சேப்பாக்கம் பாரம்பரிய மண்டலத்திற்கு சட்டப்பூர்வ பாதுகாப்பு வழங்கப்பட வேண்டும்."
+      },
+      "positions": {
+        "cand-dmk":    { "position": "neutral",  "explanation": { "en": "Rajesh Kumar supports heritage conservation but is wary of blocking redevelopment that could bring better housing stock to long-term residents.", "ta": "ராஜேஷ் குமார் பாரம்பரிய பாதுகாப்பை ஆதரிக்கிறார் ஆனால் மறுவளர்ச்சியை தடுப்பது பற்றி எச்சரிக்கையாக உள்ளார்." } },
+        "cand-aiadmk": { "position": "approve",  "explanation": { "en": "Priya Devi strongly supports statutory heritage listing and has collected 5,000 signatures for a heritage petition.", "ta": "பிரியா தேவி பாரம்பரிய பட்டியலிடலை வலுவாக ஆதரிக்கிறார், 5,000 கையொப்பங்களை சேகரித்துள்ளார்." } },
+        "cand-bjp":    { "position": "neutral",  "explanation": { "en": "Venkatesh supports smart redevelopment and is not firmly committed to statutory heritage protection.", "ta": "வெங்கடேஷ் சட்டப்பூர்வ பாரம்பரிய பாதுகாப்பில் உறுதியாக நிலைப்படவில்லை." } },
+        "cand-ind":    { "position": "approve",  "explanation": { "en": "Heritage protection is Kavitha's signature campaign issue; she has filed multiple High Court PILs against illegal demolitions.", "ta": "பாரம்பரிய பாதுகாப்பு கவிதாவின் முதன்மை பிரச்சார விஷயம்; சட்டவிரோத இடிப்புகளுக்கு எதிராக HC PILகள் தாக்கல் செய்துள்ளார்." } }
+      }
+    },
+    {
+      "title":     { "en": "Street Vendor Rights", "ta": "தெரு வியாபாரிகள் உரிமை" },
+      "statement": {
+        "en": "Registered street vendors in Chennai Central should be given permanent, legally protected vending zones and should not be evicted without alternative livelihood arrangements.",
+        "ta": "சென்னை மத்தியில் பதிவு செய்யப்பட்ட தெரு வியாபாரிகளுக்கு நிரந்தர சட்டப்பூர்வமாக பாதுகாக்கப்பட்ட வியாபார மண்டலங்கள் வழங்கப்பட வேண்டும்."
+      },
+      "positions": {
+        "cand-dmk":    { "position": "approve",  "explanation": { "en": "DMK's manifesto supports implementation of the Street Vendors Act and demarcation of permanent zones.", "ta": "திமுகவின் தேர்தல் அறிக்கை தெரு வியாபாரிகள் சட்டத்தை நடைமுறைப்படுத்துவதை ஆதரிக்கிறது." } },
+        "cand-aiadmk": { "position": "approve",  "explanation": { "en": "Priya Devi has met with Triplicane vendor associations and supports permanent stall allocation.", "ta": "பிரியா தேவி திருவல்லிக்கேணி வியாபாரி சங்கங்களை சந்தித்து நிரந்தர அரங்கு ஒதுக்கீட்டை ஆதரிக்கிறார்." } },
+        "cand-bjp":    { "position": "neutral",  "explanation": { "en": "Venkatesh supports vendor regulation but prioritises pedestrian space and traffic flow.", "ta": "வெங்கடேஷ் வியாபாரி ஒழுங்குமுறையை ஆதரிக்கிறார் ஆனால் போக்குவரத்தை முன்னுரிமை செய்கிறார்." } },
+        "cand-ind":    { "position": "approve",  "explanation": { "en": "Kavitha is a strong advocate for vendor rights and has helped vendors navigate registration under the Street Vendors Act.", "ta": "கவிதா வியாபாரி உரிமைகளின் உறுதியான வக்காளத்துதாரர்." } }
+      }
+    },
+    {
+      "title":     { "en": "Public Transport", "ta": "பொது போக்குவரத்து" },
+      "statement": {
+        "en": "Bus routes serving Chennai Central should be expanded and bus frequency increased so that residents can travel within the constituency without needing private vehicles.",
+        "ta": "சென்னை மத்தியை சேவிக்கும் பேருந்து வழிகள் விரிவாக்கப்பட்டு நகரியர் தனியார் வாகனங்கள் இல்லாமல் பயணிக்கும் வகையில் பேருந்து அதிர்வெண் அதிகரிக்கப்பட வேண்டும்."
+      },
+      "positions": {
+        "cand-dmk":    { "position": "approve",  "explanation": { "en": "DMK's government has already added new MTC routes to the constituency; Rajesh Kumar wants electric buses prioritised.", "ta": "திமுக அரசு புதிய MTC வழிகளை தொகுதிக்கு சேர்த்துள்ளது." } },
+        "cand-aiadmk": { "position": "approve",  "explanation": { "en": "Priya Devi supports extended bus routes, especially for Triplicane intra-city links.", "ta": "பிரியா தேவி திருவல்லிக்கேணி இடைக்கால இணைப்புகளுக்கு விரிவாக்கப்பட்ட பேருந்து வழிகளை ஆதரிக்கிறார்." } },
+        "cand-bjp":    { "position": "approve",  "explanation": { "en": "Venkatesh supports metro expansion and better last-mile bus connectivity.", "ta": "வெங்கடேஷ் மெட்ரோ விரிவாக்கம் மற்றும் சிறந்த கடைசி மைல் பேருந்து இணைப்பை ஆதரிக்கிறார்." } },
+        "cand-ind":    { "position": "approve",  "explanation": { "en": "Kavitha advocates for a dedicated cycle track and pedestrianisation plan alongside bus expansion.", "ta": "கவிதா பேருந்து விரிவாக்கத்துடன் சைக்கிள் பாதை மற்றும் நடைபாதை திட்டத்தை வலியுறுத்துகிறார்." } }
+      }
+    },
+    {
+      "title":     { "en": "Affordable Housing", "ta": "குறைந்த செலவில் வீட்டு வசதி" },
+      "statement": {
+        "en": "Affordable rental housing for low-income residents and daily-wage workers in Chennai Central should be developed on available TNHB land within the constituency.",
+        "ta": "சென்னை மத்தியில் உள்ள குறைந்த வருவாய் நிவாசிகள் மற்றும் நாளாந்திர கூலி தொழிலாளர்களுக்கு TNHB நிலத்தில் குறைந்த செலவில் வாடகை வீட்டு வசதி கட்டப்பட வேண்டும்."
+      },
+      "positions": {
+        "cand-dmk":    { "position": "approve",  "explanation": { "en": "Rajesh Kumar has proposed using two TNHB plots in the constituency for affordable rental housing and submitted the proposal to the housing department.", "ta": "ராஜேஷ் குமார் குறைந்த செலவு வாடகை வீட்டு வசதிக்கு TNHB நிலங்களை பயன்படுத்த முன்மொழிந்துள்ளார்." } },
+        "cand-aiadmk": { "position": "approve",  "explanation": { "en": "Priya Devi supports affordable housing on TNHB land and promises to expedite stalled housing board projects.", "ta": "பிரியா தேவி TNHB நிலத்தில் குறைந்த செலவு வீட்டை ஆதரிக்கிறார்." } },
+        "cand-bjp":    { "position": "approve",  "explanation": { "en": "Venkatesh supports Pradhan Mantri Awaas Yojana housing units and public-private partnerships for affordable flats.", "ta": "வெங்கடேஷ் PM Awaas Yojana வீட்டு அலகுகளை ஆதரிக்கிறார்." } },
+        "cand-ind":    { "position": "approve",  "explanation": { "en": "Kavitha insists that any new housing development must include existing slum-dwellers and not displace them.", "ta": "கவிதா எந்த புதிய வீட்டு வளர்ச்சியும் ஏற்கனவே உள்ள குடிசைவாசிகளை இடம் மாற்றாமல் அவர்களை சேர்க்க வேண்டும் என வலியுறுத்துகிறார்." } }
+      }
+    }
+  ],
+
+  "footer-links": [
+    {
+      "text":  { "en": "All TN Constituencies",  "ta": "அனைத்து தொகுதிகளும்" },
+      "href":  { "en": "../../constituencies/index.html", "ta": "../../constituencies/index.html" }
+    },
+    {
+      "text":  { "en": "TN State Compass",       "ta": "TN மாநில திசைகாட்டி" },
+      "href":  { "en": "../../../compass.html?config=elections/tn/2026-state/config.json", "ta": "../../../compass.html?config=elections/tn/2026-state/config.json" }
+    },
+    {
+      "text":  { "en": "All Elections",          "ta": "அனைத்து தேர்தல்கள்" },
+      "href":  { "en": "../../../index.html",    "ta": "../../../index.html" }
+    }
+  ]
+}

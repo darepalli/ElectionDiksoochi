@@ -1,0 +1,320 @@
+/* ─── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary:     #c0392b;
+  --primary-dk:  #96281b;
+  --accent:      #e67e22;
+  --bg:          #faf8f4;
+  --surface:     #ffffff;
+  --border:      #e5e7eb;
+  --text:        #1a1a2e;
+  --muted:       #6b7280;
+  --live:        #16a34a;
+  --soon:        #d97706;
+  --radius:      12px;
+  --shadow:      0 2px 12px rgba(0,0,0,.08);
+  --shadow-lg:   0 6px 30px rgba(0,0,0,.13);
+}
+
+body {
+  font-family: 'Segoe UI', 'Noto Sans Tamil', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: var(--primary); }
+a:hover { color: var(--primary-dk); }
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ─── Header ─────────────────────────────────────────────────── */
+.site-header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-logo { font-size: 2.25rem; }
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  color: #fff;
+}
+
+.site-tagline {
+  font-size: 0.85rem;
+  opacity: .82;
+  color: #fff;
+}
+
+/* ─── Hero ───────────────────────────────────────────────────── */
+.hero {
+  padding: 2.5rem 0 1.5rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: .5rem;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto .5rem;
+}
+
+.hero-ta {
+  font-size: .875rem;
+  color: var(--muted);
+}
+
+/* ─── State Sections ─────────────────────────────────────────── */
+.state-section {
+  margin: 2rem 0;
+}
+
+.state-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: .5rem;
+}
+
+/* ─── Compass Cards ──────────────────────────────────────────── */
+.compass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.compass-card {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  box-shadow: var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.compass-card--live {
+  border-color: var(--live);
+}
+
+.compass-card--live:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.compass-card--soon {
+  opacity: .75;
+  cursor: default;
+}
+
+.compass-card--soon:hover {
+  transform: none;
+  box-shadow: var(--shadow);
+}
+
+.card-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.card-badge--live {
+  background: rgba(22,163,74,.12);
+  color: var(--live);
+  border: 1px solid rgba(22,163,74,.3);
+}
+
+.card-badge--soon {
+  background: rgba(217,119,6,.12);
+  color: var(--soon);
+  border: 1px solid rgba(217,119,6,.3);
+}
+
+.card-icon { font-size: 2rem; }
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.card-title-ta {
+  font-size: .82rem;
+  color: var(--muted);
+}
+
+.card-desc {
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+.card-parties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: .25rem 0;
+}
+
+.party-tag {
+  font-size: .75rem;
+  font-weight: 700;
+  background: rgba(0,0,0,.04);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+}
+
+.card-cta {
+  margin-top: auto;
+  font-size: .875rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.soon-label { color: var(--soon); }
+
+/* ─── Roadmap ────────────────────────────────────────────────── */
+.roadmap-section { margin-top: 2.5rem; }
+
+.roadmap-note {
+  font-size: .875rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: .75rem;
+}
+
+.roadmap-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: .75rem 1rem;
+  font-size: .85rem;
+}
+
+.roadmap-state { font-weight: 600; }
+
+.roadmap-status {
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--border);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+/* ─── How It Works ───────────────────────────────────────────── */
+.how-section {
+  margin: 2.5rem 0 2rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.how-section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.step {
+  display: flex;
+  gap: .75rem;
+  align-items: flex-start;
+}
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  font-weight: 800;
+}
+
+.step p { font-size: .875rem; color: var(--muted); }
+
+.disclaimer {
+  font-size: .75rem;
+  color: var(--muted);
+  font-style: italic;
+  border-top: 1px solid var(--border);
+  padding-top: .75rem;
+}
+
+/* ─── Footer ─────────────────────────────────────────────────── */
+.site-footer {
+  background: var(--text);
+  color: rgba(255,255,255,.6);
+  text-align: center;
+  padding: 1.25rem 0;
+  font-size: .8rem;
+  margin-top: 3rem;
+}
+
+.site-footer a { color: rgba(255,255,255,.8); }
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .hero h2 { font-size: 1.5rem; }
+  .compass-grid { grid-template-columns: 1fr; }
+}

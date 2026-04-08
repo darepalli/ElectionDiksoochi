@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TN Constituency Compasses | India Election Compass</title>
+  <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg" />
+  <link rel="stylesheet" href="../../../assets/hub.css" />
+  <style>
+    .filter-bar { display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1.25rem; }
+    .filter-btn {
+      padding:5px 14px; border:1px solid var(--border); border-radius:999px;
+      background:var(--surface); font-size:.82rem; font-weight:600; cursor:pointer;
+      transition:background .15s, border-color .15s;
+    }
+    .filter-btn:hover { border-color:var(--primary); }
+    .filter-btn.active { background:var(--primary); color:#fff; border-color:var(--primary); }
+    .const-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:.75rem;
+    }
+    .const-card {
+      display:flex; align-items:center; gap:.75rem;
+      background:var(--surface); border:1px solid var(--border); border-radius:var(--radius);
+      padding:.875rem 1rem; text-decoration:none; color:var(--text);
+      box-shadow:var(--shadow); transition:transform .15s,box-shadow .15s;
+    }
+    .const-card--live:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); border-color:var(--live); }
+    .const-card--soon { opacity:.65; cursor:default; }
+    .const-num { font-size:.72rem; font-weight:700; color:var(--muted); min-width:28px; }
+    .const-info .const-name { font-weight:700; font-size:.9rem; }
+    .const-info .const-district { font-size:.75rem; color:var(--muted); }
+    .const-badge-live { font-size:.65rem; font-weight:700; color:var(--live); background:rgba(22,163,74,.1); padding:2px 7px; border-radius:999px; border:1px solid rgba(22,163,74,.3); }
+    .const-badge-soon { font-size:.65rem; font-weight:700; color:var(--soon); background:rgba(217,119,6,.1); padding:2px 7px; border-radius:999px; border:1px solid rgba(217,119,6,.3); }
+    .note-box { background:#eff6ff; border:1px solid #bfdbfe; border-radius:var(--radius); padding:1rem; font-size:.85rem; color:#1e40af; margin-bottom:1.5rem; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="site-logo">📍</div>
+      <div>
+        <h1 class="site-title">Tamil Nadu Constituency Compass</h1>
+        <p class="site-tagline">தமிழ்நாடு தொகுதி திசைகாட்டி</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section style="padding:1.5rem 0 .5rem">
+      <a href="../../../index.html" style="font-size:.85rem; font-weight:600;">← All Elections</a>
+      &nbsp; / &nbsp;
+      <a href="../../../compass.html?config=elections/tn/2026-state/config.json"
+         style="font-size:.85rem; font-weight:600;">TN 2026 State Compass</a>
+    </section>
+
+    <section class="hero" style="text-align:left; padding:1rem 0 1.5rem">
+      <h2 style="font-size:1.35rem">Choose Your Constituency</h2>
+      <p>Compare local candidates on key issues in your constituency. Each constituency compass is independently configured.</p>
+    </section>
+
+    <div class="note-box">
+      <strong>Preview mode.</strong> Two sample constituencies are live (Chennai Central &amp; Coimbatore South).
+      All 234 constituencies will be added progressively as candidate data is collected.
+      Want to contribute? Add a <code>config.json</code> for your constituency and open a pull request.
+    </div>
+
+    <!-- Filter bar (JS powered) -->
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-btn active" data-district="all">All Districts</button>
+      <button class="filter-btn" data-district="chennai">Chennai</button>
+      <button class="filter-btn" data-district="coimbatore">Coimbatore</button>
+      <button class="filter-btn" data-district="madurai">Madurai</button>
+      <button class="filter-btn" data-district="salem">Salem</button>
+      <button class="filter-btn" data-district="tirunelveli">Tirunelveli</button>
+    </div>
+
+    <div class="const-grid" id="const-grid">
+
+      <!-- Live sample: Chennai Central -->
+      <a class="const-card const-card--live"
+         data-district="chennai"
+         href="../../../compass.html?config=elections/tn/constituencies/chennai-central/config.json">
+        <span class="const-num">4</span>
+        <div class="const-info">
+          <div class="const-name">Chennai Central</div>
+          <div class="const-district">Chennai District</div>
+        </div>
+        <span class="const-badge-live" style="margin-left:auto">Live</span>
+      </a>
+
+      <!-- Live sample: Coimbatore South -->
+      <a class="const-card const-card--live"
+         data-district="coimbatore"
+         href="../../../compass.html?config=elections/tn/constituencies/coimbatore-south/config.json">
+        <span class="const-num">37</span>
+        <div class="const-info">
+          <div class="const-name">Coimbatore South</div>
+          <div class="const-district">Coimbatore District</div>
+        </div>
+        <span class="const-badge-live" style="margin-left:auto">Live</span>
+      </a>
+
+      <!-- Remaining 232 as Coming Soon placeholders (representative sample) -->
+      <script>
+        var comingSoon = [
+          [1,"Chennai North","chennai"],[2,"Chennai South","chennai"],[3,"Chennai East","chennai"],
+          [5,"Thousand Lights","chennai"],[6,"Anna Nagar","chennai"],[7,"Egmore","chennai"],
+          [35,"Coimbatore North","coimbatore"],[36,"Coimbatore Central","coimbatore"],
+          [38,"Singanallur","coimbatore"],[39,"Kinathukadavu","coimbatore"],
+          [80,"Madurai North","madurai"],[81,"Madurai South","madurai"],[82,"Madurai Central","madurai"],
+          [100,"Salem West","salem"],[101,"Salem East","salem"],[102,"Salem North","salem"],
+          [150,"Tirunelveli","tirunelveli"],[151,"Ambasamudram","tirunelveli"]
+        ];
+        var grid = document.getElementById('const-grid');
+        comingSoon.forEach(function(c) {
+          var el = document.createElement('div');
+          el.className = 'const-card const-card--soon';
+          el.setAttribute('data-district', c[2]);
+          el.innerHTML =
+            '<span class="const-num">' + c[0] + '</span>' +
+            '<div class="const-info"><div class="const-name">' + c[1] + '</div>' +
+            '<div class="const-district">' + c[2].charAt(0).toUpperCase()+c[2].slice(1) + ' District</div></div>' +
+            '<span class="const-badge-soon" style="margin-left:auto">Soon</span>';
+          grid.appendChild(el);
+        });
+      </script>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>India Election Compass &nbsp;·&nbsp; Powered by <a href="https://open-election-compass.com" target="_blank" rel="noopener">OpenElectionCompass</a> (GPL-3.0)</p>
+    </div>
+  </footer>
+
+  <script>
+    // District filter
+    document.getElementById('filter-bar').addEventListener('click', function(e) {
+      var btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      var district = btn.getAttribute('data-district');
+      document.querySelectorAll('#const-grid [data-district]').forEach(function(card) {
+        card.style.display = (district === 'all' || card.getAttribute('data-district') === district) ? '' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>

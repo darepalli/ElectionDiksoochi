@@ -1,0 +1,152 @@
+{
+  "version": "1",
+  "algorithm": "hybrid",
+
+  "languages": [
+    { "name": "English", "code": "en" },
+    { "name": "தமிழ்",  "code": "ta" }
+  ],
+
+  "title": {
+    "en": "Coimbatore South Constituency Compass 2026",
+    "ta": "கோயம்புத்தூர் தெற்கு தொகுதி திசைகாட்டி 2026"
+  },
+
+  "subtitle": {
+    "en": "Compare candidates standing for Constituency No. 37 – Coimbatore South in the 2026 Tamil Nadu Assembly elections",
+    "ta": "2026 தமிழ்நாடு சட்டசபை தேர்தலில் தொகுதி எண். 37 – கோயம்புத்தூர் தெற்கில் போட்டியிடும் வேட்பாளர்களை ஒப்பிட்டுப் பாருங்கள்"
+  },
+
+  "introduction": {
+    "heading": {
+      "en": "Coimbatore South: Know Your Candidates",
+      "ta": "கோயம்புத்தூர் தெற்கு: உங்கள் வேட்பாளர்களை அறியுங்கள்"
+    },
+    "text": {
+      "en": "Coimbatore South (Constituency No. 37) is a strategically important urban-industrial seat covering Race Course, Saibaba Colony, Peelamedu and Ganapathy areas. Known as the 'Manchester of South India', the constituency blends textile industry workers, IT professionals and small traders. Candidates are assessed on local and regional issues. Candidate names are illustrative — update with actual candidates once announced.",
+      "ta": "கோயம்புத்தூர் தெற்கு (தொகுதி எண். 37) ரேஸ் கோர்ஸ், சாய்பாபா காலனி, பீளமேடு மற்றும் கணபதி பகுதிகளை உள்ளடக்கியது. 'தென்னிந்தியாவின் மான்செஸ்டர்' என அழைக்கப்படும் இந்த தொகுதி துணி தொழில் தொழிலாளர்கள், IT நிபுணர்களையும் சிறு வியாபாரிகளையும் உள்ளடக்கியது."
+    }
+  },
+
+  "parties": [
+    {
+      "alias": "cand-dmk",
+      "name":  { "en": "A. Murugesan (DMK)",     "ta": "அ. முருகேசன் (தி.மு.க)" },
+      "short": { "en": "Murugesan / DMK",         "ta": "முருகேசன் / தி.மு.க" },
+      "description": {
+        "en": "Nominated by DMK. Trade union leader with strong support among textile mill workers and garment industry employees. Advocates for labour rights and industrial MSME support.",
+        "ta": "திமுகவால் நியமிக்கப்பட்டவர். துணி தொழிற்சாலை தொழிலாளர்களிடையே வலுவான ஆதரவுடைய தொழிற்சங்க தலைவர்."
+      }
+    },
+    {
+      "alias": "cand-aiadmk",
+      "name":  { "en": "P. Sudha Rani (AIADMK)",  "ta": "ப. சுதா ராணி (அ.தி.மு.க)" },
+      "short": { "en": "Sudha Rani / AIADMK",      "ta": "சுதா ராணி / அ.தி.மு.க" },
+      "description": {
+        "en": "Nominated by AIADMK. Former Deputy Mayor of Coimbatore Corporation. Focuses on water supply, garbage management and stormwater drain issues in South Coimbatore.",
+        "ta": "அதிமுகவால் நியமிக்கப்பட்டவர். கோயம்புத்தூர் மாநகராட்சியின் முன்னாள் துணை மேயர்."
+      }
+    },
+    {
+      "alias": "cand-bjp",
+      "name":  { "en": "V. Srinivasan (BJP)",      "ta": "வ. சீனிவாசன் (பி.ஜே.பி)" },
+      "short": { "en": "Srinivasan / BJP",          "ta": "சீனிவாசன் / பி.ஜே.பி" },
+      "description": {
+        "en": "Nominated by BJP. IT entrepreneur and city chamber of commerce member. Champion of ease of doing business, tax reforms and Coimbatore's emergence as an aerospace and defence hub.",
+        "ta": "பாஜகவால் நியமிக்கப்பட்டவர். IT தொழில்முனைவோர் மற்றும் வர்த்தக சபை உறுப்பினர்."
+      }
+    },
+    {
+      "alias": "cand-pmk",
+      "name":  { "en": "K. Aandavan (PMK)",        "ta": "க. ஆண்டவன் (பா.ம.க)" },
+      "short": { "en": "Aandavan / PMK",            "ta": "ஆண்டவன் / பா.ம.க" },
+      "description": {
+        "en": "Nominated by PMK. Agricultural cooperative head who also represents weavers' associations in Sulur taluk. Focuses on handloom worker rights and agricultural water access.",
+        "ta": "பாமகவால் நியமிக்கப்பட்டவர். சுலூர் வட்டத்தில் நெசவாளர் சங்கங்களை பிரதிநிதித்துவப்படுத்துகிறார்."
+      }
+    }
+  ],
+
+  "theses": [
+    {
+      "title":     { "en": "MSME & Textile Industry Support", "ta": "MSME & துணி தொழில் ஆதரவு" },
+      "statement": {
+        "en": "The government should provide targeted subsidies, low-interest credit and technology upgradation support specifically for Coimbatore's textile and power loom MSME sector.",
+        "ta": "கோயம்புத்தூரின் துணி மற்றும் மின் தறி MSME துறைக்கு குறிவழி மானியங்கள், குறைந்த வட்டி கடன் மற்றும் தொழில்நுட்ப மேம்பாட்டு ஆதரவு வழங்கப்பட வேண்டும்."
+      },
+      "positions": {
+        "cand-dmk":    { "position": "approve",  "explanation": { "en": "Murugesan has consistently lobbied for TUFS (Technology Upgradation Fund Scheme) extension and increased credit support for power loom weavers.", "ta": "முருகேசன் TUFS நீட்டிப்பு மற்றும் மின் தறி நெசவாளர்களுக்கு அதிக கடன் ஆதரவுக்காக தொடர்ந்து வலியுறுத்தியுள்ளார்." } },
+        "cand-aiadmk": { "position": "approve",  "explanation": { "en": "Sudha Rani supports MSME subsidies and TANSTIA-linked technical support for handloom clusters.", "ta": "சுதா ராணி MSME மானியங்கள் மற்றும் கைத்தறி குழுமங்களுக்கான TANSTIA-இணைப்பு தொழில்நுட்ப ஆதரவை ஆதரிக்கிறார்." } },
+        "cand-bjp":    { "position": "approve",  "explanation": { "en": "Srinivasan advocates for a dedicated Textile Park in Coimbatore South with GST rebates and export incentives.", "ta": "சீனிவாசன் GST தள்ளுபடிகள் மற்றும் ஏற்றுமதி பலன்களுடன் கோயம்புத்தூர் தெற்கில் அர்ப்பணிக்கப்பட்ட ஜவுளி பூங்காவை வலியுறுத்துகிறார்." } },
+        "cand-pmk":    { "position": "approve",  "explanation": { "en": "Aandavan strongly supports handloom weaver subsidies and wants government procurement targets mandated for handloom products.", "ta": "ஆண்டவன் கைத்தறி நெசவாளர் மானியங்களை வலுவாக ஆதரிக்கிறார் மற்றும் கைத்தறி பொருட்களுக்கு அரசு கொள்முதல் இலக்கை கட்டாயமாக்க விரும்புகிறார்." } }
+      }
+    },
+    {
+      "title":     { "en": "Water Supply Crisis", "ta": "குடிநீர் நெருக்கடி" },
+      "statement": {
+        "en": "The water shortage in south Coimbatore residential areas should be resolved through 24-hour piped water supply from the Siruvani reservoir, ending dependence on tankers.",
+        "ta": "சிரிவாணி நீர்த்தேக்கத்திலிருந்து 24 மணி நேர குழாய் நீர் வழங்கல் மூலம் கோயம்புத்தூர் தெற்கின் குடிநீர் நெருக்கடியை தீர்க்க வேண்டும், டேங்கர் சார்பை முடிவுக்கு கொண்டு வர வேண்டும்."
+      },
+      "positions": {
+        "cand-dmk":    { "position": "approve",  "explanation": { "en": "Murugesan has raised the water deficit in the TN Assembly and supported the Siruvani Phase IV project allocation.", "ta": "முருகேசன் சட்டசபையில் நீர் பற்றாக்குறையை எழுப்பி சிரிவாணி நான்காம் கட்ட ஒதுக்கீட்டை ஆதரித்துள்ளார்." } },
+        "cand-aiadmk": { "position": "approve",  "explanation": { "en": "Sudha Rani's tenure as Deputy Mayor included pursuing the 24×7 water project for Peelamedu and Ganapathy zones.", "ta": "சுதா ராணியின் துணை மேயர் பதவிக்காலம் பீளமேடு மற்றும் கணபதி பகுதிகளுக்கான 24×7 நீர் திட்டத்தை முன்னெடுத்தது." } },
+        "cand-bjp":    { "position": "approve",  "explanation": { "en": "Srinivasan supports water recycling for industrial use to reduce pressure on Siruvani for domestic supply.", "ta": "சீனிவாசன் தொழில் மறு ஆக்கம் பயன்படுத்துவதற்கான நீர் மறுசுழற்சியை ஆதரித்து சிரிவாணி சுமையை குறைக்க விரும்புகிறார்." } },
+        "cand-pmk":    { "position": "approve",  "explanation": { "en": "Aandavan demands equitable water distribution between the industrial north and residential south Coimbatore.", "ta": "ஆண்டவன் தொழிலக வட கோயம்புத்தூருக்கும் குடியிருப்பு தெற்கு கோயம்புத்தூருக்கும் இடையே சமபங்கு நீர் விதரணத்தை கோருகிறார்." } }
+      }
+    },
+    {
+      "title":     { "en": "Aerospace & Defence Corridor", "ta": "விண்வெளி & பாதுகாப்பு தொழில் வழி" },
+      "statement": {
+        "en": "Coimbatore should be developed as an aerospace and defence manufacturing hub under the Tamil Nadu Defence Industrial Corridor, bringing high-skill jobs and anchor industries.",
+        "ta": "தமிழ்நாடு பாதுகாப்பு தொழில் வழியின் கீழ் கோயம்புத்தூரை விண்வெளி மற்றும் பாதுகாப்பு உற்பத்தி மையமாக வளர்க்க வேண்டும்."
+      },
+      "positions": {
+        "cand-dmk":    { "position": "approve",  "explanation": { "en": "DMK's government included Coimbatore as a node in the Defence Corridor. Murugesan supports it as a job creator for engineering graduates.", "ta": "திமுக அரசு கோயம்புத்தூரை பாதுகாப்பு வழியில் ஒரு முனையாக சேர்த்தது." } },
+        "cand-aiadmk": { "position": "approve",  "explanation": { "en": "Sudha Rani supports the Corridor but wants an MSME ancillary village alongside the main defence units.", "ta": "சுதா ராணி வழியை ஆதரிக்கிறார் ஆனால் முக்கிய பாதுகாப்பு அமைப்புகளுடன் MSME கிளை கிராமம் வேண்டும்." } },
+        "cand-bjp":    { "position": "approve",  "explanation": { "en": "Srinivasan is the strongest advocate — he has lobbied defence PSUs to set up R&D arms in Coimbatore.", "ta": "சீனிவாசன் மிக உறுதியான ஆதரவாளர் - கோயம்புத்தூரில் R&D பிரிவுகளை நிறுவ PSUகளிடம் விலக்கியுள்ளார்." } },
+        "cand-pmk":    { "position": "neutral",  "explanation": { "en": "Aandavan supports industrial growth but wants assurances that Dalit and OBC workers have preferential hiring in defence units.", "ta": "ஆண்டவன் தொழில் வளர்ச்சியை ஆதரிக்கிறார் ஆனால் பாதுகாப்பு அமைப்புகளில் தலித் மற்றும் OBC தொழிலாளர்களுக்கு முன்னுரிமை வேலைவாய்ப்பு உறுதி வேண்டும்." } }
+      }
+    },
+    {
+      "title":     { "en": "Traffic & Metro Connectivity", "ta": "போக்குவரத்து & மெட்ரோ இணைப்பு" },
+      "statement": {
+        "en": "The Coimbatore Metro Rail project should be fast-tracked and prioritise south Coimbatore corridors including Race Course and Peelamedu, with a timeline commitment for construction.",
+        "ta": "கோயம்புத்தூர் மெட்ரோ ரயில் திட்டம் விரைவுபடுத்தப்பட வேண்டும் மற்றும் ரேஸ் கோர்ஸ் மற்றும் பீளமேடு உட்பட தெற்கு கோயம்புத்தூர் வழிகளுக்கு முன்னுரிமை வழங்கப்பட வேண்டும்."
+      },
+      "positions": {
+        "cand-dmk":    { "position": "approve",  "explanation": { "en": "DMK committed to Phase 1 of Coimbatore Metro in 2023 and Murugesan wants the south corridor included from Phase 1 itself.", "ta": "திமுக 2023-ல் கோயம்புத்தூர் மெட்ரோ படி 1-க்கு உறுதியளித்தது." } },
+        "cand-aiadmk": { "position": "approve",  "explanation": { "en": "Sudha Rani supports metro and also wants immediate ring road traffic management before metro comes.", "ta": "சுதா ராணி மெட்ரோவை ஆதரிக்கிறார் மற்றும் மெட்ரோ வருவதற்கு முன் உடனடி வளைய சாலை போக்குவரத்து மேலாண்மை வேண்டும்." } },
+        "cand-bjp":    { "position": "approve",  "explanation": { "en": "Srinivasan strongly supports metro, arguing it will improve Coimbatore's ranking as a business destination.", "ta": "சீனிவாசன் மெட்ரோவை வலுவாக ஆதரிக்கிறார், கோயம்புத்தூரின் வணிக முடிவிடம் தரவரிசையை மேம்படுத்தும் என வாதிடுகிறார்." } },
+        "cand-pmk":    { "position": "approve",  "explanation": { "en": "Aandavan supports metro but prioritises it as an affordable commute option for workers over a business-prestige project.", "ta": "ஆண்டவன் மெட்ரோவை ஆதரிக்கிறார் ஆனால் வணிக மதிப்பு திட்டத்திற்கு பதில் தொழிலாளர்களுக்கான மலிவு பயண விருப்பமாக முன்னுரிமை செய்கிறார்." } }
+      }
+    },
+    {
+      "title":     { "en": "Air Quality & Industrial Pollution", "ta": "காற்று தரம் & தொழில் மாசு" },
+      "statement": {
+        "en": "Industries in and around Coimbatore South that exceed pollution norms should face mandatory time-bound emission controls, and a public real-time air quality monitoring network should be installed across the constituency.",
+        "ta": "கோயம்புத்தூர் தெற்கில் மாசு நெறிமுறைகளை மீறும் தொழில்கள் கட்டாய காலகட்ட வெளியீட்டு கட்டுப்பாடுகளை எதிர்கொள்ள வேண்டும், மற்றும் பொது நிகழ் நேர காற்று தர கண்காணிப்பு நெட்வொர்க் நிறுவப்பட வேண்டும்."
+      },
+      "positions": {
+        "cand-dmk":    { "position": "approve",  "explanation": { "en": "Murugesan supports pollution controls but insists closures are last-resort; prefers upgraded effluent treatment plants with government subsidy.", "ta": "முருகேசன் மாசு கட்டுப்பாடுகளை ஆதரிக்கிறார் ஆனால் மூடல்கள் கடைசி வழியாக இருக்க வேண்டும்; மேம்படுத்தப்பட்ட கழிவு சுத்திகரிப்பு ஆலைகளை விரும்புகிறார்." } },
+        "cand-aiadmk": { "position": "approve",  "explanation": { "en": "Sudha Rani initiated a petition to TNPCB during her tenure against dyeing units violating norms in the constituency.", "ta": "சுதா ராணி பதவிக்காலத்தில் தொகுதியில் நெறிமுறைகளை மீறும் டையிங் அலகுகளுக்கு எதிராக TNPCB-க்கு மனு தாக்கல் செய்தார்." } },
+        "cand-bjp":    { "position": "neutral",  "explanation": { "en": "Srinivasan supports clean technology adoption but opposes arbitrary closures that harm employment.", "ta": "சீனிவாசன் சுத்தமான தொழில்நுட்பத்தை ஆதரிக்கிறார் ஆனால் வேலைவாய்ப்பை பாதிக்கும் தன்னிச்சையான மூடல்களை எதிர்க்கிறார்." } },
+        "cand-pmk":    { "position": "approve",  "explanation": { "en": "Aandavan supports strict pollution controls citing health impacts on workers and families in industrial areas.", "ta": "ஆண்டவன் தொழில் பகுதிகளில் தொழிலாளர்கள் மற்றும் குடும்பங்களில் உடல் நல தாக்கங்களை கூறி கடுமையான மாசு கட்டுப்பாடுகளை ஆதரிக்கிறார்." } }
+      }
+    }
+  ],
+
+  "footer-links": [
+    {
+      "text":  { "en": "All TN Constituencies",  "ta": "அனைத்து தொகுதிகளும்" },
+      "href":  { "en": "../../constituencies/index.html", "ta": "../../constituencies/index.html" }
+    },
+    {
+      "text":  { "en": "TN State Compass",       "ta": "TN மாநில திசைகாட்டி" },
+      "href":  { "en": "../../../compass.html?config=elections/tn/2026-state/config.json", "ta": "../../../compass.html?config=elections/tn/2026-state/config.json" }
+    },
+    {
+      "text":  { "en": "All Elections",          "ta": "அனைத்து தேர்தல்கள்" },
+      "href":  { "en": "../../../index.html",    "ta": "../../../index.html" }
+    }
+  ]
+}

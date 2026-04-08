@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Party Positions | India Election Compass</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <style>
+    :root {
+      --primary: #1d4ed8; --primary-dk: #1e40af;
+      --surface: #ffffff; --bg: #f1f5f9;
+      --border: #e2e8f0; --text: #1e293b; --muted: #64748b;
+      --ok: #16a34a; --warn: #d97706; --err: #dc2626; --skip-c: #94a3b8;
+      --radius: 10px; --shadow: 0 1px 3px rgba(0,0,0,.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ── Header ── */
+    .site-header { background: var(--primary); color: #fff; }
+    .header-top { padding: .875rem 0; }
+    .header-top .container { display: flex; align-items: center; gap: .875rem; flex-wrap: wrap; }
+    .header-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .header-text h1 { font-size: 1.05rem; font-weight: 700; }
+    .header-text p  { font-size: .8rem; opacity: .8; }
+    a.back-link { color: rgba(255,255,255,.85); font-size: .82rem; font-weight: 600; text-decoration: none; padding: .25rem .5rem; border: 1px solid rgba(255,255,255,.3); border-radius: 5px; }
+    a.back-link:hover { background: rgba(255,255,255,.15); }
+
+    /* ── Progress ── */
+    .progress-wrap { background: var(--primary-dk); padding-bottom: .3rem; }
+    .progress-bar { height: 4px; background: #60a5fa; width: 0%; transition: width .35s; }
+    .progress-lbl { text-align: center; font-size: .75rem; color: rgba(255,255,255,.8); padding: .2rem 0; }
+
+    /* ── Layout ── */
+    .container { max-width: 800px; margin: 0 auto; padding: 0 1rem; }
+    .page-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin: 1.25rem 0; padding: 1.375rem 1.5rem; box-shadow: var(--shadow); }
+    .card-title { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: .5rem; }
+    .step-num { background: var(--primary); color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .72rem; font-weight: 700; flex-shrink: 0; }
+
+    /* ── Fields ── */
+    .field { margin-bottom: .9rem; }
+    .field label { display: block; font-weight: 600; font-size: .83rem; margin-bottom: .3rem; }
+    .field .req { color: var(--err); }
+    .field input, .field select, .field textarea {
+      width: 100%; padding: .5rem .75rem; border: 1.5px solid var(--border); border-radius: 7px;
+      font: inherit; font-size: .88rem; background: var(--bg); color: var(--text);
+      transition: border-color .15s, background .15s;
+    }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: none; border-color: var(--primary); background: #fff;
+    }
+    .field .hint { font-size: .73rem; color: var(--muted); margin-top: .2rem; }
+    .lang-group { border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; margin-bottom: .75rem; }
+    .lang-group legend { font-weight: 700; font-size: .82rem; padding: 0 .4rem; color: var(--primary); }
+
+    /* ── Thesis cards ── */
+    .thesis-card { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: .75rem; overflow: hidden; transition: border-color .2s; }
+    .thesis-card.done { border-color: #a5b4fc; }
+    .thesis-summary {
+      display: flex; align-items: center; gap: .75rem; padding: .875rem 1rem;
+      cursor: pointer; list-style: none; background: var(--bg);
+      transition: background .15s;
+    }
+    .thesis-card details[open] > .thesis-summary { background: #fff; border-bottom: 1px solid var(--border); }
+    .thesis-summary::-webkit-details-marker { display: none; }
+    .thesis-summary::marker { display: none; }
+    .thesis-summary:hover { background: #e8eef8; }
+    .thesis-num { background: var(--primary); color: #fff; min-width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .72rem; font-weight: 700; flex-shrink: 0; }
+    .thesis-info { flex: 1; min-width: 0; }
+    .thesis-name { font-weight: 700; font-size: .88rem; }
+    .thesis-preview { font-size: .78rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .thesis-badge { font-size: .96rem; flex-shrink: 0; }
+    .thesis-chevron { color: var(--muted); font-size: .75rem; flex-shrink: 0; transition: transform .2s; }
+    details[open] .thesis-chevron { transform: rotate(180deg); }
+
+    .thesis-body { padding: 1rem; background: #fff; }
+    .thesis-stmt { font-size: .85rem; color: var(--muted); padding: .625rem .875rem; background: var(--bg); border-left: 3px solid #c7d2fe; border-radius: 4px; margin-bottom: .875rem; line-height: 1.55; }
+
+    /* ── Position buttons ── */
+    .pos-group { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .875rem; }
+    .pos-label { cursor: pointer; }
+    .pos-label input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .pos-btn {
+      display: inline-flex; align-items: center; gap: .3rem;
+      padding: .35rem .9rem; border: 1.5px solid var(--border); border-radius: 999px;
+      font-size: .82rem; font-weight: 600; background: var(--surface);
+      transition: all .15s; user-select: none; white-space: nowrap;
+    }
+    .pos-label:hover .pos-btn { border-color: var(--primary); }
+    .pos-label input:checked + .pos-btn { color: #fff; border-color: transparent; box-shadow: 0 1px 4px rgba(0,0,0,.2); }
+    .pos-label.approve input:checked + .pos-btn { background: var(--ok); }
+    .pos-label.neutral input:checked + .pos-btn { background: var(--warn); }
+    .pos-label.reject  input:checked + .pos-btn { background: var(--err); }
+    .pos-label.skip    input:checked + .pos-btn { background: var(--skip-c); }
+
+    .exp-wrap { background: var(--bg); border: 1px solid var(--border); border-radius: 7px; padding: .75rem; }
+    .exp-wrap .field:last-child { margin-bottom: 0; }
+
+    /* ── Buttons ── */
+    .btn { display: inline-flex; align-items: center; gap: .35rem; padding: .575rem 1.125rem; border: none; border-radius: 7px; font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer; transition: background .15s, transform .1s, box-shadow .15s; }
+    .btn:active { transform: scale(.97); }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-dk); }
+    .btn-primary:disabled { background: var(--skip-c); cursor: not-allowed; transform: none; }
+    .btn-secondary { background: var(--bg); color: var(--text); border: 1.5px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--primary); }
+    .btn-ok { background: var(--ok); color: #fff; }
+    .btn-ok:hover { background: #15803d; }
+    .btn-row { display: flex; flex-wrap: wrap; gap: .625rem; align-items: center; }
+
+    /* ── Info boxes ── */
+    .info-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: var(--radius); padding: .875rem 1rem; font-size: .84rem; color: #1e40af; }
+    .warn-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius); padding: .875rem 1rem; font-size: .84rem; color: #92400e; }
+    .ok-box   { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--radius); padding: .875rem 1rem; font-size: .84rem; color: #166534; }
+
+    /* ── Output ── */
+    .output-json {
+      background: #0f172a; color: #e2e8f0;
+      font: .8rem/1.65 'Consolas', 'SF Mono', 'Fira Code', monospace;
+      padding: 1.125rem; border-radius: 7px; overflow: auto; max-height: 420px;
+      margin: .875rem 0; white-space: pre;
+    }
+
+    /* ── States ── */
+    #loading { padding: 4rem 1rem; text-align: center; color: var(--muted); font-size: 1rem; }
+    #error-msg { padding: 2rem 1rem; text-align: center; color: var(--err); font-size: .95rem; }
+
+    /* ── Footer ── */
+    .site-footer { text-align: center; padding: 2rem 1rem; font-size: .78rem; color: var(--muted); }
+    .site-footer a { color: var(--primary); text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      .page-card { padding: 1rem; }
+      .pos-btn { font-size: .78rem; padding: .3rem .7rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <div class="container" style="gap:.625rem">
+        <span class="header-icon">📋</span>
+        <div class="header-text" style="flex:1">
+          <h1>Submit Party / Candidate Positions</h1>
+          <p id="election-title-sub">Loading election data…</p>
+        </div>
+        <a href="index.html" class="back-link">← All Elections</a>
+      </div>
+    </div>
+    <div class="progress-wrap">
+      <div class="progress-bar" id="progress-bar"></div>
+      <div class="progress-lbl" id="progress-lbl">0 / 0 positions filled</div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-bottom:2rem">
+
+    <div id="loading">⏳ Loading election data…</div>
+    <div id="error-msg" hidden></div>
+
+    <!-- ── Election selector (no param) ── -->
+    <div id="selector-section" class="page-card" hidden style="margin-top:1.5rem">
+      <div class="card-title" style="margin-bottom:.75rem">Choose Election</div>
+      <div class="field">
+        <label for="election-select">Select the election you are submitting positions for:</label>
+        <select id="election-select">
+          <option value="">— Select an election —</option>
+          <option value="elections/tn/2026-state/config.json">Tamil Nadu 2026 – State Assembly</option>
+          <option value="elections/tn/constituencies/chennai-central/config.json">TN 2026 – Chennai Central Constituency</option>
+          <option value="elections/tn/constituencies/coimbatore-south/config.json">TN 2026 – Coimbatore South Constituency</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" onclick="loadFromSelector()">Continue →</button>
+    </div>
+
+    <!-- ── Main form ── -->
+    <form id="main-form" hidden novalidate>
+
+      <div class="info-box" style="margin-top:1.375rem">
+        <strong>How to submit:</strong> Complete the three sections below — party/candidate details, positions on each thesis, and contact info.
+        Click <em>Generate &amp; Download</em> when done. Email the downloaded <code>.json</code> file to the election compass admin for review and publication.
+      </div>
+
+      <!-- § 1: Party Details -->
+      <div class="page-card">
+        <div class="card-title"><span class="step-num">1</span> Party / Candidate Information</div>
+
+        <div class="field">
+          <label for="f-alias">Alias / Slug <span class="req">*</span></label>
+          <input type="text" id="f-alias" name="alias" required
+                 pattern="[a-z][a-z0-9-]*"
+                 placeholder="e.g. dmk · aiadmk · cand-dmk" autocomplete="off">
+          <div class="hint">Unique short identifier. Lowercase letters, numbers and hyphens only. Must start with a letter.</div>
+        </div>
+
+        <div id="lang-fields"></div>
+      </div>
+
+      <!-- § 2: Positions -->
+      <div class="page-card">
+        <div class="card-title"><span class="step-num">2</span> Policy Positions</div>
+        <p style="font-size:.84rem;color:var(--muted);margin-bottom:1rem">
+          Expand each thesis, choose your position and add a brief explanation. All theses must have a position selected before you can generate the submission.
+        </p>
+        <div id="theses-fields"></div>
+      </div>
+
+      <!-- § 3: Contact -->
+      <div class="page-card">
+        <div class="card-title"><span class="step-num">3</span> Contact Information</div>
+        <p style="font-size:.84rem;color:var(--muted);margin-bottom:.875rem">Used for admin follow-up only — not published.</p>
+        <div class="field">
+          <label for="f-contact-name">Submitter Name</label>
+          <input type="text" id="f-contact-name" name="contact-name" placeholder="Your full name">
+        </div>
+        <div class="field">
+          <label for="f-contact-org">Organisation / Party Name</label>
+          <input type="text" id="f-contact-org" name="contact-org" placeholder="Organisation or party you represent">
+        </div>
+        <div class="field">
+          <label for="f-contact-email">Email Address</label>
+          <input type="email" id="f-contact-email" name="contact-email" placeholder="you@example.com">
+        </div>
+      </div>
+
+      <!-- § 4: Generate -->
+      <div class="page-card">
+        <div class="card-title"><span class="step-num">4</span> Generate &amp; Download</div>
+        <div class="info-box" style="margin-bottom:1rem">
+          Once all positions are filled, click <strong>Generate &amp; Download</strong> to create your submission file.
+          Email it to <strong>admin@indiaelectioncompass.in</strong> (replace with actual address).
+          Your positions will be reviewed and published within 2–3 working days.
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="generate-btn" onclick="generateAndShow()" disabled>
+            ⬇ Generate &amp; Download
+          </button>
+          <span id="progress-inline" style="font-size:.83rem;color:var(--muted)"></span>
+        </div>
+      </div>
+
+    </form>
+
+    <!-- ── Output ── -->
+    <div id="output-section" class="page-card" hidden style="margin-bottom:1.5rem">
+      <div class="card-title">✅ Submission Ready</div>
+      <div class="ok-box" style="margin-bottom:.875rem">
+        Your positions JSON has been generated. Click <strong>Download</strong>, then email the file to the admin.
+      </div>
+      <pre class="output-json" id="output-json"></pre>
+      <div class="btn-row">
+        <button class="btn btn-ok" onclick="downloadJSON()">⬇ Download JSON</button>
+        <button class="btn btn-secondary" id="copy-btn" onclick="copyJSON()">Copy to Clipboard</button>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    India Election Compass &nbsp;·&nbsp;
+    Powered by <a href="https://open-election-compass.com" target="_blank" rel="noopener">OpenElectionCompass</a> (GPL-3.0)
+    &nbsp;·&nbsp; <a href="admin/review.html">Admin Review Tool</a>
+  </footer>
+
+  <script>
+    'use strict';
+
+    var electionConfig = null;
+    var electionPath   = '';
+    var SAFE_RE        = /^elections\/[a-z]{2,}\/[a-z0-9._\/-]+\/config\.json$/;
+
+    /* ── Bootstrap ── */
+    (function init() {
+      var p = new URLSearchParams(location.search).get('election') || '';
+      if (p) {
+        loadElection(p);
+      } else {
+        hide('loading');
+        show('selector-section');
+      }
+    })();
+
+    function loadFromSelector() {
+      var val = document.getElementById('election-select').value;
+      if (!val) { alert('Please select an election.'); return; }
+      loadElection(val);
+    }
+
+    function loadElection(path) {
+      if (!SAFE_RE.test(path)) { showError('Invalid election path.'); return; }
+      electionPath = path;
+      show('loading');
+      hide('selector-section');
+      fetch(path)
+        .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(function(cfg) {
+          electionConfig = cfg;
+          renderForm();
+        })
+        .catch(function(e) { showError('Could not load election config: ' + e.message); });
+    }
+
+    /* ── Render form ── */
+    function renderForm() {
+      var cfg = electionConfig;
+      var langs = cfg.languages || [{ name: 'English', code: 'en' }];
+      var theses = cfg.theses || [];
+      var primary = langs[0].code;
+      var title = (cfg.title && (cfg.title[primary] || cfg.title.en)) || 'Election';
+
+      document.title = title + ' | Submit Positions';
+      document.getElementById('election-title-sub').textContent = title;
+
+      renderLangFields(langs);
+      renderThesisFields(theses, langs);
+
+      hide('loading');
+      show('main-form');
+      updateProgress();
+    }
+
+    function renderLangFields(langs) {
+      var html = '';
+      langs.forEach(function(lang) {
+        html += '<fieldset class="lang-group"><legend>' + esc(lang.name) + ' (' + esc(lang.code) + ')</legend>';
+        html += field('Full Name', 'name-' + lang.code, 'text', 'Full party or candidate name in ' + lang.name, true);
+        html += field('Short Name / Abbreviation', 'short-' + lang.code, 'text', 'Abbreviation or surname in ' + lang.name, true);
+        html += '<div class="field"><label>Description <span style="font-weight:400;color:var(--muted)">(optional)</span></label>'
+              + '<textarea name="desc-' + lang.code + '" rows="2" placeholder="Brief background in ' + lang.name + '"></textarea></div>';
+        html += '</fieldset>';
+      });
+      document.getElementById('lang-fields').innerHTML = html;
+    }
+
+    function renderThesisFields(theses, langs) {
+      var primary = langs[0].code;
+      var html = '';
+      theses.forEach(function(thesis, i) {
+        var titleText = (thesis.title && (thesis.title[primary] || thesis.title.en)) || ('Thesis ' + (i + 1));
+        var stmt      = (thesis.statement && (thesis.statement[primary] || thesis.statement.en)) || '';
+
+        html += '<div class="thesis-card" id="tc-' + i + '">';
+        html += '<details id="td-' + i + '"' + (i === 0 ? ' open' : '') + '>';
+        html += '<summary class="thesis-summary" onclick="void(0)">';
+        html += '<span class="thesis-num">' + (i + 1) + '</span>';
+        html += '<span class="thesis-info"><span class="thesis-name">' + esc(titleText) + '</span>';
+        html += '<span class="thesis-preview">' + esc(stmt.substring(0, 90)) + (stmt.length > 90 ? '…' : '') + '</span></span>';
+        html += '<span class="thesis-badge" id="tb-' + i + '">⚪</span>';
+        html += '<span class="thesis-chevron">▾</span>';
+        html += '</summary>';
+
+        html += '<div class="thesis-body">';
+        html += '<div class="thesis-stmt">' + esc(stmt) + '</div>';
+
+        /* Position radio buttons */
+        html += '<div class="pos-group" role="radiogroup" aria-label="Position on: ' + esc(titleText) + '">';
+        var opts = [
+          { val: 'approve', label: '✅ Approve',        cls: 'approve' },
+          { val: 'neutral', label: '🟡 Neutral',         cls: 'neutral' },
+          { val: 'reject',  label: '❌ Reject',          cls: 'reject'  },
+          { val: 'skip',    label: '⚪ Skip / No stance', cls: 'skip'   }
+        ];
+        opts.forEach(function(o) {
+          html += '<label class="pos-label ' + o.cls + '">'
+                + '<input type="radio" name="pos-' + i + '" value="' + o.val + '" onchange="onPosChange(' + i + ')">'
+                + '<span class="pos-btn">' + o.label + '</span></label>';
+        });
+        html += '</div>';
+
+        /* Explanation fields */
+        html += '<div class="exp-wrap">';
+        langs.forEach(function(lang) {
+          html += '<div class="field" style="margin-bottom:.625rem"><label style="font-weight:normal;font-size:.8rem">'
+                + 'Explanation (' + esc(lang.name) + ') — optional'
+                + '</label><textarea name="exp-' + i + '-' + lang.code + '" rows="2" '
+                + 'placeholder="Why does your party/candidate take this position? (' + lang.name + ')"></textarea></div>';
+        });
+        html += '</div>'; /* exp-wrap */
+
+        html += '</div></details></div>'; /* thesis-body / details / thesis-card */
+      });
+      document.getElementById('theses-fields').innerHTML = html;
+    }
+
+    /* ── Progress tracking ── */
+    function onPosChange(idx) {
+      var selVal = (document.querySelector('input[name="pos-' + idx + '"]:checked') || {}).value;
+      var icons  = { approve: '✅', neutral: '🟡', reject: '❌', skip: '⚪' };
+      var badge  = document.getElementById('tb-' + idx);
+      if (badge && selVal) badge.textContent = icons[selVal] || '✅';
+      var card = document.getElementById('tc-' + idx);
+      if (card) card.classList.toggle('done', !!selVal);
+      updateProgress();
+      /* Auto-advance: open next unchecked thesis */
+      if (selVal) {
+        var total = (electionConfig.theses || []).length;
+        for (var j = idx + 1; j < total; j++) {
+          if (!document.querySelector('input[name="pos-' + j + '"]:checked')) {
+            var det = document.getElementById('td-' + j);
+            if (det) det.open = true;
+            det && det.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            break;
+          }
+        }
+      }
+    }
+
+    function updateProgress() {
+      var total  = (electionConfig && electionConfig.theses) ? electionConfig.theses.length : 0;
+      var filled = 0;
+      for (var i = 0; i < total; i++) {
+        if (document.querySelector('input[name="pos-' + i + '"]:checked')) filled++;
+      }
+      var pct = total ? Math.round(filled / total * 100) : 0;
+      document.getElementById('progress-bar').style.width = pct + '%';
+      var lbl = filled + ' / ' + total + ' positions filled';
+      document.getElementById('progress-lbl').textContent = lbl;
+      document.getElementById('progress-inline').textContent = filled < total
+        ? (total - filled) + ' remaining'
+        : '✅ All positions filled';
+      document.getElementById('generate-btn').disabled = filled < total;
+    }
+
+    /* ── Generate submission JSON ── */
+    function generateAndShow() {
+      var alias = (document.getElementById('f-alias').value || '').trim();
+      if (!alias || !/^[a-z][a-z0-9-]*$/.test(alias)) {
+        alert('Please enter a valid alias (lowercase letters, numbers and hyphens, starting with a letter).');
+        document.getElementById('f-alias').focus();
+        return;
+      }
+
+      var cfg   = electionConfig;
+      var langs = cfg.languages || [{ name: 'English', code: 'en' }];
+      var data  = new FormData(document.getElementById('main-form'));
+
+      /* Party object */
+      var party = { alias: alias };
+      var nameObj = {}, shortObj = {}, descObj = {};
+      langs.forEach(function(lang) {
+        nameObj[lang.code]  = (data.get('name-' + lang.code)  || '').trim();
+        shortObj[lang.code] = (data.get('short-' + lang.code) || '').trim();
+        descObj[lang.code]  = (data.get('desc-' + lang.code)  || '').trim();
+      });
+      party.name        = nameObj;
+      party.short       = shortObj;
+      party.description = descObj;
+
+      /* Positions array */
+      var primary   = langs[0].code;
+      var positions = cfg.theses.map(function(thesis, i) {
+        var pos    = data.get('pos-' + i) || 'skip';
+        var expObj = {};
+        langs.forEach(function(lang) {
+          var v = (data.get('exp-' + i + '-' + lang.code) || '').trim();
+          if (v) expObj[lang.code] = v;
+        });
+        return {
+          thesisIndex:   i,
+          thesisTitleEn: (thesis.title && (thesis.title.en || thesis.title[primary])) || ('Thesis ' + (i + 1)),
+          position:      pos,
+          explanation:   expObj
+        };
+      });
+
+      var submission = {
+        _meta: {
+          schemaVersion:  '1',
+          election:       electionPath,
+          submittedAt:    new Date().toISOString(),
+          contactName:    (data.get('contact-name')  || '').trim(),
+          contactOrg:     (data.get('contact-org')   || '').trim(),
+          contactEmail:   (data.get('contact-email') || '').trim()
+        },
+        party:     party,
+        positions: positions
+      };
+
+      var jsonStr = JSON.stringify(submission, null, 2);
+      document.getElementById('output-json').textContent = jsonStr;
+      window._submissionJSON  = jsonStr;
+      window._submissionAlias = alias;
+
+      show('output-section');
+      document.getElementById('output-section').scrollIntoView({ behavior: 'smooth' });
+
+      /* Auto-download */
+      triggerDownload(jsonStr, 'positions-' + alias + '-' + Date.now() + '.json');
+    }
+
+    function downloadJSON() {
+      triggerDownload(window._submissionJSON, 'positions-' + (window._submissionAlias || 'submission') + '-' + Date.now() + '.json');
+    }
+
+    function copyJSON() {
+      navigator.clipboard.writeText(window._submissionJSON).then(function() {
+        var btn = document.getElementById('copy-btn');
+        btn.textContent = '✓ Copied!';
+        setTimeout(function() { btn.textContent = 'Copy to Clipboard'; }, 2200);
+      }).catch(function() { alert('Auto-copy failed. Please select and copy the text manually.'); });
+    }
+
+    /* ── Utilities ── */
+    function triggerDownload(text, filename) {
+      var blob = new Blob([text], { type: 'application/json' });
+      var url  = URL.createObjectURL(blob);
+      var a    = document.createElement('a');
+      a.href = url; a.download = filename; a.click();
+      setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+    }
+
+    function field(labelText, nameAttr, type, placeholder, required) {
+      return '<div class="field"><label>' + labelText + (required ? ' <span class="req">*</span>' : '') + '</label>'
+           + '<input type="' + type + '" name="' + nameAttr + '"' + (required ? ' required' : '')
+           + ' placeholder="' + esc(placeholder) + '"></div>';
+    }
+
+    function esc(s) {
+      return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function show(id) { document.getElementById(id).hidden = false; }
+    function hide(id) { document.getElementById(id).hidden = true;  }
+
+    function showError(msg) {
+      hide('loading');
+      var el = document.getElementById('error-msg');
+      el.textContent = '❌ ' + msg;
+      show('error-msg');
+    }
+  </script>
+</body>
+</html>

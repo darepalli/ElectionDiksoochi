@@ -1,0 +1,85 @@
+{
+  "_comment": "State-level election compass template for India Election Compass. Copy this file to elections/{state}/{year-level}/config.json and fill in actual content. Remove all _comment fields before deploying.",
+
+  "version": "1",
+
+  "algorithm": "hybrid",
+  "_algorithm_note": "Use 'hybrid' (5 user answer buttons) for richer discrimination. Alternatives: 'cityblock/approve-neutral-reject' (3 buttons). Party positions always use approve/neutral/reject/skip regardless of algorithm.",
+
+  "languages": [
+    { "name": "English", "code": "en" },
+    { "name": "NATIVE LANGUAGE NAME",  "code": "LANG_CODE" }
+  ],
+  "_languages_note": "Add one object per UI language. 'code' must be a BCP-47 code (e.g. 'ta', 'kn', 'ml', 'te', 'hi'). All multilingual content fields below must have a key for EVERY code listed here.",
+
+  "title": {
+    "en": "{State Name} Election Compass {Year}",
+    "LANG_CODE": "{Translation}"
+  },
+
+  "subtitle": {
+    "en": "Find which party best matches your views on key {State} policy issues",
+    "LANG_CODE": "{Translation}"
+  },
+
+  "introduction": {
+    "heading": {
+      "en": "Welcome to the {State} Election Compass",
+      "LANG_CODE": "{Translation}"
+    },
+    "text": {
+      "en": "Describe the election, the parties covered, how many theses, and that the tool is non-partisan.",
+      "LANG_CODE": "{Translation}"
+    }
+  },
+
+  "parties": [
+    {
+      "_comment": "Repeat this block for every party. 'alias' is used as the key in thesis positions.",
+      "alias": "party1",
+      "name":  { "en": "Full Party Name",       "LANG_CODE": "{Translation}" },
+      "short": { "en": "ABBR",                  "LANG_CODE": "{Translation}" },
+      "description": {
+        "en": "2-3 sentence factual description: founding, ideology, current leadership, key stands.",
+        "LANG_CODE": "{Translation}"
+      }
+    }
+  ],
+
+  "theses": [
+    {
+      "_comment": "Repeat for each policy question. Use 10-20 theses for best user experience.",
+      "title": {
+        "en": "Short Topic Label (3-5 words)",
+        "LANG_CODE": "{Translation}"
+      },
+      "statement": {
+        "en": "State the policy position as a clear, specific, testable statement. Avoid vague language. Good: 'The government should abolish X.' Bad: 'The government should think about X.'",
+        "LANG_CODE": "{Translation}"
+      },
+      "positions": {
+        "party1": {
+          "position": "approve",
+          "_position_values": "approve | neutral | reject | skip (skip hides the party from this thesis)",
+          "explanation": {
+            "en": "1-2 sentences citing concrete evidence: manifesto pledge, legislation, voting record, public statement.",
+            "LANG_CODE": "{Translation}"
+          }
+        }
+      }
+    }
+  ],
+
+  "footer-links": [
+    {
+      "text": { "en": "All Elections",    "LANG_CODE": "{Translation}" },
+      "href": { "en": "../../index.html", "LANG_CODE": "../../index.html" }
+    },
+    {
+      "text": { "en": "About OpenElectionCompass", "LANG_CODE": "{Translation}" },
+      "href": { "en": "https://open-election-compass.com", "LANG_CODE": "https://open-election-compass.com" }
+    }
+  ],
+
+  "_deployment_note": "Place this file at: elections/{state-code}/{year-level}/config.json. Link to it from compass.html?config=elections/{state-code}/{year-level}/config.json and from index.html."
+}

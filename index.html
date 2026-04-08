@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="India Election Compass – Find which party or candidate best matches your policy views. Available for Tamil Nadu and expanding to all Indian states." />
+  <title>India Election Compass | இந்தியா தேர்தல் திசைகாட்டி</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="assets/hub.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="site-logo">🗳️</div>
+      <div>
+        <h1 class="site-title">India Election Compass</h1>
+        <p class="site-tagline">இந்தியா தேர்தல் திசைகாட்டி</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <h2>Find Your Political Match</h2>
+      <p>
+        Answer policy questions and discover which party or candidate best represents
+        your views. Non-partisan · Free · Open Source.
+      </p>
+      <p class="hero-ta">
+        கொள்கை கேள்விகளுக்கு பதிலளித்து, உங்கள் கருத்துகளை சிறந்தாக பிரதிநிதித்துவப்படுத்தும்
+        கட்சி அல்லது வேட்பாளரை கண்டறியுங்கள்.
+      </p>
+    </section>
+
+    <!-- ── Tamil Nadu ─────────────────────────────────────────── -->
+    <section class="state-section">
+      <h3 class="state-heading">
+        <span class="state-flag">🏛️</span>
+        Tamil Nadu · தமிழ்நாடு
+      </h3>
+
+      <div class="compass-grid">
+
+        <!-- TN State 2026 – LIVE -->
+        <a class="compass-card compass-card--live"
+           href="compass.html?config=elections/tn/2026-state/config.json">
+          <div class="card-badge card-badge--live">Live</div>
+          <div class="card-icon">☀️</div>
+          <h4 class="card-title">State Assembly 2026</h4>
+          <p class="card-title-ta">சட்டசபை தேர்தல் 2026</p>
+          <p class="card-desc">
+            6 major parties · 15 policy theses · English &amp; Tamil
+          </p>
+          <div class="card-parties">
+            <span class="party-tag" style="color:#E31E24">DMK</span>
+            <span class="party-tag" style="color:#006600">AIADMK</span>
+            <span class="party-tag" style="color:#FF8C00">BJP</span>
+            <span class="party-tag" style="color:#0077C0">INC</span>
+            <span class="party-tag" style="color:#FF4444">DMDK</span>
+            <span class="party-tag" style="color:#8B0000">PMK</span>
+          </div>
+          <span class="card-cta">Start Compass →</span>
+        </a>
+
+        <!-- TN Constituencies – Coming Soon -->
+        <a class="compass-card compass-card--soon"
+           href="elections/tn/constituencies/index.html">
+          <div class="card-badge card-badge--soon">Coming Soon</div>
+          <div class="card-icon">📍</div>
+          <h4 class="card-title">Constituency Level</h4>
+          <p class="card-title-ta">தொகுதி அளவில்</p>
+          <p class="card-desc">
+            Compare candidates in your local constituency.<br/>
+            234 constituencies planned.
+          </p>
+          <span class="card-cta soon-label">View preview →</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ── Other States – Roadmap ────────────────────────────── -->
+    <section class="state-section roadmap-section">
+      <h3 class="state-heading">
+        <span class="state-flag">🗺️</span>
+        Expanding to More States
+      </h3>
+      <p class="roadmap-note">
+        Each state compass is driven by a single JSON config file — no code change
+        needed to add a new election. Want to contribute your state?
+        <a href="https://github.com" target="_blank" rel="noopener">See the guide →</a>
+      </p>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-card">
+          <span class="roadmap-state">Karnataka · ಕರ್ನಾಟಕ</span>
+          <span class="roadmap-status">Planned</span>
+        </div>
+        <div class="roadmap-card">
+          <span class="roadmap-state">Kerala · കേരളം</span>
+          <span class="roadmap-status">Planned</span>
+        </div>
+        <div class="roadmap-card">
+          <span class="roadmap-state">Andhra Pradesh · ఆంధ్ర</span>
+          <span class="roadmap-status">Planned</span>
+        </div>
+        <div class="roadmap-card">
+          <span class="roadmap-state">Maharashtra · महाराष्ट्र</span>
+          <span class="roadmap-status">Planned</span>
+        </div>
+        <div class="roadmap-card">
+          <span class="roadmap-state">Delhi · दिल्ली</span>
+          <span class="roadmap-status">Planned</span>
+        </div>
+        <div class="roadmap-card">
+          <span class="roadmap-state">Lok Sabha 2029 · National</span>
+          <span class="roadmap-status">Planned</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── How It Works ──────────────────────────────────────── -->
+    <section class="how-section">
+      <h3>How It Works</h3>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-num">1</div>
+          <p>Answer policy statements — Agree, Neutral, or Disagree</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <p>Mark how important each issue is to you</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <p>See how closely each party matches your positions</p>
+        </div>
+      </div>
+      <p class="disclaimer">
+        This is a non-partisan civic tool. It does not constitute a voting recommendation.
+        Powered by <a href="https://open-election-compass.com" target="_blank" rel="noopener">OpenElectionCompass</a>
+        (GPL-3.0).
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ── Party submission CTA ── -->
+  <section style="background:#1d4ed8;color:#fff;padding:2rem 0">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+      <div>
+        <h2 style="font-size:1.1rem;font-weight:700;margin-bottom:.25rem">Are you a party representative or candidate?</h2>
+        <p style="font-size:.85rem;opacity:.85">Submit your official positions — they'll be reviewed and added to the live compass.</p>
+      </div>
+      <a href="party-form.html" style="display:inline-flex;align-items:center;gap:.4rem;background:#fff;color:#1d4ed8;font-weight:700;font-size:.9rem;padding:.625rem 1.25rem;border-radius:7px;text-decoration:none;white-space:nowrap">📋 Submit Positions</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        India Election Compass &nbsp;·&nbsp;
+        Open Source &amp; Non-Partisan &nbsp;·&nbsp;
+        Built on <a href="https://open-election-compass.com" target="_blank" rel="noopener">OpenElectionCompass</a>
+        &nbsp;·&nbsp; <a href="party-form.html">Submit Positions</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

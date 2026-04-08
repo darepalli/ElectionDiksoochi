@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Review Tool | India Election Compass</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <style>
+    :root {
+      --primary: #1d4ed8; --primary-dk: #1e40af;
+      --surface: #fff; --bg: #f1f5f9;
+      --border: #e2e8f0; --text: #1e293b; --muted: #64748b;
+      --ok: #16a34a; --warn: #d97706; --err: #dc2626;
+      --radius: 10px; --shadow: 0 1px 3px rgba(0,0,0,.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ── Header ── */
+    .site-header { background: #0f172a; color: #fff; padding: .875rem 0; }
+    .site-header .container { display: flex; align-items: center; gap: .875rem; flex-wrap: wrap; }
+    .site-header h1 { font-size: 1.05rem; font-weight: 700; }
+    .site-header p  { font-size: .78rem; color: #94a3b8; }
+    a.back-link { color: #94a3b8; font-size: .82rem; font-weight: 600; text-decoration: none; padding: .25rem .5rem; border: 1px solid #334155; border-radius: 5px; }
+    a.back-link:hover { color: #fff; border-color: #64748b; }
+    .admin-badge { background: #ef4444; color: #fff; font-size: .65rem; font-weight: 700; padding: 2px 7px; border-radius: 999px; }
+
+    /* ── Layout ── */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 1rem; }
+    .page-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); margin: 1.125rem 0; padding: 1.375rem 1.5rem; box-shadow: var(--shadow); }
+    .card-title { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: .5rem; }
+    .step-num { background: #0f172a; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .72rem; font-weight: 700; flex-shrink: 0; }
+
+    /* ── Load grid ── */
+    .load-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .load-grid { grid-template-columns: 1fr; } }
+    .load-panel { border: 1.5px dashed var(--border); border-radius: var(--radius); padding: 1.125rem; background: var(--bg); }
+    .load-panel h3 { font-size: .88rem; font-weight: 700; margin-bottom: .5rem; }
+    .file-pick-label {
+      display: flex; align-items: center; gap: .5rem; cursor: pointer;
+      background: var(--surface); border: 1.5px solid var(--border); border-radius: 7px;
+      padding: .5rem .75rem; font-size: .83rem; font-weight: 600;
+      transition: border-color .15s;
+    }
+    .file-pick-label:hover { border-color: var(--primary); }
+    .file-pick-label input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .status-line { font-size: .78rem; margin-top: .4rem; min-height: 1.2rem; color: var(--muted); }
+    .status-line.ok  { color: var(--ok); }
+    .status-line.err { color: var(--err); }
+
+    /* ── Paste area ── */
+    .paste-area {
+      width: 100%; padding: .5rem .75rem; border: 1.5px solid var(--border); border-radius: 7px;
+      font: .8rem/1.5 'Consolas','SF Mono',monospace; background: #f8fafc; resize: vertical; min-height: 90px;
+      margin-top: .5rem; transition: border-color .15s;
+    }
+    .paste-area:focus { outline: none; border-color: var(--primary); background: #fff; }
+
+    /* ── Buttons ── */
+    .btn { display: inline-flex; align-items: center; gap: .35rem; padding: .55rem 1.1rem; border: none; border-radius: 7px; font: inherit; font-size: .87rem; font-weight: 600; cursor: pointer; transition: background .15s, transform .1s; }
+    .btn:active { transform: scale(.97); }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-dk); }
+    .btn-primary:disabled { background: #94a3b8; cursor: not-allowed; transform: none; }
+    .btn-ok { background: var(--ok); color: #fff; }
+    .btn-ok:hover { background: #15803d; }
+    .btn-secondary { background: var(--bg); color: var(--text); border: 1.5px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--primary); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: .625rem; align-items: center; }
+    .btn-danger { background: var(--err); color: #fff; }
+    .btn-danger:hover { background: #b91c1c; }
+
+    /* ── Info boxes ── */
+    .info-box  { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: var(--radius); padding: .75rem 1rem; font-size: .83rem; color: #1e40af; }
+    .warn-box  { background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius); padding: .75rem 1rem; font-size: .83rem; color: #92400e; }
+    .ok-box    { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--radius); padding: .75rem 1rem; font-size: .83rem; color: #166534; }
+    .err-box   { background: #fef2f2; border: 1px solid #fecaca; border-radius: var(--radius); padding: .75rem 1rem; font-size: .83rem; color: var(--err); }
+
+    /* ── Tables ── */
+    .info-table { width: 100%; border-collapse: collapse; font-size: .84rem; margin-bottom: .25rem; }
+    .info-table th, .info-table td { padding: .375rem .625rem; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    .info-table th { background: var(--bg); font-weight: 600; width: 30%; white-space: nowrap; }
+
+    .pos-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+    .pos-table th { background: #0f172a; color: #fff; padding: .4rem .625rem; text-align: left; }
+    .pos-table td { padding: .375rem .625rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .pos-table tr:nth-child(even) td { background: #f8fafc; }
+
+    /* ── Position badges ── */
+    .badge { display: inline-flex; align-items: center; gap: .2rem; padding: 2px 8px; border-radius: 999px; font-size: .74rem; font-weight: 700; white-space: nowrap; }
+    .badge.approve { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
+    .badge.neutral { background: #fef9c3; color: #854d0e; border: 1px solid #fde68a; }
+    .badge.reject  { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+    .badge.skip    { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge.missing { background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
+
+    /* ── Edit cell ── */
+    .edit-pos { padding: 3px 6px; border: 1px solid var(--border); border-radius: 5px; font: .78rem inherit; background: var(--bg); }
+    .edit-exp  { width: 100%; padding: 3px 6px; border: 1px solid var(--border); border-radius: 5px; font: .78rem/1.4 inherit; background: var(--bg); resize: vertical; min-height: 42px; }
+    .edit-pos:focus, .edit-exp:focus { outline: none; border-color: var(--primary); }
+
+    /* ── Output JSON ── */
+    .output-json {
+      background: #0f172a; color: #e2e8f0;
+      font: .78rem/1.6 'Consolas','SF Mono','Fira Code',monospace;
+      padding: 1.125rem; border-radius: 7px; overflow: auto; max-height: 440px;
+      margin: .875rem 0; white-space: pre;
+    }
+    .tbl-scroll { overflow-x: auto; }
+
+    /* ── Issues list ── */
+    .issues-list { list-style: none; padding: 0; }
+    .issues-list li { padding: .2rem 0; }
+    .issues-list li::before { content: '⚠️ '; }
+
+    /* ── Footer ── */
+    .site-footer { text-align: center; padding: 1.75rem 1rem; font-size: .78rem; color: var(--muted); }
+    .site-footer a { color: var(--primary); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <span style="font-size:1.4rem">🔧</span>
+      <div style="flex:1">
+        <h1>Admin Review Tool &nbsp;<span class="admin-badge">ADMIN ONLY</span></h1>
+        <p>Load a base config and a party submission to merge and download an updated config.</p>
+      </div>
+      <a href="../index.html" class="back-link">← All Elections</a>
+    </div>
+  </header>
+
+  <main class="container" style="padding-bottom:2rem">
+
+    <!-- § 1: Load files -->
+    <div class="page-card">
+      <div class="card-title"><span class="step-num">1</span> Load Files</div>
+
+      <div class="load-grid">
+
+        <!-- Base config -->
+        <div class="load-panel">
+          <h3>📄 Base Config (config.json)</h3>
+          <p style="font-size:.78rem;color:var(--muted);margin-bottom:.625rem">The existing election config file.</p>
+          <label class="file-pick-label">
+            <input type="file" accept=".json,application/json" onchange="onBaseFile(event)">
+            📂 Choose base config.json
+          </label>
+          <div class="status-line" id="base-status">No file loaded</div>
+          <div style="margin-top:.75rem">
+            <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem">Or enter URL path:</div>
+            <div style="display:flex;gap:.375rem">
+              <input type="text" id="base-url" placeholder="elections/tn/2026-state/config.json"
+                     style="flex:1;padding:.375rem .625rem;border:1.5px solid var(--border);border-radius:6px;font-size:.8rem">
+              <button class="btn btn-secondary" style="padding:.375rem .75rem;font-size:.8rem" onclick="loadBaseURL()">Fetch</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submission JSON -->
+        <div class="load-panel">
+          <h3>📨 Party Submission (.json)</h3>
+          <p style="font-size:.78rem;color:var(--muted);margin-bottom:.625rem">JSON downloaded from the party submission form.</p>
+          <label class="file-pick-label">
+            <input type="file" accept=".json,application/json" onchange="onSubmissionFile(event)">
+            📂 Choose submission .json
+          </label>
+          <div class="status-line" id="sub-status">No file loaded</div>
+          <div style="margin-top:.75rem">
+            <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem">Or paste JSON:</div>
+            <textarea class="paste-area" id="submission-paste" placeholder='Paste {"_meta":…} JSON here…'
+                      oninput="onPasteInput()"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:1rem">
+        <button class="btn btn-primary" id="process-btn" onclick="processReview()" disabled>
+          ▶ Process &amp; Preview
+        </button>
+      </div>
+    </div>
+
+    <!-- § 2: Issues -->
+    <div id="issues-section" class="page-card" hidden>
+      <div class="card-title">⚠️ Validation Issues</div>
+      <div class="err-box">
+        <ul class="issues-list" id="issues-list"></ul>
+      </div>
+    </div>
+
+    <!-- § 3: Preview -->
+    <div id="preview-section" class="page-card" hidden>
+      <div class="card-title"><span class="step-num">2</span> Submission Preview</div>
+      <div id="party-info-wrap"></div>
+
+      <div style="margin:1rem 0 .5rem;font-weight:700;font-size:.9rem">Policy Positions</div>
+      <p style="font-size:.8rem;color:var(--muted);margin-bottom:.75rem">
+        You can edit positions and explanations inline before merging. Changes here are reflected in the downloaded config.
+      </p>
+      <div class="tbl-scroll">
+        <table class="pos-table" id="pos-table">
+          <thead>
+            <tr>
+              <th style="width:3%">#</th>
+              <th style="width:22%">Thesis</th>
+              <th style="width:12%">Position</th>
+              <th>Explanation (EN)</th>
+              <th id="exp-col2-header" style="display:none"></th>
+            </tr>
+          </thead>
+          <tbody id="pos-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- § 4: Merge -->
+    <div id="merge-section" class="page-card" hidden>
+      <div class="card-title"><span class="step-num">3</span> Merge &amp; Download</div>
+
+      <div class="info-box" style="margin-bottom:1rem">
+        Clicking <strong>Generate Merged Config</strong> builds a new <code>config.json</code> with the party's data and positions merged in.
+        Review the JSON before replacing the live file.
+      </div>
+
+      <div class="btn-row" style="margin-bottom:1rem">
+        <button class="btn btn-ok" onclick="doMerge()">⚙ Generate Merged Config</button>
+      </div>
+
+      <div id="merged-output" hidden>
+        <div class="ok-box" style="margin-bottom:.75rem">
+          ✅ Merged config generated. Download and replace <code id="dest-path"></code> in your project.
+        </div>
+        <pre class="output-json" id="merged-json-pre"></pre>
+        <div class="btn-row">
+          <button class="btn btn-ok" onclick="downloadMerged()">⬇ Download Merged config.json</button>
+          <button class="btn btn-secondary" id="copy-merged-btn" onclick="copyMerged()">Copy to Clipboard</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    India Election Compass Admin Tool &nbsp;·&nbsp;
+    <a href="../party-form.html">Party Submission Form</a> &nbsp;·&nbsp;
+    <a href="../index.html">Hub</a>
+  </footer>
+
+  <script>
+    'use strict';
+
+    var baseConfig = null;
+    var submission = null;
+    var SAFE_RE    = /^elections\/[a-z]{2,}\/[a-z0-9._\/-]+\/config\.json$/;
+
+    /* ── File loaders ── */
+    function onBaseFile(e) {
+      readFile(e.target.files[0], function(text, name) {
+        try {
+          baseConfig = JSON.parse(text);
+          setStatus('base-status', '✅ Loaded: ' + ((baseConfig.title && baseConfig.title.en) || name), 'ok');
+          updateProcessBtn();
+        } catch(err) {
+          setStatus('base-status', '❌ Invalid JSON: ' + err.message, 'err');
+        }
+      });
+    }
+
+    function loadBaseURL() {
+      var path = document.getElementById('base-url').value.trim();
+      if (!path) return;
+      if (!SAFE_RE.test(path)) { setStatus('base-status', '❌ Invalid path', 'err'); return; }
+      fetch('../' + path)
+        .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+        .then(function(text) {
+          try {
+            baseConfig = JSON.parse(text);
+            setStatus('base-status', '✅ Fetched: ' + ((baseConfig.title && baseConfig.title.en) || path), 'ok');
+            updateProcessBtn();
+          } catch(err) { setStatus('base-status', '❌ Invalid JSON: ' + err.message, 'err'); }
+        })
+        .catch(function(e) { setStatus('base-status', '❌ Fetch error: ' + e.message, 'err'); });
+    }
+
+    function onSubmissionFile(e) {
+      readFile(e.target.files[0], function(text) { parseSubmission(text); });
+    }
+
+    function onPasteInput() {
+      var text = document.getElementById('submission-paste').value.trim();
+      if (text.startsWith('{')) parseSubmission(text);
+    }
+
+    function parseSubmission(text) {
+      try {
+        submission = JSON.parse(text);
+        var alias    = (submission.party && submission.party.alias) || '(unknown)';
+        var election = (submission._meta && submission._meta.election) || '';
+        setStatus('sub-status', '✅ Loaded: ' + alias + (election ? ' for ' + election : ''), 'ok');
+        updateProcessBtn();
+      } catch(err) {
+        setStatus('sub-status', '❌ Invalid JSON: ' + err.message, 'err');
+      }
+    }
+
+    function updateProcessBtn() {
+      document.getElementById('process-btn').disabled = !(baseConfig && submission);
+    }
+
+    /* ── Process & Preview ── */
+    function processReview() {
+      var issues = validateSubmission();
+      renderIssues(issues);
+      renderPreview();
+      show('merge-section');
+    }
+
+    function validateSubmission() {
+      var issues = [];
+      if (!submission.party) { issues.push('Missing "party" object'); return issues; }
+      if (!submission.party.alias) issues.push('Missing party alias');
+      if (!submission.positions || !Array.isArray(submission.positions)) {
+        issues.push('Missing or invalid "positions" array');
+        return issues;
+      }
+      var total = (baseConfig.theses || []).length;
+      if (submission.positions.length < total) {
+        issues.push('Submission has ' + submission.positions.length + ' positions but base config has ' + total + ' theses');
+      }
+      var valid = ['approve', 'neutral', 'reject', 'skip'];
+      submission.positions.forEach(function(p, i) {
+        if (valid.indexOf(p.position) === -1) {
+          issues.push('Thesis ' + (i + 1) + ': invalid position value "' + (p.position || '') + '"');
+        }
+      });
+      return issues;
+    }
+
+    function renderIssues(issues) {
+      if (!issues.length) { hide('issues-section'); return; }
+      var list = document.getElementById('issues-list');
+      list.innerHTML = issues.map(function(i) { return '<li>' + esc(i) + '</li>'; }).join('');
+      show('issues-section');
+    }
+
+    function renderPreview() {
+      var cfg   = baseConfig;
+      var langs = cfg.languages || [{ name: 'English', code: 'en' }];
+      var primary = langs[0].code;
+      var alias   = submission.party.alias;
+
+      /* Party info table */
+      var partyHtml = '<table class="info-table">'
+        + row2('Alias',         '<code>' + esc(alias) + '</code>')
+        + row2('Name (EN)',     esc((submission.party.name && submission.party.name.en) || '—'))
+        + row2('Short (EN)',    esc((submission.party.short && submission.party.short.en) || '—'))
+        + row2('Description',  esc((submission.party.description && submission.party.description.en) || '—'))
+        + row2('Election',     esc((submission._meta && submission._meta.election) || '—'))
+        + row2('Submitted',    esc((submission._meta && submission._meta.submittedAt) || '—'))
+        + row2('Contact',      esc(((submission._meta && submission._meta.contactName) || '') + ' ' + ((submission._meta && submission._meta.contactEmail) || '')))
+        + '</table>';
+      document.getElementById('party-info-wrap').innerHTML = partyHtml;
+
+      /* Show second-language explanation column if > 1 lang */
+      var has2 = langs.length > 1;
+      var col2Header = document.getElementById('exp-col2-header');
+      if (has2) {
+        col2Header.style.display = '';
+        col2Header.textContent   = 'Explanation (' + langs[1].name + ')';
+      }
+
+      /* Build position map by index */
+      var posMap = {};
+      (submission.positions || []).forEach(function(p) { posMap[p.thesisIndex] = p; });
+
+      /* Positions tbody — editable */
+      var tbody = document.getElementById('pos-tbody');
+      var html  = '';
+      (cfg.theses || []).forEach(function(thesis, i) {
+        var titleText = (thesis.title && (thesis.title.en || thesis.title[primary])) || ('Thesis ' + (i + 1));
+        var p     = posMap[i] || { position: 'missing', explanation: {} };
+        var pos   = p.position || 'missing';
+        var expEn = (p.explanation && (p.explanation.en || p.explanation[primary])) || '';
+        var exp2  = has2 && p.explanation ? (p.explanation[langs[1].code] || '') : '';
+
+        var badge = badgeHtml(pos);
+        var opts  = ['approve','neutral','reject','skip'].map(function(v) {
+          return '<option value="' + v + '"' + (v === pos ? ' selected' : '') + '>' + v.charAt(0).toUpperCase() + v.slice(1) + '</option>';
+        }).join('');
+
+        html += '<tr id="row-' + i + '">'
+              + '<td style="text-align:center;color:var(--muted)"><strong>' + (i + 1) + '</strong></td>'
+              + '<td><strong>' + esc(titleText) + '</strong></td>'
+              + '<td><select class="edit-pos" id="edit-pos-' + i + '" onchange="onEditPos(' + i + ')">' + opts + '</select></td>'
+              + '<td><textarea class="edit-exp" id="edit-exp-' + i + '-en" rows="2">' + esc(expEn) + '</textarea></td>';
+        if (has2) {
+          html += '<td><textarea class="edit-exp" id="edit-exp-' + i + '-' + langs[1].code + '" rows="2">' + esc(exp2) + '</textarea></td>';
+        }
+        html += '</tr>';
+      });
+      tbody.innerHTML = html;
+
+      show('preview-section');
+    }
+
+    function onEditPos(i) {
+      /* Just a UI hook — actual values read at merge time */
+    }
+
+    /* ── Merge ── */
+    function doMerge() {
+      var cfg     = baseConfig;
+      var langs   = cfg.languages || [{ name: 'English', code: 'en' }];
+      var alias   = submission.party.alias;
+      var merged  = JSON.parse(JSON.stringify(cfg)); /* deep clone */
+
+      /* Merge party entry */
+      var partyEntry = JSON.parse(JSON.stringify(submission.party));
+      delete partyEntry._comment;
+      var existIdx = (merged.parties || []).findIndex(function(p) { return p.alias === alias; });
+      if (existIdx >= 0) {
+        merged.parties[existIdx] = partyEntry;
+      } else {
+        if (!merged.parties) merged.parties = [];
+        merged.parties.push(partyEntry);
+      }
+
+      /* Read positions from editable table */
+      var total = (merged.theses || []).length;
+      merged.theses.forEach(function(thesis, i) {
+        var posEl = document.getElementById('edit-pos-' + i);
+        if (!posEl) return;
+        var pos    = posEl.value;
+        var expObj = {};
+        langs.forEach(function(lang) {
+          var expEl = document.getElementById('edit-exp-' + i + '-' + lang.code);
+          if (expEl && expEl.value.trim()) expObj[lang.code] = expEl.value.trim();
+        });
+        if (!thesis.positions) thesis.positions = {};
+        thesis.positions[alias] = { position: pos, explanation: expObj };
+      });
+
+      var jsonStr = JSON.stringify(merged, null, 2);
+      window._mergedJSON     = jsonStr;
+      window._mergedElection = (submission._meta && submission._meta.election) || '';
+
+      document.getElementById('merged-json-pre').textContent = jsonStr;
+      document.getElementById('dest-path').textContent       = window._mergedElection || 'config.json';
+      show('merged-output');
+      document.getElementById('merged-output').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function downloadMerged() {
+      var election = window._mergedElection || '';
+      var parts    = election.split('/');
+      var name     = parts.length >= 2 ? (parts[parts.length - 2] + '-updated-config.json') : 'updated-config.json';
+      var blob = new Blob([window._mergedJSON], { type: 'application/json' });
+      var url  = URL.createObjectURL(blob);
+      var a    = document.createElement('a');
+      a.href = url; a.download = name; a.click();
+      setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+    }
+
+    function copyMerged() {
+      navigator.clipboard.writeText(window._mergedJSON).then(function() {
+        var btn = document.getElementById('copy-merged-btn');
+        btn.textContent = '✓ Copied!';
+        setTimeout(function() { btn.textContent = 'Copy to Clipboard'; }, 2200);
+      }).catch(function() { alert('Copy failed. Please select and copy manually.'); });
+    }
+
+    /* ── Utilities ── */
+    function readFile(file, cb) {
+      if (!file) return;
+      var r = new FileReader();
+      r.onload = function(e) { cb(e.target.result, file.name); };
+      r.readAsText(file);
+    }
+
+    function badgeHtml(pos) {
+      var map = {
+        approve: '<span class="badge approve">✅ Approve</span>',
+        neutral: '<span class="badge neutral">🟡 Neutral</span>',
+        reject:  '<span class="badge reject">❌ Reject</span>',
+        skip:    '<span class="badge skip">⚪ Skip</span>',
+        missing: '<span class="badge missing">⚠️ Missing</span>'
+      };
+      return map[pos] || '<span class="badge">' + esc(pos) + '</span>';
+    }
+
+    function row2(label, value) {
+      return '<tr><th>' + label + '</th><td>' + value + '</td></tr>';
+    }
+
+    function esc(s) {
+      return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function show(id) { document.getElementById(id).hidden = false; }
+    function hide(id) { document.getElementById(id).hidden = true;  }
+
+    function setStatus(id, msg, cls) {
+      var el = document.getElementById(id);
+      el.textContent = msg;
+      el.className   = 'status-line' + (cls ? ' ' + cls : '');
+    }
+  </script>
+</body>
+</html>
