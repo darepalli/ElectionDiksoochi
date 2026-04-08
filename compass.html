@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="India Election Compass" />
   <title>Election Compass</title>
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
   <!--
     OpenElectionCompass CSS & JS (CDN)
@@ -75,7 +75,7 @@
 
   <!-- Back navigation bar -->
   <div class="back-bar">
-    <a href="../index.html">← All Elections</a>
+    <a href="index.html">← All Elections</a>
     <span class="sep">|</span>
     <span class="current-label" id="back-label">Election Compass</span>
   </div>
@@ -100,17 +100,23 @@
 
       var params     = new URLSearchParams(window.location.search);
       var configPath = params.get('config') || '';
+      var oecMount   = document.getElementById('open-election-compass');
 
-      var oecMount = document.getElementById('open-election-compass');
+      function esc(s) {
+        return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      }
+
+      function showError(heading, detail) {
+        oecMount.innerHTML =
+          '<div class="error-page">'
+          + '<h1>' + esc(heading) + '</h1>'
+          + '<p>' + esc(detail) + '</p>'
+          + '<a href="index.html">← Back to India Election Compass</a>'
+          + '</div>';
+      }
 
       if (!configPath || !SAFE_CONFIG_RE.test(configPath)) {
-        // Show a friendly error — do NOT expose the raw param in an error msg
-        oecMount.innerHTML =
-          '<div class="error-page">' +
-          '  <h1>No Election Selected</h1>' +
-          '  <p>Please choose an election from the hub to launch the compass.</p>' +
-          '  <a href="../index.html">← Back to India Election Compass</a>' +
-          '</div>';
+        showError('No Election Selected', 'Please choose an election from the hub to launch the compass.');
         return;
       }
 
@@ -124,16 +130,34 @@
       if (backLabel) backLabel.textContent = label;
       document.title = label + ' | India Election Compass';
 
-      // Mount the OEC component with load-url
-      oecMount.innerHTML =
-        '<open-election-compass load-url="' + configPath + '" />';
+      // OEC v1 requires config embedded inline as <script type="application/json">
+      // (load-url is not supported in v1.x)
+      // Wait for both: config JSON fetched AND OEC custom element registered.
+      Promise.all([
+        fetch(configPath).then(function (r) {
+          if (!r.ok) throw new Error('Config not found (HTTP ' + r.status + ')');
+          return r.json();
+        }),
+        customElements.whenDefined('open-election-compass')
+      ]).then(function (results) {
+        var data = results[0];
+        var el   = document.createElement('open-election-compass');
+        var s    = document.createElement('script');
+        s.type        = 'application/json';
+        s.textContent = JSON.stringify(data);
+        el.appendChild(s);
+        oecMount.innerHTML = '';
+        oecMount.appendChild(el);
+      }).catch(function (err) {
+        showError('Failed to Load Election', err.message);
+      });
     }());
   </script>
 
-  <!-- OEC library (deferred — runs after DOM is parsed) -->
+  <!-- OEC library — async so it loads in parallel with the config fetch -->
   <script
     src="https://unpkg.com/@open-election-compass/client@1.2.2/dist/lib/open-election-compass.umd.min.js"
-    defer
+    async
   ></script>
 
 </body>
