@@ -42,7 +42,7 @@
     }
 
     /* Push OEC content below the back-bar */
-    #oec-wrapper { padding-top: 36px; }
+    #open-election-compass { padding-top: 36px; }
 
     /* Error state */
     .error-page {
@@ -80,8 +80,8 @@
       2. OEC library (defer) runs after HTML is fully parsed → reads load-url,
          fetches the JSON and mounts the component.
   -->
-  <div id="oec-wrapper">
-    <!-- OEC reads load-url AFTER defer script runs; attribute is set by inline script below -->
+  <div id="open-election-compass">
+    <!-- Vue mounts here (el:"#open-election-compass"); OEC reads load-url from the component prop -->
     <open-election-compass id="oec-el"></open-election-compass>
   </div>
 
@@ -92,7 +92,7 @@
       var params     = new URLSearchParams(window.location.search);
       var configPath = params.get('config') || '';
       var oecEl      = document.getElementById('oec-el');
-      var wrapper    = document.getElementById('oec-wrapper');
+      var wrapper    = document.getElementById('open-election-compass');
 
       if (!configPath || !SAFE_CONFIG_RE.test(configPath)) {
         wrapper.innerHTML =
