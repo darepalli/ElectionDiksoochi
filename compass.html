@@ -59,6 +59,24 @@
     .error-page h1 { font-size: 1.5rem; color: #c0392b; }
     .error-page p  { max-width: 480px; color: #6b7280; }
     .error-page a  { color: #c0392b; font-weight: 600; }
+
+    /* Source citation links injected below party explanation bubbles */
+    .oec-source-link {
+      display: inline-block;
+      margin-top: 0.6rem;
+      padding: 0.2rem 0.55rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #2563eb;
+      border: 1px solid #bfdbfe;
+      border-radius: 4px;
+      text-decoration: none;
+      background: #eff6ff;
+    }
+    .oec-source-link:hover {
+      background: #dbeafe;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -120,6 +138,76 @@
 
   <!-- OEC library: defer ensures it runs AFTER the inline script above has set load-url -->
   <script src="assets/open-election-compass.umd.min.js" defer></script>
+
+  <script>
+    /*
+     * Source-link injector
+     * Fetches the same config.json that OEC loaded, builds a lookup table of
+     * explanation-text-prefix → source URL, then watches for OEC's .chat-bubble
+     * elements to appear (they render in the compare section after all answers
+     * are given). When one appears its .chat-bubble__bubble text is matched and
+     * a clickable "Source →" badge is appended.
+     *
+     * To add sources: set the "source" field on each position in config.json.
+     * Leave it as "" to show no link for that position.
+     */
+    (function () {
+      var SAFE_CONFIG_RE = /^\/|^elections\/[a-z]/;
+      var configPath = '';
+      var oecEl = document.getElementById('oec-el');
+      if (oecEl) configPath = oecEl.getAttribute('load-url') || '';
+      if (!configPath) return;
+
+      // Build prefix → source map for every language in the config
+      var srcMap = {}; // key: first 60 chars of explanation text, value: URL
+
+      fetch(configPath)
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (cfg) {
+          var parties = cfg.parties || [];
+          var theses  = cfg.theses  || [];
+          var langs   = (cfg.languages || []).map(function (l) { return l.code; });
+
+          theses.forEach(function (thesis) {
+            parties.forEach(function (party) {
+              var pos = thesis.positions && thesis.positions[party.alias];
+              if (!pos || !pos.source) return;
+              langs.forEach(function (code) {
+                var text = pos.explanation && pos.explanation[code];
+                if (text) srcMap[text.substring(0, 60)] = pos.source;
+              });
+            });
+          });
+
+          // Watch for OEC's .chat-bubble elements (compare section)
+          var container = document.getElementById('open-election-compass');
+          if (!container || !Object.keys(srcMap).length) return;
+
+          function injectLinks () {
+            container.querySelectorAll('.chat-bubble:not([data-src-done])').forEach(function (bubble) {
+              bubble.setAttribute('data-src-done', '1');
+              var bubbleEl = bubble.querySelector('.chat-bubble__bubble');
+              if (!bubbleEl) return;
+              var key = bubbleEl.textContent.trim().substring(0, 60);
+              var src = srcMap[key];
+              if (!src) return;
+              var a = document.createElement('a');
+              a.href = src;
+              a.target = '_blank';
+              a.rel = 'noopener noreferrer';
+              a.className = 'oec-source-link';
+              a.textContent = 'Source →';
+              bubbleEl.appendChild(a);
+            });
+          }
+
+          var observer = new MutationObserver(injectLinks);
+          observer.observe(container, { childList: true, subtree: true });
+          injectLinks(); // catch anything already rendered
+        })
+        .catch(function () { /* silently ignore – sources are optional */ });
+    }());
+  </script>
 
 </body>
 </html>
