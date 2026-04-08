@@ -7,11 +7,6 @@
   <title>Election Compass</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
-  <!--
-    OpenElectionCompass JS — served locally (CSS is bundled inside the JS)
-    Source: @open-election-compass/client@1.0.0-beta.13
-  -->
-
   <style>
     /* Thin wrapper styles – OEC renders everything else */
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -75,82 +70,56 @@
     <span class="current-label" id="back-label">Election Compass</span>
   </div>
 
-  <!-- OEC mount point – load-url set dynamically by script below -->
+  <!--
+    OEC mount point.
+    Usage:  compass.html?config=elections/tn/2026-state/config.json
+
+    Sequence (per OEC docs):
+      1. Inline script (below) runs synchronously → validates ?config= param,
+         sets the load-url attribute on <open-election-compass> and updates page title.
+      2. OEC library (defer) runs after HTML is fully parsed → reads load-url,
+         fetches the JSON and mounts the component.
+  -->
   <div id="oec-wrapper">
-    <div id="open-election-compass">
-      <!-- Placeholder replaced by script; OEC mounts here -->
-    </div>
+    <!-- OEC reads load-url AFTER defer script runs; attribute is set by inline script below -->
+    <open-election-compass id="oec-el"></open-election-compass>
   </div>
 
-  <!--
-    Dynamic config loader
-    ──────────────────────────────────────────────────────────────────
-    Usage:  compass.html?config=elections/tn/2026-state/config.json
-    Security: only relative paths inside elections/ are accepted.
-    ──────────────────────────────────────────────────────────────────
-  -->
   <script>
     (function () {
       var SAFE_CONFIG_RE = /^elections\/[a-z]{2,}\/[a-z0-9._/-]+\/config\.json$/;
 
       var params     = new URLSearchParams(window.location.search);
       var configPath = params.get('config') || '';
-      var oecMount   = document.getElementById('open-election-compass');
-
-      function esc(s) {
-        return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-      }
-
-      function showError(heading, detail) {
-        oecMount.innerHTML =
-          '<div class="error-page">'
-          + '<h1>' + esc(heading) + '</h1>'
-          + '<p>' + esc(detail) + '</p>'
-          + '<a href="index.html">← Back to India Election Compass</a>'
-          + '</div>';
-      }
+      var oecEl      = document.getElementById('oec-el');
+      var wrapper    = document.getElementById('oec-wrapper');
 
       if (!configPath || !SAFE_CONFIG_RE.test(configPath)) {
-        showError('No Election Selected', 'Please choose an election from the hub to launch the compass.');
+        wrapper.innerHTML =
+          '<div class="error-page">'
+          + '<h1>No Election Selected</h1>'
+          + '<p>Please choose an election from the hub to launch the compass.</p>'
+          + '<a href="index.html">\u2190 Back to India Election Compass</a>'
+          + '</div>';
         return;
       }
 
-      // Build a title label from the path for the back-bar
-      // e.g. "elections/tn/2026-state/config.json" → "TN · 2026 State"
+      // Build back-bar label: "elections/tn/2026-state/config.json" → "TN · 2026 State"
       var parts = configPath.split('/');
       var state = (parts[1] || '').toUpperCase();
       var level = (parts[2] || '').replace(/-/g, ' ').replace(/\b\w/g, function(c){ return c.toUpperCase(); });
-      var label = state + ' · ' + level;
-      var backLabel = document.getElementById('back-label');
-      if (backLabel) backLabel.textContent = label;
+      var label = state + ' \u00b7 ' + level;
+      document.getElementById('back-label').textContent = label;
       document.title = label + ' | India Election Compass';
 
-      // OEC v1 requires config embedded inline as <script type="application/json">
-      // (load-url is not supported in v1.x)
-      // Wait for both: config JSON fetched AND OEC custom element registered.
-      Promise.all([
-        fetch(configPath).then(function (r) {
-          if (!r.ok) throw new Error('Config not found (HTTP ' + r.status + ')');
-          return r.json();
-        }),
-        customElements.whenDefined('open-election-compass')
-      ]).then(function (results) {
-        var data = results[0];
-        var el   = document.createElement('open-election-compass');
-        var s    = document.createElement('script');
-        s.type        = 'application/json';
-        s.textContent = JSON.stringify(data);
-        el.appendChild(s);
-        oecMount.innerHTML = '';
-        oecMount.appendChild(el);
-      }).catch(function (err) {
-        showError('Failed to Load Election', err.message);
-      });
+      // Set load-url BEFORE the deferred OEC script executes.
+      // The deferred script reads this attribute when it initialises.
+      oecEl.setAttribute('load-url', configPath);
     }());
   </script>
 
-  <!-- OEC library — local copy, async so it loads in parallel with the config fetch -->
-  <script src="assets/open-election-compass.umd.min.js" async></script>
+  <!-- OEC library: defer ensures it runs AFTER the inline script above has set load-url -->
+  <script src="assets/open-election-compass.umd.min.js" defer></script>
 
 </body>
 </html>
