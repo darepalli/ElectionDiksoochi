@@ -55,6 +55,26 @@
       white-space: nowrap;
     }
 
+    .back-bar .spacer {
+      flex: 1;
+    }
+
+    .feedback-trigger {
+      border: 1px solid rgba(255,255,255,.45);
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      border-radius: 7px;
+      padding: 0.35rem 0.6rem;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      min-height: 34px;
+    }
+
+    .feedback-trigger:hover {
+      background: rgba(255,255,255,.2);
+    }
+
     /* Push OEC content below the back-bar */
     #open-election-compass {
       padding-top: calc(var(--back-bar-h, 36px) + 4px);
@@ -144,6 +164,97 @@
       white-space: pre-wrap;
     }
 
+    .feedback-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 13000;
+      padding: 1rem;
+    }
+
+    .feedback-modal.is-open {
+      display: flex;
+    }
+
+    .feedback-card {
+      width: min(560px, 96vw);
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 18px 60px rgba(0,0,0,.25);
+      padding: 1rem;
+    }
+
+    .feedback-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: .3rem;
+    }
+
+    .feedback-note {
+      font-size: .79rem;
+      color: #4b5563;
+      margin-bottom: .6rem;
+    }
+
+    .feedback-field {
+      width: 100%;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: .55rem .65rem;
+      font-size: .85rem;
+      font-family: inherit;
+      margin-bottom: .45rem;
+    }
+
+    .feedback-field--textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .feedback-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .5rem;
+      font-size: .74rem;
+      color: #6b7280;
+      margin-bottom: .75rem;
+    }
+
+    .feedback-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: .5rem;
+    }
+
+    .feedback-btn {
+      border: 1px solid #d1d5db;
+      background: #fff;
+      color: #111827;
+      border-radius: 7px;
+      padding: .45rem .75rem;
+      font-size: .8rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .feedback-btn--primary {
+      border-color: #2563eb;
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .feedback-btn--primary:disabled {
+      background: #93c5fd;
+      border-color: #93c5fd;
+      cursor: not-allowed;
+    }
+
     @media (max-width: 768px) {
       .back-bar {
         gap: 0.45rem;
@@ -162,6 +273,11 @@
       .back-bar .current-label {
         font-size: 0.75rem;
         max-width: 58vw;
+      }
+
+      .feedback-trigger {
+        font-size: .72rem;
+        padding: .3rem .55rem;
       }
 
       .oec-source-inline {
@@ -189,6 +305,10 @@
         gap: 2px;
       }
 
+      .back-bar .spacer {
+        display: none;
+      }
+
       .back-bar a,
       .back-bar .current-label {
         line-height: 1.2;
@@ -203,6 +323,23 @@
         font-size: 0.68rem;
         padding: 0.2rem 0.4rem;
       }
+
+      .feedback-card {
+        padding: .85rem;
+      }
+
+      .feedback-meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .feedback-actions {
+        width: 100%;
+      }
+
+      .feedback-btn {
+        flex: 1;
+      }
     }
   </style>
 </head>
@@ -213,6 +350,30 @@
     <a href="index.html">← All Elections</a>
     <span class="sep">|</span>
     <span class="current-label" id="back-label">Election Compass</span>
+    <span class="spacer"></span>
+    <button type="button" class="feedback-trigger" id="feedback-open">Feedback</button>
+  </div>
+
+  <div class="feedback-modal" id="feedback-modal" aria-hidden="true">
+    <div class="feedback-card" role="dialog" aria-modal="true" aria-labelledby="feedback-title">
+      <div class="feedback-title" id="feedback-title">Send Feedback</div>
+      <p class="feedback-note">Feedback will open as a public GitHub issue in this project. Please avoid personal or sensitive information.</p>
+      <select class="feedback-field" id="feedback-type" aria-label="Feedback type">
+        <option value="General">General</option>
+        <option value="Source Correction">Source Correction</option>
+        <option value="Bug">Bug</option>
+        <option value="Mobile UX">Mobile UX</option>
+      </select>
+      <textarea class="feedback-field feedback-field--textarea" id="feedback-text" maxlength="300" placeholder="Write feedback (max 300 characters)..."></textarea>
+      <div class="feedback-meta">
+        <span>Max 300 chars</span>
+        <span id="feedback-count">0 / 300</span>
+      </div>
+      <div class="feedback-actions">
+        <button type="button" class="feedback-btn" id="feedback-cancel">Cancel</button>
+        <button type="button" class="feedback-btn feedback-btn--primary" id="feedback-submit" disabled>Post to Repo</button>
+      </div>
+    </div>
   </div>
 
   <!--
@@ -282,6 +443,86 @@
 
   <!-- OEC library: defer ensures it runs AFTER the inline script above has set load-url -->
   <script src="assets/open-election-compass.umd.min.js" defer></script>
+
+  <script>
+    (function () {
+      var owner = 'darepalli';
+      var repo = 'ElectionDiksoochi';
+      var params = new URLSearchParams(window.location.search);
+      var configPath = params.get('config') || '';
+      var pageContext = configPath || window.location.pathname;
+
+      var modal = document.getElementById('feedback-modal');
+      var openBtn = document.getElementById('feedback-open');
+      var cancelBtn = document.getElementById('feedback-cancel');
+      var submitBtn = document.getElementById('feedback-submit');
+      var textEl = document.getElementById('feedback-text');
+      var typeEl = document.getElementById('feedback-type');
+      var countEl = document.getElementById('feedback-count');
+
+      if (!modal || !openBtn || !cancelBtn || !submitBtn || !textEl || !typeEl || !countEl) return;
+
+      function openModal () {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        setTimeout(function () { textEl.focus(); }, 10);
+      }
+
+      function closeModal () {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+
+      function refreshCount () {
+        var len = textEl.value.length;
+        countEl.textContent = len + ' / 300';
+        submitBtn.disabled = len === 0;
+      }
+
+      function buildIssueUrl () {
+        var kind = typeEl.value || 'General';
+        var feedback = textEl.value.trim();
+        var title = '[Feedback][' + kind + '] ' + pageContext;
+        var body = [
+          '### Feedback',
+          feedback,
+          '',
+          '### Context',
+          '- Page: ' + pageContext,
+          '- URL: ' + window.location.href,
+          '- User Agent: ' + navigator.userAgent,
+          '- Timestamp: ' + new Date().toISOString(),
+          '',
+          '_Submitted via in-app feedback form._'
+        ].join('\n');
+
+        var issueUrl = 'https://github.com/' + owner + '/' + repo + '/issues/new';
+        issueUrl += '?labels=' + encodeURIComponent('feedback,' + kind.toLowerCase().replace(/\s+/g, '-'));
+        issueUrl += '&title=' + encodeURIComponent(title);
+        issueUrl += '&body=' + encodeURIComponent(body);
+        return issueUrl;
+      }
+
+      openBtn.addEventListener('click', openModal);
+      cancelBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+      });
+
+      textEl.addEventListener('input', refreshCount);
+      submitBtn.addEventListener('click', function () {
+        var text = textEl.value.trim();
+        if (!text) return;
+        window.open(buildIssueUrl(), '_blank', 'noopener');
+        closeModal();
+      });
+
+      refreshCount();
+    }());
+  </script>
 
   <script>
     /*
