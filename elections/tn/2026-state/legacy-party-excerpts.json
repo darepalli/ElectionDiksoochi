@@ -1,0 +1,364 @@
+﻿{
+    "parties":  [
+                    "DMK",
+                    "INC",
+                    "AIADMK",
+                    "BJP"
+                ],
+    "generatedFrom":  "d0d47f6",
+    "byTitle":  {
+                    "Public Health Spending":  {
+                                                   "DMK":  {
+                                                               "en":  "DMK has prioritized public health expansion through state schemes, government hospital upgrades and doorstep healthcare initiatives.",
+                                                               "source":  "",
+                                                               "ta":  "திமுக அரசு மருத்துவமனை மேம்பாடு, மாநில சுகாதாரத் திட்டங்கள் மற்றும் மக்களிடம் சென்று சேரும் சிகிச்சை முயற்சிகள் மூலம் பொது சுகாதாரத்தை விரிவுபடுத்தி வருகிறது."
+                                                           },
+                                                   "BJP":  {
+                                                               "en":  "BJP supports healthcare expansion but often emphasizes mixed public-private delivery and central scheme alignment over purely state-led spending increases.",
+                                                               "source":  "",
+                                                               "ta":  "பாஜக சுகாதார விரிவாக்கத்தை ஆதரித்தாலும், முழுக்க மாநிலச் செலவு உயர்வை விட பொது-தனியார் கலப்பு சேவை மற்றும் மத்திய திட்ட ஒத்திசைவை அதிகம் வலியுறுத்துகிறது."
+                                                           },
+                                                   "INC":  {
+                                                               "en":  "Congress generally supports stronger public healthcare systems, preventive care and higher social-sector expenditure.",
+                                                               "source":  "",
+                                                               "ta":  "காங்கிரஸ் பொதுவாக வலுவான பொது சுகாதார அமைப்பு, தடுப்பு சிகிச்சை மற்றும் அதிக சமூகத் துறை செலவினத்தை ஆதரிக்கிறது."
+                                                           },
+                                                   "AIADMK":  {
+                                                                  "en":  "AIADMK has historically supported expanding state health infrastructure, insurance coverage and district-level service delivery.",
+                                                                  "source":  "",
+                                                                  "ta":  "அதிமுக மாநில சுகாதார கட்டமைப்பு, காப்பீட்டு பாதுகாப்பு மற்றும் மாவட்ட மட்ட சேவை வலையை விரிவுபடுத்துவதைக் காலத்துக்கு காலம் ஆதரித்துள்ளது."
+                                                              }
+                                               },
+                    "Two-Language Policy":  {
+                                                "DMK":  {
+                                                            "en":  "DMK has historically led anti-Hindi agitations since 1937. The party strongly opposes mandatory Hindi and implements the two-language formula in state schools.",
+                                                            "source":  "",
+                                                            "ta":  "திமுக 1937 முதலே இந்தி எதிர்ப்பு போராட்டத்தை வழிநடத்தியது. கட்சி கட்டாய இந்தியை கடுமையாக எதிர்க்கிறது."
+                                                        },
+                                                "BJP":  {
+                                                            "en":  "BJP\u0027s National Education Policy promotes a three-language formula including Hindi, which Tamil Nadu\u0027s ruling parties vigorously oppose.",
+                                                            "source":  "",
+                                                            "ta":  "பாஜகவின் தேசிய கல்விக் கொள்கை இந்தி உட்பட மூன்று மொழி சூத்திரத்தை ஊக்குவிக்கிறது, இதை தமிழ்நாட்டு கட்சிகள் கடுமையாக எதிர்க்கின்றன."
+                                                        },
+                                                "INC":  {
+                                                            "en":  "Congress nationally supports the three-language formula but its Tamil Nadu unit aligns with the two-language position.",
+                                                            "source":  "",
+                                                            "ta":  "காங்கிரஸ் தேசிய அளவில் மூன்று மொழி சூத்திரத்தை ஆதரிக்கிறது ஆனால் தமிழ்நாடு அலகு இரு மொழி நிலைப்பாட்டுடன் இணைகிறது."
+                                                        },
+                                                "AIADMK":  {
+                                                               "en":  "AIADMK upheld the two-language formula during its tenure and opposed NEP\u0027s Hindi mandate.",
+                                                               "source":  "",
+                                                               "ta":  "அதிமுக ஆட்சியில் இரு மொழி கொள்கையை தக்கவைத்தது மற்றும் NEP-இன் இந்தி கட்டாயத்தை எதிர்த்தது."
+                                                           }
+                                            },
+                    "Abolish NEET":  {
+                                         "DMK":  {
+                                                     "en":  "DMK passed a bill in the Tamil Nadu Assembly to exempt the state from NEET and has consistently led the movement to scrap it, citing discrimination against rural and government school students.",
+                                                     "source":  "",
+                                                     "ta":  "திமுக சட்டசபையில் NEET விலக்கு மசோதாவை நிறைவேற்றியது. கிராமப்புற மற்றும் அரசு பள்ளி மாணவர்களுக்கு ஏற்படும் பாகுபாட்டை சுட்டிக்காட்டி NEET ரத்துக்கு தொடர்ந்து வழிநடத்துகிறது."
+                                                 },
+                                         "BJP":  {
+                                                     "en":  "BJP supports NEET as a uniform national standard that ensures quality medical education and prevents marks inflation in state boards.",
+                                                     "source":  "",
+                                                     "ta":  "பாஜக NEET-ஐ தேசிய தரமான மருத்துவக் கல்வியை உறுதி செய்யும் சீரான தேசிய தரத்திட்டமாக ஆதரிக்கிறது."
+                                                 },
+                                         "INC":  {
+                                                     "en":  "Congress\u0027s national stance has been mixed. While TN Congress units support abolition, the national party has not formally committed to scrapping NEET.",
+                                                     "source":  "",
+                                                     "ta":  "காங்கிரஸின் தேசிய நிலைப்பாடு கலவையானது. தமிழ்நாடு காங்கிரஸ் ரத்தை ஆதரிக்கிறது, ஆனால் தேசிய கட்சி முறைப்படி உறுதியளிக்கவில்லை."
+                                                 },
+                                         "AIADMK":  {
+                                                        "en":  "AIADMK eventually aligned with the anti-NEET position after initial ambiguity, supporting the state\u0027s legislative efforts.",
+                                                        "source":  "",
+                                                        "ta":  "ஆரம்பத்தில் அலட்சியமாக இருந்த அதிமுக பின்னர் NEET எதிர்ப்பு நிலைப்பாட்டுடன் இணைந்தது."
+                                                    }
+                                     },
+                    "Tamil as School Medium":  {
+                                                   "DMK":  {
+                                                               "en":  "Tamil language promotion is a core identity for DMK. It strongly supports Tamil as the medium of instruction while also emphasising English competency.",
+                                                               "source":  "",
+                                                               "ta":  "தமிழ் மொழி மேம்பாடு திமுகவின் அடையாளத்தின் மூல கல்லாகும். கட்சி தமிழை போதனா ஊடகமாக வலுவாக ஆதரிக்கிறது மற்றும் ஆங்கில திறனையும் வலியுறுத்துகிறது."
+                                                           },
+                                                   "BJP":  {
+                                                               "en":  "BJP supports multilingualism and mother tongue instruction but also promotes Hindi. It does not specifically oppose Tamil-medium schooling.",
+                                                               "source":  "",
+                                                               "ta":  "பாஜக பல மொழிவாதம் மற்றும் தாய்மொழி கற்பித்தலை ஆதரிக்கிறது ஆனால் இந்தியையும் ஊக்குவிக்கிறது."
+                                                           },
+                                                   "INC":  {
+                                                               "en":  "Congress in Tamil Nadu supports Tamil-medium schooling and has backed the two-language formula.",
+                                                               "source":  "",
+                                                               "ta":  "தமிழ்நாட்டில் காங்கிரஸ் தமிழ் வழிக் கல்வியை ஆதரிக்கிறது மற்றும் இரு மொழி சூத்திரத்தை ஆதரித்துள்ளது."
+                                                           },
+                                                   "AIADMK":  {
+                                                                  "en":  "AIADMK strongly promotes Tamil as school medium and has kept English as a second language in the state curriculum.",
+                                                                  "source":  "",
+                                                                  "ta":  "அதிமுக தமிழை பள்ளி வழிமுறையாக வலுவாக ஊக்குவிக்கிறது மற்றும் மாநில பாடத்திட்டத்தில் ஆங்கிலத்தை இரண்டாம் மொழியாக வைத்துள்ளது."
+                                                              }
+                                               },
+                    "Women\u0027s Safety Laws":  {
+                                                     "DMK":  {
+                                                                 "en":  "DMK has set up fast-track courts for crimes against women and launched the Makkaludan Mudhalvar scheme for public safety reporting.",
+                                                                 "source":  "",
+                                                                 "ta":  "திமுக பெண்களுக்கு எதிரான குற்றங்களுக்கு விரைவு நடுவர் மன்றங்களை அமைத்து பொது பாதுகாப்பு புகாரளிப்புக்கான திட்டங்களை அறிமுகப்படுத்தியுள்ளது."
+                                                             },
+                                                     "BJP":  {
+                                                                 "en":  "BJP supports stronger laws for women\u0027s safety, including its central legislative changes post-Nirbhaya case.",
+                                                                 "source":  "",
+                                                                 "ta":  "பாஜக பெண்கள் பாதுகாப்புக்கான வலுவான சட்டங்களை ஆதரிக்கிறது."
+                                                             },
+                                                     "INC":  {
+                                                                 "en":  "Congress strongly supports women\u0027s safety reforms and helped pass the Nirbhaya Act in 2013.",
+                                                                 "source":  "",
+                                                                 "ta":  "காங்கிரஸ் பெண்கள் பாதுகாப்பு சீர்திருத்தங்களை வலுவாக ஆதரிக்கிறது."
+                                                             },
+                                                     "AIADMK":  {
+                                                                    "en":  "AIADMK supports stronger women\u0027s safety laws and during its tenure expanded the availability of police help for women.",
+                                                                    "source":  "",
+                                                                    "ta":  "அதிமுக வலுவான பெண்கள் பாதுகாப்பு சட்டங்களை ஆதரிக்கிறது மற்றும் ஆட்சியில் பெண்களுக்கு காவல் உதவியை விரிவாக்கியது."
+                                                                }
+                                                 },
+                    "Farmer MSP Guarantee":  {
+                                                 "DMK":  {
+                                                             "en":  "DMK supports legal MSP guarantees and has raised the issue in Parliament and in its manifesto.",
+                                                             "source":  "",
+                                                             "ta":  "திமுக சட்டப்பூர்வ MSP உத்தரவாதங்களை ஆதரிக்கிறது மற்றும் நாடாளுமன்றத்திலும் தேர்தல் அறிக்கையிலும் விஷயத்தை எழுப்பியுள்ளது."
+                                                         },
+                                                 "BJP":  {
+                                                             "en":  "BJP supports MSP in principle but has resisted making it a legal guarantee, preferring market-linked pricing reforms.",
+                                                             "source":  "",
+                                                             "ta":  "பாஜக கொள்கையில் MSP-ஐ ஆதரிக்கிறது ஆனால் சட்டப்பூர்வ உத்தரவாதமாக மாற்றுவதை எதிர்க்கிறது, சந்தை-இணைப்பு விலை சீர்திருத்தங்களை விரும்புகிறது."
+                                                         },
+                                                 "INC":  {
+                                                             "en":  "Congress strongly supports legal MSP guarantee — it was a key promise in the 2024 Lok Sabha campaign.",
+                                                             "source":  "",
+                                                             "ta":  "காங்கிரஸ் சட்டப்பூர்வ MSP உத்தரவாதத்தை வலுவாக ஆதரிக்கிறது - இது 2024 மக்களவை தேர்தல் பிரச்சாரத்தில் முக்கிய வாக்குறுதியாக இருந்தது."
+                                                         },
+                                                 "AIADMK":  {
+                                                                "en":  "AIADMK strongly supports MSP as Tamil Nadu\u0027s farming communities have long demanded price protection for paddy and other crops.",
+                                                                "source":  "",
+                                                                "ta":  "அதிமுக MSP-ஐ வலுவாக ஆதரிக்கிறது, ஏனெனில் தமிழ்நாட்டு விவசாய சமுதாயங்கள் நெல் மற்றும் பிற பயிர்களுக்கு விலை பாதுகாப்பை நீண்டகாலமாக கோருகின்றன."
+                                                            }
+                                             },
+                    "Universal Basic Income":  {
+                                                   "DMK":  {
+                                                               "en":  "DMK\u0027s Kalaignar Magalir Urimai Thogai (₹1000/month to women heads of household) is a step towards UBI. The party favours expanding direct benefit transfers.",
+                                                               "source":  "",
+                                                               "ta":  "திமுகவின் கலைஞர் மகளிர் உரிமை தொகை (குடும்பத் தலைவிகளுக்கு மாதம் ₹1000) UBI நோக்கிய ஒரு படி."
+                                                           },
+                                                   "BJP":  {
+                                                               "en":  "BJP prefers targeted welfare over universal transfers, and its PM-KISAN scheme is means-tested rather than universal.",
+                                                               "source":  "",
+                                                               "ta":  "பாஜக உலகளாவிய பரிமாற்றங்களை விட குறிவழி நலன்களை விரும்புகிறது."
+                                                           },
+                                                   "INC":  {
+                                                               "en":  "Congress\u0027s NYAY scheme (2019 manifesto) promised ₹6000/month to the poorest families — a UBI-adjacent proposal.",
+                                                               "source":  "",
+                                                               "ta":  "காங்கிரஸின் NYAY திட்டம் (2019 தேர்தல் அறிக்கை) மிக வறிய குடும்பங்களுக்கு மாதம் ₹6000 வாக்குறுதியளித்தது - UBIக்கு அருகிலான திட்டம்."
+                                                           },
+                                                   "AIADMK":  {
+                                                                  "en":  "AIADMK supports targeted cash transfer schemes for the poor similar to UBI.",
+                                                                  "source":  "",
+                                                                  "ta":  "அதிமுக UBI போன்ற வறியவர்களுக்கான குறிவழி பண பரிமாற்ற திட்டங்களை ஆதரிக்கிறது."
+                                                              }
+                                               },
+                    "OBC Reservation Increase":  {
+                                                     "DMK":  {
+                                                                 "en":  "DMK secured the inclusion of OBC data in the census and passed a bill increasing Tamil Nadu\u0027s OBC quota to 69% (pending legal challenges). Social justice is central to its identity.",
+                                                                 "source":  "",
+                                                                 "ta":  "திமுக OBC தரவை கணக்கெடுப்பில் சேர்க்க பாதுகாப்பளித்து தமிழ்நாட்டின் OBC ஒதுக்கீட்டை 69% ஆக உயர்த்தும் மசோதாவை நிறைவேற்றியது."
+                                                             },
+                                                     "BJP":  {
+                                                                 "en":  "BJP has not strongly positioned itself on increasing OBC quotas in Tamil Nadu beyond the Supreme Court cap, though it claims to support OBC welfare nationally.",
+                                                                 "source":  "",
+                                                                 "ta":  "பாஜக உச்சநீதிமன்ற வரம்பை தாண்டி OBC ஒதுக்கீட்டை அதிகரிப்பதில் வலுவான நிலைப்பாட்டை எடுக்கவில்லை."
+                                                             },
+                                                     "INC":  {
+                                                                 "en":  "Congress has historically supported OBC reservations. Its 2024 manifesto included a caste census to inform reservation reform.",
+                                                                 "source":  "",
+                                                                 "ta":  "காங்கிரஸ் OBC இடஒதுக்கீட்டை வரலாற்று ரீதியாக ஆதரித்துள்ளது."
+                                                             },
+                                                     "AIADMK":  {
+                                                                    "en":  "AIADMK supports higher OBC quotas in Tamil Nadu, maintaining the state\u0027s unique 69% reservation for BCs and MBCs.",
+                                                                    "source":  "",
+                                                                    "ta":  "அதிமுக Tamil Nadu\u0027s 69% பிசி/MBC ஒதுக்கீட்டை பராமரித்து OBC குவோட்டாவை ஆதரிக்கிறது."
+                                                                }
+                                                 },
+                    "Cauvery Water Rights":  {
+                                                 "DMK":  {
+                                                             "en":  "DMK has been at the forefront of demanding Tamil Nadu\u0027s full Cauvery share and has approached courts multiple times.",
+                                                             "source":  "",
+                                                             "ta":  "திமுக தமிழ்நாட்டின் முழு காவிரி பங்கை கோரும் முன்வரிசையில் உள்ளது."
+                                                         },
+                                                 "BJP":  {
+                                                             "en":  "BJP as the central party tries to mediate between Karnataka and Tamil Nadu rather than taking a unilateral side.",
+                                                             "source":  "",
+                                                             "ta":  "மத்திய கட்சியான பாஜக இரு மாநிலங்களுக்கும் இடையில் மத்தியஸ்தம் செய்ய முயற்சிக்கிறது."
+                                                         },
+                                                 "INC":  {
+                                                             "en":  "Congress supports Tamil Nadu\u0027s Cauvery rights and has criticised the BJP government for not enforcing the court order.",
+                                                             "source":  "",
+                                                             "ta":  "காங்கிரஸ் தமிழ்நாட்டின் காவிரி உரிமைகளை ஆதரிக்கிறது."
+                                                         },
+                                                 "AIADMK":  {
+                                                                "en":  "AIADMK has historically championed Tamil Nadu\u0027s Cauvery rights, particularly during the 2016-2017 crisis.",
+                                                                "source":  "",
+                                                                "ta":  "அதிமுக வரலாற்று ரீதியாக தமிழ்நாட்டின் காவிரி உரிமைகளுக்காக போராடியுள்ளது."
+                                                            }
+                                             },
+                    "Private School Fee Regulation":  {
+                                                          "DMK":  {
+                                                                      "en":  "DMK passed the Tamil Nadu Regulation of Private Schools (Amendment) Act and supports fee regulation.",
+                                                                      "source":  "",
+                                                                      "ta":  "திமுக தமிழ்நாடு தனியார் பள்ளிகள் ஒழுங்குமுறை (திருத்தம்) சட்டத்தை நிறைவேற்றி கட்டண ஒழுங்குமுறையை ஆதரிக்கிறது."
+                                                                  },
+                                                          "BJP":  {
+                                                                      "en":  "BJP generally prefers market-determined fees and opposes excessive government intervention in private schools.",
+                                                                      "source":  "",
+                                                                      "ta":  "பாஜக பொதுவாக சந்தை தீர்மானித்த கட்டணங்களை விரும்புகிறது மற்றும் தனியார் பள்ளிகளில் அதிகப்படியான அரசு தலையீட்டை எதிர்க்கிறது."
+                                                                  },
+                                                          "INC":  {
+                                                                      "en":  "Congress supports fee regulation to protect middle-class families from exorbitant school fees.",
+                                                                      "source":  "",
+                                                                      "ta":  "காங்கிரஸ் மத்தியதர வர்க்க குடும்பங்களை அதிகப்படியான பள்ளி கட்டணங்களிலிருந்து பாதுகாக்க கட்டண ஒழுங்குமுறையை ஆதரிக்கிறது."
+                                                                  },
+                                                          "AIADMK":  {
+                                                                         "en":  "AIADMK has historically had mixed views — it has some regulation but private school lobbies have significant influence.",
+                                                                         "source":  "",
+                                                                         "ta":  "அதிமுக வரலாற்று ரீதியாக கலவையான கருத்துக்களை கொண்டிருந்தது - சில ஒழுங்குமுறைகள் உள்ளன ஆனால் தனியார் பள்ளி லாபிகள் குறிப்பிடத்தக்க தாக்கத்தை கொண்டுள்ளன."
+                                                                     }
+                                                      },
+                    "PDS Expansion":  {
+                                          "DMK":  {
+                                                      "en":  "DMK has expanded PDS to include free rice, dhall, oil and other essentials. Further expansion is part of its social welfare agenda.",
+                                                      "source":  "",
+                                                      "ta":  "திமுக இலவச அரிசி, பயறு, எண்ணெய் மற்றும் பிற அத்தியாவசியங்களை சேர்க்க PDS-ஐ விரிவாக்கியுள்ளது."
+                                                  },
+                                          "BJP":  {
+                                                      "en":  "BJP advocates for reformed, targeted distribution rather than blanket expansion, preferring DBT (Direct Benefit Transfer) over physical commodity distribution.",
+                                                      "source":  "",
+                                                      "ta":  "பாஜக விரிவான விரிவாக்கத்திற்கு பதிலாக சீர்திருத்தப்பட்ட, குறிவழி விநியோகத்தை வலியுறுத்துகிறது."
+                                                  },
+                                          "INC":  {
+                                                      "en":  "Congress supports PDS expansion as part of the right to food, and its UPA government significantly expanded PDS coverage.",
+                                                      "source":  "",
+                                                      "ta":  "காங்கிரஸ் உணவுக்கான உரிமையின் ஒரு பகுதியாக PDS விரிவாக்கத்தை ஆதரிக்கிறது."
+                                                  },
+                                          "AIADMK":  {
+                                                         "en":  "AIADMK expanded PDS during its governance and supports continued inclusion of essential nutrition items.",
+                                                         "source":  "",
+                                                         "ta":  "அதிமுக PDS-ஐ விரிவாக்கி அத்தியாவசிய ஊட்டச்சத்து பொருட்களை சேர்க்க ஆதரிக்கிறது."
+                                                     }
+                                      },
+                    "Industrial Investment Zones":  {
+                                                        "DMK":  {
+                                                                    "en":  "DMK has aggressively courted foreign investment — Tamil Nadu has attracted companies like Apple\u0027s supply chain, Foxconn and large EV investments. It balances development with farmer compensation.",
+                                                                    "source":  "",
+                                                                    "ta":  "திமுக வெளிநாட்டு முதலீட்டை தீவிரமாக ஈர்த்துள்ளது - Apple சப்ளை செயின், Foxconn மற்றும் பெரிய EV முதலீடுகளை தமிழ்நாடு ஈர்த்துள்ளது."
+                                                                },
+                                                        "BJP":  {
+                                                                    "en":  "BJP strongly advocates economic liberalisation, SEZs and ease of doing business.",
+                                                                    "source":  "",
+                                                                    "ta":  "பாஜக பொருளாதார தாராளவாதம், SEZ மற்றும் வணிக சுலபமாக்கத்தை வலுவாக வலியுறுத்துகிறது."
+                                                                },
+                                                        "INC":  {
+                                                                    "en":  "Congress supports industrial investment but insists on fair land acquisition with farmer consent and rehabilitation.",
+                                                                    "source":  "",
+                                                                    "ta":  "காங்கிரஸ் தொழில் முதலீட்டை ஆதரிக்கிறது ஆனால் விவசாயி ஒப்புதல் மற்றும் மறுவாழ்வுடன் நியாயமான நிலம் கையகப்படுத்துதலை வலியுறுத்துகிறது."
+                                                                },
+                                                        "AIADMK":  {
+                                                                       "en":  "AIADMK similarly invited major industrialisation during its tenure, including aerospace and automobile sectors.",
+                                                                       "source":  "",
+                                                                       "ta":  "அதிமுக ஆட்சியில் விண்வெளி மற்றும் ஆட்டோமொபைல் துறைகள் உட்பட பெரும் தொழிலாக்கத்தை அழைத்தது."
+                                                                   }
+                                                    },
+                    "State Autonomy":  {
+                                           "DMK":  {
+                                                       "en":  "State autonomy is the cornerstone of DMK\u0027s Dravidian ideology. The party consistently demands greater fiscal and legislative powers for Tamil Nadu.",
+                                                       "source":  "",
+                                                       "ta":  "மாநில தன்னாட்சி திமுகவின் திராவிட கொள்கையின் மூலக்கல். கட்சி எப்போதும் தமிழ்நாட்டிற்கு அதிக நிதி மற்றும் சட்டவியல் அதிகாரங்களை கோருகிறது."
+                                                   },
+                                           "BJP":  {
+                                                       "en":  "BJP favours a strong central government and uniform national policies. Excessive state autonomy conflicts with its vision of \u0027One Nation\u0027.",
+                                                       "source":  "",
+                                                       "ta":  "பாஜக வலிமையான மத்திய அரசையும் சீரான தேசிய கொள்கைகளையும் ஆதரிக்கிறது. அதிகப்படியான மாநில தன்னாட்சி அதன் \u0027ஒரே நாடு\u0027 பார்வைக்கு முரணானது."
+                                                   },
+                                           "INC":  {
+                                                       "en":  "Congress supports cooperative federalism and has historically backed state rights, though it prefers dialogue over confrontation.",
+                                                       "source":  "",
+                                                       "ta":  "காங்கிரஸ் கூட்டாட்சியை ஆதரிக்கிறது மற்றும் வரலாற்று ரீதியாக மாநில உரிமைகளை ஆதரித்துள்ளது."
+                                                   },
+                                           "AIADMK":  {
+                                                          "en":  "AIADMK supports greater state rights but takes a less confrontational approach with the Centre compared to DMK.",
+                                                          "source":  "",
+                                                          "ta":  "அதிமுக அதிக மாநில உரிமைகளை ஆதரிக்கிறது ஆனால் திமுகவை விட மத்தியத்துடன் குறைந்த மோதல் அணுகுமுறையை கைக்கொள்கிறது."
+                                                      }
+                                       },
+                    "Renewable Energy Transition":  {
+                                                        "DMK":  {
+                                                                    "en":  "DMK has made substantial investments in solar and wind — Tamil Nadu is a national leader in renewable energy. The government targets 50 GW of renewable capacity.",
+                                                                    "source":  "",
+                                                                    "ta":  "திமுக சூரிய மற்றும் காற்றாலையில் கணிசமான முதலீடு செய்துள்ளது. தமிழ்நாடு ஒரு தேசிய புதுப்பிக்கத்தக்க ஆற்றல் தலைவராக உள்ளது."
+                                                                },
+                                                        "BJP":  {
+                                                                    "en":  "BJP has set ambitious national renewable energy targets (500 GW by 2030) and supports solar expansion, though it has been slower on a coal phase-out timeline.",
+                                                                    "source":  "",
+                                                                    "ta":  "பாஜக 2030-க்குள் 500 GW என்ற நோக்கிய புதுப்பிக்கத்தக்க இலக்குகளை நிர்ணயித்துள்ளது."
+                                                                },
+                                                        "INC":  {
+                                                                    "en":  "Congress strongly supports renewable energy transition and committed to it in its 2024 manifesto.",
+                                                                    "source":  "",
+                                                                    "ta":  "காங்கிரஸ் புதுப்பிக்கத்தக்க ஆற்றல் மாற்றத்தை வலுவாக ஆதரிக்கிறது."
+                                                                },
+                                                        "AIADMK":  {
+                                                                       "en":  "AIADMK expanded renewable energy during its tenure; Tamil Nadu became the first state to reach 10 GW of wind power under AIADMK governance.",
+                                                                       "source":  "",
+                                                                       "ta":  "அதிமுக ஆட்சியில் புதுப்பிக்கத்தக்க ஆற்றலை விரிவாக்கியது; தமிழ்நாடு 10 GW காற்றாலை சக்தியை எட்டிய முதல் மாநிலமானது."
+                                                                   }
+                                                    },
+                    "Liquor Prohibition":  {
+                                               "DMK":  {
+                                                           "en":  "DMK maintains TASMAC as a major state revenue source (over ₹35,000 crore annually). It promotes regulated sale rather than prohibition.",
+                                                           "source":  "",
+                                                           "ta":  "திமுக TASMAC-ஐ முக்கிய மாநில வருவாய் ஆதாரமாக (ஆண்டுக்கு ₹35,000+ கோடி) பராமரிக்கிறது. கட்டுப்படுத்தப்பட்ட விற்பனையை ஆதரிக்கிறது."
+                                                       },
+                                               "BJP":  {
+                                                           "en":  "Liquor policy is largely a state subject. BJP has no strong stated position on Tamil Nadu\u0027s TASMAC.",
+                                                           "source":  "",
+                                                           "ta":  "மது கொள்கை முக்கியமாக மாநில விஷயம். பாஜக TASMAC-ல் வலுவான நிலைப்பாட்டை எடுக்கவில்லை."
+                                                       },
+                                               "INC":  {
+                                                           "en":  "Congress has not strongly pushed for prohibition, viewing alcohol as a state subject and TASMAC revenue as fiscally important.",
+                                                           "source":  "",
+                                                           "ta":  "காங்கிரஸ் மது தடையை வலுவாக வலியுறுத்தவில்லை, நிதி ரீதியாக TASMAC வருவாய் முக்கியமானது என கருதுகிறது."
+                                                       },
+                                               "AIADMK":  {
+                                                              "en":  "AIADMK governed Tamil Nadu with TASMAC in place for many years and did not pursue prohibition despite electoral promises.",
+                                                              "source":  "",
+                                                              "ta":  "அதிமுக TASMAC உடன் பல ஆண்டுகள் ஆட்சி செய்தது. தேர்தல் வாக்குறுதிகள் இருந்தாலும் மது தடையை நடைமுறைப்படுத்தவில்லை."
+                                                          }
+                                           },
+                    "Free Electricity Scheme":  {
+                                                    "DMK":  {
+                                                                "en":  "Free electricity up to 200 units is DMK\u0027s flagship populist scheme, introduced after the 2021 elections.",
+                                                                "source":  "",
+                                                                "ta":  "200 யூனிட் இலவச மின்சாரம் 2021 தேர்தலுக்கு பிறகு அறிமுகப்படுத்தப்பட்ட திமுகவின் முதன்மை திட்டம்."
+                                                            },
+                                                    "BJP":  {
+                                                                "en":  "BJP\u0027s central leadership has criticised blanket freebies as \u0027revdi culture\u0027 that strains state finances and discourages productivity.",
+                                                                "source":  "",
+                                                                "ta":  "பாஜக மத்திய தலைமை இலவசங்களை ரேவடி கலாச்சாரம் என விமர்சித்து மாநில நிதியை பாதிக்கும் என கூறுகிறது."
+                                                            },
+                                                    "INC":  {
+                                                                "en":  "Congress supports welfare electricity schemes as part of its social safety net policy.",
+                                                                "source":  "",
+                                                                "ta":  "காங்கிரஸ் சமூக பாதுகாப்பு வலை கொள்கையின் ஒரு பகுதியாக இலவச மின்சார திட்டங்களை ஆதரிக்கிறது."
+                                                            },
+                                                    "AIADMK":  {
+                                                                   "en":  "AIADMK supports the scheme in principle as a welfare measure, though it has raised questions about TANGEDCO\u0027s financial sustainability.",
+                                                                   "source":  "",
+                                                                   "ta":  "அதிமுக கொள்கையில் திட்டத்தை ஆதரிக்கிறது, ஆனால் TANGEDCO நிதி நிலையை கேள்வி எழுப்பியுள்ளது."
+                                                               }
+                                                }
+                },
+    "version":  "1"
+}

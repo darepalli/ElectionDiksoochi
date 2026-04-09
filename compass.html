@@ -248,6 +248,71 @@
       border-radius: 8px;
       background: #f8fafc;
       padding: 0.45rem 0.5rem;
+      border-left: 4px solid #cbd5e1;
+    }
+
+    .oec-profile-panel__item[data-alliance="dmk"] {
+      border-left-color: #dc2626;
+    }
+
+    .oec-profile-panel__item[data-alliance="aiadmk"] {
+      border-left-color: #16a34a;
+    }
+
+    .oec-profile-panel__item[data-alliance="bjp"] {
+      border-left-color: #ea580c;
+    }
+
+    .oec-profile-panel__item[data-alliance="ind"] {
+      border-left-color: #475569;
+    }
+
+    .oec-profile-panel__group {
+      margin-bottom: 0.6rem;
+    }
+
+    .oec-profile-panel__group-title {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: #334155;
+      margin: 0 0 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .oec-profile-panel__group-members {
+      margin: 0 0 0.35rem;
+      color: #475569;
+      font-size: 0.68rem;
+      line-height: 1.3;
+      font-weight: 600;
+    }
+
+    .oec-alliance-dot {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 999px;
+      display: inline-block;
+      background: #cbd5e1;
+    }
+
+    .oec-alliance-dot[data-alliance="dmk"] {
+      background: #dc2626;
+    }
+
+    .oec-alliance-dot[data-alliance="aiadmk"] {
+      background: #16a34a;
+    }
+
+    .oec-alliance-dot[data-alliance="bjp"] {
+      background: #ea580c;
+    }
+
+    .oec-alliance-dot[data-alliance="ind"] {
+      background: #475569;
     }
 
     .oec-profile-panel__name {
@@ -343,6 +408,178 @@
 
     .oec-debug-log {
       white-space: pre-wrap;
+    }
+
+    .oec-random-results {
+      margin: 0 auto;
+      max-width: 980px;
+      padding: 1rem;
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .oec-random-results__header {
+      background: #f8fafc;
+      border: 1px solid #dbe4ee;
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+    }
+
+    .oec-random-results__title {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #0f172a;
+    }
+
+    .oec-random-results__meta {
+      margin-top: 0.35rem;
+      font-size: 0.82rem;
+      color: #475569;
+    }
+
+    .oec-random-results__rerun {
+      margin-top: 0.6rem;
+      border: 1px solid #0f766e;
+      background: #ecfeff;
+      color: #0f766e;
+      border-radius: 8px;
+      padding: 0.42rem 0.7rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .oec-random-results__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.7rem;
+    }
+
+    .oec-random-card {
+      border: 1px solid #dbe4ee;
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 0.7rem 0.8rem;
+    }
+
+    .oec-random-card__name {
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 0.3rem;
+    }
+
+    .oec-random-card__score {
+      font-size: 1.35rem;
+      line-height: 1;
+      font-weight: 800;
+      color: #0f766e;
+    }
+
+    .oec-random-card__small {
+      margin-top: 0.2rem;
+      color: #64748b;
+      font-size: 0.74rem;
+    }
+
+    .oec-random-results__responses {
+      border: 1px solid #dbe4ee;
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 0.75rem 0.85rem;
+    }
+
+    .oec-random-results__responses h3 {
+      margin: 0 0 0.45rem 0;
+      font-size: 0.92rem;
+      color: #0f172a;
+    }
+
+    .oec-random-results__responses ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 0.3rem;
+      color: #334155;
+      font-size: 0.79rem;
+    }
+
+    .oec-random-results__details {
+      border: 1px solid #dbe4ee;
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 0.75rem 0.85rem;
+      overflow: auto;
+    }
+
+    .oec-random-results__details h3 {
+      margin: 0 0 0.55rem 0;
+      font-size: 0.92rem;
+      color: #0f172a;
+    }
+
+    .oec-random-details-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+      font-size: 0.76rem;
+      color: #334155;
+    }
+
+    .oec-random-details-table th,
+    .oec-random-details-table td {
+      border: 1px solid #e2e8f0;
+      padding: 0.45rem 0.5rem;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    .oec-random-details-table th {
+      background: #f8fafc;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .oec-random-stance {
+      display: inline-block;
+      font-weight: 700;
+      color: #0f766e;
+    }
+
+    .oec-random-expl {
+      display: block;
+      margin-top: 0.2rem;
+      color: #64748b;
+      line-height: 1.35;
+    }
+
+    .oec-random-subparty {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.73rem;
+      color: #475569;
+      line-height: 1.3;
+    }
+
+    .oec-random-subparty-excerpt {
+      display: block;
+      margin-top: 0.12rem;
+      font-size: 0.71rem;
+      color: #64748b;
+      font-style: italic;
+      line-height: 1.3;
+    }
+
+    .oec-random-source {
+      display: inline-block;
+      margin-top: 0.24rem;
+      font-size: 0.7rem;
+      color: #2563eb;
+      text-decoration: none;
+      border-bottom: 1px dotted #93c5fd;
+    }
+
+    .oec-random-source:hover {
+      text-decoration: underline;
     }
 
     .feedback-modal {
@@ -493,6 +730,7 @@
         max-height: 38vh;
         padding: 0.5rem 0.55rem;
       }
+
     }
 
     @media (max-width: 480px) {
@@ -609,6 +847,18 @@
       var wrapper    = document.getElementById('open-election-compass');
       var backBar    = document.querySelector('.back-bar');
       var langButtons = Array.prototype.slice.call(document.querySelectorAll('.lang-btn'));
+      var hostName = String(window.location.hostname || '').toLowerCase();
+      var isLocalhost = hostName === 'localhost' || hostName === '127.0.0.1' || hostName === '::1' || hostName === '[::1]';
+      var randomResultsQuery = getParam('randomresults') === '1';
+
+      if ((!configPath || !SAFE_CONFIG_RE.test(configPath)) && isLocalhost && randomResultsQuery) {
+        configPath = 'elections/tn/2026-state/config.json';
+        try {
+          var autoUrl = new URL(window.location.href);
+          autoUrl.searchParams.set('config', configPath);
+          window.history.replaceState({}, '', autoUrl.toString());
+        } catch (e) {}
+      }
 
       function normalizeLang(value) {
         var raw = String(value || '').toLowerCase();
@@ -1037,6 +1287,9 @@
       if (oecEl) configPath = oecEl.getAttribute('load-url') || '';
       if (!configPath) return;
       var debugMode = /(?:\?|&)debug=1(?:&|$)/.test(window.location.search);
+      var randomResultsMode = /(?:\?|&)randomresults=1(?:&|$)/.test(window.location.search);
+      var hostName = String(window.location.hostname || '').toLowerCase();
+      var isLocalhost = hostName === 'localhost' || hostName === '127.0.0.1' || hostName === '::1' || hostName === '[::1]';
 
       function normalizeLang(value) {
         var raw = String(value || '').toLowerCase();
@@ -1085,6 +1338,7 @@
       var debugLogEl = null;
       var debugLines = [];
       var profilePanelCollapsed = false;
+      var allianceDisplayMap = {};
 
       function debugLog (line) {
         if (!debugMode) return;
@@ -1108,9 +1362,85 @@
         return tag + (cls ? '.' + cls.split(' ').slice(0, 2).join('.') : '') + (txt ? ' [' + txt + ']' : '');
       }
 
+      function getElementKey(el) {
+        if (!el) return '';
+        var id = el.id || '';
+        var name = el.getAttribute ? (el.getAttribute('name') || '') : '';
+        var role = el.getAttribute ? (el.getAttribute('role') || '') : '';
+        var cls = (el.className && String(el.className).trim()) || '';
+        var txt = (el.textContent || '').trim().replace(/\s+/g, ' ').substring(0, 36);
+        return [el.tagName || '', id, name, role, cls.split(' ').slice(0, 2).join('.'), txt].join('|').toLowerCase();
+      }
+
+      function getQueryRoots(container) {
+        var roots = [document];
+        if (container) roots.push(container);
+        if (container && container.shadowRoot) roots.push(container.shadowRoot);
+        return roots;
+      }
+
+      function getControlText(el) {
+        if (!el) return '';
+        var txt = (el.textContent || '').trim();
+        var aria = (el.getAttribute && el.getAttribute('aria-label')) || '';
+        var title = (el.getAttribute && el.getAttribute('title')) || '';
+        var value = (el.value || '');
+        var labelTxt = '';
+        if (el.labels && el.labels.length) {
+          labelTxt = (el.labels[0].textContent || '').trim();
+        } else if (el.closest) {
+          var parentLabel = el.closest('label');
+          if (parentLabel) labelTxt = (parentLabel.textContent || '').trim();
+        }
+        return [txt, aria, title, value, labelTxt].join(' ').replace(/\s+/g, ' ').trim();
+      }
+
+      function isProgressText(text) {
+        return /compare|comparison|results?|show results?|done|finish|submit|next|continue|proceed|proceed to the next thesis|see your result|ஒப்பீடு|முடிவு|முடி|அடுத்தது|தொடர்/i.test(String(text || ''));
+      }
+
+      function isImportanceOrDontKnowText(text) {
+        var t = String(text || '').toLowerCase().replace(/\s+/g, ' ').trim();
+        return /^important to me$|^எனக்கு முக்கியம்$|^i\s*don'?t\s*know$|^dont\s*know$|^skip$|^தெரியாது$|^தவிர்$/.test(t);
+      }
+
+      function isStanceText(text) {
+        return /strongly approve|approve|partly|neutral|reject|strongly reject|strongly agree|agree|disagree|strongly disagree|மிகவும் ஒப்புதல்|ஒப்புதல்|பகுதியாக ஒப்புதல்|நடுநிலை|எதிர்ப்பு|கடுமையான எதிர்ப்பு|மிகவும் ஒப்புக்கொள்கிறேன்|ஒப்புக்கொள்கிறேன்|ஏற்கவில்லை|மிகவும் ஏற்கவில்லை/i.test(String(text || ''));
+      }
+
+      function queryAllInRoots(container, selector) {
+        var roots = getQueryRoots(container);
+        var out = [];
+        roots.forEach(function (root) {
+          try {
+            var list = root.querySelectorAll(selector);
+            for (var i = 0; i < list.length; i++) out.push(list[i]);
+          } catch (e) {}
+        });
+        return out;
+      }
+
+      function clickBestTarget(el) {
+        if (!el) return false;
+        var direct = el.matches && el.matches('button, [role="button"], label, input, .party-item__button');
+        if (direct) {
+          el.click();
+          return true;
+        }
+
+        var nested = el.querySelector && el.querySelector('button, [role="button"], label, input, .party-item__button');
+        if (nested) {
+          nested.click();
+          return true;
+        }
+
+        el.click();
+        return true;
+      }
+
       function pickRandomSelection () {
-        var compareCandidates = Array.prototype.slice.call(document.querySelectorAll('.compare-section button, .compare-section [role="button"], .compare-section [class*="thesis"], .compare-section .chat-bubble'));
-        var fallbackCandidates = Array.prototype.slice.call(document.querySelectorAll('#open-election-compass button, #open-election-compass [role="button"], #open-election-compass [class*="thesis"], #open-election-compass .party-item__button'));
+        var compareCandidates = queryAllInRoots(document.getElementById('open-election-compass'), '.compare-section button, .compare-section [role="button"], .compare-section [class*="thesis"], .compare-section .chat-bubble, .compare-section label');
+        var fallbackCandidates = queryAllInRoots(document.getElementById('open-election-compass'), '#open-election-compass button, #open-election-compass [role="button"], #open-election-compass [class*="thesis"], #open-election-compass .party-item__button, #open-election-compass .party-item, #open-election-compass label');
         var candidates = (compareCandidates.length ? compareCandidates : fallbackCandidates)
           .filter(function (el) {
             if (!isVisible(el)) return false;
@@ -1126,7 +1456,358 @@
 
         var chosen = candidates[Math.floor(Math.random() * candidates.length)];
         debugLog('random selection click -> ' + describeEl(chosen));
-        chosen.click();
+        clickBestTarget(chosen);
+      }
+
+      function getAutoAnswerCandidates(container) {
+        return queryAllInRoots(container, '.compare-section .party-item__button, .compare-section button, .compare-section [role="button"], .compare-section label, .compare-section input[type="radio"], .compare-section input[type="checkbox"], #open-election-compass .party-item__button, #open-election-compass .party-item button, #open-election-compass [role="button"], #open-election-compass label, #open-election-compass input[type="radio"], #open-election-compass input[type="checkbox"], #open-election-compass .base-button')
+          .filter(function (el) {
+            if (!isVisible(el) || el.disabled) return false;
+            if (el.closest('.oec-debug-panel')) return false;
+            if (el.closest('.oec-source-inline')) return false;
+            if (el.closest('.oec-candidate-profile')) return false;
+            if (el.classList && el.classList.contains('oec-profile-btn')) return false;
+            if (el.id === 'oec-profile-toggle') return false;
+
+            var combinedTxt = getControlText(el);
+
+            // Auto-test should answer stance only; skip importance and don't-know actions.
+            if (isImportanceOrDontKnowText(combinedTxt)) return false;
+
+            if (!combinedTxt) return false;
+            if (/^(expand|collapse|clear log|random selection|profile|party|source|விரி|சுருக்கு)$/i.test(combinedTxt)) return false;
+            if (isProgressText(combinedTxt)) return false;
+            if (!isStanceText(combinedTxt) && !(el.classList && el.classList.contains('party-item__button'))) return false;
+
+            var ariaPressed = (el.getAttribute('aria-pressed') || '').toLowerCase();
+            var ariaChecked = (el.getAttribute('aria-checked') || '').toLowerCase();
+            if (ariaPressed === 'true' || ariaChecked === 'true') return false;
+            if (el.classList && (el.classList.contains('selected') || el.classList.contains('is-selected') || el.classList.contains('active'))) return false;
+
+            return true;
+          });
+      }
+
+      function findPrimaryProgressButton(container) {
+        var actionButtons = queryAllInRoots(container, 'button, [role="button"], a')
+          .filter(function (el) {
+            if (!isVisible(el) || el.disabled) return false;
+            if (el.closest('.oec-debug-panel')) return false;
+            if (el.closest('.oec-candidate-profile')) return false;
+            var txt = getControlText(el);
+            if (!txt) return false;
+            return isProgressText(txt);
+          });
+
+        if (!actionButtons.length) return null;
+
+        function score(txt) {
+          var t = String(txt || '').toLowerCase();
+          if (/compare|comparison|results?|show results?|done|finish|submit|ஒப்பீடு|முடிவு|முடி/.test(t)) return 100;
+          if (/next|continue|proceed|அடுத்தது|தொடர்/.test(t)) return 50;
+          return 10;
+        }
+
+        actionButtons.sort(function (a, b) {
+          return score(b.textContent) - score(a.textContent);
+        });
+
+        return actionButtons[0];
+      }
+
+      function findForwardButton(container) {
+        var forwardButtons = queryAllInRoots(container, 'button, [role="button"], a')
+          .filter(function (el) {
+            if (!isVisible(el) || el.disabled) return false;
+            var txt = getControlText(el);
+            if (!txt) return false;
+            return /next|continue|proceed|proceed to the next thesis|see your result|அடுத்தது|தொடர்|முடிவு/i.test(txt);
+          });
+        return forwardButtons.length ? forwardButtons[0] : null;
+      }
+
+      function getStepMarker(container) {
+        var candidates = queryAllInRoots(container, '.compare-section h1, .compare-section h2, .compare-section h3, .compare-section h4, #open-election-compass h1, #open-election-compass h2, #open-election-compass h3, #open-election-compass h4, #open-election-compass [class*="question"], #open-election-compass [class*="thesis-title"], #open-election-compass [class*="statement"]');
+        for (var i = 0; i < candidates.length; i++) {
+          var el = candidates[i];
+          if (!isVisible(el)) continue;
+          var txt = (el.textContent || '').trim().replace(/\s+/g, ' ');
+          if (txt && txt.length > 6) return txt.substring(0, 100);
+        }
+        return '';
+      }
+
+      function hasComparisonResults(container) {
+        var roots = getQueryRoots(container);
+        for (var i = 0; i < roots.length; i++) {
+          var root = roots[i];
+          try {
+            var bubbles = root.querySelectorAll('.compare-section .chat-bubble, .chat-bubble').length;
+            if (bubbles >= 2) return true;
+          } catch (e) {}
+        }
+        return false;
+      }
+
+      function normalizePositionValue(position) {
+        var p = String(position || '').toLowerCase().replace(/_/g, '-').trim();
+        if (p === 'strongly-approve' || p === 'strongly agree') return 2;
+        if (p === 'approve' || p === 'agree') return 1;
+        if (p === 'partly') return 0.5;
+        if (p === 'neutral') return 0;
+        if (p === 'reject' || p === 'disagree') return -1;
+        if (p === 'strongly-reject' || p === 'strongly disagree') return -2;
+        return 0;
+      }
+
+      function getPositionLabel(position) {
+        var p = String(position || '').toLowerCase().replace(/_/g, '-').trim();
+        if (uiLang === 'ta') {
+          if (p === 'strongly-approve' || p === 'strongly agree') return 'மிகவும் ஒப்புதல்';
+          if (p === 'approve' || p === 'agree') return 'ஒப்புதல்';
+          if (p === 'partly') return 'பகுதியாக ஒப்புதல்';
+          if (p === 'neutral') return 'நடுநிலை';
+          if (p === 'reject' || p === 'disagree') return 'எதிர்ப்பு';
+          if (p === 'strongly-reject' || p === 'strongly disagree') return 'கடுமையான எதிர்ப்பு';
+          return 'நடுநிலை';
+        }
+        if (p === 'strongly-approve' || p === 'strongly agree') return 'Strongly approve';
+        if (p === 'approve' || p === 'agree') return 'Approve';
+        if (p === 'partly') return 'Partly';
+        if (p === 'neutral') return 'Neutral';
+        if (p === 'reject' || p === 'disagree') return 'Reject';
+        if (p === 'strongly-reject' || p === 'strongly disagree') return 'Strongly reject';
+        return 'Neutral';
+      }
+
+      function getMajorAllianceMembers(alias) {
+        if (alias === 'dmk-alliance') return ['DMK', 'INC'];
+        if (alias === 'aiadmk-alliance') return ['AIADMK', 'BJP'];
+        return [];
+      }
+
+      function extractPerPartyPositionsFromExplanation(expl) {
+        var out = {};
+        var raw = String(expl || '');
+        if (!raw) return out;
+
+        var re = /\b([A-Z][A-Z()\-]{1,15})\s*:\s*(strongly-approve|approve|partly|neutral|reject|strongly-reject|strongly agree|agree|disagree|strongly disagree)\b/gi;
+        var m;
+        while ((m = re.exec(raw)) !== null) {
+          out[String(m[1]).toUpperCase()] = {
+            position: String(m[2]).toLowerCase().replace(/\s+/g, '-'),
+            excerpt: String(m[0])
+          };
+        }
+        return out;
+      }
+
+      function getFallbackSubpartyExcerpt(party, alignedPosition) {
+        var p = getPositionLabel(alignedPosition);
+        if (uiLang === 'ta') return party + ' அதிகாரப்பூர்வ நிலை: ' + p;
+        return party + ' official stance: ' + p;
+      }
+
+      function getLegacyExcerptForParty(legacyExcerpts, thesisTitleEn, partyCode) {
+        if (!legacyExcerpts || !legacyExcerpts.byTitle) return '';
+        if (!thesisTitleEn || !partyCode) return '';
+        var byTitle = legacyExcerpts.byTitle[thesisTitleEn];
+        if (!byTitle || !byTitle[partyCode]) return '';
+        var node = byTitle[partyCode];
+        return String((uiLang === 'ta' ? (node.ta || node.en) : (node.en || node.ta)) || '');
+      }
+
+      function getAllianceSubpartyPositions(alias, alignedPosition, explanation, thesisTitleEn, legacyExcerpts) {
+        var members = getMajorAllianceMembers(alias);
+        if (!members.length) return [];
+
+        var parsed = extractPerPartyPositionsFromExplanation(explanation);
+        var aligned = String(alignedPosition || 'neutral').toLowerCase().replace(/\s+/g, '-');
+
+        return members.map(function (name) {
+          var parsedItem = parsed[name] || null;
+          var memberPos = parsedItem ? parsedItem.position : aligned;
+          var legacyExcerpt = getLegacyExcerptForParty(legacyExcerpts, thesisTitleEn, name);
+          var memberExcerpt = legacyExcerpt || getFallbackSubpartyExcerpt(name, aligned);
+          var parsedExcerpt = parsedItem && parsedItem.excerpt ? parsedItem.excerpt : '';
+          return {
+            party: name,
+            position: memberPos,
+            excerpt: memberExcerpt,
+            parsedExcerpt: parsedExcerpt
+          };
+        });
+      }
+
+      function getRandomResponseChoice() {
+        var choices = [
+          { value: 2, en: 'Strongly approve', ta: 'மிகவும் ஒப்புதல்' },
+          { value: 1, en: 'Approve', ta: 'ஒப்புதல்' },
+          { value: 0.5, en: 'Partly', ta: 'பகுதியாக ஒப்புதல்' },
+          { value: 0, en: 'Neutral', ta: 'நடுநிலை' },
+          { value: -1, en: 'Reject', ta: 'எதிர்ப்பு' },
+          { value: -2, en: 'Strongly reject', ta: 'கடுமையான எதிர்ப்பு' }
+        ];
+        return choices[Math.floor(Math.random() * choices.length)];
+      }
+
+      function getPartyDisplayName(party) {
+        if (!party) return 'Party';
+        if (party.short && party.short[uiLang]) return party.short[uiLang];
+        if (party.name && party.name[uiLang]) return party.name[uiLang];
+        if (party.short && party.short.en) return party.short.en;
+        if (party.name && party.name.en) return party.name.en;
+        return party.alias || 'Party';
+      }
+
+      function renderRandomResultsPage(container, cfg, legacyExcerpts) {
+        var parties = cfg.parties || [];
+        var theses = cfg.theses || [];
+        if (!container || !parties.length || !theses.length) return false;
+
+        var userResponses = theses.map(function (thesis, idx) {
+          var pick = getRandomResponseChoice();
+          var title = (thesis.title && (thesis.title[uiLang] || thesis.title.en || thesis.title.ta)) || ('Thesis ' + (idx + 1));
+          return { value: pick.value, label: uiLang === 'ta' ? pick.ta : pick.en, title: title };
+        });
+
+        var scored = parties.map(function (party) {
+          var total = 0;
+          var count = 0;
+          for (var i = 0; i < theses.length; i++) {
+            var pos = theses[i].positions && theses[i].positions[party.alias];
+            if (!pos) continue;
+            var partyValue = normalizePositionValue(pos.position);
+            var responseValue = userResponses[i].value;
+            var similarity = 1 - (Math.abs(responseValue - partyValue) / 4);
+            total += Math.max(0, similarity);
+            count += 1;
+          }
+
+          var score = count ? Math.round((total / count) * 100) : 0;
+          return {
+            name: getPartyDisplayName(party),
+            alias: party.alias || '',
+            score: score,
+            answered: count
+          };
+        });
+
+        scored.sort(function (a, b) { return b.score - a.score; });
+
+        var html = '';
+        html += '<div class="oec-random-results">';
+        html += '<section class="oec-random-results__header">';
+        html += '<h2 class="oec-random-results__title">' + (uiLang === 'ta' ? 'சீரற்ற பதில்களால் உருவாக்கப்பட்ட ஒப்பீட்டு முடிவு' : 'Comparison Result From Random Responses') + '</h2>';
+        html += '<div class="oec-random-results__meta">' + (uiLang === 'ta' ? 'இது சோதனைக்கான செயற்கை முன்னோட்டம். ஒவ்வொரு ரீலோடிலும் புதிய பதில்கள் உருவாகும்.' : 'This is a synthetic test preview. Reload generates a new random response set.') + '</div>';
+        html += '<button type="button" class="oec-random-results__rerun" id="oec-random-rerun">' + (uiLang === 'ta' ? 'மீண்டும் சீரற்ற முடிவு உருவாக்கு' : 'Generate New Random Result') + '</button>';
+        html += '</section>';
+
+        html += '<section class="oec-random-results__grid">';
+        scored.forEach(function (item) {
+          html += '<article class="oec-random-card">';
+          html += '<div class="oec-random-card__name">' + item.name + '</div>';
+          html += '<div class="oec-random-card__score">' + item.score + '%</div>';
+          html += '<div class="oec-random-card__small">' + (uiLang === 'ta' ? ('ஒப்பீடு செய்யப்பட்ட தீர்மானங்கள்: ' + item.answered) : ('Theses compared: ' + item.answered)) + '</div>';
+          html += '</article>';
+        });
+        html += '</section>';
+
+        html += '<section class="oec-random-results__responses">';
+        html += '<h3>' + (uiLang === 'ta' ? 'தேர்ந்தெடுக்கப்பட்ட சீரற்ற பதில்கள் (முதல் 8)' : 'Selected Random Responses (first 8)') + '</h3>';
+        html += '<ul>';
+        userResponses.slice(0, 8).forEach(function (r) {
+          html += '<li>' + escapeHtml(r.title) + ' - ' + escapeHtml(r.label) + '</li>';
+        });
+        html += '</ul>';
+        html += '</section>';
+
+        html += '<section class="oec-random-results__details">';
+        html += '<h3>' + (uiLang === 'ta' ? 'தலைப்புவாரியான கட்சி நிலைப்பாடுகள்' : 'Issue-wise Party Stands') + '</h3>';
+        html += '<table class="oec-random-details-table">';
+        html += '<thead><tr>';
+        html += '<th>' + (uiLang === 'ta' ? 'தீர்மானம்' : 'Thesis') + '</th>';
+        html += '<th>' + (uiLang === 'ta' ? 'உங்கள் சீரற்ற பதில்' : 'Your Random Response') + '</th>';
+        parties.forEach(function (party) {
+          html += '<th>' + escapeHtml(getPartyDisplayName(party)) + '</th>';
+        });
+        html += '</tr></thead>';
+        html += '<tbody>';
+
+        theses.forEach(function (thesis, idx) {
+          var titleEn = (thesis.title && thesis.title.en) ? String(thesis.title.en) : '';
+          var title = (thesis.title && (thesis.title[uiLang] || thesis.title.en || thesis.title.ta)) || ('Thesis ' + (idx + 1));
+          html += '<tr>';
+          html += '<td>' + escapeHtml(title) + '</td>';
+          html += '<td><span class="oec-random-stance">' + escapeHtml(userResponses[idx].label) + '</span></td>';
+
+          parties.forEach(function (party) {
+            var pos = thesis.positions && thesis.positions[party.alias];
+            if (!pos) {
+              html += '<td><span class="oec-random-stance">' + (uiLang === 'ta' ? 'தரவு இல்லை' : 'No data') + '</span></td>';
+              return;
+            }
+
+            var posLabel = getPositionLabel(pos.position);
+            var expl = (pos.explanation && (pos.explanation[uiLang] || pos.explanation.en || pos.explanation.ta)) || '';
+            var sourceUrl = pos.source || '';
+            var subpartyPositions = getAllianceSubpartyPositions(
+              party.alias,
+              pos.position,
+              (pos.explanation && (pos.explanation.en || pos.explanation.ta)) || expl,
+              titleEn,
+              legacyExcerpts
+            );
+            html += '<td>';
+            html += '<span class="oec-random-stance">' + escapeHtml(posLabel) + '</span>';
+            if (subpartyPositions.length > 1) {
+              var uniq = {};
+              subpartyPositions.forEach(function (sp) { uniq[sp.position] = true; });
+              if (Object.keys(uniq).length > 1) {
+                html += '<span class="oec-random-expl">' + escapeHtml(uiLang === 'ta' ? 'இந்த கூட்டணியில் கட்சிகள் வேறுபட்ட நிலைப்பாடுகளை கொண்டுள்ளன.' : 'Parties in this alliance hold different positions on this issue.') + '</span>';
+              }
+            }
+            subpartyPositions.forEach(function (item) {
+              var subLabel = getPositionLabel(item.position);
+              html += '<span class="oec-random-subparty">' + escapeHtml(item.party + ': ' + subLabel) + '</span>';
+              if (item.parsedExcerpt) {
+                html += '<span class="oec-random-subparty-excerpt">' + escapeHtml(uiLang === 'ta' ? ('கூட்டணி குறிப்பிலிருந்து: ' + item.parsedExcerpt) : ('From alliance note: ' + item.parsedExcerpt)) + '</span>';
+              }
+              if (item.excerpt) {
+                html += '<span class="oec-random-subparty-excerpt">"' + escapeHtml(item.excerpt) + '"</span>';
+              }
+            });
+            if (expl) html += '<span class="oec-random-expl">' + escapeHtml(expl) + '</span>';
+            if (sourceUrl) {
+              html += '<a class="oec-random-source" href="' + escapeHtml(sourceUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(uiLang === 'ta' ? 'ஆதாரம்' : 'Source') + '</a>';
+            }
+            html += '</td>';
+          });
+
+          html += '</tr>';
+        });
+
+        html += '</tbody></table>';
+        html += '</section>';
+
+        html += '</div>';
+
+        container.innerHTML = html;
+        var rerunBtn = container.querySelector('#oec-random-rerun');
+        if (rerunBtn) {
+          rerunBtn.addEventListener('click', function () {
+            try {
+              var u = new URL(window.location.href);
+              u.searchParams.set('randomresults', '1');
+              u.searchParams.set('rnd', String(Date.now()));
+              window.location.assign(u.toString());
+              return;
+            } catch (e) {}
+            window.location.reload();
+          });
+        }
+
+        return true;
       }
 
       if (debugMode) {
@@ -1201,6 +1882,61 @@
           : 'Public profile link is not available for this candidate yet.';
       }
 
+      function getAllianceMetaForParty(party, partyTag) {
+        var alias = String((party && party.alias) || '').toLowerCase();
+        if (alias.indexOf('cand-dmk') === 0 || alias === 'dmk' || alias === 'dmk-alliance' || partyTag === 'DMK' || partyTag === 'INC' || partyTag === 'VCK' || partyTag === 'CPI' || partyTag === 'CPI(M)' || partyTag === 'CPM' || partyTag === 'MDMK') {
+          var dmkMeta = allianceDisplayMap['dmk-alliance'] || null;
+          return {
+            key: 'dmk',
+            aliasKey: 'dmk-alliance',
+            label: dmkMeta && dmkMeta.label ? dmkMeta.label : (uiLang === 'ta' ? 'திமுக கூட்டணி' : 'DMK Alliance'),
+            membersText: dmkMeta && dmkMeta.membersText ? dmkMeta.membersText : ''
+          };
+        }
+        if (alias.indexOf('cand-aiadmk') === 0 || alias === 'aiadmk' || alias === 'aiadmk-alliance' || partyTag === 'AIADMK' || partyTag === 'ADMK' || partyTag === 'DMDK' || partyTag === 'PMK') {
+          var aiadmkMeta = allianceDisplayMap['aiadmk-alliance'] || null;
+          return {
+            key: 'aiadmk',
+            aliasKey: 'aiadmk-alliance',
+            label: aiadmkMeta && aiadmkMeta.label ? aiadmkMeta.label : (uiLang === 'ta' ? 'அதிமுக கூட்டணி' : 'AIADMK Alliance'),
+            membersText: aiadmkMeta && aiadmkMeta.membersText ? aiadmkMeta.membersText : ''
+          };
+        }
+        if (alias.indexOf('cand-bjp') === 0 || alias === 'bjp' || alias === 'bjp-alliance' || partyTag === 'BJP') {
+          var bjpMeta = allianceDisplayMap['bjp-alliance'] || null;
+          return {
+            key: 'bjp',
+            aliasKey: 'bjp-alliance',
+            label: bjpMeta && bjpMeta.label ? bjpMeta.label : (uiLang === 'ta' ? 'பாஜக கூட்டணி' : 'BJP Alliance'),
+            membersText: bjpMeta && bjpMeta.membersText ? bjpMeta.membersText : ''
+          };
+        }
+        if (alias === 'tvk' || partyTag === 'TVK') {
+          var tvkMeta = allianceDisplayMap['tvk'] || null;
+          return {
+            key: 'ind',
+            aliasKey: 'tvk',
+            label: tvkMeta && tvkMeta.label ? tvkMeta.label : 'TVK',
+            membersText: tvkMeta && tvkMeta.membersText ? tvkMeta.membersText : ''
+          };
+        }
+        if (alias.indexOf('cand-ind') === 0 || partyTag === 'IND' || partyTag === 'INDEPENDENT') {
+          return {
+            key: 'ind',
+            aliasKey: 'ind',
+            label: uiLang === 'ta' ? 'சுயேட்சை / பிற' : 'Independent / Other',
+            membersText: ''
+          };
+        }
+
+        return {
+          key: 'ind',
+          aliasKey: 'ind',
+          label: uiLang === 'ta' ? 'பிற' : 'Other',
+          membersText: ''
+        };
+      }
+
       function renderCandidateProfilePanel () {
         if (!candidateLinkItems.length) return;
 
@@ -1232,29 +1968,61 @@
         html += '<button type="button" class="oec-profile-toggle" id="oec-profile-toggle">' + escapeHtml(toggleText) + '</button>';
         html += '</div>';
         html += '<div class="oec-profile-panel__body">';
-        html += '<div class="oec-profile-panel__list">';
-
+        var allianceOrder = ['dmk', 'aiadmk', 'bjp', 'ind'];
+        var groups = {};
         candidateLinkItems.forEach(function (item) {
-          html += '<div class="oec-profile-panel__item">';
-          html += '<div class="oec-profile-panel__name">';
-          if (item.symbol) {
-            html += '<span class="oec-party-symbol">' + escapeHtml(item.symbol) + '</span>';
+          if (!groups[item.allianceKey]) {
+            groups[item.allianceKey] = {
+              key: item.allianceKey,
+              label: item.allianceLabel,
+              membersText: item.allianceMembers || '',
+              items: []
+            };
           }
-          html += '<span>' + escapeHtml(item.name) + '</span>';
-          html += '</div>';
-          html += '<div class="oec-profile-panel__actions">';
-          if (item.profileUrl) {
-            html += '<a class="oec-profile-btn" href="' + escapeHtml(item.profileUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(profileText) + '</a>';
-          } else {
-            html += '<a class="oec-profile-btn is-disabled" href="#" data-profile-missing="1">' + escapeHtml(profileText) + '</a>';
+          if (!groups[item.allianceKey].membersText && item.allianceMembers) {
+            groups[item.allianceKey].membersText = item.allianceMembers;
           }
-          if (item.partyUrl) {
-            html += '<a class="oec-profile-btn" href="' + escapeHtml(item.partyUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(partyText) + '</a>';
-          }
-          html += '</div></div>';
+          groups[item.allianceKey].items.push(item);
         });
 
-        html += '</div></div>';
+        allianceOrder.forEach(function (allianceKey) {
+          var group = groups[allianceKey];
+          if (!group || !group.items.length) return;
+
+          html += '<section class="oec-profile-panel__group">';
+          html += '<h5 class="oec-profile-panel__group-title">';
+          html += '<span class="oec-alliance-dot" data-alliance="' + escapeHtml(group.key) + '"></span>';
+          html += '<span>' + escapeHtml(group.label) + '</span>';
+          html += '</h5>';
+          if (group.membersText) {
+            html += '<p class="oec-profile-panel__group-members">' + escapeHtml(group.membersText) + '</p>';
+          }
+          html += '<div class="oec-profile-panel__list">';
+
+          group.items.forEach(function (item) {
+            html += '<div class="oec-profile-panel__item" data-alliance="' + escapeHtml(item.allianceKey) + '">';
+            html += '<div class="oec-profile-panel__name">';
+            if (item.symbol) {
+              html += '<span class="oec-party-symbol">' + escapeHtml(item.symbol) + '</span>';
+            }
+            html += '<span>' + escapeHtml(item.name) + '</span>';
+            html += '</div>';
+            html += '<div class="oec-profile-panel__actions">';
+            if (item.profileUrl) {
+              html += '<a class="oec-profile-btn" href="' + escapeHtml(item.profileUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(profileText) + '</a>';
+            } else {
+              html += '<a class="oec-profile-btn is-disabled" href="#" data-profile-missing="1">' + escapeHtml(profileText) + '</a>';
+            }
+            if (item.partyUrl) {
+              html += '<a class="oec-profile-btn" href="' + escapeHtml(item.partyUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(partyText) + '</a>';
+            }
+            html += '</div></div>';
+          });
+
+          html += '</div></section>';
+        });
+
+        html += '</div>';
         panel.innerHTML = html;
 
         var toggleBtn = panel.querySelector('#oec-profile-toggle');
@@ -1287,6 +2055,29 @@
           var parties = cfg.parties || [];
           var theses  = cfg.theses  || [];
           var langs   = (cfg.languages || []).map(function (l) { return l.code; });
+          allianceDisplayMap = {};
+
+          var partyByAlias = {};
+          parties.forEach(function (party) {
+            if (party && party.alias) partyByAlias[String(party.alias)] = party;
+          });
+
+          var allianceMetaCfg = cfg.allianceMetadata || {};
+          Object.keys(allianceMetaCfg).forEach(function (aliasKey) {
+            var meta = allianceMetaCfg[aliasKey] || {};
+            var members = (meta.displayMembers && (meta.displayMembers[uiLang] || meta.displayMembers.en || meta.displayMembers.ta)) || [];
+            var membersText = Array.isArray(members) ? members.join(', ') : '';
+            var party = partyByAlias[aliasKey] || null;
+            var label = '';
+            if (party) {
+              label = (party.short && (party.short[uiLang] || party.short.en || party.short.ta)) ||
+                (party.name && (party.name[uiLang] || party.name.en || party.name.ta)) || '';
+            }
+            allianceDisplayMap[aliasKey] = {
+              label: label,
+              membersText: membersText
+            };
+          });
           debugLog('config loaded: theses=' + theses.length + ', parties=' + parties.length);
 
           // Build a default source map per party alias for fallback matching.
@@ -1329,6 +2120,14 @@
               var alias = String(party.alias);
               if (/^cand-([a-z0-9()]+)$/i.test(alias)) {
                 partyTag = RegExp.$1.toUpperCase();
+              } else if (alias === 'dmk-alliance') {
+                partyTag = 'DMK';
+              } else if (alias === 'aiadmk-alliance') {
+                partyTag = 'AIADMK';
+              } else if (alias === 'bjp-alliance') {
+                partyTag = 'BJP';
+              } else if (alias === 'tvk') {
+                partyTag = 'TVK';
               }
             }
 
@@ -1361,11 +2160,16 @@
             else if (party.name && party.name.en) displayName = party.name.en;
             else displayName = party.alias || 'Candidate';
 
+            var allianceMeta = getAllianceMetaForParty(party, partyTag);
+
             candidateLinkItems.push({
               name: displayName,
               symbol: symbolText,
               profileUrl: profileUrl,
-              partyUrl: partyWiki
+              partyUrl: partyWiki,
+              allianceKey: allianceMeta.key,
+              allianceLabel: allianceMeta.label,
+              allianceMembers: allianceMeta.membersText || ''
             });
           });
           debugLog('candidate profile entries=' + partyProfileEntries.length);
@@ -1385,6 +2189,18 @@
 
           var container = document.getElementById('open-election-compass');
           if (!container) return;
+
+          if (isLocalhost && randomResultsMode) {
+            var legacyPath = configPath.replace(/config\.json$/i, 'legacy-party-excerpts.json');
+            fetch(legacyPath)
+              .then(function (r) { return r.ok ? r.json() : null; })
+              .catch(function () { return null; })
+              .then(function (legacyExcerpts) {
+                var rendered = renderRandomResultsPage(container, cfg, legacyExcerpts || null);
+                if (rendered) debugLog('random results mode rendered');
+              });
+            return;
+          }
 
           function injectLinks () {
             var bubbles = container.querySelectorAll('.chat-bubble');
