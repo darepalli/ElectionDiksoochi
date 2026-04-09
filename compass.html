@@ -8,9 +8,17 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
   <style>
+    :root {
+      --back-bar-h: 36px;
+    }
+
     /* Thin wrapper styles – OEC renders everything else */
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
 
     /* Back-to-hub bar */
     .back-bar {
@@ -20,29 +28,38 @@
       right: 0;
       z-index: 9999;
       background: rgba(192, 57, 43, 0.95);
-      padding: 6px 1rem;
+      padding: calc(6px + env(safe-area-inset-top, 0px)) 1rem 6px;
       display: flex;
       align-items: center;
       gap: 1rem;
+      min-height: 36px;
+      backdrop-filter: blur(2px);
     }
     .back-bar a {
       color: #fff;
       text-decoration: none;
-      font-size: .82rem;
+      font-size: .86rem;
       font-weight: 600;
       display: flex;
       align-items: center;
       gap: 4px;
+      min-height: 34px;
     }
     .back-bar a:hover { text-decoration: underline; }
     .back-bar .sep { color: rgba(255,255,255,.5); }
     .back-bar .current-label {
       font-size: .82rem;
       color: rgba(255,255,255,.85);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     /* Push OEC content below the back-bar */
-    #open-election-compass { padding-top: 36px; }
+    #open-election-compass {
+      padding-top: calc(var(--back-bar-h, 36px) + 4px);
+      min-height: 100vh;
+    }
 
     /* Error state */
     .error-page {
@@ -60,12 +77,12 @@
     .error-page p  { max-width: 480px; color: #6b7280; }
     .error-page a  { color: #c0392b; font-weight: 600; }
 
-    /* Source citation link and popup for compare-screen positions */
+    /* Source citation shown inline inside compare explanation bubbles */
     .oec-source-link {
       display: inline-block;
       margin-top: 0.6rem;
-      padding: 0.2rem 0.55rem;
-      font-size: 0.72rem;
+      padding: 0.35rem 0.65rem;
+      font-size: 0.76rem;
       font-weight: 600;
       color: #2563eb;
       border: 1px solid #bfdbfe;
@@ -78,59 +95,115 @@
       text-decoration: underline;
     }
 
-    .oec-source-modal {
-      position: fixed;
-      inset: 0;
-      z-index: 10000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      background: rgba(0, 0, 0, 0.45);
-    }
-    .oec-source-modal.is-open { display: flex; }
-    .oec-source-modal__card {
-      width: min(560px, 96vw);
-      background: #fff;
-      border-radius: 10px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-      padding: 1rem;
-    }
-    .oec-source-modal__title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 0.45rem;
-    }
-    .oec-source-modal__body {
-      font-size: 0.86rem;
-      color: #4b5563;
-      margin-bottom: 0.85rem;
+    .oec-source-inline {
+      margin-top: 0.55rem;
+      font-size: 0.78rem;
+      line-height: 1.35;
+      color: #475569;
       word-break: break-word;
     }
-    .oec-source-modal__actions {
+
+    .oec-debug-panel {
+      position: fixed;
+      right: 12px;
+      bottom: 12px;
+      z-index: 12000;
+      width: min(420px, calc(100vw - 24px));
+      max-height: 45vh;
+      overflow: auto;
+      background: rgba(17, 24, 39, 0.95);
+      color: #d1fae5;
+      border: 1px solid #065f46;
+      border-radius: 8px;
+      padding: 0.6rem 0.75rem;
+      font-size: 0.72rem;
+      line-height: 1.35;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      white-space: pre-wrap;
+    }
+
+    .oec-debug-controls {
       display: flex;
-      justify-content: flex-end;
       gap: 0.45rem;
+      margin-bottom: 0.55rem;
+      flex-wrap: wrap;
     }
-    .oec-source-btn {
-      border: 1px solid #d1d5db;
+
+    .oec-debug-btn {
+      border: 1px solid #10b981;
+      background: #022c22;
+      color: #a7f3d0;
       border-radius: 6px;
-      background: #fff;
-      color: #111827;
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 0.42rem 0.7rem;
+      padding: 0.2rem 0.45rem;
       cursor: pointer;
-      text-decoration: none;
+      font-size: 0.7rem;
+      font-family: inherit;
     }
-    .oec-source-btn--primary {
-      background: #2563eb;
-      border-color: #2563eb;
-      color: #fff;
+
+    .oec-debug-log {
+      white-space: pre-wrap;
     }
-    .oec-source-btn--primary:hover { background: #1d4ed8; }
+
+    @media (max-width: 768px) {
+      .back-bar {
+        gap: 0.45rem;
+        padding-left: 0.65rem;
+        padding-right: 0.65rem;
+      }
+
+      .back-bar .sep {
+        display: none;
+      }
+
+      .back-bar a {
+        font-size: 0.78rem;
+      }
+
+      .back-bar .current-label {
+        font-size: 0.75rem;
+        max-width: 58vw;
+      }
+
+      .oec-source-inline {
+        font-size: 0.76rem;
+      }
+
+      .oec-source-link {
+        font-size: 0.72rem;
+      }
+
+      .oec-debug-panel {
+        right: 8px;
+        left: 8px;
+        bottom: 8px;
+        width: auto;
+        max-height: 38vh;
+        padding: 0.5rem 0.55rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .back-bar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .back-bar a,
+      .back-bar .current-label {
+        line-height: 1.2;
+      }
+
+      .back-bar .current-label {
+        max-width: 94vw;
+        white-space: normal;
+      }
+
+      .oec-debug-btn {
+        font-size: 0.68rem;
+        padding: 0.2rem 0.4rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -172,6 +245,13 @@
       var configPath = getParam('config');
       var oecEl      = document.getElementById('oec-el');
       var wrapper    = document.getElementById('open-election-compass');
+      var backBar    = document.querySelector('.back-bar');
+
+      function syncBackBarHeight () {
+        if (!backBar) return;
+        var h = Math.max(36, Math.ceil(backBar.getBoundingClientRect().height));
+        document.documentElement.style.setProperty('--back-bar-h', h + 'px');
+      }
 
       if (!configPath || !SAFE_CONFIG_RE.test(configPath)) {
         wrapper.innerHTML =
@@ -191,6 +271,9 @@
       document.getElementById('back-label').textContent = label;
       document.title = label + ' | India Election Compass';
 
+      syncBackBarHeight();
+      window.addEventListener('resize', syncBackBarHeight);
+
       // Set load-url BEFORE the deferred OEC script executes.
       // The deferred script reads this attribute when it initialises.
       oecEl.setAttribute('load-url', configPath);
@@ -202,84 +285,121 @@
 
   <script>
     /*
-     * Source popup injector
-     * When a user clicks a party position in compare screen, OEC renders a
-     * chat bubble with the party explanation. We map that explanation to the
-     * source URL in config.json and show a popup with the source link.
+     * Source injector
+     * Adds source details directly inside compare explanation bubbles.
      */
     (function () {
       var configPath = '';
       var oecEl = document.getElementById('oec-el');
       if (oecEl) configPath = oecEl.getAttribute('load-url') || '';
       if (!configPath) return;
+      var debugMode = /(?:\?|&)debug=1(?:&|$)/.test(window.location.search);
 
-      var srcMap = {}; // key: first 60 chars of explanation text, value: URL
-      var pendingCompareClickAt = 0;
+      var srcMap = {}; // key: normalized explanation text, value: URL
+      var partySourceMap = {}; // key: normalized party name/short, value: URL
+      var debugPanel = null;
+      var debugLogEl = null;
+      var debugLines = [];
 
-      function matchesSelector(el, selector) {
-        var fn = el.matches || el.msMatchesSelector || el.webkitMatchesSelector;
-        return fn ? fn.call(el, selector) : false;
+      function debugLog (line) {
+        if (!debugMode) return;
+        var stamp = new Date().toISOString().slice(11, 19);
+        debugLines.push('[' + stamp + '] ' + line);
+        if (debugLines.length > 40) debugLines.shift();
+        if (debugLogEl) debugLogEl.textContent = debugLines.join('\n');
+        try { console.log('[OEC-SOURCE-DEBUG]', line); } catch (e) {}
       }
 
-      function closestAny(el, selectors) {
-        while (el && el.nodeType === 1) {
-          for (var i = 0; i < selectors.length; i++) {
-            if (matchesSelector(el, selectors[i])) return el;
-          }
-          el = el.parentElement;
+      function isVisible (el) {
+        if (!el) return false;
+        var r = el.getBoundingClientRect();
+        return r.width > 0 && r.height > 0;
+      }
+
+      function describeEl (el) {
+        var tag = (el.tagName || '').toLowerCase();
+        var cls = (el.className && String(el.className).trim()) || '';
+        var txt = (el.textContent || '').trim().replace(/\s+/g, ' ').substring(0, 40);
+        return tag + (cls ? '.' + cls.split(' ').slice(0, 2).join('.') : '') + (txt ? ' [' + txt + ']' : '');
+      }
+
+      function pickRandomSelection () {
+        var compareCandidates = Array.prototype.slice.call(document.querySelectorAll('.compare-section button, .compare-section [role="button"], .compare-section [class*="thesis"], .compare-section .chat-bubble'));
+        var fallbackCandidates = Array.prototype.slice.call(document.querySelectorAll('#open-election-compass button, #open-election-compass [role="button"], #open-election-compass [class*="thesis"], #open-election-compass .party-item__button'));
+        var candidates = (compareCandidates.length ? compareCandidates : fallbackCandidates)
+          .filter(function (el) {
+            if (!isVisible(el)) return false;
+            if (el.closest('.oec-debug-panel')) return false;
+            if (el.closest('.oec-source-inline')) return false;
+            return true;
+          });
+
+        if (!candidates.length) {
+          debugLog('random selection: no clickable candidates found');
+          return;
         }
-        return null;
+
+        var chosen = candidates[Math.floor(Math.random() * candidates.length)];
+        debugLog('random selection click -> ' + describeEl(chosen));
+        chosen.click();
       }
 
-      function createModal () {
-        var modal = document.createElement('div');
-        modal.className = 'oec-source-modal';
-        modal.innerHTML =
-          '<div class="oec-source-modal__card" role="dialog" aria-modal="true" aria-label="Source link">'
-          + '<div class="oec-source-modal__title">Source for this party position</div>'
-          + '<div class="oec-source-modal__body" id="oec-source-modal-body"></div>'
-          + '<div class="oec-source-modal__actions">'
-          + '<button type="button" class="oec-source-btn" id="oec-source-close">Close</button>'
-          + '<a class="oec-source-btn oec-source-btn--primary" id="oec-source-open" target="_blank" rel="noopener noreferrer">Open Source</a>'
+      if (debugMode) {
+        debugPanel = document.createElement('div');
+        debugPanel.className = 'oec-debug-panel';
+        debugPanel.innerHTML =
+          '<div class="oec-debug-controls">'
+          + '<button type="button" class="oec-debug-btn" id="oec-debug-random">Random Selection</button>'
+          + '<button type="button" class="oec-debug-btn" id="oec-debug-clear">Clear Log</button>'
           + '</div>'
-          + '</div>';
-        document.body.appendChild(modal);
-
-        modal.addEventListener('click', function (ev) {
-          if (ev.target === modal) modal.classList.remove('is-open');
+          + '<div class="oec-debug-log" id="oec-debug-log">Source debug active...</div>';
+        document.body.appendChild(debugPanel);
+        debugLogEl = debugPanel.querySelector('#oec-debug-log');
+        debugPanel.querySelector('#oec-debug-random').addEventListener('click', pickRandomSelection);
+        debugPanel.querySelector('#oec-debug-clear').addEventListener('click', function () {
+          debugLines = [];
+          if (debugLogEl) debugLogEl.textContent = 'Log cleared.';
         });
-        modal.querySelector('#oec-source-close').addEventListener('click', function () {
-          modal.classList.remove('is-open');
-        });
-        document.addEventListener('keydown', function (ev) {
-          if (ev.key === 'Escape') modal.classList.remove('is-open');
-        });
-        return modal;
       }
 
-      var modal = createModal();
-      var modalBody = modal.querySelector('#oec-source-modal-body');
-      var modalOpen = modal.querySelector('#oec-source-open');
+      function normalizeText (text) {
+        return String(text || '')
+          .toLowerCase()
+          .replace(/[\u200B-\u200D\uFEFF]/g, '')
+          .replace(/\s+/g, ' ')
+          .replace(/[^0-9a-z\u00C0-\uFFFF\s]/g, '')
+          .trim();
+      }
 
-      function showSourcePopup (src) {
-        if (src) {
-          modalBody.textContent = src;
-          modalOpen.href = src;
-          modalOpen.style.display = 'inline-flex';
-        } else {
-          modalBody.textContent = 'No source link has been added for this party position yet.';
-          modalOpen.removeAttribute('href');
-          modalOpen.style.display = 'none';
+      function addExplanationSource (text, src) {
+        if (!text || !src) return;
+        var full = normalizeText(text);
+        if (!full) return;
+        srcMap[full] = src;
+        if (full.length > 80) srcMap[full.substring(0, 80)] = src;
+      }
+
+      function getSourceLabel (url) {
+        var raw = String(url || '').toLowerCase();
+        if (!raw) return 'Source Link';
+
+        if (raw.indexOf('manifesto') >= 0 || raw.indexOf('nyay') >= 0) {
+          return 'Party Manifesto';
         }
-        modal.classList.add('is-open');
-      }
+        if (raw.indexOf('/speech') >= 0 || raw.indexOf('/speeches') >= 0) {
+          return 'Party Speech';
+        }
+        if (raw.indexOf('/ideology') >= 0 || raw.indexOf('/election-corner') >= 0 || raw.indexOf('/polic') >= 0) {
+          return 'Party Policy Page';
+        }
 
-      document.addEventListener('click', function (ev) {
-        var compareRoot = closestAny(ev.target, ['.compare-section']);
-        if (!compareRoot) return;
-        var trigger = closestAny(ev.target, ['button', '[role="button"]', '.chat-bubble__status', '.chat-bubble__party']);
-        if (trigger) pendingCompareClickAt = Date.now();
-      });
+        try {
+          var host = new URL(url).hostname.replace(/^www\./, '');
+          if (host) return 'Party Website (' + host + ')';
+        } catch (e) {}
+
+        return 'Party Website';
+      }
 
       fetch(configPath)
         .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
@@ -287,6 +407,29 @@
           var parties = cfg.parties || [];
           var theses  = cfg.theses  || [];
           var langs   = (cfg.languages || []).map(function (l) { return l.code; });
+          debugLog('config loaded: theses=' + theses.length + ', parties=' + parties.length);
+
+          // Build a default source map per party alias for fallback matching.
+          var aliasSource = {};
+          theses.forEach(function (thesis) {
+            parties.forEach(function (party) {
+              if (aliasSource[party.alias]) return;
+              var pos = thesis.positions && thesis.positions[party.alias];
+              if (pos && pos.source) aliasSource[party.alias] = pos.source;
+            });
+          });
+
+          parties.forEach(function (party) {
+            var src = aliasSource[party.alias] || '';
+            if (!src) return;
+            langs.forEach(function (code) {
+              var shortName = party.short && party.short[code];
+              var longName = party.name && party.name[code];
+              if (shortName) partySourceMap[normalizeText(shortName)] = src;
+              if (longName) partySourceMap[normalizeText(longName)] = src;
+            });
+          });
+          debugLog('party fallback keys=' + Object.keys(partySourceMap).length);
 
           theses.forEach(function (thesis) {
             parties.forEach(function (party) {
@@ -294,43 +437,70 @@
               if (!pos || !pos.source) return;
               langs.forEach(function (code) {
                 var text = pos.explanation && pos.explanation[code];
-                if (text) srcMap[text.substring(0, 60)] = pos.source;
+                addExplanationSource(text, pos.source);
               });
             });
           });
+          debugLog('explanation source keys=' + Object.keys(srcMap).length);
 
           var container = document.getElementById('open-election-compass');
-          if (!container || !Object.keys(srcMap).length) return;
+          if (!container) return;
 
           function injectLinks () {
-            container.querySelectorAll('.chat-bubble:not([data-src-done])').forEach(function (bubble) {
-              bubble.setAttribute('data-src-done', '1');
-              var bubbleEl = bubble.querySelector('.chat-bubble__bubble');
-              if (!bubbleEl) return;
-              var key = bubbleEl.textContent.trim().substring(0, 60);
-              var src = srcMap[key];
-              if (!src) {
-                if (Date.now() - pendingCompareClickAt < 2500) {
-                  showSourcePopup('');
-                  pendingCompareClickAt = 0;
-                }
-                return;
-              }
-              var a = document.createElement('a');
-              a.href = src;
-              a.setAttribute('role', 'button');
-              a.className = 'oec-source-link';
-              a.textContent = 'Source →';
-              a.addEventListener('click', function (ev) {
-                ev.preventDefault();
-                showSourcePopup(src);
-              });
-              bubbleEl.appendChild(a);
+            var pending = container.querySelectorAll('.chat-bubble:not([data-src-done])');
+            if (!pending.length && debugMode) {
+              var total = container.querySelectorAll('.chat-bubble').length;
+              debugLog('scan: pending=0 total=' + total);
+            }
 
-              if (Date.now() - pendingCompareClickAt < 2500) {
-                showSourcePopup(src);
-                pendingCompareClickAt = 0;
+            pending.forEach(function (bubble) {
+              bubble.setAttribute('data-src-done', '1');
+              var bubbleEl = bubble.querySelector('.chat-bubble__bubble') || bubble.querySelector('[class*="chat-bubble__bubble"]');
+              if (!bubbleEl) return;
+              var bubbleText = normalizeText(bubbleEl.textContent);
+              var src = srcMap[bubbleText] || srcMap[bubbleText.substring(0, 80)] || '';
+              var matchKind = src ? 'explanation-exact' : 'none';
+
+              // Fuzzy match when the UI truncates or slightly alters punctuation.
+              if (!src && bubbleText) {
+                for (var k in srcMap) {
+                  if (k.length < 30) continue;
+                  if (bubbleText.indexOf(k) === 0 || k.indexOf(bubbleText) === 0) {
+                    src = srcMap[k];
+                    matchKind = 'explanation-fuzzy';
+                    break;
+                  }
+                }
               }
+
+              // Fallback by party label in bubble footer/header.
+              if (!src) {
+                var partyEl = bubble.querySelector('.chat-bubble__party');
+                if (partyEl) {
+                  var partyKey = normalizeText(partyEl.textContent);
+                  src = partySourceMap[partyKey] || '';
+                  if (src) matchKind = 'party-fallback';
+                }
+              }
+
+              var info = document.createElement('div');
+              info.className = 'oec-source-inline';
+
+              if (src) {
+                info.textContent = 'Source: ';
+                var a = document.createElement('a');
+                a.href = src;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.className = 'oec-source-link';
+                a.textContent = getSourceLabel(src);
+                info.appendChild(a);
+              } else {
+                info.textContent = 'Source: not added yet.';
+              }
+
+              bubbleEl.appendChild(info);
+              debugLog('bubble processed: match=' + matchKind + ', text=' + bubbleText.substring(0, 64));
             });
           }
 
