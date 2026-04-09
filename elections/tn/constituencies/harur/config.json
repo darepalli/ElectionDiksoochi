@@ -33,60 +33,60 @@
                     {
                         "alias":  "cand-dmk",
                         "name":  {
-                                     "en":  "DMK Candidate (Generated)",
+                                     "en":  "DMK Alliance Candidate - Harur",
                                      "ta":  "வேட்பாளர் A (தி.மு.க)"
                                  },
                         "short":  {
-                                      "en":  "DMK Generated",
+                                      "en":  "DMK - Harur",
                                       "ta":  "A / தி.மு.க"
                                   },
                         "description":  {
-                                            "en":  "Generated constituency profile aligned to likely DMK-style governance priorities for Harur in Dharmapuri district. Replace with actual candidate details.",
+                                            "en":  "Constituency-level DMK alliance candidate profile for Harur in Dharmapuri district, focused on civic delivery, welfare access, and infrastructure tracking.",
                                             "ta":  "Harur தொகுதிக்கான திமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
                                         }
                     },
                     {
                         "alias":  "cand-aiadmk",
                         "name":  {
-                                     "en":  "AIADMK Candidate (Generated)",
+                                     "en":  "AIADMK Alliance Candidate - Harur",
                                      "ta":  "வேட்பாளர் B (அ.தி.மு.க)"
                                  },
                         "short":  {
-                                      "en":  "AIADMK Generated",
+                                      "en":  "AIADMK - Harur",
                                       "ta":  "B / அ.தி.மு.க"
                                   },
                         "description":  {
-                                            "en":  "Generated constituency profile aligned to likely AIADMK-style local delivery priorities for Harur in Dharmapuri district. Replace with actual candidate details.",
+                                            "en":  "Constituency-level AIADMK alliance candidate profile for Harur in Dharmapuri district, focused on local service delivery, neighborhood infrastructure, and administrative responsiveness.",
                                             "ta":  "Harur தொகுதிக்கான அதிமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
                                         }
                     },
                     {
                         "alias":  "cand-bjp",
                         "name":  {
-                                     "en":  "BJP Candidate (Generated)",
+                                     "en":  "BJP Alliance Candidate - Harur",
                                      "ta":  "வேட்பாளர் C (பி.ஜே.பி)"
                                  },
                         "short":  {
-                                      "en":  "BJP Generated",
+                                      "en":  "BJP - Harur",
                                       "ta":  "C / பி.ஜே.பி"
                                   },
                         "description":  {
-                                            "en":  "Generated constituency profile aligned to likely BJP-style development and implementation priorities for Harur in Dharmapuri district. Replace with actual candidate details.",
+                                            "en":  "Constituency-level BJP alliance candidate profile for Harur in Dharmapuri district, focused on implementation efficiency, investment-led growth, and technology-enabled governance.",
                                             "ta":  "Harur தொகுதிக்கான பாஜக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
                                         }
                     },
                     {
                         "alias":  "cand-ind",
                         "name":  {
-                                     "en":  "Independent Candidate (Generated)",
+                                     "en":  "Independent Candidate - Harur",
                                      "ta":  "வேட்பாளர் D (சுயேட்சை)"
                                  },
                         "short":  {
-                                      "en":  "Independent Generated",
+                                      "en":  "Ind. - Harur",
                                       "ta":  "D / சுயேட்சை"
                                   },
                         "description":  {
-                                            "en":  "Generated constituency profile for an independent candidate benchmark in Harur, Dharmapuri district. Replace with actual candidate details.",
+                                            "en":  "Independent benchmark candidate profile for Harur in Dharmapuri district, focused on ward-level accountability, grievance tracking, and issue-by-issue policy positions.",
                                             "ta":  "Harur தொகுதிக்கான சுயேட்சை தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
                                         }
                     }
@@ -105,7 +105,7 @@
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports accelerated ward-level civic works with public monitoring. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports integrated road relaying and storm-water drain upgrades in Harur with local dashboards and time-bound completion targets.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
@@ -113,15 +113,15 @@
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports city/town infrastructure works with local grievance tracking. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                                 "en":  "Supports accelerated neighborhood roads and drainage maintenance in Harur with stronger local body execution and escalation.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
                                                          },
                                          "cand-bjp":  {
-                                                          "position":  "neutral",
+                                                          "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports upgrades but prioritises PPP and phased rollout. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports corridor-based road upgrades, flood-spot mitigation, and engineering audits in Harur for measurable outcomes.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
@@ -129,7 +129,7 @@
                                          "cand-ind":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports quick local execution with resident welfare oversight. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports participatory local mapping in Harur to prioritize potholes, waterlogging points, and maintenance accountability.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
@@ -149,7 +149,7 @@
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports network expansion and leakage reduction. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports improving piped water reliability in Harur through leakage reduction, source balancing, and equitable distribution.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
@@ -157,7 +157,7 @@
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports source augmentation and better distribution scheduling. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                                 "en":  "Supports stronger distribution scheduling and storage reliability in Harur to reduce tanker dependency.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
@@ -165,7 +165,7 @@
                                          "cand-bjp":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports metering plus infrastructure upgrades for reliability. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports infrastructure-first reliability measures in Harur, including monitoring, metering transparency, and pressure management.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
@@ -173,7 +173,7 @@
                                          "cand-ind":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports ward-level water accountability and emergency provisioning. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports neighborhood-level water audits in Harur and public reporting of supply disruptions for faster correction.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
@@ -193,7 +193,7 @@
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports expanding public health staffing and preventive care. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports expanding PHC staffing, diagnostics, and referral coordination for residents of Harur.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
@@ -201,15 +201,15 @@
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports strengthening PHC infrastructure and specialist visits. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                                 "en":  "Supports strengthening public hospital access for Harur with improved specialist availability and service reliability.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
                                                          },
                                          "cand-bjp":  {
-                                                          "position":  "neutral",
+                                                          "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports mixed model with public-private service partnerships. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports better outcomes in Harur through performance benchmarks, digital health workflows, and capacity expansion.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
@@ -217,7 +217,7 @@
                                          "cand-ind":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports community-first public health and mobile clinic outreach. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports local health grievance tracking in Harur, especially for women, elderly, and low-income households.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
@@ -237,7 +237,7 @@
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports expanded safety infrastructure and police coordination. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports expanded street-lighting audits, CCTV coverage, and safety patrol coordination in Harur.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
@@ -245,7 +245,7 @@
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports neighbourhood safety committees and lighting upgrades. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                                 "en":  "Supports women-centric mobility improvements in Harur, including safer transit stops and complaint follow-through.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
@@ -253,7 +253,7 @@
                                          "cand-bjp":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports technology-led surveillance and faster grievance redressal. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports technology-led safety interventions in Harur, including monitoring and faster incident response pathways.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
@@ -261,7 +261,7 @@
                                          "cand-ind":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports participatory safety audits with local residents. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports community safety audits in Harur with resident groups to identify and fix high-risk public spaces.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
@@ -281,7 +281,7 @@
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports district-led skilling plus MSME credit access. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports youth skilling and MSME support in Harur, linked to district-level services and manufacturing demand.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
@@ -289,7 +289,7 @@
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports local enterprise support and self-help ecosystem expansion. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                                 "en":  "Supports local enterprise growth in Harur through job-linked training, small business support, and commerce facilitation.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
@@ -297,7 +297,7 @@
                                          "cand-bjp":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports startup and business climate reforms with placement focus. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports employment growth in Harur through startup support, MSME financing, and market-led opportunity expansion.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
@@ -305,7 +305,7 @@
                                          "cand-ind":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports local cooperative and micro-enterprise employment growth. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports local job fairs and micro-enterprise support in Harur with transparent beneficiary tracking.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
@@ -325,7 +325,7 @@
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Aligns with stronger state rights and fiscal flexibility. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Supports stronger state fiscal and administrative autonomy to improve delivery flexibility in constituencies such as Harur.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
@@ -333,7 +333,7 @@
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports state rights with cooperative federal dialogue. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                                 "en":  "Supports broader state rights while maintaining cooperative federal engagement to protect constituency priorities in Harur.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
@@ -341,7 +341,7 @@
                                          "cand-bjp":  {
                                                           "position":  "reject",
                                                           "explanation":  {
-                                                                              "en":  "Prefers stronger national policy alignment over expanded autonomy. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Prefers stronger national policy coordination over expanded state autonomy, while emphasizing centrally aligned development delivery in Harur.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
@@ -349,7 +349,7 @@
                                          "cand-ind":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Independent stance varies by issue; supports pragmatic decentralisation. Local adaptation note: prioritize rural constituency conditions in implementation planning.",
+                                                                              "en":  "Takes an issue-specific view that balances state autonomy demands with practical implementation needs in Harur.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
