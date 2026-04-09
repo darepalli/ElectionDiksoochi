@@ -182,7 +182,7 @@
       position: fixed;
       right: 12px;
       top: calc(var(--back-bar-h, 56px) + 12px);
-      width: min(360px, calc(100vw - 24px));
+      width: min(336px, calc(100vw - 24px));
       max-height: calc(100vh - var(--back-bar-h, 56px) - 24px);
       overflow: auto;
       z-index: 11400;
@@ -190,7 +190,7 @@
       border: 1px solid #dbeafe;
       border-radius: 10px;
       box-shadow: 0 12px 26px rgba(15, 23, 42, 0.16);
-      padding: 0.7rem 0.75rem;
+      padding: 0.55rem 0.6rem;
     }
 
     .oec-profile-panel.is-collapsed {
@@ -205,7 +205,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 0.5rem;
-      margin-bottom: 0.55rem;
+      margin-bottom: 0.42rem;
     }
 
     .oec-profile-toggle {
@@ -268,27 +268,157 @@
     }
 
     .oec-profile-panel__group {
-      margin-bottom: 0.6rem;
+      --alliance-accent: #64748b;
+      --alliance-bg: #f8fafc;
+      margin-bottom: 0.45rem;
+      border: 1px solid color-mix(in srgb, var(--alliance-accent) 24%, #e2e8f0);
+      border-radius: 8px;
+      background: var(--alliance-bg);
+      padding: 0.35rem 0.4rem;
+    }
+
+    .oec-profile-panel__group[data-alliance="dmk"] {
+      --alliance-accent: #dc2626;
+      --alliance-bg: #fef2f2;
+    }
+
+    .oec-profile-panel__group[data-alliance="aiadmk"] {
+      --alliance-accent: #16a34a;
+      --alliance-bg: #f0fdf4;
+    }
+
+    .oec-profile-panel__group[data-alliance="bjp"] {
+      --alliance-accent: #ea580c;
+      --alliance-bg: #fff7ed;
+    }
+
+    .oec-profile-panel__group[data-alliance="ind"] {
+      --alliance-accent: #475569;
+      --alliance-bg: #f8fafc;
     }
 
     .oec-profile-panel__group-title {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 800;
       color: #334155;
-      margin: 0 0 0.35rem;
+      margin: 0;
       text-transform: uppercase;
       letter-spacing: 0.02em;
     }
 
     .oec-profile-panel__group-members {
-      margin: 0 0 0.35rem;
+      margin: 0 0 0.28rem;
       color: #475569;
-      font-size: 0.68rem;
-      line-height: 1.3;
+      font-size: 0.64rem;
+      line-height: 1.2;
       font-weight: 600;
+    }
+
+    .oec-profile-panel__group-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .oec-profile-panel__group-body.is-collapsed {
+      display: none;
+    }
+
+    .oec-group-toggle {
+      border: 1px solid color-mix(in srgb, var(--alliance-accent) 35%, #cbd5e1);
+      background: color-mix(in srgb, var(--alliance-accent) 8%, #ffffff);
+      color: color-mix(in srgb, var(--alliance-accent) 75%, #1f2937);
+      border-radius: 6px;
+      padding: 0.1rem 0.32rem;
+      font-size: 0.64rem;
+      font-weight: 700;
+      cursor: pointer;
+      line-height: 1.1;
+    }
+
+    .oec-alliance-seat-list {
+      display: grid;
+      gap: 0.22rem;
+      margin: 0.18rem 0 0;
+    }
+
+    .oec-alliance-seat-row {
+      border: 1px solid color-mix(in srgb, var(--alliance-accent) 18%, #e2e8f0);
+      border-radius: 6px;
+      background: color-mix(in srgb, var(--alliance-accent) 4%, #ffffff);
+      padding: 0.26rem 0.34rem;
+    }
+
+    .oec-alliance-seat-row__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.28rem;
+      margin-bottom: 0.12rem;
+    }
+
+    .oec-alliance-seat-row__party {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.22rem;
+      font-size: 0.66rem;
+      font-weight: 700;
+      color: #1f2937;
+    }
+
+    .oec-alliance-seat-row__party-symbol {
+      font-size: 0.72rem;
+      line-height: 1;
+    }
+
+    .oec-alliance-seat-row__links {
+      display: inline-flex;
+      gap: 0.28rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .oec-alliance-seat-link {
+      color: color-mix(in srgb, var(--alliance-accent) 72%, #1d4ed8);
+      text-decoration: none;
+      font-size: 0.62rem;
+      font-weight: 700;
+      border-bottom: 1px dotted color-mix(in srgb, var(--alliance-accent) 45%, #93c5fd);
+    }
+
+    .oec-alliance-seat-link:hover {
+      text-decoration: underline;
+    }
+
+    .oec-alliance-seat-row__bar {
+      height: 0.3rem;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .oec-alliance-seat-row__fill {
+      display: block;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--alliance-accent) 70%, #ffffff),
+        var(--alliance-accent)
+      );
+      border-radius: 999px;
+      min-width: 2px;
+    }
+
+    .oec-alliance-seat-row__meta {
+      margin-top: 0.1rem;
+      color: #64748b;
+      font-size: 0.6rem;
+      line-height: 1.2;
     }
 
     .oec-alliance-dot {
@@ -297,6 +427,16 @@
       border-radius: 999px;
       display: inline-block;
       background: #cbd5e1;
+    }
+
+    .oec-alliance-header-symbol {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 0.9rem;
+      height: 0.9rem;
+      font-size: 0.82rem;
+      line-height: 1;
     }
 
     .oec-alliance-dot[data-alliance="dmk"] {
@@ -515,6 +655,80 @@
       margin: 0 0 0.55rem 0;
       font-size: 0.92rem;
       color: #0f172a;
+    }
+
+    .oec-live-details__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .oec-live-details__head h3 {
+      margin: 0;
+    }
+
+    .oec-live-details__toggle {
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      color: #334155;
+      border-radius: 6px;
+      padding: 0.16rem 0.44rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      cursor: pointer;
+      line-height: 1.1;
+    }
+
+    .oec-live-details__toggle:hover {
+      background: #eef2f7;
+    }
+
+    .oec-live-details__body.is-collapsed {
+      display: none;
+    }
+
+    .oec-results-view-switch {
+      border: 1px solid #dbe4ee;
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 0.45rem 0.55rem;
+      margin-bottom: 0.55rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .oec-results-view-switch__label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .oec-results-view-switch__buttons {
+      display: inline-flex;
+      gap: 0.35rem;
+    }
+
+    .oec-results-view-switch__btn {
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      color: #334155;
+      border-radius: 6px;
+      padding: 0.14rem 0.5rem;
+      font-size: 0.68rem;
+      font-weight: 700;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+
+    .oec-results-view-switch__btn.is-active {
+      border-color: #2563eb;
+      background: #dbeafe;
+      color: #1d4ed8;
     }
 
     .oec-random-details-table {
@@ -1334,11 +1548,176 @@
         'IND': { symbol: '👤 Independent', wiki: 'https://en.wikipedia.org/wiki/Independent_politician' },
         'INDEPENDENT': { symbol: '👤 Independent', wiki: 'https://en.wikipedia.org/wiki/Independent_politician' }
       };
+      var ALLIANCE_PARTNER_SEATS = {
+        'dmk-alliance': [
+          {
+            code: 'DMK',
+            name: 'DMK',
+            symbol: '☀',
+            seats: 176,
+            links: [
+              { label: 'Website', url: 'https://www.dmk.in/' },
+              { label: 'Manifesto', url: 'https://www.thehindu.com/incoming/70799704-dmk-manifesto-2026pdf' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'INC',
+            name: 'INC',
+            symbol: '✋',
+            seats: 28,
+            links: [
+              { label: 'Website', url: 'https://www.inc.in/' },
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Indian_National_Congress' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'DMDK',
+            name: 'DMDK',
+            symbol: '🥁',
+            seats: 10,
+            links: [
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Desiya_Murpokku_Dravida_Kazhagam' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'VCK',
+            name: 'VCK',
+            symbol: '💠',
+            seats: 8,
+            links: [
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Viduthalai_Chiruthaigal_Katchi' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'CPI(M)',
+            name: 'CPI(M)',
+            symbol: '🔨',
+            seats: 5,
+            links: [
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Communist_Party_of_India_(Marxist)' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'CPI',
+            name: 'CPI',
+            symbol: '🌾',
+            seats: 5,
+            links: [
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Communist_Party_of_India' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'IUML',
+            name: 'IUML',
+            symbol: '🪜',
+            seats: 2,
+            links: [
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Indian_Union_Muslim_League' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          }
+        ],
+        'aiadmk-alliance': [
+          {
+            code: 'AIADMK',
+            name: 'AIADMK',
+            symbol: '🍃',
+            seats: 172,
+            links: [
+              { label: 'Website', url: 'https://www.aiadmk.com/' },
+              { label: 'Manifesto', url: 'https://www.thehindu.com/news/resources/70779689-aiadmk-manifestotn-assembly-election-2026pdf' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'BJP',
+            name: 'BJP',
+            symbol: '🪷',
+            seats: 33,
+            links: [
+              { label: 'Website', url: 'https://www.bjp.org/' },
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Bharatiya_Janata_Party' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'PMK',
+            name: 'PMK',
+            symbol: '🥭',
+            seats: 18,
+            links: [
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Pattali_Makkal_Katchi' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'AMMK',
+            name: 'AMMK',
+            symbol: '🍲',
+            seats: 11,
+            links: [
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Amma_Makkal_Munneetra_Kazhagam' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'TMC(M)',
+            name: 'TMC(M)',
+            symbol: '🪷',
+            seats: 5,
+            links: [
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Tamil_Maanila_Congress_(Moopanar)' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'IJK',
+            name: 'IJK',
+            symbol: '🍃',
+            seats: 2,
+            links: [
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Indhiya_Jananayaga_Katchi' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          },
+          {
+            code: 'SIFB',
+            name: 'South Indian Forward Bloc',
+            symbol: '🪷',
+            seats: 1,
+            links: [
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/South_Indian_Forward_Bloc' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          }
+        ],
+        'tvk': [
+          {
+            code: 'TVK',
+            name: 'Tamilaga Vettri Kazhagam',
+            symbol: '⭐',
+            seats: 233,
+            links: [
+              { label: 'Wikipedia', url: 'https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam' }
+            ],
+            source: 'https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election'
+          }
+        ]
+      };
+      var GROUP_COLLAPSE_STORAGE_KEY = 'oec-profile-panel-group-collapsed-v1';
+      var RESULTS_VIEW_MODE_STORAGE_KEY = 'oec-results-view-mode-v1';
       var debugPanel = null;
       var debugLogEl = null;
       var debugLines = [];
       var profilePanelCollapsed = false;
       var allianceDisplayMap = {};
+      var resultsViewMode = 'tabular';
 
       function debugLog (line) {
         if (!debugMode) return;
@@ -1810,6 +2189,132 @@
         return true;
       }
 
+      function renderLiveComparisonDetails(container, cfg, legacyExcerpts) {
+        if (!container || !cfg) return;
+        var existing = container.querySelector('#oec-live-comparison-details');
+
+        var parties = cfg.parties || [];
+        var theses = cfg.theses || [];
+        if (!parties.length || !theses.length) {
+          if (existing && existing.parentElement) existing.parentElement.removeChild(existing);
+          return;
+        }
+
+        if (resultsViewMode !== 'tabular') {
+          if (existing && existing.parentElement) existing.parentElement.removeChild(existing);
+          return;
+        }
+
+        var signature = [
+          uiLang,
+          String(parties.length),
+          String(theses.length),
+          legacyExcerpts ? 'legacy' : 'nolegacy'
+        ].join('|');
+
+        if (existing && existing.getAttribute('data-signature') === signature) return;
+
+        var collapsedByDefault = false;
+        var keepExpanded = existing && !existing.classList.contains('is-collapsed');
+        var collapsed = keepExpanded ? false : collapsedByDefault;
+        var toggleLabel = collapsed
+          ? (uiLang === 'ta' ? 'விரிவு' : 'Expand')
+          : (uiLang === 'ta' ? 'சுருக்கு' : 'Collapse');
+
+        var html = '';
+        html += '<div class="oec-live-details__head">';
+        html += '<h3>' + escapeHtml(uiLang === 'ta' ? 'தலைப்புவாரியான கட்சி நிலைப்பாடுகள்' : 'Issue-wise Party Stands') + '</h3>';
+        html += '<button type="button" class="oec-live-details__toggle" id="oec-live-details-toggle">' + escapeHtml(toggleLabel) + '</button>';
+        html += '</div>';
+        html += '<div class="oec-live-details__body' + (collapsed ? ' is-collapsed' : '') + '">';
+        html += '<table class="oec-random-details-table">';
+        html += '<thead><tr>';
+        html += '<th>' + escapeHtml(uiLang === 'ta' ? 'தீர்மானம்' : 'Thesis') + '</th>';
+        parties.forEach(function (party) {
+          html += '<th>' + escapeHtml(getPartyDisplayName(party)) + '</th>';
+        });
+        html += '</tr></thead>';
+        html += '<tbody>';
+
+        theses.forEach(function (thesis, idx) {
+          var titleEn = (thesis.title && thesis.title.en) ? String(thesis.title.en) : '';
+          var title = (thesis.title && (thesis.title[uiLang] || thesis.title.en || thesis.title.ta)) || ('Thesis ' + (idx + 1));
+          html += '<tr>';
+          html += '<td>' + escapeHtml(title) + '</td>';
+
+          parties.forEach(function (party) {
+            var pos = thesis.positions && thesis.positions[party.alias];
+            if (!pos) {
+              html += '<td><span class="oec-random-stance">' + escapeHtml(uiLang === 'ta' ? 'தரவு இல்லை' : 'No data') + '</span></td>';
+              return;
+            }
+
+            var posLabel = getPositionLabel(pos.position);
+            var expl = (pos.explanation && (pos.explanation[uiLang] || pos.explanation.en || pos.explanation.ta)) || '';
+            var sourceUrl = pos.source || '';
+            var subpartyPositions = getAllianceSubpartyPositions(
+              party.alias,
+              pos.position,
+              (pos.explanation && (pos.explanation.en || pos.explanation.ta)) || expl,
+              titleEn,
+              legacyExcerpts
+            );
+
+            html += '<td>';
+            html += '<span class="oec-random-stance">' + escapeHtml(posLabel) + '</span>';
+            if (subpartyPositions.length > 1) {
+              var uniq = {};
+              subpartyPositions.forEach(function (sp) { uniq[sp.position] = true; });
+              if (Object.keys(uniq).length > 1) {
+                html += '<span class="oec-random-expl">' + escapeHtml(uiLang === 'ta' ? 'இந்த கூட்டணியில் கட்சிகள் வேறுபட்ட நிலைப்பாடுகளை கொண்டுள்ளன.' : 'Parties in this alliance hold different positions on this issue.') + '</span>';
+              }
+            }
+            subpartyPositions.forEach(function (item) {
+              var subLabel = getPositionLabel(item.position);
+              html += '<span class="oec-random-subparty">' + escapeHtml(item.party + ': ' + subLabel) + '</span>';
+              if (item.parsedExcerpt) {
+                html += '<span class="oec-random-subparty-excerpt">' + escapeHtml(uiLang === 'ta' ? ('கூட்டணி குறிப்பிலிருந்து: ' + item.parsedExcerpt) : ('From alliance note: ' + item.parsedExcerpt)) + '</span>';
+              }
+              if (item.excerpt) {
+                html += '<span class="oec-random-subparty-excerpt">"' + escapeHtml(item.excerpt) + '"</span>';
+              }
+            });
+            if (expl) html += '<span class="oec-random-expl">' + escapeHtml(expl) + '</span>';
+            if (sourceUrl) {
+              html += '<a class="oec-random-source" href="' + escapeHtml(sourceUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(uiLang === 'ta' ? 'ஆதாரம்' : 'Source') + '</a>';
+            }
+            html += '</td>';
+          });
+
+          html += '</tr>';
+        });
+
+        html += '</tbody></table>';
+        html += '</div>';
+
+        var section = existing || document.createElement('section');
+        section.id = 'oec-live-comparison-details';
+        section.className = 'oec-random-results__details' + (collapsed ? ' is-collapsed' : '');
+        section.setAttribute('data-signature', signature);
+        section.innerHTML = html;
+
+        if (!existing) {
+          container.appendChild(section);
+        }
+
+        var toggleBtn = section.querySelector('#oec-live-details-toggle');
+        var body = section.querySelector('.oec-live-details__body');
+        if (toggleBtn && body) {
+          toggleBtn.addEventListener('click', function () {
+            var isNowCollapsed = body.classList.toggle('is-collapsed');
+            section.classList.toggle('is-collapsed', isNowCollapsed);
+            toggleBtn.textContent = isNowCollapsed
+              ? (uiLang === 'ta' ? 'விரிவு' : 'Expand')
+              : (uiLang === 'ta' ? 'சுருக்கு' : 'Collapse');
+          });
+        }
+      }
+
       if (debugMode) {
         debugPanel = document.createElement('div');
         debugPanel.className = 'oec-debug-panel';
@@ -1882,6 +2387,132 @@
           : 'Public profile link is not available for this candidate yet.';
       }
 
+      function escapeAttrValue(value) {
+        return escapeHtml(value);
+      }
+
+      function getAllianceSeatRows(allianceAliasKey) {
+        return ALLIANCE_PARTNER_SEATS[allianceAliasKey] || [];
+      }
+
+      function renderAllianceSeatRows(allianceAliasKey) {
+        var rows = getAllianceSeatRows(allianceAliasKey);
+        if (!rows.length) return '';
+
+        var html = '<div class="oec-alliance-seat-list">';
+        rows.forEach(function (row) {
+          var seatCount = Number(row.seats) || 0;
+          var pct = Math.max(1, Math.min(100, Math.round((seatCount / 234) * 100)));
+          var rowName = row.name || row.code || 'Party';
+          var rowSymbol = row.symbol || '';
+          var rowLinks = Array.isArray(row.links) ? row.links : [];
+          html += '<div class="oec-alliance-seat-row">';
+          html += '<div class="oec-alliance-seat-row__top">';
+          html += '<span class="oec-alliance-seat-row__party">';
+          if (rowSymbol) {
+            html += '<span class="oec-alliance-seat-row__party-symbol">' + escapeHtml(rowSymbol) + '</span>';
+          }
+          html += '<span>' + escapeHtml(rowName) + ' (' + seatCount + ')</span>';
+          html += '</span>';
+          if (rowLinks.length) {
+            html += '<span class="oec-alliance-seat-row__links">';
+            rowLinks.forEach(function (link) {
+              if (!link || !link.url) return;
+              var label = link.label || 'Link';
+              html += '<a class="oec-alliance-seat-link" href="' + escapeAttrValue(link.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(label) + '</a>';
+            });
+            html += '</span>';
+          }
+          html += '</div>';
+          html += '<div class="oec-alliance-seat-row__bar"><span class="oec-alliance-seat-row__fill" style="width:' + pct + '%"></span></div>';
+          html += '<div class="oec-alliance-seat-row__meta">' + seatCount + ' / 234 seats';
+          if (row.source) {
+            html += ' • <a class="oec-alliance-seat-link" href="' + escapeAttrValue(row.source) + '" target="_blank" rel="noopener noreferrer">Source</a>';
+          }
+          html += '</div>';
+          html += '</div>';
+        });
+        html += '</div>';
+        return html;
+      }
+
+      function readCollapsedGroupState() {
+        if (!window.localStorage) return {};
+        try {
+          var raw = window.localStorage.getItem(GROUP_COLLAPSE_STORAGE_KEY);
+          if (!raw) return {};
+          var parsed = JSON.parse(raw);
+          return parsed && typeof parsed === 'object' ? parsed : {};
+        } catch (e) {
+          return {};
+        }
+      }
+
+      function persistCollapsedGroupState(state) {
+        if (!window.localStorage) return;
+        try {
+          window.localStorage.setItem(GROUP_COLLAPSE_STORAGE_KEY, JSON.stringify(state || {}));
+        } catch (e) {}
+      }
+
+      function readResultsViewMode() {
+        if (!window.localStorage) return 'tabular';
+        try {
+          var raw = window.localStorage.getItem(RESULTS_VIEW_MODE_STORAGE_KEY);
+          if (raw === 'live' || raw === 'tabular') return raw;
+        } catch (e) {}
+        return 'tabular';
+      }
+
+      function persistResultsViewMode(mode) {
+        var next = mode === 'live' ? 'live' : 'tabular';
+        resultsViewMode = next;
+        if (!window.localStorage) return;
+        try {
+          window.localStorage.setItem(RESULTS_VIEW_MODE_STORAGE_KEY, next);
+        } catch (e) {}
+      }
+
+      function renderResultsViewSwitcher(container, onChange) {
+        if (!container) return;
+        var node = container.querySelector('#oec-results-view-switch');
+        if (!node) {
+          node = document.createElement('section');
+          node.id = 'oec-results-view-switch';
+          node.className = 'oec-results-view-switch';
+          node.innerHTML =
+            '<span class="oec-results-view-switch__label">'
+            + escapeHtml(uiLang === 'ta' ? 'பார்வை முறை' : 'View Mode')
+            + '</span>'
+            + '<span class="oec-results-view-switch__buttons">'
+            + '<button type="button" class="oec-results-view-switch__btn" data-view-mode="live">'
+            + escapeHtml(uiLang === 'ta' ? 'நேரடி ஒப்பீடு' : 'Live Comparison')
+            + '</button>'
+            + '<button type="button" class="oec-results-view-switch__btn" data-view-mode="tabular">'
+            + escapeHtml(uiLang === 'ta' ? 'அட்டவணை' : 'Tabular')
+            + '</button>'
+            + '</span>';
+          container.prepend(node);
+        }
+
+        var btns = node.querySelectorAll('.oec-results-view-switch__btn');
+        btns.forEach(function (btn) {
+          var mode = btn.getAttribute('data-view-mode');
+          btn.classList.toggle('is-active', mode === resultsViewMode);
+          if (!btn.getAttribute('data-bound')) {
+            btn.setAttribute('data-bound', '1');
+            btn.addEventListener('click', function () {
+              var selected = btn.getAttribute('data-view-mode');
+              persistResultsViewMode(selected);
+              btns.forEach(function (b) {
+                b.classList.toggle('is-active', b.getAttribute('data-view-mode') === resultsViewMode);
+              });
+              if (typeof onChange === 'function') onChange(resultsViewMode);
+            });
+          }
+        });
+      }
+
       function getAllianceMetaForParty(party, partyTag) {
         var alias = String((party && party.alias) || '').toLowerCase();
         if (alias.indexOf('cand-dmk') === 0 || alias === 'dmk' || alias === 'dmk-alliance' || partyTag === 'DMK' || partyTag === 'INC' || partyTag === 'VCK' || partyTag === 'CPI' || partyTag === 'CPI(M)' || partyTag === 'CPM' || partyTag === 'MDMK') {
@@ -1939,6 +2570,7 @@
 
       function renderCandidateProfilePanel () {
         if (!candidateLinkItems.length) return;
+        var groupCollapsedState = readCollapsedGroupState();
 
         var panel = document.getElementById('oec-profile-panel');
         if (!panel) {
@@ -1956,9 +2588,7 @@
         if (profilePanelCollapsed) panel.classList.add('is-collapsed');
         else panel.classList.remove('is-collapsed');
 
-        var title = uiLang === 'ta' ? 'வேட்பாளர்கள் & இணைப்புகள்' : 'Candidates & Links';
-        var profileText = uiLang === 'ta' ? 'சுயவிவரம்' : 'Profile';
-        var partyText = uiLang === 'ta' ? 'கட்சி' : 'Party';
+        var title = uiLang === 'ta' ? 'கட்சிகள் & இணைப்புகள்' : 'Parties & Links';
         var toggleText = profilePanelCollapsed
           ? (uiLang === 'ta' ? 'விரி' : 'Expand')
           : (uiLang === 'ta' ? 'சுருக்கு' : 'Collapse');
@@ -1974,10 +2604,14 @@
           if (!groups[item.allianceKey]) {
             groups[item.allianceKey] = {
               key: item.allianceKey,
+              aliasKey: item.allianceAliasKey || item.allianceKey,
               label: item.allianceLabel,
               membersText: item.allianceMembers || '',
               items: []
             };
+          }
+          if (!groups[item.allianceKey].aliasKey && item.allianceAliasKey) {
+            groups[item.allianceKey].aliasKey = item.allianceAliasKey;
           }
           if (!groups[item.allianceKey].membersText && item.allianceMembers) {
             groups[item.allianceKey].membersText = item.allianceMembers;
@@ -1988,37 +2622,30 @@
         allianceOrder.forEach(function (allianceKey) {
           var group = groups[allianceKey];
           if (!group || !group.items.length) return;
+          var isGroupCollapsed = !!groupCollapsedState[group.key];
+          var groupSeatRows = getAllianceSeatRows(group.aliasKey);
+          var groupHeaderSymbol = (groupSeatRows[0] && groupSeatRows[0].symbol) ? groupSeatRows[0].symbol : '';
+          var groupToggleText = isGroupCollapsed
+            ? (uiLang === 'ta' ? 'விரி' : 'Expand')
+            : (uiLang === 'ta' ? 'சுருக்கு' : 'Collapse');
 
-          html += '<section class="oec-profile-panel__group">';
+          html += '<section class="oec-profile-panel__group" data-alliance="' + escapeHtml(group.key) + '">';
+          html += '<div class="oec-profile-panel__group-head">';
           html += '<h5 class="oec-profile-panel__group-title">';
-          html += '<span class="oec-alliance-dot" data-alliance="' + escapeHtml(group.key) + '"></span>';
+          if (groupHeaderSymbol) {
+            html += '<span class="oec-alliance-header-symbol">' + escapeHtml(groupHeaderSymbol) + '</span>';
+          } else {
+            html += '<span class="oec-alliance-dot" data-alliance="' + escapeHtml(group.key) + '"></span>';
+          }
           html += '<span>' + escapeHtml(group.label) + '</span>';
           html += '</h5>';
+          html += '<button type="button" class="oec-group-toggle" data-group-key="' + escapeHtml(group.key) + '">' + escapeHtml(groupToggleText) + '</button>';
+          html += '</div>';
+          html += '<div class="oec-profile-panel__group-body' + (isGroupCollapsed ? ' is-collapsed' : '') + '">';
           if (group.membersText) {
             html += '<p class="oec-profile-panel__group-members">' + escapeHtml(group.membersText) + '</p>';
           }
-          html += '<div class="oec-profile-panel__list">';
-
-          group.items.forEach(function (item) {
-            html += '<div class="oec-profile-panel__item" data-alliance="' + escapeHtml(item.allianceKey) + '">';
-            html += '<div class="oec-profile-panel__name">';
-            if (item.symbol) {
-              html += '<span class="oec-party-symbol">' + escapeHtml(item.symbol) + '</span>';
-            }
-            html += '<span>' + escapeHtml(item.name) + '</span>';
-            html += '</div>';
-            html += '<div class="oec-profile-panel__actions">';
-            if (item.profileUrl) {
-              html += '<a class="oec-profile-btn" href="' + escapeHtml(item.profileUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(profileText) + '</a>';
-            } else {
-              html += '<a class="oec-profile-btn is-disabled" href="#" data-profile-missing="1">' + escapeHtml(profileText) + '</a>';
-            }
-            if (item.partyUrl) {
-              html += '<a class="oec-profile-btn" href="' + escapeHtml(item.partyUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(partyText) + '</a>';
-            }
-            html += '</div></div>';
-          });
-
+          html += renderAllianceSeatRows(group.aliasKey);
           html += '</div></section>';
         });
 
@@ -2040,11 +2667,19 @@
           });
         }
 
-        var missingProfileBtns = panel.querySelectorAll('[data-profile-missing="1"]');
-        missingProfileBtns.forEach(function (btn) {
-          btn.addEventListener('click', function (e) {
-            e.preventDefault();
-            window.alert(getProfileUnavailableMessage());
+        var groupToggles = panel.querySelectorAll('.oec-group-toggle');
+        groupToggles.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var key = btn.getAttribute('data-group-key') || '';
+            if (!key) return;
+            var body = btn.closest('.oec-profile-panel__group') && btn.closest('.oec-profile-panel__group').querySelector('.oec-profile-panel__group-body');
+            if (!body) return;
+            var collapsed = body.classList.toggle('is-collapsed');
+            groupCollapsedState[key] = collapsed;
+            persistCollapsedGroupState(groupCollapsedState);
+            btn.textContent = collapsed
+              ? (uiLang === 'ta' ? 'விரி' : 'Expand')
+              : (uiLang === 'ta' ? 'சுருக்கு' : 'Collapse');
           });
         });
       }
@@ -2052,6 +2687,7 @@
       fetch(configPath)
         .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
         .then(function (cfg) {
+          resultsViewMode = readResultsViewMode();
           var parties = cfg.parties || [];
           var theses  = cfg.theses  || [];
           var langs   = (cfg.languages || []).map(function (l) { return l.code; });
@@ -2168,6 +2804,7 @@
               profileUrl: profileUrl,
               partyUrl: partyWiki,
               allianceKey: allianceMeta.key,
+              allianceAliasKey: allianceMeta.aliasKey,
               allianceLabel: allianceMeta.label,
               allianceMembers: allianceMeta.membersText || ''
             });
@@ -2190,15 +2827,21 @@
           var container = document.getElementById('open-election-compass');
           if (!container) return;
 
+          var legacyExcerptsData = null;
+          var legacyPath = configPath.replace(/config\.json$/i, 'legacy-party-excerpts.json');
+          var legacyLoadPromise = fetch(legacyPath)
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .catch(function () { return null; })
+            .then(function (legacyExcerpts) {
+              legacyExcerptsData = legacyExcerpts || null;
+              return legacyExcerptsData;
+            });
+
           if (isLocalhost && randomResultsMode) {
-            var legacyPath = configPath.replace(/config\.json$/i, 'legacy-party-excerpts.json');
-            fetch(legacyPath)
-              .then(function (r) { return r.ok ? r.json() : null; })
-              .catch(function () { return null; })
-              .then(function (legacyExcerpts) {
-                var rendered = renderRandomResultsPage(container, cfg, legacyExcerpts || null);
-                if (rendered) debugLog('random results mode rendered');
-              });
+            legacyLoadPromise.then(function (legacyExcerpts) {
+              var rendered = renderRandomResultsPage(container, cfg, legacyExcerpts || null);
+              if (rendered) debugLog('random results mode rendered');
+            });
             return;
           }
 
@@ -2388,8 +3031,12 @@
             isInjecting = true;
             if (observer) observer.disconnect();
             try {
+              renderResultsViewSwitcher(container, function () {
+                scheduleInjectors();
+              });
               injectLinks();
               injectCandidateProfileLinks();
+              renderLiveComparisonDetails(container, cfg, legacyExcerptsData);
             } finally {
               if (observer) observer.observe(container, { childList: true, subtree: true });
               isInjecting = false;
@@ -2410,6 +3057,10 @@
           });
           observer.observe(container, { childList: true, subtree: true });
           runInjectors(); // catch anything already rendered
+
+          legacyLoadPromise.then(function () {
+            scheduleInjectors();
+          });
 
           // OEC updates some UI states asynchronously; periodic refresh keeps source labels in sync.
           setInterval(function () {
