@@ -7,7 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="../../../assets/favicon.svg" />
   <link rel="stylesheet" href="../../../assets/hub.css" />
   <style>
-    .filter-bar { display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:1.25rem; }
+    .filter-bar { display:flex; gap:.5rem; flex-wrap:wrap; margin-bottom:.9rem; }
     .filter-btn {
       padding:5px 14px; border:1px solid var(--border); border-radius:999px;
       background:var(--surface); font-size:.82rem; font-weight:600; cursor:pointer;
@@ -32,6 +32,17 @@
     .const-badge-live { font-size:.65rem; font-weight:700; color:var(--live); background:rgba(22,163,74,.1); padding:2px 7px; border-radius:999px; border:1px solid rgba(22,163,74,.3); }
     .const-badge-soon { font-size:.65rem; font-weight:700; color:var(--soon); background:rgba(217,119,6,.1); padding:2px 7px; border-radius:999px; border:1px solid rgba(217,119,6,.3); }
     .note-box { background:#eff6ff; border:1px solid #bfdbfe; border-radius:var(--radius); padding:1rem; font-size:.85rem; color:#1e40af; margin-bottom:1.5rem; }
+    .tool-row { display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:1rem; }
+    .tool-input {
+      min-width:210px; max-width:320px; width:100%;
+      border:1px solid var(--border); border-radius:8px; padding:.5rem .65rem;
+      font-size:.84rem; background:#fff;
+    }
+    .result-meta { font-size:.78rem; color:var(--muted); margin-bottom:.75rem; }
+    @media (max-width: 560px) {
+      .tool-input { max-width:none; }
+      .const-grid { grid-template-columns:1fr; }
+    }
   </style>
 </head>
 <body>
@@ -61,71 +72,25 @@
     </section>
 
     <div class="note-box">
-      <strong>Preview mode.</strong> Two sample constituencies are live (Chennai Central &amp; Coimbatore South).
-      All 234 constituencies will be added progressively as candidate data is collected.
-      Want to contribute? Add a <code>config.json</code> for your constituency and open a pull request.
+      <strong>Statewide index enabled.</strong> All 234 Tamil Nadu Assembly constituencies are loaded with
+      constituency names and districts from the generated master dataset.
     </div>
 
-    <!-- Filter bar (JS powered) -->
+    <!-- Filters and tools (JS powered) -->
     <div class="filter-bar" id="filter-bar">
-      <button class="filter-btn active" data-district="all">All Districts</button>
-      <button class="filter-btn" data-district="chennai">Chennai</button>
-      <button class="filter-btn" data-district="coimbatore">Coimbatore</button>
-      <button class="filter-btn" data-district="madurai">Madurai</button>
-      <button class="filter-btn" data-district="salem">Salem</button>
-      <button class="filter-btn" data-district="tirunelveli">Tirunelveli</button>
+      <button class="filter-btn active" data-status="all">All</button>
+      <button class="filter-btn" data-status="live">Live</button>
+      <button class="filter-btn" data-status="soon">Coming Soon</button>
     </div>
+
+    <div class="tool-row">
+      <input id="search-input" class="tool-input" type="text" placeholder="Search by name or constituency number..." />
+      <input id="jump-input" class="tool-input" type="number" min="1" max="234" placeholder="Jump to number (1-234)" />
+    </div>
+
+    <div class="result-meta" id="result-meta">Loading constituencies...</div>
 
     <div class="const-grid" id="const-grid">
-
-      <!-- Live sample: Chennai Central -->
-      <a class="const-card const-card--live"
-         data-district="chennai"
-         href="../../../compass.html?config=elections/tn/constituencies/chennai-central/config.json">
-        <span class="const-num">4</span>
-        <div class="const-info">
-          <div class="const-name">Chennai Central</div>
-          <div class="const-district">Chennai District</div>
-        </div>
-        <span class="const-badge-live" style="margin-left:auto">Live</span>
-      </a>
-
-      <!-- Live sample: Coimbatore South -->
-      <a class="const-card const-card--live"
-         data-district="coimbatore"
-         href="../../../compass.html?config=elections/tn/constituencies/coimbatore-south/config.json">
-        <span class="const-num">37</span>
-        <div class="const-info">
-          <div class="const-name">Coimbatore South</div>
-          <div class="const-district">Coimbatore District</div>
-        </div>
-        <span class="const-badge-live" style="margin-left:auto">Live</span>
-      </a>
-
-      <!-- Remaining 232 as Coming Soon placeholders (representative sample) -->
-      <script>
-        var comingSoon = [
-          [1,"Chennai North","chennai"],[2,"Chennai South","chennai"],[3,"Chennai East","chennai"],
-          [5,"Thousand Lights","chennai"],[6,"Anna Nagar","chennai"],[7,"Egmore","chennai"],
-          [35,"Coimbatore North","coimbatore"],[36,"Coimbatore Central","coimbatore"],
-          [38,"Singanallur","coimbatore"],[39,"Kinathukadavu","coimbatore"],
-          [80,"Madurai North","madurai"],[81,"Madurai South","madurai"],[82,"Madurai Central","madurai"],
-          [100,"Salem West","salem"],[101,"Salem East","salem"],[102,"Salem North","salem"],
-          [150,"Tirunelveli","tirunelveli"],[151,"Ambasamudram","tirunelveli"]
-        ];
-        var grid = document.getElementById('const-grid');
-        comingSoon.forEach(function(c) {
-          var el = document.createElement('div');
-          el.className = 'const-card const-card--soon';
-          el.setAttribute('data-district', c[2]);
-          el.innerHTML =
-            '<span class="const-num">' + c[0] + '</span>' +
-            '<div class="const-info"><div class="const-name">' + c[1] + '</div>' +
-            '<div class="const-district">' + c[2].charAt(0).toUpperCase()+c[2].slice(1) + ' District</div></div>' +
-            '<span class="const-badge-soon" style="margin-left:auto">Soon</span>';
-          grid.appendChild(el);
-        });
-      </script>
     </div>
 
   </main>
@@ -137,17 +102,86 @@
   </footer>
 
   <script>
-    // District filter
-    document.getElementById('filter-bar').addEventListener('click', function(e) {
-      var btn = e.target.closest('.filter-btn');
-      if (!btn) return;
-      document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
-      btn.classList.add('active');
-      var district = btn.getAttribute('data-district');
-      document.querySelectorAll('#const-grid [data-district]').forEach(function(card) {
-        card.style.display = (district === 'all' || card.getAttribute('data-district') === district) ? '' : 'none';
+    (function () {
+      var list = [];
+
+      var grid = document.getElementById('const-grid');
+      var searchInput = document.getElementById('search-input');
+      var jumpInput = document.getElementById('jump-input');
+      var meta = document.getElementById('result-meta');
+      var activeStatus = 'all';
+
+      function cardHtml (item) {
+        var core =
+          '<span class="const-num">' + item.no + '</span>' +
+          '<div class="const-info">' +
+            '<div class="const-name">' + item.name + '</div>' +
+            '<div class="const-district">' + item.district + '</div>' +
+          '</div>' +
+          (item.status === 'live'
+            ? '<span class="const-badge-live" style="margin-left:auto">Live</span>'
+            : '<span class="const-badge-soon" style="margin-left:auto">Soon</span>');
+
+        if (item.status === 'live') {
+          return '<a class="const-card const-card--live" data-no="' + item.no + '" data-status="live" href="' + item.href + '">' + core + '</a>';
+        }
+        return '<div class="const-card const-card--soon" data-no="' + item.no + '" data-status="soon">' + core + '</div>';
+      }
+
+      function render () {
+        var q = (searchInput.value || '').toLowerCase().trim();
+        var filtered = list.filter(function (item) {
+          var statusOk = activeStatus === 'all' || item.status === activeStatus;
+          var textOk = !q || String(item.no).indexOf(q) >= 0 || item.name.toLowerCase().indexOf(q) >= 0 || item.district.toLowerCase().indexOf(q) >= 0;
+          return statusOk && textOk;
+        });
+
+        grid.innerHTML = filtered.map(cardHtml).join('');
+        meta.textContent = 'Showing ' + filtered.length + ' of ' + list.length + ' constituencies';
+      }
+
+      document.getElementById('filter-bar').addEventListener('click', function (e) {
+        var btn = e.target.closest('.filter-btn');
+        if (!btn) return;
+        document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        activeStatus = btn.getAttribute('data-status') || 'all';
+        render();
       });
-    });
+
+      searchInput.addEventListener('input', render);
+      jumpInput.addEventListener('change', function () {
+        var n = parseInt(jumpInput.value, 10);
+        if (isNaN(n) || n < 1 || n > 234) return;
+        searchInput.value = String(n);
+        render();
+        var target = grid.querySelector('[data-no="' + n + '"]');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+
+      fetch('constituencies.json')
+        .then(function (res) {
+          if (!res.ok) throw new Error('Failed to load constituencies');
+          return res.json();
+        })
+        .then(function (data) {
+          var rows = (data && data.constituencies) || [];
+          list = rows.map(function (row) {
+            return {
+              no: row.no,
+              name: row.name,
+              district: row.district,
+              status: 'live',
+              href: '../../../compass.html?config=elections/tn/constituencies/' + row.slug + '/config.json'
+            };
+          });
+          render();
+        })
+        .catch(function () {
+          meta.textContent = 'Unable to load constituency metadata.';
+          grid.innerHTML = '';
+        });
+    }());
   </script>
 
 </body>

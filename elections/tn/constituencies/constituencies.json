@@ -1,0 +1,1645 @@
+﻿{
+    "generatedAt":  "2026-04-09T12:22:16.7602600Z",
+    "source":  "https://en.wikipedia.org/wiki/List_of_constituencies_of_the_Tamil_Nadu_Legislative_Assembly",
+    "total":  234,
+    "constituencies":  [
+                           {
+                               "no":  1,
+                               "name":  "Gummidipoondi",
+                               "district":  "Thiruvallur",
+                               "slug":  "gummidipoondi",
+                               "live":  false
+                           },
+                           {
+                               "no":  2,
+                               "name":  "Ponneri",
+                               "district":  "Thiruvallur",
+                               "slug":  "ponneri",
+                               "live":  false
+                           },
+                           {
+                               "no":  3,
+                               "name":  "Tiruttani",
+                               "district":  "Thiruvallur",
+                               "slug":  "tiruttani",
+                               "live":  false
+                           },
+                           {
+                               "no":  4,
+                               "name":  "Thiruvallur",
+                               "district":  "Thiruvallur",
+                               "slug":  "thiruvallur",
+                               "live":  true
+                           },
+                           {
+                               "no":  5,
+                               "name":  "Poonamallee",
+                               "district":  "Thiruvallur",
+                               "slug":  "poonamallee",
+                               "live":  false
+                           },
+                           {
+                               "no":  6,
+                               "name":  "Avadi",
+                               "district":  "Thiruvallur",
+                               "slug":  "avadi",
+                               "live":  false
+                           },
+                           {
+                               "no":  7,
+                               "name":  "Maduravoyal",
+                               "district":  "Chennai",
+                               "slug":  "maduravoyal",
+                               "live":  false
+                           },
+                           {
+                               "no":  8,
+                               "name":  "Ambattur",
+                               "district":  "Chennai",
+                               "slug":  "ambattur",
+                               "live":  false
+                           },
+                           {
+                               "no":  9,
+                               "name":  "Madavaram",
+                               "district":  "Chennai",
+                               "slug":  "madavaram",
+                               "live":  false
+                           },
+                           {
+                               "no":  10,
+                               "name":  "Thiruvottiyur",
+                               "district":  "Chennai",
+                               "slug":  "thiruvottiyur",
+                               "live":  false
+                           },
+                           {
+                               "no":  11,
+                               "name":  "Dr. Radhakrishnan Nagar",
+                               "district":  "Chennai",
+                               "slug":  "dr-radhakrishnan-nagar",
+                               "live":  false
+                           },
+                           {
+                               "no":  12,
+                               "name":  "Perambur",
+                               "district":  "Chennai",
+                               "slug":  "perambur",
+                               "live":  false
+                           },
+                           {
+                               "no":  13,
+                               "name":  "Kolathur",
+                               "district":  "Chennai",
+                               "slug":  "kolathur",
+                               "live":  false
+                           },
+                           {
+                               "no":  14,
+                               "name":  "Villivakkam",
+                               "district":  "Chennai",
+                               "slug":  "villivakkam",
+                               "live":  false
+                           },
+                           {
+                               "no":  15,
+                               "name":  "Thiru-Vi-Ka-Nagar",
+                               "district":  "Chennai",
+                               "slug":  "thiru-vi-ka-nagar",
+                               "live":  false
+                           },
+                           {
+                               "no":  16,
+                               "name":  "Egmore",
+                               "district":  "Chennai",
+                               "slug":  "egmore",
+                               "live":  false
+                           },
+                           {
+                               "no":  17,
+                               "name":  "Royapuram",
+                               "district":  "Chennai",
+                               "slug":  "royapuram",
+                               "live":  false
+                           },
+                           {
+                               "no":  18,
+                               "name":  "Harbour",
+                               "district":  "Chennai",
+                               "slug":  "harbour",
+                               "live":  false
+                           },
+                           {
+                               "no":  19,
+                               "name":  "Chepauk-Thiruvallikeni",
+                               "district":  "Chennai",
+                               "slug":  "chepauk-thiruvallikeni",
+                               "live":  false
+                           },
+                           {
+                               "no":  20,
+                               "name":  "Thousand Lights",
+                               "district":  "Chennai",
+                               "slug":  "thousand-lights",
+                               "live":  false
+                           },
+                           {
+                               "no":  21,
+                               "name":  "Anna Nagar",
+                               "district":  "Chennai",
+                               "slug":  "anna-nagar",
+                               "live":  false
+                           },
+                           {
+                               "no":  22,
+                               "name":  "Virugampakkam",
+                               "district":  "Chennai",
+                               "slug":  "virugampakkam",
+                               "live":  false
+                           },
+                           {
+                               "no":  23,
+                               "name":  "Saidapet",
+                               "district":  "Chennai",
+                               "slug":  "saidapet",
+                               "live":  false
+                           },
+                           {
+                               "no":  24,
+                               "name":  "Thiyagarayanagar",
+                               "district":  "Chennai",
+                               "slug":  "thiyagarayanagar",
+                               "live":  false
+                           },
+                           {
+                               "no":  25,
+                               "name":  "Mylapore",
+                               "district":  "Chennai",
+                               "slug":  "mylapore",
+                               "live":  false
+                           },
+                           {
+                               "no":  26,
+                               "name":  "Velachery",
+                               "district":  "Chennai",
+                               "slug":  "velachery",
+                               "live":  false
+                           },
+                           {
+                               "no":  27,
+                               "name":  "Sholinganallur",
+                               "district":  "Chennai",
+                               "slug":  "sholinganallur",
+                               "live":  false
+                           },
+                           {
+                               "no":  28,
+                               "name":  "Alandur",
+                               "district":  "Chennai",
+                               "slug":  "alandur",
+                               "live":  false
+                           },
+                           {
+                               "no":  29,
+                               "name":  "Sriperumbudur",
+                               "district":  "Kancheepuram",
+                               "slug":  "sriperumbudur",
+                               "live":  false
+                           },
+                           {
+                               "no":  30,
+                               "name":  "Pallavaram",
+                               "district":  "Chengalpattu",
+                               "slug":  "pallavaram",
+                               "live":  false
+                           },
+                           {
+                               "no":  31,
+                               "name":  "Tambaram",
+                               "district":  "Chengalpattu",
+                               "slug":  "tambaram",
+                               "live":  false
+                           },
+                           {
+                               "no":  32,
+                               "name":  "Chengalpattu",
+                               "district":  "Chengalpattu",
+                               "slug":  "chengalpattu",
+                               "live":  false
+                           },
+                           {
+                               "no":  33,
+                               "name":  "Thiruporur",
+                               "district":  "Chengalpattu",
+                               "slug":  "thiruporur",
+                               "live":  false
+                           },
+                           {
+                               "no":  34,
+                               "name":  "Cheyyur",
+                               "district":  "Chengalpattu",
+                               "slug":  "cheyyur",
+                               "live":  false
+                           },
+                           {
+                               "no":  35,
+                               "name":  "Madurantakam",
+                               "district":  "Chengalpattu",
+                               "slug":  "madurantakam",
+                               "live":  false
+                           },
+                           {
+                               "no":  36,
+                               "name":  "Uthiramerur",
+                               "district":  "Kancheepuram",
+                               "slug":  "uthiramerur",
+                               "live":  false
+                           },
+                           {
+                               "no":  37,
+                               "name":  "Kancheepuram",
+                               "district":  "Kancheepuram",
+                               "slug":  "kancheepuram",
+                               "live":  true
+                           },
+                           {
+                               "no":  38,
+                               "name":  "Arakkonam",
+                               "district":  "Ranipet",
+                               "slug":  "arakkonam",
+                               "live":  false
+                           },
+                           {
+                               "no":  39,
+                               "name":  "Sholingur",
+                               "district":  "Ranipet",
+                               "slug":  "sholingur",
+                               "live":  false
+                           },
+                           {
+                               "no":  40,
+                               "name":  "Katpadi",
+                               "district":  "Vellore",
+                               "slug":  "katpadi",
+                               "live":  false
+                           },
+                           {
+                               "no":  41,
+                               "name":  "Ranipet",
+                               "district":  "Ranipet",
+                               "slug":  "ranipet",
+                               "live":  false
+                           },
+                           {
+                               "no":  42,
+                               "name":  "Arcot",
+                               "district":  "Ranipet",
+                               "slug":  "arcot",
+                               "live":  false
+                           },
+                           {
+                               "no":  43,
+                               "name":  "Vellore",
+                               "district":  "Vellore",
+                               "slug":  "vellore",
+                               "live":  false
+                           },
+                           {
+                               "no":  44,
+                               "name":  "Anaikattu",
+                               "district":  "Vellore",
+                               "slug":  "anaikattu",
+                               "live":  false
+                           },
+                           {
+                               "no":  45,
+                               "name":  "Kilvaithinankuppam",
+                               "district":  "Vellore",
+                               "slug":  "kilvaithinankuppam",
+                               "live":  false
+                           },
+                           {
+                               "no":  46,
+                               "name":  "Gudiyatham",
+                               "district":  "Vellore",
+                               "slug":  "gudiyatham",
+                               "live":  false
+                           },
+                           {
+                               "no":  47,
+                               "name":  "Vaniyambadi",
+                               "district":  "Tirupattur",
+                               "slug":  "vaniyambadi",
+                               "live":  false
+                           },
+                           {
+                               "no":  48,
+                               "name":  "Ambur",
+                               "district":  "Tirupattur",
+                               "slug":  "ambur",
+                               "live":  false
+                           },
+                           {
+                               "no":  49,
+                               "name":  "Jolarpet",
+                               "district":  "Tirupattur",
+                               "slug":  "jolarpet",
+                               "live":  false
+                           },
+                           {
+                               "no":  50,
+                               "name":  "Tiruppattur",
+                               "district":  "Tirupattur",
+                               "slug":  "tiruppattur",
+                               "live":  false
+                           },
+                           {
+                               "no":  51,
+                               "name":  "Uthangarai",
+                               "district":  "Krishnagiri",
+                               "slug":  "uthangarai",
+                               "live":  false
+                           },
+                           {
+                               "no":  52,
+                               "name":  "Bargur",
+                               "district":  "Krishnagiri",
+                               "slug":  "bargur",
+                               "live":  false
+                           },
+                           {
+                               "no":  53,
+                               "name":  "Krishnagiri",
+                               "district":  "Krishnagiri",
+                               "slug":  "krishnagiri",
+                               "live":  false
+                           },
+                           {
+                               "no":  54,
+                               "name":  "Veppanahalli",
+                               "district":  "Krishnagiri",
+                               "slug":  "veppanahalli",
+                               "live":  false
+                           },
+                           {
+                               "no":  55,
+                               "name":  "Hosur",
+                               "district":  "Krishnagiri",
+                               "slug":  "hosur",
+                               "live":  false
+                           },
+                           {
+                               "no":  56,
+                               "name":  "Thalli",
+                               "district":  "Krishnagiri",
+                               "slug":  "thalli",
+                               "live":  false
+                           },
+                           {
+                               "no":  57,
+                               "name":  "Palacode",
+                               "district":  "Dharmapuri",
+                               "slug":  "palacode",
+                               "live":  false
+                           },
+                           {
+                               "no":  58,
+                               "name":  "Pennagaram",
+                               "district":  "Dharmapuri",
+                               "slug":  "pennagaram",
+                               "live":  false
+                           },
+                           {
+                               "no":  59,
+                               "name":  "Dharmapuri",
+                               "district":  "Dharmapuri",
+                               "slug":  "dharmapuri",
+                               "live":  false
+                           },
+                           {
+                               "no":  60,
+                               "name":  "Pappireddippatti",
+                               "district":  "Dharmapuri",
+                               "slug":  "pappireddippatti",
+                               "live":  false
+                           },
+                           {
+                               "no":  61,
+                               "name":  "Harur",
+                               "district":  "Dharmapuri",
+                               "slug":  "harur",
+                               "live":  false
+                           },
+                           {
+                               "no":  62,
+                               "name":  "Chengam",
+                               "district":  "Tiruvannamalai",
+                               "slug":  "chengam",
+                               "live":  false
+                           },
+                           {
+                               "no":  63,
+                               "name":  "Tiruvannamalai",
+                               "district":  "Tiruvannamalai",
+                               "slug":  "tiruvannamalai",
+                               "live":  false
+                           },
+                           {
+                               "no":  64,
+                               "name":  "Kilpennathur",
+                               "district":  "Tiruvannamalai",
+                               "slug":  "kilpennathur",
+                               "live":  false
+                           },
+                           {
+                               "no":  65,
+                               "name":  "Kalasapakkam",
+                               "district":  "Tiruvannamalai",
+                               "slug":  "kalasapakkam",
+                               "live":  false
+                           },
+                           {
+                               "no":  66,
+                               "name":  "Polur",
+                               "district":  "Tiruvannamalai",
+                               "slug":  "polur",
+                               "live":  false
+                           },
+                           {
+                               "no":  67,
+                               "name":  "Arani",
+                               "district":  "Tiruvannamalai",
+                               "slug":  "arani",
+                               "live":  false
+                           },
+                           {
+                               "no":  68,
+                               "name":  "Cheyyar",
+                               "district":  "Tiruvannamalai",
+                               "slug":  "cheyyar",
+                               "live":  false
+                           },
+                           {
+                               "no":  69,
+                               "name":  "Vandavasi",
+                               "district":  "Tiruvannamalai",
+                               "slug":  "vandavasi",
+                               "live":  false
+                           },
+                           {
+                               "no":  70,
+                               "name":  "Gingee",
+                               "district":  "Viluppuram",
+                               "slug":  "gingee",
+                               "live":  false
+                           },
+                           {
+                               "no":  71,
+                               "name":  "Mailam",
+                               "district":  "Viluppuram",
+                               "slug":  "mailam",
+                               "live":  false
+                           },
+                           {
+                               "no":  72,
+                               "name":  "Tindivanam",
+                               "district":  "Viluppuram",
+                               "slug":  "tindivanam",
+                               "live":  false
+                           },
+                           {
+                               "no":  73,
+                               "name":  "Vanur",
+                               "district":  "Viluppuram",
+                               "slug":  "vanur",
+                               "live":  false
+                           },
+                           {
+                               "no":  74,
+                               "name":  "Villupuram",
+                               "district":  "Viluppuram",
+                               "slug":  "villupuram",
+                               "live":  false
+                           },
+                           {
+                               "no":  75,
+                               "name":  "Vikravandi",
+                               "district":  "Viluppuram",
+                               "slug":  "vikravandi",
+                               "live":  false
+                           },
+                           {
+                               "no":  76,
+                               "name":  "Tirukkoyilur",
+                               "district":  "Kallakurichi",
+                               "slug":  "tirukkoyilur",
+                               "live":  false
+                           },
+                           {
+                               "no":  77,
+                               "name":  "Ulundurpettai",
+                               "district":  "Kallakurichi",
+                               "slug":  "ulundurpettai",
+                               "live":  false
+                           },
+                           {
+                               "no":  78,
+                               "name":  "Rishivandiyam",
+                               "district":  "Kallakurichi",
+                               "slug":  "rishivandiyam",
+                               "live":  false
+                           },
+                           {
+                               "no":  79,
+                               "name":  "Sankarapuram",
+                               "district":  "Kallakurichi",
+                               "slug":  "sankarapuram",
+                               "live":  false
+                           },
+                           {
+                               "no":  80,
+                               "name":  "Kallakurichi",
+                               "district":  "Kallakurichi",
+                               "slug":  "kallakurichi",
+                               "live":  false
+                           },
+                           {
+                               "no":  81,
+                               "name":  "Gangavalli",
+                               "district":  "Salem",
+                               "slug":  "gangavalli",
+                               "live":  false
+                           },
+                           {
+                               "no":  82,
+                               "name":  "Attur",
+                               "district":  "Salem",
+                               "slug":  "attur",
+                               "live":  false
+                           },
+                           {
+                               "no":  83,
+                               "name":  "Yercaud",
+                               "district":  "Salem",
+                               "slug":  "yercaud",
+                               "live":  false
+                           },
+                           {
+                               "no":  84,
+                               "name":  "Omalur",
+                               "district":  "Salem",
+                               "slug":  "omalur",
+                               "live":  false
+                           },
+                           {
+                               "no":  85,
+                               "name":  "Mettur",
+                               "district":  "Salem",
+                               "slug":  "mettur",
+                               "live":  false
+                           },
+                           {
+                               "no":  86,
+                               "name":  "Edappadi",
+                               "district":  "Salem",
+                               "slug":  "edappadi",
+                               "live":  false
+                           },
+                           {
+                               "no":  87,
+                               "name":  "Sankari",
+                               "district":  "Salem",
+                               "slug":  "sankari",
+                               "live":  false
+                           },
+                           {
+                               "no":  88,
+                               "name":  "Salem (West)",
+                               "district":  "Salem",
+                               "slug":  "salem-west",
+                               "live":  false
+                           },
+                           {
+                               "no":  89,
+                               "name":  "Salem (North)",
+                               "district":  "Salem",
+                               "slug":  "salem-north",
+                               "live":  false
+                           },
+                           {
+                               "no":  90,
+                               "name":  "Salem (South)",
+                               "district":  "Salem",
+                               "slug":  "salem-south",
+                               "live":  false
+                           },
+                           {
+                               "no":  91,
+                               "name":  "Veerapandi",
+                               "district":  "Salem",
+                               "slug":  "veerapandi",
+                               "live":  false
+                           },
+                           {
+                               "no":  92,
+                               "name":  "Rasipuram",
+                               "district":  "Namakkal",
+                               "slug":  "rasipuram",
+                               "live":  false
+                           },
+                           {
+                               "no":  93,
+                               "name":  "Senthamangalam",
+                               "district":  "Namakkal",
+                               "slug":  "senthamangalam",
+                               "live":  false
+                           },
+                           {
+                               "no":  94,
+                               "name":  "Namakkal",
+                               "district":  "Namakkal",
+                               "slug":  "namakkal",
+                               "live":  false
+                           },
+                           {
+                               "no":  95,
+                               "name":  "Paramathi Velur",
+                               "district":  "Namakkal",
+                               "slug":  "paramathi-velur",
+                               "live":  false
+                           },
+                           {
+                               "no":  96,
+                               "name":  "Tiruchengodu",
+                               "district":  "Namakkal",
+                               "slug":  "tiruchengodu",
+                               "live":  false
+                           },
+                           {
+                               "no":  97,
+                               "name":  "Kumarapalayam",
+                               "district":  "Namakkal",
+                               "slug":  "kumarapalayam",
+                               "live":  false
+                           },
+                           {
+                               "no":  98,
+                               "name":  "Erode (East)",
+                               "district":  "Erode",
+                               "slug":  "erode-east",
+                               "live":  false
+                           },
+                           {
+                               "no":  99,
+                               "name":  "Erode (West)",
+                               "district":  "Erode",
+                               "slug":  "erode-west",
+                               "live":  false
+                           },
+                           {
+                               "no":  100,
+                               "name":  "Modakkurichi",
+                               "district":  "Erode",
+                               "slug":  "modakkurichi",
+                               "live":  false
+                           },
+                           {
+                               "no":  101,
+                               "name":  "Dharapuram",
+                               "district":  "Tiruppur",
+                               "slug":  "dharapuram",
+                               "live":  false
+                           },
+                           {
+                               "no":  102,
+                               "name":  "Kangayam",
+                               "district":  "Tiruppur",
+                               "slug":  "kangayam",
+                               "live":  false
+                           },
+                           {
+                               "no":  103,
+                               "name":  "Perundurai",
+                               "district":  "Erode",
+                               "slug":  "perundurai",
+                               "live":  false
+                           },
+                           {
+                               "no":  104,
+                               "name":  "Bhavani",
+                               "district":  "Erode",
+                               "slug":  "bhavani",
+                               "live":  false
+                           },
+                           {
+                               "no":  105,
+                               "name":  "Anthiyur",
+                               "district":  "Erode",
+                               "slug":  "anthiyur",
+                               "live":  false
+                           },
+                           {
+                               "no":  106,
+                               "name":  "Gobichettipalayam",
+                               "district":  "Erode",
+                               "slug":  "gobichettipalayam",
+                               "live":  false
+                           },
+                           {
+                               "no":  107,
+                               "name":  "Bhavanisagar",
+                               "district":  "Erode",
+                               "slug":  "bhavanisagar",
+                               "live":  false
+                           },
+                           {
+                               "no":  108,
+                               "name":  "Udhagamandalam",
+                               "district":  "Nilgiris",
+                               "slug":  "udhagamandalam",
+                               "live":  false
+                           },
+                           {
+                               "no":  109,
+                               "name":  "Gudalur",
+                               "district":  "Nilgiris",
+                               "slug":  "gudalur",
+                               "live":  false
+                           },
+                           {
+                               "no":  110,
+                               "name":  "Coonoor",
+                               "district":  "Nilgiris",
+                               "slug":  "coonoor",
+                               "live":  false
+                           },
+                           {
+                               "no":  111,
+                               "name":  "Mettupalayam",
+                               "district":  "Coimbatore",
+                               "slug":  "mettupalayam",
+                               "live":  false
+                           },
+                           {
+                               "no":  112,
+                               "name":  "Avanashi",
+                               "district":  "Tiruppur",
+                               "slug":  "avanashi",
+                               "live":  false
+                           },
+                           {
+                               "no":  113,
+                               "name":  "Tiruppur (North)",
+                               "district":  "Tiruppur",
+                               "slug":  "tiruppur-north",
+                               "live":  false
+                           },
+                           {
+                               "no":  114,
+                               "name":  "Tiruppur (South)",
+                               "district":  "Tiruppur",
+                               "slug":  "tiruppur-south",
+                               "live":  false
+                           },
+                           {
+                               "no":  115,
+                               "name":  "Palladam",
+                               "district":  "Tiruppur",
+                               "slug":  "palladam",
+                               "live":  false
+                           },
+                           {
+                               "no":  116,
+                               "name":  "Sulur",
+                               "district":  "Coimbatore",
+                               "slug":  "sulur",
+                               "live":  false
+                           },
+                           {
+                               "no":  117,
+                               "name":  "Kavundampalayam",
+                               "district":  "Coimbatore",
+                               "slug":  "kavundampalayam",
+                               "live":  false
+                           },
+                           {
+                               "no":  118,
+                               "name":  "Coimbatore (North)",
+                               "district":  "Coimbatore",
+                               "slug":  "coimbatore-north",
+                               "live":  false
+                           },
+                           {
+                               "no":  119,
+                               "name":  "Thondamuthur",
+                               "district":  "Coimbatore",
+                               "slug":  "thondamuthur",
+                               "live":  false
+                           },
+                           {
+                               "no":  120,
+                               "name":  "Coimbatore (South)",
+                               "district":  "Coimbatore",
+                               "slug":  "coimbatore-south",
+                               "live":  false
+                           },
+                           {
+                               "no":  121,
+                               "name":  "Singanallur",
+                               "district":  "Coimbatore",
+                               "slug":  "singanallur",
+                               "live":  false
+                           },
+                           {
+                               "no":  122,
+                               "name":  "Kinathukadavu",
+                               "district":  "Coimbatore",
+                               "slug":  "kinathukadavu",
+                               "live":  false
+                           },
+                           {
+                               "no":  123,
+                               "name":  "Pollachi",
+                               "district":  "Coimbatore",
+                               "slug":  "pollachi",
+                               "live":  false
+                           },
+                           {
+                               "no":  124,
+                               "name":  "Valparai",
+                               "district":  "Coimbatore",
+                               "slug":  "valparai",
+                               "live":  false
+                           },
+                           {
+                               "no":  125,
+                               "name":  "Udumalaipettai",
+                               "district":  "Tiruppur",
+                               "slug":  "udumalaipettai",
+                               "live":  false
+                           },
+                           {
+                               "no":  126,
+                               "name":  "Madathukulam",
+                               "district":  "Tiruppur",
+                               "slug":  "madathukulam",
+                               "live":  false
+                           },
+                           {
+                               "no":  127,
+                               "name":  "Palani",
+                               "district":  "Dindigul",
+                               "slug":  "palani",
+                               "live":  false
+                           },
+                           {
+                               "no":  128,
+                               "name":  "Oddanchatram",
+                               "district":  "Dindigul",
+                               "slug":  "oddanchatram",
+                               "live":  false
+                           },
+                           {
+                               "no":  129,
+                               "name":  "Athoor",
+                               "district":  "Dindigul",
+                               "slug":  "athoor",
+                               "live":  false
+                           },
+                           {
+                               "no":  130,
+                               "name":  "Nilakottai",
+                               "district":  "Dindigul",
+                               "slug":  "nilakottai",
+                               "live":  false
+                           },
+                           {
+                               "no":  131,
+                               "name":  "Natham",
+                               "district":  "Dindigul",
+                               "slug":  "natham",
+                               "live":  false
+                           },
+                           {
+                               "no":  132,
+                               "name":  "Dindigul",
+                               "district":  "Dindigul",
+                               "slug":  "dindigul",
+                               "live":  false
+                           },
+                           {
+                               "no":  133,
+                               "name":  "Vedasandur",
+                               "district":  "Dindigul",
+                               "slug":  "vedasandur",
+                               "live":  false
+                           },
+                           {
+                               "no":  134,
+                               "name":  "Aravakurichi",
+                               "district":  "Karur",
+                               "slug":  "aravakurichi",
+                               "live":  false
+                           },
+                           {
+                               "no":  135,
+                               "name":  "Karur",
+                               "district":  "Karur",
+                               "slug":  "karur",
+                               "live":  false
+                           },
+                           {
+                               "no":  136,
+                               "name":  "Krishnarayapuram",
+                               "district":  "Karur",
+                               "slug":  "krishnarayapuram",
+                               "live":  false
+                           },
+                           {
+                               "no":  137,
+                               "name":  "Kulithalai",
+                               "district":  "Karur",
+                               "slug":  "kulithalai",
+                               "live":  false
+                           },
+                           {
+                               "no":  138,
+                               "name":  "Manapaarai",
+                               "district":  "Tiruchirappalli",
+                               "slug":  "manapaarai",
+                               "live":  false
+                           },
+                           {
+                               "no":  139,
+                               "name":  "Srirangam",
+                               "district":  "Tiruchirappalli",
+                               "slug":  "srirangam",
+                               "live":  false
+                           },
+                           {
+                               "no":  140,
+                               "name":  "Tiruchirappalli (West)",
+                               "district":  "Tiruchirappalli",
+                               "slug":  "tiruchirappalli-west",
+                               "live":  false
+                           },
+                           {
+                               "no":  141,
+                               "name":  "Tiruchirappalli (East)",
+                               "district":  "Tiruchirappalli",
+                               "slug":  "tiruchirappalli-east",
+                               "live":  false
+                           },
+                           {
+                               "no":  142,
+                               "name":  "Thiruverumbur",
+                               "district":  "Tiruchirappalli",
+                               "slug":  "thiruverumbur",
+                               "live":  false
+                           },
+                           {
+                               "no":  143,
+                               "name":  "Lalgudi",
+                               "district":  "Tiruchirappalli",
+                               "slug":  "lalgudi",
+                               "live":  false
+                           },
+                           {
+                               "no":  144,
+                               "name":  "Manachanallur",
+                               "district":  "Tiruchirappalli",
+                               "slug":  "manachanallur",
+                               "live":  false
+                           },
+                           {
+                               "no":  145,
+                               "name":  "Musiri",
+                               "district":  "Tiruchirappalli",
+                               "slug":  "musiri",
+                               "live":  false
+                           },
+                           {
+                               "no":  146,
+                               "name":  "Thuraiyur",
+                               "district":  "Tiruchirappalli",
+                               "slug":  "thuraiyur",
+                               "live":  false
+                           },
+                           {
+                               "no":  147,
+                               "name":  "Perambalur",
+                               "district":  "Perambalur",
+                               "slug":  "perambalur",
+                               "live":  false
+                           },
+                           {
+                               "no":  148,
+                               "name":  "Kunnam",
+                               "district":  "Perambalur",
+                               "slug":  "kunnam",
+                               "live":  false
+                           },
+                           {
+                               "no":  149,
+                               "name":  "Ariyalur",
+                               "district":  "Ariyalur",
+                               "slug":  "ariyalur",
+                               "live":  false
+                           },
+                           {
+                               "no":  150,
+                               "name":  "Jayankondam",
+                               "district":  "Ariyalur",
+                               "slug":  "jayankondam",
+                               "live":  false
+                           },
+                           {
+                               "no":  151,
+                               "name":  "Tittakudi",
+                               "district":  "Cuddalore",
+                               "slug":  "tittakudi",
+                               "live":  false
+                           },
+                           {
+                               "no":  152,
+                               "name":  "Virudhachalam",
+                               "district":  "Cuddalore",
+                               "slug":  "virudhachalam",
+                               "live":  false
+                           },
+                           {
+                               "no":  153,
+                               "name":  "Neyveli",
+                               "district":  "Cuddalore",
+                               "slug":  "neyveli",
+                               "live":  false
+                           },
+                           {
+                               "no":  154,
+                               "name":  "Panruti",
+                               "district":  "Cuddalore",
+                               "slug":  "panruti",
+                               "live":  false
+                           },
+                           {
+                               "no":  155,
+                               "name":  "Cuddalore",
+                               "district":  "Cuddalore",
+                               "slug":  "cuddalore",
+                               "live":  false
+                           },
+                           {
+                               "no":  156,
+                               "name":  "Kurinjipadi",
+                               "district":  "Cuddalore",
+                               "slug":  "kurinjipadi",
+                               "live":  false
+                           },
+                           {
+                               "no":  157,
+                               "name":  "Bhuvanagiri",
+                               "district":  "Cuddalore",
+                               "slug":  "bhuvanagiri",
+                               "live":  false
+                           },
+                           {
+                               "no":  158,
+                               "name":  "Chidambaram",
+                               "district":  "Cuddalore",
+                               "slug":  "chidambaram",
+                               "live":  false
+                           },
+                           {
+                               "no":  159,
+                               "name":  "Kattumannarkoil",
+                               "district":  "Cuddalore",
+                               "slug":  "kattumannarkoil",
+                               "live":  false
+                           },
+                           {
+                               "no":  160,
+                               "name":  "Sirkazhi",
+                               "district":  "Mayiladuthurai",
+                               "slug":  "sirkazhi",
+                               "live":  false
+                           },
+                           {
+                               "no":  161,
+                               "name":  "Mayiladuthurai",
+                               "district":  "Mayiladuthurai",
+                               "slug":  "mayiladuthurai",
+                               "live":  false
+                           },
+                           {
+                               "no":  162,
+                               "name":  "Poompuhar",
+                               "district":  "Mayiladuthurai",
+                               "slug":  "poompuhar",
+                               "live":  false
+                           },
+                           {
+                               "no":  163,
+                               "name":  "Nagapattinam",
+                               "district":  "Nagapattinam",
+                               "slug":  "nagapattinam",
+                               "live":  false
+                           },
+                           {
+                               "no":  164,
+                               "name":  "Kilvelur",
+                               "district":  "Nagapattinam",
+                               "slug":  "kilvelur",
+                               "live":  false
+                           },
+                           {
+                               "no":  165,
+                               "name":  "Vedaranyam",
+                               "district":  "Nagapattinam",
+                               "slug":  "vedaranyam",
+                               "live":  false
+                           },
+                           {
+                               "no":  166,
+                               "name":  "Thiruthuraipoondi",
+                               "district":  "Thiruvarur",
+                               "slug":  "thiruthuraipoondi",
+                               "live":  false
+                           },
+                           {
+                               "no":  167,
+                               "name":  "Mannargudi",
+                               "district":  "Thiruvarur",
+                               "slug":  "mannargudi",
+                               "live":  false
+                           },
+                           {
+                               "no":  168,
+                               "name":  "Thiruvarur",
+                               "district":  "Thiruvarur",
+                               "slug":  "thiruvarur",
+                               "live":  false
+                           },
+                           {
+                               "no":  169,
+                               "name":  "Nannilam",
+                               "district":  "Thiruvarur",
+                               "slug":  "nannilam",
+                               "live":  false
+                           },
+                           {
+                               "no":  170,
+                               "name":  "Thiruvidaimarudur",
+                               "district":  "Thanjavur",
+                               "slug":  "thiruvidaimarudur",
+                               "live":  false
+                           },
+                           {
+                               "no":  171,
+                               "name":  "Kumbakonam",
+                               "district":  "Thanjavur",
+                               "slug":  "kumbakonam",
+                               "live":  false
+                           },
+                           {
+                               "no":  172,
+                               "name":  "Papanasam",
+                               "district":  "Thanjavur",
+                               "slug":  "papanasam",
+                               "live":  false
+                           },
+                           {
+                               "no":  173,
+                               "name":  "Thiruvaiyaru",
+                               "district":  "Thanjavur",
+                               "slug":  "thiruvaiyaru",
+                               "live":  false
+                           },
+                           {
+                               "no":  174,
+                               "name":  "Thanjavur",
+                               "district":  "Thanjavur",
+                               "slug":  "thanjavur",
+                               "live":  false
+                           },
+                           {
+                               "no":  175,
+                               "name":  "Orathanadu",
+                               "district":  "Thanjavur",
+                               "slug":  "orathanadu",
+                               "live":  false
+                           },
+                           {
+                               "no":  176,
+                               "name":  "Pattukkottai",
+                               "district":  "Thanjavur",
+                               "slug":  "pattukkottai",
+                               "live":  false
+                           },
+                           {
+                               "no":  177,
+                               "name":  "Peravurani",
+                               "district":  "Thanjavur",
+                               "slug":  "peravurani",
+                               "live":  false
+                           },
+                           {
+                               "no":  178,
+                               "name":  "Gandarvakottai",
+                               "district":  "Pudukkottai",
+                               "slug":  "gandarvakottai",
+                               "live":  false
+                           },
+                           {
+                               "no":  179,
+                               "name":  "Viralimalai",
+                               "district":  "Pudukkottai",
+                               "slug":  "viralimalai",
+                               "live":  false
+                           },
+                           {
+                               "no":  180,
+                               "name":  "Pudukkottai",
+                               "district":  "Pudukkottai",
+                               "slug":  "pudukkottai",
+                               "live":  false
+                           },
+                           {
+                               "no":  181,
+                               "name":  "Thirumayam",
+                               "district":  "Pudukkottai",
+                               "slug":  "thirumayam",
+                               "live":  false
+                           },
+                           {
+                               "no":  182,
+                               "name":  "Alangudi",
+                               "district":  "Pudukkottai",
+                               "slug":  "alangudi",
+                               "live":  false
+                           },
+                           {
+                               "no":  183,
+                               "name":  "Aranthangi",
+                               "district":  "Pudukkottai",
+                               "slug":  "aranthangi",
+                               "live":  false
+                           },
+                           {
+                               "no":  184,
+                               "name":  "Karaikudi",
+                               "district":  "Sivaganga",
+                               "slug":  "karaikudi",
+                               "live":  false
+                           },
+                           {
+                               "no":  185,
+                               "name":  "Tiruppattur",
+                               "district":  "Sivaganga",
+                               "slug":  "tiruppattur",
+                               "live":  false
+                           },
+                           {
+                               "no":  186,
+                               "name":  "Sivaganga",
+                               "district":  "Sivaganga",
+                               "slug":  "sivaganga",
+                               "live":  false
+                           },
+                           {
+                               "no":  187,
+                               "name":  "Manamadurai",
+                               "district":  "Sivaganga",
+                               "slug":  "manamadurai",
+                               "live":  false
+                           },
+                           {
+                               "no":  188,
+                               "name":  "Melur",
+                               "district":  "Madurai",
+                               "slug":  "melur",
+                               "live":  false
+                           },
+                           {
+                               "no":  189,
+                               "name":  "Madurai East",
+                               "district":  "Madurai",
+                               "slug":  "madurai-east",
+                               "live":  false
+                           },
+                           {
+                               "no":  190,
+                               "name":  "Sholavandan",
+                               "district":  "Madurai",
+                               "slug":  "sholavandan",
+                               "live":  false
+                           },
+                           {
+                               "no":  191,
+                               "name":  "Madurai North",
+                               "district":  "Madurai",
+                               "slug":  "madurai-north",
+                               "live":  false
+                           },
+                           {
+                               "no":  192,
+                               "name":  "Madurai South",
+                               "district":  "Madurai",
+                               "slug":  "madurai-south",
+                               "live":  false
+                           },
+                           {
+                               "no":  193,
+                               "name":  "Madurai Central",
+                               "district":  "Madurai",
+                               "slug":  "madurai-central",
+                               "live":  false
+                           },
+                           {
+                               "no":  194,
+                               "name":  "Madurai West",
+                               "district":  "Madurai",
+                               "slug":  "madurai-west",
+                               "live":  false
+                           },
+                           {
+                               "no":  195,
+                               "name":  "Thiruparankundram",
+                               "district":  "Madurai",
+                               "slug":  "thiruparankundram",
+                               "live":  false
+                           },
+                           {
+                               "no":  196,
+                               "name":  "Thirumangalam",
+                               "district":  "Madurai",
+                               "slug":  "thirumangalam",
+                               "live":  false
+                           },
+                           {
+                               "no":  197,
+                               "name":  "Usilampatti",
+                               "district":  "Madurai",
+                               "slug":  "usilampatti",
+                               "live":  false
+                           },
+                           {
+                               "no":  198,
+                               "name":  "Andipatti",
+                               "district":  "Theni",
+                               "slug":  "andipatti",
+                               "live":  false
+                           },
+                           {
+                               "no":  199,
+                               "name":  "Periyakulam",
+                               "district":  "Theni",
+                               "slug":  "periyakulam",
+                               "live":  false
+                           },
+                           {
+                               "no":  200,
+                               "name":  "Bodinayakanur",
+                               "district":  "Theni",
+                               "slug":  "bodinayakanur",
+                               "live":  false
+                           },
+                           {
+                               "no":  201,
+                               "name":  "Cumbum",
+                               "district":  "Theni",
+                               "slug":  "cumbum",
+                               "live":  false
+                           },
+                           {
+                               "no":  202,
+                               "name":  "Rajapalayam",
+                               "district":  "Virudhunagar",
+                               "slug":  "rajapalayam",
+                               "live":  false
+                           },
+                           {
+                               "no":  203,
+                               "name":  "Srivilliputhur",
+                               "district":  "Virudhunagar",
+                               "slug":  "srivilliputhur",
+                               "live":  false
+                           },
+                           {
+                               "no":  204,
+                               "name":  "Sattur",
+                               "district":  "Virudhunagar",
+                               "slug":  "sattur",
+                               "live":  false
+                           },
+                           {
+                               "no":  205,
+                               "name":  "Sivakasi",
+                               "district":  "Virudhunagar",
+                               "slug":  "sivakasi",
+                               "live":  false
+                           },
+                           {
+                               "no":  206,
+                               "name":  "Virudhunagar",
+                               "district":  "Virudhunagar",
+                               "slug":  "virudhunagar",
+                               "live":  false
+                           },
+                           {
+                               "no":  207,
+                               "name":  "Aruppukkottai",
+                               "district":  "Virudhunagar",
+                               "slug":  "aruppukkottai",
+                               "live":  false
+                           },
+                           {
+                               "no":  208,
+                               "name":  "Tiruchuli",
+                               "district":  "Virudhunagar",
+                               "slug":  "tiruchuli",
+                               "live":  false
+                           },
+                           {
+                               "no":  209,
+                               "name":  "Paramakudi",
+                               "district":  "Ramanathapuram",
+                               "slug":  "paramakudi",
+                               "live":  false
+                           },
+                           {
+                               "no":  210,
+                               "name":  "Tiruvadanai",
+                               "district":  "Ramanathapuram",
+                               "slug":  "tiruvadanai",
+                               "live":  false
+                           },
+                           {
+                               "no":  211,
+                               "name":  "Ramanathapuram",
+                               "district":  "Ramanathapuram",
+                               "slug":  "ramanathapuram",
+                               "live":  false
+                           },
+                           {
+                               "no":  212,
+                               "name":  "Mudhukulathur",
+                               "district":  "Ramanathapuram",
+                               "slug":  "mudhukulathur",
+                               "live":  false
+                           },
+                           {
+                               "no":  213,
+                               "name":  "Vilathikulam",
+                               "district":  "Thoothukudi",
+                               "slug":  "vilathikulam",
+                               "live":  false
+                           },
+                           {
+                               "no":  214,
+                               "name":  "Thoothukkudi",
+                               "district":  "Thoothukudi",
+                               "slug":  "thoothukkudi",
+                               "live":  false
+                           },
+                           {
+                               "no":  215,
+                               "name":  "Tiruchendur",
+                               "district":  "Thoothukudi",
+                               "slug":  "tiruchendur",
+                               "live":  false
+                           },
+                           {
+                               "no":  216,
+                               "name":  "Srivaikuntam",
+                               "district":  "Thoothukudi",
+                               "slug":  "srivaikuntam",
+                               "live":  false
+                           },
+                           {
+                               "no":  217,
+                               "name":  "Ottapidaram",
+                               "district":  "Thoothukudi",
+                               "slug":  "ottapidaram",
+                               "live":  false
+                           },
+                           {
+                               "no":  218,
+                               "name":  "Kovilpatti",
+                               "district":  "Thoothukudi",
+                               "slug":  "kovilpatti",
+                               "live":  false
+                           },
+                           {
+                               "no":  219,
+                               "name":  "Sankarankovil",
+                               "district":  "Tenkasi",
+                               "slug":  "sankarankovil",
+                               "live":  false
+                           },
+                           {
+                               "no":  220,
+                               "name":  "Vasudevanallur",
+                               "district":  "Tenkasi",
+                               "slug":  "vasudevanallur",
+                               "live":  false
+                           },
+                           {
+                               "no":  221,
+                               "name":  "Kadayanallur",
+                               "district":  "Tenkasi",
+                               "slug":  "kadayanallur",
+                               "live":  false
+                           },
+                           {
+                               "no":  222,
+                               "name":  "Tenkasi",
+                               "district":  "Tenkasi",
+                               "slug":  "tenkasi",
+                               "live":  false
+                           },
+                           {
+                               "no":  223,
+                               "name":  "Alangulam",
+                               "district":  "Tenkasi",
+                               "slug":  "alangulam",
+                               "live":  false
+                           },
+                           {
+                               "no":  224,
+                               "name":  "Tirunelveli",
+                               "district":  "Tirunelveli",
+                               "slug":  "tirunelveli",
+                               "live":  false
+                           },
+                           {
+                               "no":  225,
+                               "name":  "Ambasamudram",
+                               "district":  "Tirunelveli",
+                               "slug":  "ambasamudram",
+                               "live":  false
+                           },
+                           {
+                               "no":  226,
+                               "name":  "Palayamkottai",
+                               "district":  "Tirunelveli",
+                               "slug":  "palayamkottai",
+                               "live":  false
+                           },
+                           {
+                               "no":  227,
+                               "name":  "Nanguneri",
+                               "district":  "Tirunelveli",
+                               "slug":  "nanguneri",
+                               "live":  false
+                           },
+                           {
+                               "no":  228,
+                               "name":  "Radhapuram",
+                               "district":  "Tirunelveli",
+                               "slug":  "radhapuram",
+                               "live":  false
+                           },
+                           {
+                               "no":  229,
+                               "name":  "Kanniyakumari",
+                               "district":  "Kanniyakumari",
+                               "slug":  "kanniyakumari",
+                               "live":  false
+                           },
+                           {
+                               "no":  230,
+                               "name":  "Nagercoil",
+                               "district":  "Kanniyakumari",
+                               "slug":  "nagercoil",
+                               "live":  false
+                           },
+                           {
+                               "no":  231,
+                               "name":  "Colachal",
+                               "district":  "Kanniyakumari",
+                               "slug":  "colachal",
+                               "live":  false
+                           },
+                           {
+                               "no":  232,
+                               "name":  "Padmanabhapuram",
+                               "district":  "Kanniyakumari",
+                               "slug":  "padmanabhapuram",
+                               "live":  false
+                           },
+                           {
+                               "no":  233,
+                               "name":  "Vilavancode",
+                               "district":  "Kanniyakumari",
+                               "slug":  "vilavancode",
+                               "live":  false
+                           },
+                           {
+                               "no":  234,
+                               "name":  "Killiyoor",
+                               "district":  "Kanniyakumari",
+                               "slug":  "killiyoor",
+                               "live":  false
+                           }
+                       ]
+}
