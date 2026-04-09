@@ -1056,6 +1056,17 @@
         return match ? decodeURIComponent(match[1].replace(/\+/g, ' ')) : '';
       }
 
+      function withNoCache(url, token) {
+        var key = token || String(Date.now());
+        try {
+          var u = new URL(url, window.location.href);
+          u.searchParams.set('_oecv', key);
+          return u.toString();
+        } catch (e) {
+          return String(url) + (String(url).indexOf('?') >= 0 ? '&' : '?') + '_oecv=' + encodeURIComponent(key);
+        }
+      }
+
       var configPath = getParam('config');
       var oecEl      = document.getElementById('oec-el');
       var wrapper    = document.getElementById('open-election-compass');
@@ -1212,7 +1223,7 @@
         if (document.getElementById('oec-runtime-script')) return;
         var s = document.createElement('script');
         s.id = 'oec-runtime-script';
-        s.src = 'assets/open-election-compass.umd.min.js';
+        s.src = withNoCache('assets/open-election-compass.umd.min.js', noCacheToken);
         s.defer = true;
         document.body.appendChild(s);
       }
@@ -1389,12 +1400,16 @@
       syncBackBarHeight();
       window.addEventListener('resize', syncBackBarHeight);
 
+      var noCacheToken = String(Date.now());
+      var noCacheConfigUrl = withNoCache(configPath, noCacheToken);
+
       // Always set load-url for internal scripts that read this value.
-      oecEl.setAttribute('load-url', configPath);
+      // Use a versioned URL so OEC runtime also fetches fresh JSON from server.
+      oecEl.setAttribute('load-url', noCacheConfigUrl);
       setOecLanguage(selectedLang);
 
       // Load config first, inject Tamil UI overrides, then start OEC.
-      fetch(configPath)
+      fetch(noCacheConfigUrl, { cache: 'no-store' })
         .then(function (r) {
           if (!r.ok) throw new Error('Failed to load config: ' + r.status);
           return r.json();
@@ -2439,6 +2454,21 @@
         return 'Party Website';
       }
 
+      function withNoCache(url, token) {
+        var key = token || String(Date.now());
+        try {
+          var u = new URL(url, window.location.href);
+          u.searchParams.set('_oecv', key);
+          return u.toString();
+        } catch (e) {
+          return String(url) + (String(url).indexOf('?') >= 0 ? '&' : '?') + '_oecv=' + encodeURIComponent(key);
+        }
+      }
+
+      function stripQueryAndHash(url) {
+        return String(url || '').split('#')[0].split('?')[0];
+      }
+
       function escapeHtml(text) {
         return String(text || '')
           .replace(/&/g, '&amp;')
@@ -2738,7 +2768,10 @@
         });
       }
 
-      fetch(configPath)
+      var noCacheToken = String(Date.now());
+      var noCacheConfigUrl = withNoCache(configPath, noCacheToken);
+
+      fetch(noCacheConfigUrl, { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
         .then(function (cfg) {
           resultsViewMode = readResultsViewMode();
@@ -2882,8 +2915,9 @@
           if (!container) return;
 
           var legacyExcerptsData = null;
-          var legacyPath = configPath.replace(/config\.json$/i, 'legacy-party-excerpts.json');
-          var legacyLoadPromise = fetch(legacyPath)
+          var baseConfigPath = stripQueryAndHash(configPath);
+          var legacyPath = baseConfigPath.replace(/config\.json$/i, 'legacy-party-excerpts.json');
+          var legacyLoadPromise = fetch(withNoCache(legacyPath, noCacheToken), { cache: 'no-store' })
             .then(function (r) { return r.ok ? r.json() : null; })
             .catch(function () { return null; })
             .then(function (legacyExcerpts) {
