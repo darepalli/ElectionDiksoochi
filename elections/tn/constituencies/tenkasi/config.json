@@ -1,4 +1,4 @@
-﻿{
+{
     "version":  "1",
     "algorithm":  "hybrid",
     "languages":  [
@@ -43,7 +43,11 @@
                         "description":  {
                                             "en":  "Constituency-level DMK alliance candidate profile for Tenkasi in Tenkasi district, focused on civic delivery, welfare access, and infrastructure tracking.",
                                             "ta":  "Tenkasi தொகுதிக்கான திமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        }
+                                        },
+                        "profile":  {
+                                        "en":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam"
+                                    }
                     },
                     {
                         "alias":  "cand-aiadmk",
@@ -58,7 +62,11 @@
                         "description":  {
                                             "en":  "Constituency-level AIADMK alliance candidate profile for Tenkasi in Tenkasi district, focused on local service delivery, neighborhood infrastructure, and administrative responsiveness.",
                                             "ta":  "Tenkasi தொகுதிக்கான அதிமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        }
+                                        },
+                        "profile":  {
+                                        "en":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam"
+                                    }
                     },
                     {
                         "alias":  "cand-bjp",
@@ -73,7 +81,11 @@
                         "description":  {
                                             "en":  "Constituency-level BJP alliance candidate profile for Tenkasi in Tenkasi district, focused on implementation efficiency, investment-led growth, and technology-enabled governance.",
                                             "ta":  "Tenkasi தொகுதிக்கான பாஜக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        }
+                                        },
+                        "profile":  {
+                                        "en":  "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party",
+                                        "ta":  "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party"
+                                    }
                     },
                     {
                         "alias":  "cand-ind",
@@ -88,7 +100,11 @@
                         "description":  {
                                             "en":  "Independent benchmark candidate profile for Tenkasi in Tenkasi district, focused on ward-level accountability, grievance tracking, and issue-by-issue policy positions.",
                                             "ta":  "Tenkasi தொகுதிக்கான சுயேட்சை தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        }
+                                        },
+                        "profile":  {
+                                        "en":  "https://en.wikipedia.org/wiki/Independent_politician",
+                                        "ta":  "https://en.wikipedia.org/wiki/Independent_politician"
+                                    }
                     }
                 ],
     "theses":  [

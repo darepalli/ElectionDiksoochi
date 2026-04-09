@@ -1,4 +1,4 @@
-﻿{
+{
     "version":  "1",
     "algorithm":  "hybrid",
     "languages":  [
@@ -7,26 +7,26 @@
                           "code":  "en"
                       },
                       {
-                          "name":  "தமிழ்",
+                          "name":  "à®¤à®®à®¿à®´à¯",
                           "code":  "ta"
                       }
                   ],
     "title":  {
                   "en":  "Tiruchirappalli (East) Constituency Compass 2026",
-                  "ta":  "Tiruchirappalli (East) தொகுதி திசைகாட்டி 2026"
+                  "ta":  "Tiruchirappalli (East) à®¤à¯Šà®•à¯à®¤à®¿ à®¤à®¿à®šà¯ˆà®•à®¾à®Ÿà¯à®Ÿà®¿ 2026"
               },
     "subtitle":  {
                      "en":  "Compare generated candidate profiles for Constituency No. 141 - Tiruchirappalli (East) (Tiruchirappalli district) in the 2026 Tamil Nadu Assembly elections",
-                     "ta":  "2026 தமிழ்நாடு சட்டசபை தேர்தலில் தொகுதி எண் 141 - Tiruchirappalli (East) (Tiruchirappalli மாவட்டம்)ற்கான உருவாக்கப்பட்ட வேட்பாளர் சுயவிவரங்களை ஒப்பிடுங்கள்"
+                     "ta":  "2026 à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯ à®šà®Ÿà¯à®Ÿà®šà®ªà¯ˆ à®¤à¯‡à®°à¯à®¤à®²à®¿à®²à¯ à®¤à¯Šà®•à¯à®¤à®¿ à®Žà®£à¯ 141 - Tiruchirappalli (East) (Tiruchirappalli à®®à®¾à®µà®Ÿà¯à®Ÿà®®à¯)à®±à¯à®•à®¾à®© à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®šà¯à®¯à®µà®¿à®µà®°à®™à¯à®•à®³à¯ˆ à®’à®ªà¯à®ªà®¿à®Ÿà¯à®™à¯à®•à®³à¯"
                  },
     "introduction":  {
                          "heading":  {
                                          "en":  "Tiruchirappalli (East): District-Aware Candidate Compass",
-                                         "ta":  "Tiruchirappalli (East): மாவட்ட முன்னுரிமை வேட்பாளர் திசைகாட்டி"
+                                         "ta":  "Tiruchirappalli (East): à®®à®¾à®µà®Ÿà¯à®Ÿ à®®à¯à®©à¯à®©à¯à®°à®¿à®®à¯ˆ à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®¤à®¿à®šà¯ˆà®•à®¾à®Ÿà¯à®Ÿà®¿"
                                      },
                          "text":  {
                                       "en":  "This constituency profile is auto-generated using official constituency name and district metadata. Candidate profiles and stance notes are structured placeholders tuned for Tiruchirappalli district priorities (infrastructure, water, health, jobs and governance) and must be replaced with verified local candidates plus source-backed statements before public use. [Profile: urban]",
-                                      "ta":  "இந்த தொகுதி சுயவிவரம் அதிகாரப்பூர்வ தொகுதி பெயர் மற்றும் மாவட்ட தரவின் அடிப்படையில் தானாக உருவாக்கப்பட்டது. வேட்பாளர் சுயவிவரங்களும் நிலைப்பாடுகளும் Tiruchirappalli மாவட்ட முன்னுரிமைகள் (அளவைத்தளம், தண்ணீர், சுகாதாரம், வேலைவாய்ப்பு, நிர்வாகம்) பொருந்தும் மாதிரி வடிவில் உள்ளன; பொதுப் பயன்பாட்டிற்கு முன் சரிபார்க்கப்பட்ட உள்ளூர் வேட்பாளர்கள் மற்றும் ஆதாரப்பூர்வ குறிப்புகளால் மாற்றப்பட வேண்டும்."
+                                      "ta":  "à®‡à®¨à¯à®¤ à®¤à¯Šà®•à¯à®¤à®¿ à®šà¯à®¯à®µà®¿à®µà®°à®®à¯ à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®¤à¯Šà®•à¯à®¤à®¿ à®ªà¯†à®¯à®°à¯ à®®à®±à¯à®±à¯à®®à¯ à®®à®¾à®µà®Ÿà¯à®Ÿ à®¤à®°à®µà®¿à®©à¯ à®…à®Ÿà®¿à®ªà¯à®ªà®Ÿà¯ˆà®¯à®¿à®²à¯ à®¤à®¾à®©à®¾à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿà®¤à¯. à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®šà¯à®¯à®µà®¿à®µà®°à®™à¯à®•à®³à¯à®®à¯ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà®¾à®Ÿà¯à®•à®³à¯à®®à¯ Tiruchirappalli à®®à®¾à®µà®Ÿà¯à®Ÿ à®®à¯à®©à¯à®©à¯à®°à®¿à®®à¯ˆà®•à®³à¯ (à®…à®³à®µà¯ˆà®¤à¯à®¤à®³à®®à¯, à®¤à®£à¯à®£à¯€à®°à¯, à®šà¯à®•à®¾à®¤à®¾à®°à®®à¯, à®µà¯‡à®²à¯ˆà®µà®¾à®¯à¯à®ªà¯à®ªà¯, à®¨à®¿à®°à¯à®µà®¾à®•à®®à¯) à®ªà¯Šà®°à¯à®¨à¯à®¤à¯à®®à¯ à®®à®¾à®¤à®¿à®°à®¿ à®µà®Ÿà®¿à®µà®¿à®²à¯ à®‰à®³à¯à®³à®©; à®ªà¯Šà®¤à¯à®ªà¯ à®ªà®¯à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà®¿à®±à¯à®•à¯ à®®à¯à®©à¯ à®šà®°à®¿à®ªà®¾à®°à¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®‰à®³à¯à®³à¯‚à®°à¯ à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®†à®¤à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®•à¯à®±à®¿à®ªà¯à®ªà¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                   }
                      },
     "parties":  [
@@ -34,79 +34,95 @@
                         "alias":  "cand-dmk",
                         "name":  {
                                      "en":  "DMK Alliance Candidate - Tiruchirappalli (East)",
-                                     "ta":  "வேட்பாளர் A (தி.மு.க)"
+                                     "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ A (à®¤à®¿.à®®à¯.à®•)"
                                  },
                         "short":  {
                                       "en":  "DMK - Tiruchirappalli (East)",
-                                      "ta":  "A / தி.மு.க"
+                                      "ta":  "A / à®¤à®¿.à®®à¯.à®•"
                                   },
                         "description":  {
                                             "en":  "Constituency-level DMK alliance candidate profile for Tiruchirappalli (East) in Tiruchirappalli district, focused on civic delivery, welfare access, and infrastructure tracking.",
-                                            "ta":  "Tiruchirappalli (East) தொகுதிக்கான திமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        }
+                                            "ta":  "Tiruchirappalli (East) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®¤à®¿à®®à¯à®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
+                                        },
+                        "profile":  {
+                                        "en":  "https://www.dmk.in/ta/party/ideology/",
+                                        "ta":  "https://www.dmk.in/ta/party/ideology/"
+                                    }
                     },
                     {
                         "alias":  "cand-aiadmk",
                         "name":  {
                                      "en":  "AIADMK Alliance Candidate - Tiruchirappalli (East)",
-                                     "ta":  "வேட்பாளர் B (அ.தி.மு.க)"
+                                     "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ B (à®….à®¤à®¿.à®®à¯.à®•)"
                                  },
                         "short":  {
                                       "en":  "AIADMK - Tiruchirappalli (East)",
-                                      "ta":  "B / அ.தி.மு.க"
+                                      "ta":  "B / à®….à®¤à®¿.à®®à¯.à®•"
                                   },
                         "description":  {
                                             "en":  "Constituency-level AIADMK alliance candidate profile for Tiruchirappalli (East) in Tiruchirappalli district, focused on local service delivery, neighborhood infrastructure, and administrative responsiveness.",
-                                            "ta":  "Tiruchirappalli (East) தொகுதிக்கான அதிமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        }
+                                            "ta":  "Tiruchirappalli (East) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®…à®¤à®¿à®®à¯à®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
+                                        },
+                        "profile":  {
+                                        "en":  "https://www.aiadmk.com/",
+                                        "ta":  "https://www.aiadmk.com/"
+                                    }
                     },
                     {
                         "alias":  "cand-bjp",
                         "name":  {
                                      "en":  "BJP Alliance Candidate - Tiruchirappalli (East)",
-                                     "ta":  "வேட்பாளர் C (பி.ஜே.பி)"
+                                     "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ C (à®ªà®¿.à®œà¯‡.à®ªà®¿)"
                                  },
                         "short":  {
                                       "en":  "BJP - Tiruchirappalli (East)",
-                                      "ta":  "C / பி.ஜே.பி"
+                                      "ta":  "C / à®ªà®¿.à®œà¯‡.à®ªà®¿"
                                   },
                         "description":  {
                                             "en":  "Constituency-level BJP alliance candidate profile for Tiruchirappalli (East) in Tiruchirappalli district, focused on implementation efficiency, investment-led growth, and technology-enabled governance.",
-                                            "ta":  "Tiruchirappalli (East) தொகுதிக்கான பாஜக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        }
+                                            "ta":  "Tiruchirappalli (East) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®ªà®¾à®œà®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
+                                        },
+                        "profile":  {
+                                        "en":  "https://www.bjp.org/election-corner",
+                                        "ta":  "https://www.bjp.org/election-corner"
+                                    }
                     },
                     {
                         "alias":  "cand-ind",
                         "name":  {
                                      "en":  "Independent Candidate - Tiruchirappalli (East)",
-                                     "ta":  "வேட்பாளர் D (சுயேட்சை)"
+                                     "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ D (à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ)"
                                  },
                         "short":  {
                                       "en":  "Ind. - Tiruchirappalli (East)",
-                                      "ta":  "D / சுயேட்சை"
+                                      "ta":  "D / à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ"
                                   },
                         "description":  {
                                             "en":  "Independent benchmark candidate profile for Tiruchirappalli (East) in Tiruchirappalli district, focused on ward-level accountability, grievance tracking, and issue-by-issue policy positions.",
-                                            "ta":  "Tiruchirappalli (East) தொகுதிக்கான சுயேட்சை தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        }
+                                            "ta":  "Tiruchirappalli (East) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
+                                        },
+                        "profile":  {
+                                        "en":  "https://en.wikipedia.org/wiki/Independent_politician",
+                                        "ta":  "https://en.wikipedia.org/wiki/Independent_politician"
+                                    }
                     }
                 ],
     "theses":  [
                    {
                        "title":  {
                                      "en":  "Local Roads and Drainage",
-                                     "ta":  "உள்ளூர் சாலை மற்றும் வடிகால்"
+                                     "ta":  "à®‰à®³à¯à®³à¯‚à®°à¯ à®šà®¾à®²à¯ˆ à®®à®±à¯à®±à¯à®®à¯ à®µà®Ÿà®¿à®•à®¾à®²à¯"
                                  },
                        "statement":  {
                                          "en":  "In dense urban zones of Tiruchirappalli (East), road relaying, junction redesign and storm-water desilting should run with ward dashboards and monsoon readiness audits.",
-                                         "ta":  "Tiruchirappalli (East) தொகுதியில் சாலை தரமும் வடிகாலும் காலக்கெடு கொண்ட வார்டு திட்டம் மூலம் மேம்படுத்தப்பட வேண்டும்."
+                                         "ta":  "Tiruchirappalli (East) à®¤à¯Šà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®šà®¾à®²à¯ˆ à®¤à®°à®®à¯à®®à¯ à®µà®Ÿà®¿à®•à®¾à®²à¯à®®à¯ à®•à®¾à®²à®•à¯à®•à¯†à®Ÿà¯ à®•à¯Šà®£à¯à®Ÿ à®µà®¾à®°à¯à®Ÿà¯ à®¤à®¿à®Ÿà¯à®Ÿà®®à¯ à®®à¯‚à®²à®®à¯ à®®à¯‡à®®à¯à®ªà®Ÿà¯à®¤à¯à®¤à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports integrated road relaying and storm-water drain upgrades in Tiruchirappalli (East) with local dashboards and time-bound completion targets.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
                                                       },
@@ -114,7 +130,7 @@
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports accelerated neighborhood roads and drainage maintenance in Tiruchirappalli (East) with stronger local body execution and escalation.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
                                                          },
@@ -122,7 +138,7 @@
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports corridor-based road upgrades, flood-spot mitigation, and engineering audits in Tiruchirappalli (East) for measurable outcomes.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
                                                       },
@@ -130,7 +146,7 @@
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports participatory local mapping in Tiruchirappalli (East) to prioritize potholes, waterlogging points, and maintenance accountability.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
                                                       }
@@ -139,18 +155,18 @@
                    {
                        "title":  {
                                      "en":  "Drinking Water Reliability",
-                                     "ta":  "குடிநீர் விநியோக நம்பகத்தன்மை"
+                                     "ta":  "à®•à¯à®Ÿà®¿à®¨à¯€à®°à¯ à®µà®¿à®¨à®¿à®¯à¯‹à®• à®¨à®®à¯à®ªà®•à®¤à¯à®¤à®©à¯à®®à¯ˆ"
                                  },
                        "statement":  {
                                          "en":  "Urban households should get predictable piped supply through pressure management, leak-reduction, metering transparency and emergency tanker fallback only when needed.",
-                                         "ta":  "Tiruchirappalli (East) தொகுதியில் வீடுகளுக்கு நம்பகமான குழாய் குடிநீர் வழங்கல் அதிகரித்து டேங்கர் சார்பு குறைக்கப்பட வேண்டும்."
+                                         "ta":  "Tiruchirappalli (East) à®¤à¯Šà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®µà¯€à®Ÿà¯à®•à®³à¯à®•à¯à®•à¯ à®¨à®®à¯à®ªà®•à®®à®¾à®© à®•à¯à®´à®¾à®¯à¯ à®•à¯à®Ÿà®¿à®¨à¯€à®°à¯ à®µà®´à®™à¯à®•à®²à¯ à®…à®¤à®¿à®•à®°à®¿à®¤à¯à®¤à¯ à®Ÿà¯‡à®™à¯à®•à®°à¯ à®šà®¾à®°à¯à®ªà¯ à®•à¯à®±à¯ˆà®•à¯à®•à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports improving piped water reliability in Tiruchirappalli (East) through leakage reduction, source balancing, and equitable distribution.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
                                                       },
@@ -158,7 +174,7 @@
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports stronger distribution scheduling and storage reliability in Tiruchirappalli (East) to reduce tanker dependency.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
                                                          },
@@ -166,7 +182,7 @@
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports infrastructure-first reliability measures in Tiruchirappalli (East), including monitoring, metering transparency, and pressure management.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
                                                       },
@@ -174,7 +190,7 @@
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports neighborhood-level water audits in Tiruchirappalli (East) and public reporting of supply disruptions for faster correction.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
                                                       }
@@ -183,18 +199,18 @@
                    {
                        "title":  {
                                      "en":  "Public Health Access",
-                                     "ta":  "பொது சுகாதார அணுகல்"
+                                     "ta":  "à®ªà¯Šà®¤à¯ à®šà¯à®•à®¾à®¤à®¾à®° à®…à®£à¯à®•à®²à¯"
                                  },
                        "statement":  {
                                          "en":  "Primary and secondary public health facilities serving Tiruchirappalli (East) should expand staffing, diagnostics, women and child health services, and emergency referral capacity.",
-                                         "ta":  "Tiruchirappalli (East) தொகுதிக்கு சேவை செய்கிற அரசு சுகாதார மையங்கள் மற்றும் மருத்துவமனைகளுக்கு கூடுதல் பணியாளர்கள் மற்றும் பரிசோதனை வசதி வழங்கப்பட வேண்டும்."
+                                         "ta":  "Tiruchirappalli (East) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à¯ à®šà¯‡à®µà¯ˆ à®šà¯†à®¯à¯à®•à®¿à®± à®…à®°à®šà¯ à®šà¯à®•à®¾à®¤à®¾à®° à®®à¯ˆà®¯à®™à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®®à®°à¯à®¤à¯à®¤à¯à®µà®®à®©à¯ˆà®•à®³à¯à®•à¯à®•à¯ à®•à¯‚à®Ÿà¯à®¤à®²à¯ à®ªà®£à®¿à®¯à®¾à®³à®°à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®ªà®°à®¿à®šà¯‹à®¤à®©à¯ˆ à®µà®šà®¤à®¿ à®µà®´à®™à¯à®•à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports expanding PHC staffing, diagnostics, and referral coordination for residents of Tiruchirappalli (East).",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
                                                       },
@@ -202,7 +218,7 @@
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports strengthening public hospital access for Tiruchirappalli (East) with improved specialist availability and service reliability.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
                                                          },
@@ -210,7 +226,7 @@
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports better outcomes in Tiruchirappalli (East) through performance benchmarks, digital health workflows, and capacity expansion.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
                                                       },
@@ -218,7 +234,7 @@
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports local health grievance tracking in Tiruchirappalli (East), especially for women, elderly, and low-income households.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
                                                       }
@@ -227,18 +243,18 @@
                    {
                        "title":  {
                                      "en":  "Women Safety and Mobility",
-                                     "ta":  "பெண்கள் பாதுகாப்பு மற்றும் பயண வசதி"
+                                     "ta":  "à®ªà¯†à®£à¯à®•à®³à¯ à®ªà®¾à®¤à¯à®•à®¾à®ªà¯à®ªà¯ à®®à®±à¯à®±à¯à®®à¯ à®ªà®¯à®£ à®µà®šà®¤à®¿"
                                  },
                        "statement":  {
                                          "en":  "Women safety and mobility in Tiruchirappalli (East) should improve through lighting audits, secure last-mile transport, CCTV at vulnerable points, and faster response systems.",
-                                         "ta":  "Tiruchirappalli (East) தொகுதியில் பெண்கள் பாதுகாப்பை மேம்படுத்த தெரு விளக்குகள், CCTV மற்றும் பாதுகாப்பான பொது போக்குவரத்து நிறுத்தங்கள் அதிகரிக்கப்பட வேண்டும்."
+                                         "ta":  "Tiruchirappalli (East) à®¤à¯Šà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®ªà¯†à®£à¯à®•à®³à¯ à®ªà®¾à®¤à¯à®•à®¾à®ªà¯à®ªà¯ˆ à®®à¯‡à®®à¯à®ªà®Ÿà¯à®¤à¯à®¤ à®¤à¯†à®°à¯ à®µà®¿à®³à®•à¯à®•à¯à®•à®³à¯, CCTV à®®à®±à¯à®±à¯à®®à¯ à®ªà®¾à®¤à¯à®•à®¾à®ªà¯à®ªà®¾à®© à®ªà¯Šà®¤à¯ à®ªà¯‹à®•à¯à®•à¯à®µà®°à®¤à¯à®¤à¯ à®¨à®¿à®±à¯à®¤à¯à®¤à®™à¯à®•à®³à¯ à®…à®¤à®¿à®•à®°à®¿à®•à¯à®•à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports expanded street-lighting audits, CCTV coverage, and safety patrol coordination in Tiruchirappalli (East).",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
                                                       },
@@ -246,7 +262,7 @@
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports women-centric mobility improvements in Tiruchirappalli (East), including safer transit stops and complaint follow-through.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
                                                          },
@@ -254,7 +270,7 @@
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports technology-led safety interventions in Tiruchirappalli (East), including monitoring and faster incident response pathways.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
                                                       },
@@ -262,7 +278,7 @@
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports community safety audits in Tiruchirappalli (East) with resident groups to identify and fix high-risk public spaces.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
                                                       }
@@ -271,18 +287,18 @@
                    {
                        "title":  {
                                      "en":  "Local Jobs and MSME Support",
-                                     "ta":  "உள்ளூர் வேலைவாய்ப்பு மற்றும் MSME ஆதரவு"
+                                     "ta":  "à®‰à®³à¯à®³à¯‚à®°à¯ à®µà¯‡à®²à¯ˆà®µà®¾à®¯à¯à®ªà¯à®ªà¯ à®®à®±à¯à®±à¯à®®à¯ MSME à®†à®¤à®°à®µà¯"
                                  },
                        "statement":  {
                                          "en":  "Urban employment strategy should connect youth skilling with services, manufacturing clusters, digital jobs and MSME procurement opportunities.",
-                                         "ta":  "Tiruchirappalli (East) தொகுதியில் சிறு தொழில்கள் மற்றும் இளைஞர்களுக்கு MSME, திறன் பயிற்சி மற்றும் உள்ளூர் வேலைவாய்ப்பு ஆதரவு அதிகரிக்கப்பட வேண்டும்."
+                                         "ta":  "Tiruchirappalli (East) à®¤à¯Šà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®šà®¿à®±à¯ à®¤à¯Šà®´à®¿à®²à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®‡à®³à¯ˆà®žà®°à¯à®•à®³à¯à®•à¯à®•à¯ MSME, à®¤à®¿à®±à®©à¯ à®ªà®¯à®¿à®±à¯à®šà®¿ à®®à®±à¯à®±à¯à®®à¯ à®‰à®³à¯à®³à¯‚à®°à¯ à®µà¯‡à®²à¯ˆà®µà®¾à®¯à¯à®ªà¯à®ªà¯ à®†à®¤à®°à®µà¯ à®…à®¤à®¿à®•à®°à®¿à®•à¯à®•à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports youth skilling and MSME support in Tiruchirappalli (East), linked to district-level services and manufacturing demand.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
                                                       },
@@ -290,7 +306,7 @@
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports local enterprise growth in Tiruchirappalli (East) through job-linked training, small business support, and commerce facilitation.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
                                                          },
@@ -298,7 +314,7 @@
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports employment growth in Tiruchirappalli (East) through startup support, MSME financing, and market-led opportunity expansion.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
                                                       },
@@ -306,7 +322,7 @@
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports local job fairs and micro-enterprise support in Tiruchirappalli (East) with transparent beneficiary tracking.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
                                                       }
@@ -315,18 +331,18 @@
                    {
                        "title":  {
                                      "en":  "State Autonomy",
-                                     "ta":  "மாநில தன்னாட்சி"
+                                     "ta":  "à®®à®¾à®¨à®¿à®² à®¤à®©à¯à®©à®¾à®Ÿà¯à®šà®¿"
                                  },
                        "statement":  {
                                          "en":  "Tamil Nadu should pursue stronger fiscal and administrative autonomy while protecting district-level development flexibility for constituencies like Tiruchirappalli (East).",
-                                         "ta":  "தமிழ்நாடு ஒன்றிய அரசிடமிருந்து அதிக நிதி மற்றும் நிர்வாக தன்னாட்சி கோர வேண்டும்."
+                                         "ta":  "à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯ à®’à®©à¯à®±à®¿à®¯ à®…à®°à®šà®¿à®Ÿà®®à®¿à®°à¯à®¨à¯à®¤à¯ à®…à®¤à®¿à®• à®¨à®¿à®¤à®¿ à®®à®±à¯à®±à¯à®®à¯ à®¨à®¿à®°à¯à®µà®¾à®• à®¤à®©à¯à®©à®¾à®Ÿà¯à®šà®¿ à®•à¯‹à®° à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
                                          "cand-dmk":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports stronger state fiscal and administrative autonomy to improve delivery flexibility in constituencies such as Tiruchirappalli (East).",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.dmk.in/ta/party/ideology/"
                                                       },
@@ -334,7 +350,7 @@
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports broader state rights while maintaining cooperative federal engagement to protect constituency priorities in Tiruchirappalli (East).",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
                                                              "source":  "https://www.aiadmk.com/"
                                                          },
@@ -342,7 +358,7 @@
                                                           "position":  "reject",
                                                           "explanation":  {
                                                                               "en":  "Prefers stronger national policy coordination over expanded state autonomy, while emphasizing centrally aligned development delivery in Tiruchirappalli (East).",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://www.bjp.org/election-corner"
                                                       },
@@ -350,7 +366,7 @@
                                                           "position":  "neutral",
                                                           "explanation":  {
                                                                               "en":  "Takes an issue-specific view that balances state autonomy demands with practical implementation needs in Tiruchirappalli (East).",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
                                                           "source":  "https://eci.gov.in/"
                                                       }
@@ -361,7 +377,7 @@
                          {
                              "text":  {
                                           "en":  "All TN Constituencies",
-                                          "ta":  "அனைத்து தொகுதிகளும்"
+                                          "ta":  "à®…à®©à¯ˆà®¤à¯à®¤à¯ à®¤à¯Šà®•à¯à®¤à®¿à®•à®³à¯à®®à¯"
                                       },
                              "href":  {
                                           "en":  "../../constituencies/index.html",
@@ -371,7 +387,7 @@
                          {
                              "text":  {
                                           "en":  "TN State Compass",
-                                          "ta":  "TN மாநில திசைகாட்டி"
+                                          "ta":  "TN à®®à®¾à®¨à®¿à®² à®¤à®¿à®šà¯ˆà®•à®¾à®Ÿà¯à®Ÿà®¿"
                                       },
                              "href":  {
                                           "en":  "../../../compass.html?config=elections/tn/2026-state/config.json",
@@ -381,7 +397,7 @@
                          {
                              "text":  {
                                           "en":  "All Elections",
-                                          "ta":  "அனைத்து தேர்தல்கள்"
+                                          "ta":  "à®…à®©à¯ˆà®¤à¯à®¤à¯ à®¤à¯‡à®°à¯à®¤à®²à¯à®•à®³à¯"
                                       },
                              "href":  {
                                           "en":  "../../../index.html",
