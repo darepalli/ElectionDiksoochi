@@ -90,6 +90,38 @@
       background: rgba(255,255,255,.22);
     }
 
+    .results-mode-switch {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 34px;
+      background: rgba(255,255,255,.08);
+    }
+
+    .results-mode-btn {
+      border: 0;
+      background: transparent;
+      color: rgba(255,255,255,.88);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 0.3rem 0.46rem;
+      min-height: 34px;
+      min-width: 58px;
+      cursor: pointer;
+      line-height: 1.2;
+    }
+
+    .results-mode-btn + .results-mode-btn {
+      border-left: 1px solid rgba(255,255,255,.28);
+    }
+
+    .results-mode-btn.is-active {
+      color: #fff;
+      background: rgba(255,255,255,.22);
+    }
+
     .feedback-trigger {
       border: 1px solid rgba(255,255,255,.45);
       background: rgba(255,255,255,.12);
@@ -689,48 +721,6 @@
       display: none;
     }
 
-    .oec-results-view-switch {
-      border: 1px solid #dbe4ee;
-      border-radius: 10px;
-      background: #ffffff;
-      padding: 0.45rem 0.55rem;
-      margin-bottom: 0.55rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .oec-results-view-switch__label {
-      font-size: 0.76rem;
-      font-weight: 700;
-      color: #334155;
-    }
-
-    .oec-results-view-switch__buttons {
-      display: inline-flex;
-      gap: 0.35rem;
-    }
-
-    .oec-results-view-switch__btn {
-      border: 1px solid #cbd5e1;
-      background: #f8fafc;
-      color: #334155;
-      border-radius: 6px;
-      padding: 0.14rem 0.5rem;
-      font-size: 0.68rem;
-      font-weight: 700;
-      cursor: pointer;
-      line-height: 1.2;
-    }
-
-    .oec-results-view-switch__btn.is-active {
-      border-color: #2563eb;
-      background: #dbeafe;
-      color: #1d4ed8;
-    }
-
     .oec-random-details-table {
       width: 100%;
       border-collapse: collapse;
@@ -918,6 +908,12 @@
         padding: 0.28rem 0.42rem;
       }
 
+      .results-mode-btn {
+        font-size: 0.68rem;
+        min-width: 50px;
+        padding: 0.26rem 0.38rem;
+      }
+
       .oec-source-inline {
         font-size: 0.76rem;
       }
@@ -1003,6 +999,10 @@
     <div class="language-switch" role="group" aria-label="Language selector">
       <button type="button" class="lang-btn" data-lang="en" id="lang-en">EN</button>
       <button type="button" class="lang-btn" data-lang="ta" id="lang-ta">தமிழ்</button>
+    </div>
+    <div class="results-mode-switch" role="group" aria-label="Results view mode" id="oec-top-view-switch">
+      <button type="button" class="results-mode-btn" data-view-mode="live" id="oec-mode-live">Live</button>
+      <button type="button" class="results-mode-btn" data-view-mode="tabular" id="oec-mode-tabular">Table</button>
     </div>
     <button type="button" class="feedback-trigger" id="feedback-open">Feedback</button>
   </div>
@@ -2541,28 +2541,15 @@
       }
 
       function renderResultsViewSwitcher(container, onChange) {
-        if (!container) return;
-        var node = container.querySelector('#oec-results-view-switch');
-        if (!node) {
-          node = document.createElement('section');
-          node.id = 'oec-results-view-switch';
-          node.className = 'oec-results-view-switch';
-          node.innerHTML =
-            '<span class="oec-results-view-switch__label">'
-            + escapeHtml(uiLang === 'ta' ? 'பார்வை முறை' : 'View Mode')
-            + '</span>'
-            + '<span class="oec-results-view-switch__buttons">'
-            + '<button type="button" class="oec-results-view-switch__btn" data-view-mode="live">'
-            + escapeHtml(uiLang === 'ta' ? 'நேரடி ஒப்பீடு' : 'Live Comparison')
-            + '</button>'
-            + '<button type="button" class="oec-results-view-switch__btn" data-view-mode="tabular">'
-            + escapeHtml(uiLang === 'ta' ? 'அட்டவணை' : 'Tabular')
-            + '</button>'
-            + '</span>';
-          container.prepend(node);
-        }
+        var node = document.getElementById('oec-top-view-switch');
+        if (!node) return;
 
-        var btns = node.querySelectorAll('.oec-results-view-switch__btn');
+        var liveBtn = node.querySelector('[data-view-mode="live"]');
+        var tabBtn = node.querySelector('[data-view-mode="tabular"]');
+        if (liveBtn) liveBtn.textContent = uiLang === 'ta' ? 'நேரடி' : 'Live';
+        if (tabBtn) tabBtn.textContent = uiLang === 'ta' ? 'அட்டவணை' : 'Table';
+
+        var btns = node.querySelectorAll('.results-mode-btn');
         btns.forEach(function (btn) {
           var mode = btn.getAttribute('data-view-mode');
           btn.classList.toggle('is-active', mode === resultsViewMode);
@@ -3098,15 +3085,9 @@
             isInjecting = true;
             if (observer) observer.disconnect();
             try {
-              var resultsReady = hasComparisonResults(container, cfg);
-              var switcher = container.querySelector('#oec-results-view-switch');
-              if (resultsReady) {
-                renderResultsViewSwitcher(container, function () {
-                  scheduleInjectors();
-                });
-              } else if (switcher && switcher.parentElement) {
-                switcher.parentElement.removeChild(switcher);
-              }
+              renderResultsViewSwitcher(container, function () {
+                scheduleInjectors();
+              });
               injectLinks();
               injectCandidateProfileLinks();
               renderLiveComparisonDetails(container, cfg, legacyExcerptsData);
