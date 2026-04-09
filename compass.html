@@ -255,6 +255,26 @@
       background: #dbeafe;
     }
 
+    .oec-profile-link-btn {
+      border: 1px solid #c7d2fe;
+      background: #eef2ff;
+      color: #3730a3;
+      border-radius: 6px;
+      padding: 0.18rem 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-decoration: none;
+      line-height: 1.2;
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.72rem;
+    }
+
+    .oec-profile-link-btn:hover {
+      background: #e0e7ff;
+      text-decoration: underline;
+    }
+
     .oec-profile-panel__title {
       margin: 0;
       color: #0f172a;
@@ -1517,6 +1537,7 @@
       if (!configPath) return;
       var debugMode = /(?:\?|&)debug=1(?:&|$)/.test(window.location.search);
       var randomResultsMode = /(?:\?|&)randomresults=1(?:&|$)/.test(window.location.search);
+      var partyPositionsMode = /(?:\?|&)partypositions=1(?:&|$)/.test(window.location.search);
       var hostName = String(window.location.hostname || '').toLowerCase();
       var isLocalhost = hostName === 'localhost' || hostName === '127.0.0.1' || hostName === '::1' || hostName === '[::1]';
 
@@ -2263,6 +2284,90 @@
         return true;
       }
 
+      function renderPartyPositionsPage(container, cfg, legacyExcerpts) {
+        var parties = cfg.parties || [];
+        var theses = cfg.theses || [];
+        if (!container || !parties.length || !theses.length) return false;
+
+        var html = '';
+        html += '<div class="oec-random-results">';
+        html += '<section class="oec-random-results__header">';
+        html += '<h2 class="oec-random-results__title">' + (uiLang === 'ta' ? 'கட்சிகளின் நிலைப்பாடு அட்டவணை' : 'Party Position Table') + '</h2>';
+        html += '<div class="oec-random-results__meta">' + (uiLang === 'ta' ? 'ஒவ்வொரு தீர்மானத்திற்கும் கட்சிகளின் நிலைப்பாடுகள், கூட்டணி துணைக் கட்சி வரிகள், மற்றும் ஆதாரங்கள்.' : 'Issue-wise party positions with alliance partner sub-lines and source links.') + '</div>';
+        html += '</section>';
+
+        html += '<section class="oec-random-results__details">';
+        html += '<h3>' + (uiLang === 'ta' ? 'தலைப்புவாரியான கட்சி நிலைப்பாடுகள்' : 'Issue-wise Party Stands') + '</h3>';
+        html += '<table class="oec-random-details-table">';
+        html += '<thead><tr>';
+        html += '<th>' + (uiLang === 'ta' ? 'தீர்மானம்' : 'Thesis') + '</th>';
+        parties.forEach(function (party) {
+          html += '<th>' + escapeHtml(getPartyDisplayName(party)) + '</th>';
+        });
+        html += '</tr></thead>';
+        html += '<tbody>';
+
+        theses.forEach(function (thesis, idx) {
+          var titleEn = (thesis.title && thesis.title.en) ? String(thesis.title.en) : '';
+          var title = (thesis.title && (thesis.title[uiLang] || thesis.title.en || thesis.title.ta)) || ('Thesis ' + (idx + 1));
+          html += '<tr>';
+          html += '<td>' + escapeHtml(title) + '</td>';
+
+          parties.forEach(function (party) {
+            var pos = thesis.positions && thesis.positions[party.alias];
+            if (!pos) {
+              html += '<td><span class="oec-random-stance">' + escapeHtml(uiLang === 'ta' ? 'தரவு இல்லை' : 'No data') + '</span></td>';
+              return;
+            }
+
+            var posLabel = getPositionLabel(pos.position);
+            var expl = (pos.explanation && (pos.explanation[uiLang] || pos.explanation.en || pos.explanation.ta)) || '';
+            var sourceUrl = pos.source || '';
+            var subpartyPositions = getAllianceSubpartyPositions(
+              party.alias,
+              pos.position,
+              (pos.explanation && (pos.explanation.en || pos.explanation.ta)) || expl,
+              titleEn,
+              legacyExcerpts
+            );
+
+            html += '<td>';
+            html += '<span class="oec-random-stance">' + escapeHtml(posLabel) + '</span>';
+            if (subpartyPositions.length > 1) {
+              var uniq = {};
+              subpartyPositions.forEach(function (sp) { uniq[sp.position] = true; });
+              if (Object.keys(uniq).length > 1) {
+                html += '<span class="oec-random-expl">' + escapeHtml(uiLang === 'ta' ? 'இந்த கூட்டணியில் கட்சிகள் வேறுபட்ட நிலைப்பாடுகளை கொண்டுள்ளன.' : 'Parties in this alliance hold different positions on this issue.') + '</span>';
+              }
+            }
+            subpartyPositions.forEach(function (item) {
+              var subLabel = getPositionLabel(item.position);
+              html += '<span class="oec-random-subparty">' + escapeHtml(item.party + ': ' + subLabel) + '</span>';
+              if (item.parsedExcerpt) {
+                html += '<span class="oec-random-subparty-excerpt">' + escapeHtml(uiLang === 'ta' ? ('கூட்டணி குறிப்பிலிருந்து: ' + item.parsedExcerpt) : ('From alliance note: ' + item.parsedExcerpt)) + '</span>';
+              }
+              if (item.excerpt) {
+                html += '<span class="oec-random-subparty-excerpt">"' + escapeHtml(item.excerpt) + '"</span>';
+              }
+            });
+            if (expl) html += '<span class="oec-random-expl">' + escapeHtml(expl) + '</span>';
+            if (sourceUrl) {
+              html += '<a class="oec-random-source" href="' + escapeHtml(sourceUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(uiLang === 'ta' ? 'ஆதாரம்' : 'Source') + '</a>';
+            }
+            html += '</td>';
+          });
+
+          html += '</tr>';
+        });
+
+        html += '</tbody></table>';
+        html += '</section>';
+        html += '</div>';
+
+        container.innerHTML = html;
+        return true;
+      }
+
       function renderLiveComparisonDetails(container, cfg, legacyExcerpts) {
         if (!container || !cfg) return;
         var existing = container.querySelector('#oec-live-comparison-details');
@@ -2676,9 +2781,20 @@
         var toggleText = profilePanelCollapsed
           ? (uiLang === 'ta' ? 'விரி' : 'Expand')
           : (uiLang === 'ta' ? 'சுருக்கு' : 'Collapse');
+        var positionsText = uiLang === 'ta' ? 'கட்சி நிலைப்பாடுகள்' : 'Party Positions';
+        var positionsHref = '#';
+        try {
+          var u = new URL(window.location.href);
+          u.searchParams.set('config', stripQueryAndHash(configPath));
+          u.searchParams.set('partypositions', '1');
+          u.searchParams.set('viewmode', 'tabular');
+          u.searchParams.delete('randomresults');
+          positionsHref = u.toString();
+        } catch (e) {}
 
         var html = '<div class="oec-profile-panel__header">';
         html += '<h4 class="oec-profile-panel__title">' + escapeHtml(title) + '</h4>';
+        html += '<a class="oec-profile-link-btn" href="' + escapeHtml(positionsHref) + '">' + escapeHtml(positionsText) + '</a>';
         html += '<button type="button" class="oec-profile-toggle" id="oec-profile-toggle">' + escapeHtml(toggleText) + '</button>';
         html += '</div>';
         html += '<div class="oec-profile-panel__body">';
@@ -2929,6 +3045,14 @@
             legacyLoadPromise.then(function (legacyExcerpts) {
               var rendered = renderRandomResultsPage(container, cfg, legacyExcerpts || null);
               if (rendered) debugLog('random results mode rendered');
+            });
+            return;
+          }
+
+          if (partyPositionsMode) {
+            legacyLoadPromise.then(function (legacyExcerpts) {
+              var rendered = renderPartyPositionsPage(container, cfg, legacyExcerpts || null);
+              if (rendered) debugLog('party positions mode rendered');
             });
             return;
           }
