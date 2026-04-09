@@ -59,6 +59,37 @@
       flex: 1;
     }
 
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 34px;
+      background: rgba(255,255,255,.08);
+    }
+
+    .lang-btn {
+      border: 0;
+      background: transparent;
+      color: rgba(255,255,255,.88);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.32rem 0.5rem;
+      min-height: 34px;
+      min-width: 44px;
+      cursor: pointer;
+    }
+
+    .lang-btn + .lang-btn {
+      border-left: 1px solid rgba(255,255,255,.28);
+    }
+
+    .lang-btn.is-active {
+      color: #fff;
+      background: rgba(255,255,255,.22);
+    }
+
     .feedback-trigger {
       border: 1px solid rgba(255,255,255,.45);
       background: rgba(255,255,255,.12);
@@ -280,6 +311,12 @@
         padding: .3rem .55rem;
       }
 
+      .lang-btn {
+        font-size: 0.71rem;
+        min-width: 42px;
+        padding: 0.28rem 0.42rem;
+      }
+
       .oec-source-inline {
         font-size: 0.76rem;
       }
@@ -351,6 +388,10 @@
     <span class="sep">|</span>
     <span class="current-label" id="back-label">Election Compass</span>
     <span class="spacer"></span>
+    <div class="language-switch" role="group" aria-label="Language selector">
+      <button type="button" class="lang-btn" data-lang="en" id="lang-en">EN</button>
+      <button type="button" class="lang-btn" data-lang="ta" id="lang-ta">தமிழ்</button>
+    </div>
     <button type="button" class="feedback-trigger" id="feedback-open">Feedback</button>
   </div>
 
@@ -407,6 +448,84 @@
       var oecEl      = document.getElementById('oec-el');
       var wrapper    = document.getElementById('open-election-compass');
       var backBar    = document.querySelector('.back-bar');
+      var langButtons = Array.prototype.slice.call(document.querySelectorAll('.lang-btn'));
+
+      function normalizeLang(value) {
+        var raw = String(value || '').toLowerCase();
+        return raw.indexOf('ta') === 0 ? 'ta' : 'en';
+      }
+
+      function getSelectedLang() {
+        var queryLangRaw = getParam('lang');
+        if (queryLangRaw) return normalizeLang(queryLangRaw);
+        try {
+          var storedLang = window.localStorage.getItem('oec-lang');
+          if (storedLang) return normalizeLang(storedLang);
+        } catch (e) {}
+        return 'en';
+      }
+
+      function setLangUi(lang) {
+        langButtons.forEach(function (btn) {
+          var active = btn.getAttribute('data-lang') === lang;
+          btn.classList.toggle('is-active', active);
+          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+      }
+
+      function persistLang(lang) {
+        try { window.localStorage.setItem('oec-lang', lang); } catch (e) {}
+        try {
+          var url = new URL(window.location.href);
+          url.searchParams.set('lang', lang);
+          window.history.replaceState({}, '', url.toString());
+        } catch (e) {}
+      }
+
+      function setOecLanguage(lang) {
+        if (!oecEl) return;
+        // OEC supports a dedicated `language` prop; keep both attribute and property in sync.
+        oecEl.setAttribute('language', lang);
+        try { oecEl.language = lang; } catch (e) {}
+      }
+
+      function forceOecRemount(lang) {
+        try {
+          var url = new URL(window.location.href);
+          url.searchParams.set('lang', lang);
+          // Bust bfcache-style restores so OEC always re-initializes from scratch.
+          url.searchParams.set('_oec_remount', String(Date.now()));
+          window.location.assign(url.toString());
+          return;
+        } catch (e) {}
+        // Fallback if URL API is unavailable.
+        window.location.reload();
+      }
+
+      function isLangButtonTextMatch(text, lang) {
+        var t = String(text || '').toLowerCase().replace(/\s+/g, ' ').trim();
+        if (!t) return false;
+        if (lang === 'ta') {
+          return t.indexOf('தமிழ்') >= 0 || t === 'ta' || t === 'tam';
+        }
+        return t.indexOf('english') >= 0 || t === 'en';
+      }
+
+      function tryApplyLanguageInOec(lang) {
+        var nodes = document.querySelectorAll('#open-election-compass button, #open-election-compass [role="button"], #open-election-compass [class*="lang"]');
+        for (var i = 0; i < nodes.length; i++) {
+          var node = nodes[i];
+          var txt = (node.textContent || '').replace(/\s+/g, ' ').trim();
+          if (!txt) continue;
+          if (isLangButtonTextMatch(txt, lang)) {
+            node.click();
+            return true;
+          }
+        }
+        return false;
+      }
+
+      var selectedLang = getSelectedLang();
 
       function syncBackBarHeight () {
         if (!backBar) return;
@@ -432,12 +551,34 @@
       document.getElementById('back-label').textContent = label;
       document.title = label + ' | India Election Compass';
 
+      setLangUi(selectedLang);
+      persistLang(selectedLang);
+
+      langButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          selectedLang = normalizeLang(btn.getAttribute('data-lang'));
+          setLangUi(selectedLang);
+          persistLang(selectedLang);
+          setOecLanguage(selectedLang);
+          forceOecRemount(selectedLang);
+        });
+      });
+
+      var langApplyAttempts = 0;
+      var langTimer = window.setInterval(function () {
+        langApplyAttempts++;
+        if (tryApplyLanguageInOec(selectedLang) || langApplyAttempts > 30) {
+          window.clearInterval(langTimer);
+        }
+      }, 350);
+
       syncBackBarHeight();
       window.addEventListener('resize', syncBackBarHeight);
 
       // Set load-url BEFORE the deferred OEC script executes.
       // The deferred script reads this attribute when it initialises.
       oecEl.setAttribute('load-url', configPath);
+      setOecLanguage(selectedLang);
     }());
   </script>
 
