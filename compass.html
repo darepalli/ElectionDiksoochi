@@ -154,6 +154,23 @@
       word-break: break-word;
     }
 
+    .oec-candidate-profile {
+      margin-top: 0.45rem;
+      font-size: 0.76rem;
+      line-height: 1.3;
+    }
+
+    .oec-candidate-profile a {
+      color: #0f766e;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px dotted #0f766e;
+    }
+
+    .oec-candidate-profile a:hover {
+      text-decoration: underline;
+    }
+
     .oec-debug-panel {
       position: fixed;
       right: 12px;
@@ -502,6 +519,97 @@
         window.location.reload();
       }
 
+      function deepMerge(target, source) {
+        if (!source || typeof source !== 'object') return target;
+        if (!target || typeof target !== 'object') target = {};
+        Object.keys(source).forEach(function (key) {
+          var srcVal = source[key];
+          var tgtVal = target[key];
+          if (srcVal && typeof srcVal === 'object' && !Array.isArray(srcVal)) {
+            target[key] = deepMerge(tgtVal && typeof tgtVal === 'object' && !Array.isArray(tgtVal) ? tgtVal : {}, srcVal);
+          } else {
+            target[key] = srcVal;
+          }
+        });
+        return target;
+      }
+
+      function getTamilOecOverwrites() {
+        return {
+          algorithm: {
+            options: {
+              'strongly-approve': {
+                button: 'மிகவும் ஒப்புதல்',
+                'button-aria': 'இந்த தீர்மானத்தை மிகவும் ஒப்புதல் அளிக்க இங்கே சொடுக்கவும்'
+              },
+              approve: {
+                button: 'ஒப்புதல்',
+                'button-aria': 'இந்த தீர்மானத்தை ஒப்புதல் அளிக்க இங்கே சொடுக்கவும்'
+              },
+              partly: {
+                button: 'பகுதியாக ஒப்புதல்',
+                'button-aria': 'இந்த தீர்மானத்துக்கு பகுதியாக ஒப்புதல் அளிக்க இங்கே சொடுக்கவும்'
+              },
+              neutral: {
+                button: 'நடுநிலை',
+                'button-aria': 'இந்த தீர்மானத்தில் நடுநிலையாக இருக்க இங்கே சொடுக்கவும்'
+              },
+              reject: {
+                button: 'எதிர்ப்பு',
+                'button-aria': 'இந்த தீர்மானத்தை நிராகரிக்க இங்கே சொடுக்கவும்'
+              },
+              'strongly-reject': {
+                button: 'கடுமையான எதிர்ப்பு',
+                'button-aria': 'இந்த தீர்மானத்தை கடுமையாக நிராகரிக்க இங்கே சொடுக்கவும்'
+              }
+            }
+          },
+          views: {
+            home: {
+              theses: {
+                'important-button': {
+                  important: 'எனக்கு முக்கியம்'
+                },
+                'skip-button': {
+                  skip: 'தெரியாது'
+                }
+              }
+            }
+          }
+        };
+      }
+
+      function injectTamilOverwrites(config) {
+        if (!config || !Array.isArray(config.languages)) return config;
+        for (var i = 0; i < config.languages.length; i++) {
+          var lang = config.languages[i];
+          if (lang && String(lang.code).toLowerCase() === 'ta') {
+            lang.overwrites = deepMerge(lang.overwrites || {}, getTamilOecOverwrites());
+          }
+        }
+        return config;
+      }
+
+      function ensureOecConfigTag(configObj) {
+        var existing = document.getElementById('oec-config-data');
+        if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+        var script = document.createElement('script');
+        script.id = 'oec-config-data';
+        script.type = 'application/json';
+        script.text = JSON.stringify(configObj);
+        document.body.appendChild(script);
+        oecEl.setAttribute('load-tag', '#oec-config-data');
+      }
+
+      function ensureOecScriptLoaded() {
+        if (document.getElementById('oec-runtime-script')) return;
+        var s = document.createElement('script');
+        s.id = 'oec-runtime-script';
+        s.src = 'assets/open-election-compass.umd.min.js';
+        s.defer = true;
+        document.body.appendChild(s);
+      }
+
       function isLangButtonTextMatch(text, lang) {
         var t = String(text || '').toLowerCase().replace(/\s+/g, ' ').trim();
         if (!t) return false;
@@ -523,6 +631,88 @@
           }
         }
         return false;
+      }
+
+      var TA_UI_LABELS = [
+        { re: /^strongly approve$/, ta: 'மிகவும் ஒப்புதல்' },
+        { re: /^approve$/, ta: 'ஒப்புதல்' },
+        { re: /^partly$/, ta: 'பகுதியாக ஒப்புதல்' },
+        { re: /^neutral$/, ta: 'நடுநிலை' },
+        { re: /^reject$/, ta: 'எதிர்ப்பு' },
+        { re: /^strongly reject$/, ta: 'கடுமையான எதிர்ப்பு' },
+        { re: /^strongly agree$/, ta: 'மிகவும் ஒப்புக்கொள்கிறேன்' },
+        { re: /^agree$/, ta: 'ஒப்புக்கொள்கிறேன்' },
+        { re: /^disagree$/, ta: 'ஏற்கவில்லை' },
+        { re: /^strongly disagree$/, ta: 'மிகவும் ஏற்கவில்லை' },
+        { re: /^important to me$/, ta: 'எனக்கு முக்கியம்' },
+        { re: /^i don't know$/, ta: 'தெரியாது' },
+        { re: /^skip$/, ta: 'தவிர்' },
+        { re: /^proceed to the next thesis$/, ta: 'அடுத்த தீர்மானத்துக்கு செல்லவும்' },
+        { re: /^start with the first thesis$/, ta: 'முதல் தீர்மானத்திலிருந்து தொடங்கவும்' },
+        { re: /^select the parties$/, ta: 'கட்சிகளைத் தேர்ந்தெடுக்கவும்' },
+        { re: /^see your result$/, ta: 'உங்கள் முடிவைப் பார்க்கவும்' },
+        { re: /^read the statements$/, ta: 'நிலையுரைகளைப் படிக்கவும்' },
+        { re: /^party selection$/, ta: 'கட்சி தேர்வு' },
+        { re: /^evaluation$/, ta: 'மதிப்பீடு' },
+        { re: /^introduction$/, ta: 'அறிமுகம்' },
+        { re: /^theses$/, ta: 'தீர்மானங்கள்' },
+        { re: /^result$/, ta: 'முடிவு' },
+        { re: /^start$/, ta: 'தொடங்கு' },
+        { re: /^next$/, ta: 'அடுத்து' },
+        { re: /^back$/, ta: 'பின்செல்' },
+        { re: /^show more$/, ta: 'மேலும் காண்பி' },
+        { re: /^hide$/, ta: 'மறை' },
+        { re: /^menu$/, ta: 'மெனு' },
+        { re: /^languages$/, ta: 'மொழிகள்' },
+        { re: /^change language$/, ta: 'மொழியை மாற்று' },
+        { re: /^reset$/, ta: 'மீட்டமை' },
+        { re: /click here to strongly approve this thesis/, ta: 'இந்த தீர்மானத்தை வலுவாக ஒப்புதல் அளிக்க இங்கே சொடுக்கவும்' },
+        { re: /click here to approve this thesis/, ta: 'இந்த தீர்மானத்தை ஒப்புதல் அளிக்க இங்கே சொடுக்கவும்' },
+        { re: /click here to agree partly with this thesis/, ta: 'இந்த தீர்மானத்துக்கு பகுதியாக ஒப்புதல் அளிக்க இங்கே சொடுக்கவும்' },
+        { re: /click here to remain neutral regarding this thesis/, ta: 'இந்த தீர்மானத்தில் நடுநிலையாக இருக்க இங்கே சொடுக்கவும்' },
+        { re: /click here to reject this thesis/, ta: 'இந்த தீர்மானத்தை நிராகரிக்க இங்கே சொடுக்கவும்' },
+        { re: /click here to strongly reject this thesis/, ta: 'இந்த தீர்மானத்தை வலுவாக நிராகரிக்க இங்கே சொடுக்கவும்' }
+      ];
+
+      function normalizeUiLabel(s) {
+        return String(s || '').replace(/\s+/g, ' ').trim().toLowerCase();
+      }
+
+      function getTamilUiLabel(s) {
+        var normalized = normalizeUiLabel(s);
+        for (var i = 0; i < TA_UI_LABELS.length; i++) {
+          if (TA_UI_LABELS[i].re.test(normalized)) {
+            return TA_UI_LABELS[i].ta;
+          }
+        }
+        return '';
+      }
+
+      function applyTamilUiLabelTranslations(root) {
+        if (selectedLang !== 'ta') return;
+        var scope = root || document;
+        var nodes = scope.querySelectorAll('#open-election-compass button, #open-election-compass [role="button"], #open-election-compass a, #open-election-compass [aria-label], #open-election-compass [title]');
+        for (var i = 0; i < nodes.length; i++) {
+          var node = nodes[i];
+
+          var text = (node.textContent || '').replace(/\s+/g, ' ').trim();
+          var translatedText = getTamilUiLabel(text);
+          if (translatedText) {
+            node.textContent = translatedText;
+          }
+
+          var ariaLabel = node.getAttribute('aria-label');
+          if (ariaLabel) {
+            var translatedAria = getTamilUiLabel(ariaLabel);
+            if (translatedAria) node.setAttribute('aria-label', translatedAria);
+          }
+
+          var title = node.getAttribute('title');
+          if (title) {
+            var translatedTitle = getTamilUiLabel(title);
+            if (translatedTitle) node.setAttribute('title', translatedTitle);
+          }
+        }
       }
 
       var selectedLang = getSelectedLang();
@@ -572,18 +762,46 @@
         }
       }, 350);
 
+      applyTamilUiLabelTranslations(document);
+      if (window.MutationObserver) {
+        var oecRootNode = document.getElementById('open-election-compass');
+        if (oecRootNode) {
+          var uiLabelObserver = new MutationObserver(function () {
+            applyTamilUiLabelTranslations(document);
+          });
+          uiLabelObserver.observe(oecRootNode, {
+            subtree: true,
+            childList: true,
+            characterData: true,
+            attributes: true,
+            attributeFilter: ['aria-label', 'title']
+          });
+        }
+      }
+
       syncBackBarHeight();
       window.addEventListener('resize', syncBackBarHeight);
 
-      // Set load-url BEFORE the deferred OEC script executes.
-      // The deferred script reads this attribute when it initialises.
+      // Always set load-url for internal scripts that read this value.
       oecEl.setAttribute('load-url', configPath);
       setOecLanguage(selectedLang);
+
+      // Load config first, inject Tamil UI overrides, then start OEC.
+      fetch(configPath)
+        .then(function (r) {
+          if (!r.ok) throw new Error('Failed to load config: ' + r.status);
+          return r.json();
+        })
+        .then(function (cfg) {
+          ensureOecConfigTag(injectTamilOverwrites(cfg));
+          ensureOecScriptLoaded();
+        })
+        .catch(function () {
+          // Fallback to plain load-url mode if config fetch fails.
+          ensureOecScriptLoaded();
+        });
     }());
   </script>
-
-  <!-- OEC library: defer ensures it runs AFTER the inline script above has set load-url -->
-  <script src="assets/open-election-compass.umd.min.js" defer></script>
 
   <script>
     (function () {
@@ -679,6 +897,7 @@
 
       var srcMap = {}; // key: normalized explanation text, value: URL
       var partySourceMap = {}; // key: normalized party name/short, value: URL
+      var partyProfileEntries = []; // [{ url, keys[] }]
       var debugPanel = null;
       var debugLogEl = null;
       var debugLines = [];
@@ -813,6 +1032,29 @@
           });
           debugLog('party fallback keys=' + Object.keys(partySourceMap).length);
 
+          // Build candidate profile map from optional parties[].profile links.
+          parties.forEach(function (party) {
+            var profileUrl = '';
+            if (party.profile && typeof party.profile === 'string') {
+              profileUrl = party.profile;
+            } else if (party.profile && typeof party.profile === 'object') {
+              profileUrl = party.profile[selectedLang] || party.profile.en || party.profile.ta || '';
+            }
+            if (!profileUrl) return;
+
+            var keys = [];
+            langs.forEach(function (code) {
+              var shortName = party.short && party.short[code];
+              var longName = party.name && party.name[code];
+              if (shortName) keys.push(normalizeText(shortName));
+              if (longName) keys.push(normalizeText(longName));
+            });
+            if (party.alias) keys.push(normalizeText(party.alias));
+
+            partyProfileEntries.push({ url: profileUrl, keys: keys.filter(Boolean) });
+          });
+          debugLog('candidate profile entries=' + partyProfileEntries.length);
+
           theses.forEach(function (thesis) {
             parties.forEach(function (party) {
               var pos = thesis.positions && thesis.positions[party.alias];
@@ -886,9 +1128,54 @@
             });
           }
 
-          var observer = new MutationObserver(injectLinks);
+          function findProfileUrlForText(text) {
+            var norm = normalizeText(text);
+            if (!norm) return '';
+            for (var i = 0; i < partyProfileEntries.length; i++) {
+              var entry = partyProfileEntries[i];
+              for (var j = 0; j < entry.keys.length; j++) {
+                var key = entry.keys[j];
+                if (!key) continue;
+                if (norm.indexOf(key) >= 0 || key.indexOf(norm) >= 0) {
+                  return entry.url;
+                }
+              }
+            }
+            return '';
+          }
+
+          function injectCandidateProfileLinks () {
+            if (!partyProfileEntries.length) return;
+            var cards = container.querySelectorAll('.party-item:not([data-profile-done]), [class*="party-item"]:not([data-profile-done])');
+            cards.forEach(function (card) {
+              card.setAttribute('data-profile-done', '1');
+              if (card.querySelector('.oec-candidate-profile')) return;
+
+              var rawText = (card.textContent || '').replace(/\s+/g, ' ').trim();
+              var url = findProfileUrlForText(rawText);
+              if (!url) return;
+
+              var holder = document.createElement('div');
+              holder.className = 'oec-candidate-profile';
+
+              var link = document.createElement('a');
+              link.href = url;
+              link.target = '_blank';
+              link.rel = 'noopener noreferrer';
+              link.textContent = selectedLang === 'ta' ? 'சுயவிவரம்' : 'Profile';
+
+              holder.appendChild(link);
+              card.appendChild(holder);
+            });
+          }
+
+          var observer = new MutationObserver(function () {
+            injectLinks();
+            injectCandidateProfileLinks();
+          });
           observer.observe(container, { childList: true, subtree: true });
           injectLinks(); // catch anything already rendered
+          injectCandidateProfileLinks();
         })
         .catch(function () { /* silently ignore – sources are optional */ });
     }());

@@ -33,6 +33,10 @@
       "alias": "cand-dmk",
       "name":  { "en": "T. Rajesh Kumar (DMK)",    "ta": "த. ராஜேஷ் குமார் (தி.மு.க)" },
       "short": { "en": "Rajesh / DMK",              "ta": "ராஜேஷ் / தி.மு.க" },
+      "profile": {
+        "en": "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam",
+        "ta": "https://ta.wikipedia.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%9F_%E0%AE%AE%E0%AF%81%E0%AE%A9%E0%AF%8D%E0%AE%A9%E0%AF%87%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%95%E0%AF%8D_%E0%AE%95%E0%AE%B4%E0%AE%95%E0%AE%AE%E0%AF%8D"
+      },
       "description": {
         "en": "Nominated by DMK. Former councillor for Ward 58. Focus areas: drainage & flooding, public health infrastructure and Chepauk stadium development.",
         "ta": "திமுகவால் நியமிக்கப்பட்டவர். வார்டு 58-ல் முன்னாள் மாவட்ட மன்றர். கவன தொடை: வடிகால் மற்றும் வெள்ள நிவாரணம், பொது சுகாதார உள்கட்டமைப்பு."
@@ -42,6 +46,10 @@
       "alias": "cand-aiadmk",
       "name":  { "en": "S. Priya Devi (AIADMK)",   "ta": "ப. பிரியா தேவி (அ.தி.மு.க)" },
       "short": { "en": "Priya / AIADMK",            "ta": "பிரியா / அ.தி.மு.க" },
+      "profile": {
+        "en": "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam",
+        "ta": "https://ta.wikipedia.org/wiki/%E0%AE%85%E0%AE%A3%E0%AF%88%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%AF_%E0%AE%85%E0%AE%A3%E0%AF%8D%E0%AE%A3%E0%AE%BE_%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%9F_%E0%AE%AE%E0%AF%81%E0%AE%A9%E0%AF%8D%E0%AE%A9%E0%AF%87%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%95%E0%AF%8D_%E0%AE%95%E0%AE%B4%E0%AE%95%E0%AE%AE%E0%AF%8D"
+      },
       "description": {
         "en": "Nominated by AIADMK. Social worker with 15 years of community work in Triplicane. Advocates for improved public transport connectivity and affordable housing.",
         "ta": "அதிமுகவால் நியமிக்கப்பட்டவர். திருவல்லிக்கேணியில் 15 ஆண்டுகள் சமூக சேவை."
@@ -51,6 +59,10 @@
       "alias": "cand-bjp",
       "name":  { "en": "K. Venkatesh (BJP)",        "ta": "க. வெங்கடேஷ் (பி.ஜே.பி)" },
       "short": { "en": "Venkatesh / BJP",            "ta": "வெங்கடேஷ் / பி.ஜே.பி" },
+      "profile": {
+        "en": "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party",
+        "ta": "https://ta.wikipedia.org/wiki/%E0%AE%AA%E0%AE%BE%E0%AE%B0%E0%AE%A4%E0%AE%BF%E0%AE%AF_%E0%AE%9C%E0%AE%A9%E0%AE%A4%E0%AE%BE_%E0%AE%95%E0%AE%9F%E0%AF%8D%E0%AE%9A%E0%AE%BF"
+      },
       "description": {
         "en": "Nominated by BJP. Businessman and party district secretary. Champions Central Government welfare schemes, Kashi Tamil Sangamam ties and smart city projects.",
         "ta": "பாஜகவால் நியமிக்கப்பட்டவர். வணிகர் மற்றும் மாவட்ட கட்சி செயலர்."
@@ -60,6 +72,10 @@
       "alias": "cand-ind",
       "name":  { "en": "R. Kavitha (Independent)", "ta": "ர. கவிதா (சுயேட்சை)" },
       "short": { "en": "Kavitha / Ind.",            "ta": "கவிதா / சுயேட்சை" },
+      "profile": {
+        "en": "https://en.wikipedia.org/wiki/Independent_politician",
+        "ta": "https://ta.wikipedia.org/wiki/%E0%AE%9A%E0%AF%81%E0%AE%AF%E0%AF%87%E0%AE%9F%E0%AF%8D%E0%AE%9A%E0%AF%88"
+      },
       "description": {
         "en": "Standing as an Independent. RTI activist and urban planning advocate who has filed multiple petitions against unregulated demolitions in Chepauk and Park Town heritage zone.",
         "ta": "சுயேட்சையாக போட்டியிடுகிறார். RTI ஆர்வலர் மற்றும் நகர திட்டமிடல் ஆதரவாளர்."
