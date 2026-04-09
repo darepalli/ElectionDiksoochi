@@ -186,6 +186,30 @@
       word-break: break-word;
     }
 
+    .oec-live-party-details {
+      margin-top: 0.42rem;
+      padding-top: 0.34rem;
+      border-top: 1px dashed #dbe4ee;
+      font-size: 0.73rem;
+      color: #475569;
+      line-height: 1.3;
+    }
+
+    .oec-live-party-details__line {
+      display: block;
+      margin-top: 0.15rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .oec-live-party-details__excerpt {
+      display: block;
+      margin-top: 0.1rem;
+      font-size: 0.71rem;
+      font-style: italic;
+      color: #64748b;
+    }
+
     .oec-candidate-profile {
       margin-top: 0.45rem;
       font-size: 0.76rem;
@@ -1562,6 +1586,8 @@
 
       var srcMap = {}; // key: normalized explanation text, value: URL
       var partySourceMap = {}; // key: normalized party name/short, value: URL
+      var explanationMetaMap = {}; // key: normalized explanation text, value: { partyAlias, thesisTitleEn, position, source, explanationRaw }
+      var partyAliasByDisplayKey = {}; // key: normalized party label, value: party alias
       var partyProfileEntries = []; // [{ url, keys[] }]
       var candidateLinkItems = []; // [{ name, symbol, profileUrl, partyUrl }]
       var PARTY_META = {
@@ -2539,6 +2565,37 @@
         if (full.length > 80) srcMap[full.substring(0, 80)] = src;
       }
 
+      function addExplanationMeta(text, meta) {
+        if (!text || !meta) return;
+        var full = normalizeText(text);
+        if (!full) return;
+        explanationMetaMap[full] = meta;
+        if (full.length > 80) explanationMetaMap[full.substring(0, 80)] = meta;
+      }
+
+      function findExplanationMeta(bubbleTextNorm, partyAliasHint) {
+        if (!bubbleTextNorm) return null;
+        var direct = explanationMetaMap[bubbleTextNorm] || explanationMetaMap[bubbleTextNorm.substring(0, 80)] || null;
+        if (direct && (!partyAliasHint || direct.partyAlias === partyAliasHint)) return direct;
+
+        for (var k in explanationMetaMap) {
+          if (!k || k.length < 24) continue;
+          if (bubbleTextNorm.indexOf(k) === 0 || k.indexOf(bubbleTextNorm) === 0) {
+            var m = explanationMetaMap[k];
+            if (!partyAliasHint || (m && m.partyAlias === partyAliasHint)) return m;
+          }
+        }
+        return null;
+      }
+
+      function getPartyAliasFromBubble(bubble) {
+        if (!bubble) return '';
+        var partyEl = bubble.querySelector('.chat-bubble__party');
+        if (!partyEl) return '';
+        var partyKey = normalizeText(partyEl.textContent);
+        return partyAliasByDisplayKey[partyKey] || '';
+      }
+
       function getSourceLabel (url) {
         var raw = String(url || '').toLowerCase();
         if (!raw) return 'Source Link';
@@ -2966,7 +3023,10 @@
               var longName = party.name && party.name[code];
               if (shortName) partySourceMap[normalizeText(shortName)] = src;
               if (longName) partySourceMap[normalizeText(longName)] = src;
+              if (shortName) partyAliasByDisplayKey[normalizeText(shortName)] = party.alias;
+              if (longName) partyAliasByDisplayKey[normalizeText(longName)] = party.alias;
             });
+            if (party.alias) partyAliasByDisplayKey[normalizeText(party.alias)] = party.alias;
           });
           debugLog('party fallback keys=' + Object.keys(partySourceMap).length);
 
@@ -3047,10 +3107,18 @@
           theses.forEach(function (thesis) {
             parties.forEach(function (party) {
               var pos = thesis.positions && thesis.positions[party.alias];
-              if (!pos || !pos.source) return;
+              if (!pos) return;
+              var thesisTitleEn = (thesis.title && thesis.title.en) ? String(thesis.title.en) : '';
               langs.forEach(function (code) {
                 var text = pos.explanation && pos.explanation[code];
-                addExplanationSource(text, pos.source);
+                addExplanationSource(text, pos.source || '');
+                addExplanationMeta(text, {
+                  partyAlias: party.alias || '',
+                  thesisTitleEn: thesisTitleEn,
+                  position: pos.position || 'neutral',
+                  source: pos.source || '',
+                  explanationRaw: (pos.explanation && (pos.explanation.en || pos.explanation.ta || text)) || ''
+                });
               });
             });
           });
@@ -3098,8 +3166,11 @@
 
               // Keep source block idempotent to avoid observer feedback loops.
               var existingInfo = bubbleEl.querySelector('.oec-source-inline');
+              var existingDetails = bubbleEl.querySelector('.oec-live-party-details');
 
               var bubbleText = normalizeText(bubbleEl.textContent);
+              var partyAliasHint = getPartyAliasFromBubble(bubble);
+              var explanationMeta = findExplanationMeta(bubbleText, partyAliasHint);
               var src = srcMap[bubbleText] || srcMap[bubbleText.substring(0, 80)] || '';
               var matchKind = src ? 'explanation-exact' : 'none';
 
@@ -3125,6 +3196,11 @@
                 }
               }
 
+              if (!src && explanationMeta && explanationMeta.source) {
+                src = explanationMeta.source;
+                matchKind = 'meta-fallback';
+              }
+
               var info = existingInfo || document.createElement('div');
               info.className = 'oec-source-inline';
 
@@ -3142,6 +3218,47 @@
               }
 
               if (!existingInfo) bubbleEl.appendChild(info);
+
+              if (explanationMeta && explanationMeta.partyAlias) {
+                var detailHtml = '';
+                var subpartyPositions = getAllianceSubpartyPositions(
+                  explanationMeta.partyAlias,
+                  explanationMeta.position,
+                  explanationMeta.explanationRaw,
+                  explanationMeta.thesisTitleEn,
+                  legacyExcerptsData
+                );
+
+                if (subpartyPositions.length > 1) {
+                  var uniq = {};
+                  subpartyPositions.forEach(function (sp) { uniq[sp.position] = true; });
+                  if (Object.keys(uniq).length > 1) {
+                    detailHtml += '<span class="oec-live-party-details__excerpt">'
+                      + escapeHtml(uiLang === 'ta' ? 'இந்த கூட்டணியில் கட்சிகள் வேறுபட்ட நிலைப்பாடுகளை கொண்டுள்ளன.' : 'Parties in this alliance hold different positions on this issue.')
+                      + '</span>';
+                  }
+                }
+
+                subpartyPositions.forEach(function (item) {
+                  var subLabel = getPositionLabel(item.position);
+                  detailHtml += '<span class="oec-live-party-details__line">' + escapeHtml(item.party + ': ' + subLabel) + '</span>';
+                  if (item.excerpt) {
+                    detailHtml += '<span class="oec-live-party-details__excerpt">"' + escapeHtml(item.excerpt) + '"</span>';
+                  }
+                });
+
+                if (detailHtml) {
+                  var details = existingDetails || document.createElement('div');
+                  details.className = 'oec-live-party-details';
+                  details.innerHTML = detailHtml;
+                  if (!existingDetails) bubbleEl.appendChild(details);
+                } else if (existingDetails && existingDetails.parentElement) {
+                  existingDetails.parentElement.removeChild(existingDetails);
+                }
+              } else if (existingDetails && existingDetails.parentElement) {
+                existingDetails.parentElement.removeChild(existingDetails);
+              }
+
               debugLog('bubble processed: match=' + matchKind + ', text=' + bubbleText.substring(0, 64));
             });
           }
