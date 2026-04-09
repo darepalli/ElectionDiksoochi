@@ -2020,7 +2020,7 @@
           var token = userResponseByThesisKey[keys[i]];
           if (token) return getPositionLabel(token);
         }
-        return uiLang === 'ta' ? 'காணவில்லை' : 'Not captured';
+        return getPositionLabel('neutral');
       }
 
       function normalizePositionValue(position) {
@@ -2301,6 +2301,7 @@
         html += '<table class="oec-random-details-table">';
         html += '<thead><tr>';
         html += '<th>' + (uiLang === 'ta' ? 'தீர்மானம்' : 'Thesis') + '</th>';
+        html += '<th>' + escapeHtml(uiLang === 'ta' ? 'உங்கள் பதில்' : 'Your Response') + '</th>';
         parties.forEach(function (party) {
           html += '<th>' + escapeHtml(getPartyDisplayName(party)) + '</th>';
         });
@@ -2312,6 +2313,7 @@
           var title = (thesis.title && (thesis.title[uiLang] || thesis.title.en || thesis.title.ta)) || ('Thesis ' + (idx + 1));
           html += '<tr>';
           html += '<td>' + escapeHtml(title) + '</td>';
+          html += '<td><span class="oec-random-stance">' + escapeHtml(getCapturedUserResponseLabel(thesis, idx)) + '</span></td>';
 
           parties.forEach(function (party) {
             var pos = thesis.positions && thesis.positions[party.alias];
@@ -2574,6 +2576,32 @@
         return String(url || '').split('#')[0].split('?')[0];
       }
 
+      function getConfigPathForQuery(url) {
+        var raw = stripQueryAndHash(url);
+        if (!raw) return '';
+
+        var SAFE_CONFIG_RE = /^elections\/[a-z]{2,}\/[a-z0-9._/-]+\/config\.json$/;
+        if (SAFE_CONFIG_RE.test(raw)) return raw;
+
+        try {
+          var u = new URL(raw, window.location.href);
+          var p = String(u.pathname || '').replace(/\\/g, '/');
+          var idx = p.toLowerCase().indexOf('/elections/');
+          if (idx >= 0) {
+            var rel = p.substring(idx + 1);
+            if (SAFE_CONFIG_RE.test(rel)) return rel;
+          }
+        } catch (e) {}
+
+        try {
+          var q = new URLSearchParams(window.location.search).get('config') || '';
+          q = stripQueryAndHash(q);
+          if (SAFE_CONFIG_RE.test(q)) return q;
+        } catch (e) {}
+
+        return '';
+      }
+
       function escapeHtml(text) {
         return String(text || '')
           .replace(/&/g, '&amp;')
@@ -2785,7 +2813,8 @@
         var positionsHref = '#';
         try {
           var u = new URL(window.location.href);
-          u.searchParams.set('config', stripQueryAndHash(configPath));
+          var safeConfigPath = getConfigPathForQuery(configPath);
+          if (safeConfigPath) u.searchParams.set('config', safeConfigPath);
           u.searchParams.set('partypositions', '1');
           u.searchParams.set('viewmode', 'tabular');
           u.searchParams.delete('randomresults');
