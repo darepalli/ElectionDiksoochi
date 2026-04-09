@@ -1396,9 +1396,8 @@
               var bubbleEl = bubble.querySelector('.chat-bubble__bubble') || bubble.querySelector('[class*="chat-bubble__bubble"]');
               if (!bubbleEl) return;
 
-              // Rebuild inline source block each pass so late renders/language switches stay correct.
+              // Keep source block idempotent to avoid observer feedback loops.
               var existingInfo = bubbleEl.querySelector('.oec-source-inline');
-              if (existingInfo) existingInfo.remove();
 
               var bubbleText = normalizeText(bubbleEl.textContent);
               var src = srcMap[bubbleText] || srcMap[bubbleText.substring(0, 80)] || '';
@@ -1426,23 +1425,23 @@
                 }
               }
 
-              var info = document.createElement('div');
+              var info = existingInfo || document.createElement('div');
               info.className = 'oec-source-inline';
 
               if (src) {
                 info.textContent = 'Source: ';
-                var a = document.createElement('a');
+                var a = info.querySelector('a.oec-source-link') || document.createElement('a');
                 a.href = src;
                 a.target = '_blank';
                 a.rel = 'noopener noreferrer';
                 a.className = 'oec-source-link';
                 a.textContent = getSourceLabel(src);
-                info.appendChild(a);
+                if (!a.parentElement) info.appendChild(a);
               } else {
                 info.textContent = 'Source: not added yet.';
               }
 
-              bubbleEl.appendChild(info);
+              if (!existingInfo) bubbleEl.appendChild(info);
               debugLog('bubble processed: match=' + matchKind + ', text=' + bubbleText.substring(0, 64));
             });
           }
@@ -1564,19 +1563,42 @@
             });
           }
 
-          var observer = new MutationObserver(function () {
-            injectLinks();
-            injectCandidateProfileLinks();
+          var observer = null;
+          var injectScheduled = false;
+          var isInjecting = false;
+
+          function runInjectors() {
+            if (isInjecting) return;
+            isInjecting = true;
+            if (observer) observer.disconnect();
+            try {
+              injectLinks();
+              injectCandidateProfileLinks();
+            } finally {
+              if (observer) observer.observe(container, { childList: true, subtree: true });
+              isInjecting = false;
+            }
+          }
+
+          function scheduleInjectors() {
+            if (injectScheduled) return;
+            injectScheduled = true;
+            window.requestAnimationFrame(function () {
+              injectScheduled = false;
+              runInjectors();
+            });
+          }
+
+          observer = new MutationObserver(function () {
+            scheduleInjectors();
           });
           observer.observe(container, { childList: true, subtree: true });
-          injectLinks(); // catch anything already rendered
-          injectCandidateProfileLinks();
+          runInjectors(); // catch anything already rendered
 
           // OEC updates some UI states asynchronously; periodic refresh keeps source labels in sync.
           setInterval(function () {
-            injectLinks();
-            injectCandidateProfileLinks();
-          }, 1200);
+            scheduleInjectors();
+          }, 2400);
         })
         .catch(function () { /* silently ignore – sources are optional */ });
     }());
