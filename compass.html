@@ -158,6 +158,139 @@
       margin-top: 0.45rem;
       font-size: 0.76rem;
       line-height: 1.3;
+      display: block;
+      position: relative;
+      z-index: 2;
+      pointer-events: auto;
+    }
+
+    .oec-party-symbol {
+      display: inline-block;
+      margin-right: 0.45rem;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .oec-candidate-links {
+      display: inline-flex;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .oec-profile-panel {
+      position: fixed;
+      right: 12px;
+      top: calc(var(--back-bar-h, 56px) + 12px);
+      width: min(360px, calc(100vw - 24px));
+      max-height: calc(100vh - var(--back-bar-h, 56px) - 24px);
+      overflow: auto;
+      z-index: 11400;
+      background: #ffffff;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.16);
+      padding: 0.7rem 0.75rem;
+    }
+
+    .oec-profile-panel.is-collapsed {
+      width: auto;
+      max-height: none;
+      overflow: visible;
+      padding-bottom: 0.6rem;
+    }
+
+    .oec-profile-panel__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .oec-profile-toggle {
+      border: 1px solid #bfdbfe;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border-radius: 6px;
+      padding: 0.18rem 0.5rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .oec-profile-toggle:hover {
+      background: #dbeafe;
+    }
+
+    .oec-profile-panel__title {
+      margin: 0;
+      color: #0f172a;
+      font-size: 0.92rem;
+      font-weight: 800;
+    }
+
+    .oec-profile-panel__body {
+      display: block;
+    }
+
+    .oec-profile-panel.is-collapsed .oec-profile-panel__body {
+      display: none;
+    }
+
+    .oec-profile-panel__list {
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .oec-profile-panel__item {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #f8fafc;
+      padding: 0.45rem 0.5rem;
+    }
+
+    .oec-profile-panel__name {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      color: #1f2937;
+      font-size: 0.8rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.35rem;
+    }
+
+    .oec-profile-panel__actions {
+      display: inline-flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .oec-profile-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 1.72rem;
+      padding: 0.2rem 0.52rem;
+      border-radius: 6px;
+      border: 1px solid #bfdbfe;
+      background: #eff6ff;
+      color: #1d4ed8;
+      text-decoration: none;
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    .oec-profile-btn:hover {
+      background: #dbeafe;
+      text-decoration: underline;
+    }
+
+    .oec-profile-btn.is-disabled {
+      background: #f3f4f6;
+      border-color: #d1d5db;
+      color: #6b7280;
     }
 
     .oec-candidate-profile a {
@@ -340,6 +473,16 @@
 
       .oec-source-link {
         font-size: 0.72rem;
+      }
+
+      .oec-profile-panel {
+        right: 8px;
+        width: calc(100vw - 16px);
+        max-height: 46vh;
+      }
+
+      .oec-profile-panel.is-collapsed {
+        width: calc(100vw - 16px);
       }
 
       .oec-debug-panel {
@@ -895,12 +1038,53 @@
       if (!configPath) return;
       var debugMode = /(?:\?|&)debug=1(?:&|$)/.test(window.location.search);
 
+      function normalizeLang(value) {
+        var raw = String(value || '').toLowerCase();
+        return raw.indexOf('ta') === 0 ? 'ta' : 'en';
+      }
+
+      function getUiLang() {
+        try {
+          var q = new URLSearchParams(window.location.search).get('lang');
+          if (q) return normalizeLang(q);
+        } catch (e) {}
+        try {
+          var stored = window.localStorage.getItem('oec-lang');
+          if (stored) return normalizeLang(stored);
+        } catch (e) {}
+        return 'en';
+      }
+
+      var uiLang = getUiLang();
+
       var srcMap = {}; // key: normalized explanation text, value: URL
       var partySourceMap = {}; // key: normalized party name/short, value: URL
       var partyProfileEntries = []; // [{ url, keys[] }]
+      var candidateLinkItems = []; // [{ name, symbol, profileUrl, partyUrl }]
+      var PARTY_META = {
+        'DMK': { symbol: '☀ Rising Sun', wiki: 'https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam' },
+        'AIADMK': { symbol: '🍃 Two Leaves', wiki: 'https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam' },
+        'ADMK': { symbol: '🍃 Two Leaves', wiki: 'https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam' },
+        'BJP': { symbol: '🪷 Lotus', wiki: 'https://en.wikipedia.org/wiki/Bharatiya_Janata_Party' },
+        'INC': { symbol: '✋ Hand', wiki: 'https://en.wikipedia.org/wiki/Indian_National_Congress' },
+        'PMK': { symbol: '🥭 Mango', wiki: 'https://en.wikipedia.org/wiki/Pattali_Makkal_Katchi' },
+        'DMDK': { symbol: '🥁 Drum', wiki: 'https://en.wikipedia.org/wiki/Desiya_Murpokku_Dravida_Kazhagam' },
+        'NTK': { symbol: '🎤 Microphone', wiki: 'https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi' },
+        'MNM': { symbol: '🔦 Torch', wiki: 'https://en.wikipedia.org/wiki/Makkal_Needhi_Maiam' },
+        'AMMK': { symbol: '🍲 Pressure Cooker', wiki: 'https://en.wikipedia.org/wiki/Amma_Makkal_Munneetra_Kazhagam' },
+        'TVK': { symbol: '⭐ Star', wiki: 'https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam' },
+        'VCK': { symbol: '💠 Ring', wiki: 'https://en.wikipedia.org/wiki/Viduthalai_Chiruthaigal_Katchi' },
+        'MDMK': { symbol: '🔻 Top', wiki: 'https://en.wikipedia.org/wiki/Marumalarchi_Dravida_Munnetra_Kazhagam' },
+        'CPI': { symbol: '🌾 Ears of Corn', wiki: 'https://en.wikipedia.org/wiki/Communist_Party_of_India' },
+        'CPI(M)': { symbol: '🔨 Hammer-Sickle-Star', wiki: 'https://en.wikipedia.org/wiki/Communist_Party_of_India_(Marxist)' },
+        'CPM': { symbol: '🔨 Hammer-Sickle-Star', wiki: 'https://en.wikipedia.org/wiki/Communist_Party_of_India_(Marxist)' },
+        'IND': { symbol: '👤 Independent', wiki: 'https://en.wikipedia.org/wiki/Independent_politician' },
+        'INDEPENDENT': { symbol: '👤 Independent', wiki: 'https://en.wikipedia.org/wiki/Independent_politician' }
+      };
       var debugPanel = null;
       var debugLogEl = null;
       var debugLines = [];
+      var profilePanelCollapsed = false;
 
       function debugLog (line) {
         if (!debugMode) return;
@@ -1002,6 +1186,101 @@
         return 'Party Website';
       }
 
+      function escapeHtml(text) {
+        return String(text || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function getProfileUnavailableMessage() {
+        return uiLang === 'ta'
+          ? 'இந்த வேட்பாளருக்கான பொதுப் சுயவிவர இணைப்பு இன்னும் கிடைக்கவில்லை.'
+          : 'Public profile link is not available for this candidate yet.';
+      }
+
+      function renderCandidateProfilePanel () {
+        if (!candidateLinkItems.length) return;
+
+        var panel = document.getElementById('oec-profile-panel');
+        if (!panel) {
+          panel = document.createElement('aside');
+          panel.id = 'oec-profile-panel';
+          panel.className = 'oec-profile-panel';
+          document.body.appendChild(panel);
+        }
+
+        if (window.localStorage) {
+          var savedState = window.localStorage.getItem('oec-profile-panel-collapsed');
+          profilePanelCollapsed = savedState === '1';
+        }
+
+        if (profilePanelCollapsed) panel.classList.add('is-collapsed');
+        else panel.classList.remove('is-collapsed');
+
+        var title = uiLang === 'ta' ? 'வேட்பாளர்கள் & இணைப்புகள்' : 'Candidates & Links';
+        var profileText = uiLang === 'ta' ? 'சுயவிவரம்' : 'Profile';
+        var partyText = uiLang === 'ta' ? 'கட்சி' : 'Party';
+        var toggleText = profilePanelCollapsed
+          ? (uiLang === 'ta' ? 'விரி' : 'Expand')
+          : (uiLang === 'ta' ? 'சுருக்கு' : 'Collapse');
+
+        var html = '<div class="oec-profile-panel__header">';
+        html += '<h4 class="oec-profile-panel__title">' + escapeHtml(title) + '</h4>';
+        html += '<button type="button" class="oec-profile-toggle" id="oec-profile-toggle">' + escapeHtml(toggleText) + '</button>';
+        html += '</div>';
+        html += '<div class="oec-profile-panel__body">';
+        html += '<div class="oec-profile-panel__list">';
+
+        candidateLinkItems.forEach(function (item) {
+          html += '<div class="oec-profile-panel__item">';
+          html += '<div class="oec-profile-panel__name">';
+          if (item.symbol) {
+            html += '<span class="oec-party-symbol">' + escapeHtml(item.symbol) + '</span>';
+          }
+          html += '<span>' + escapeHtml(item.name) + '</span>';
+          html += '</div>';
+          html += '<div class="oec-profile-panel__actions">';
+          if (item.profileUrl) {
+            html += '<a class="oec-profile-btn" href="' + escapeHtml(item.profileUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(profileText) + '</a>';
+          } else {
+            html += '<a class="oec-profile-btn is-disabled" href="#" data-profile-missing="1">' + escapeHtml(profileText) + '</a>';
+          }
+          if (item.partyUrl) {
+            html += '<a class="oec-profile-btn" href="' + escapeHtml(item.partyUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(partyText) + '</a>';
+          }
+          html += '</div></div>';
+        });
+
+        html += '</div></div>';
+        panel.innerHTML = html;
+
+        var toggleBtn = panel.querySelector('#oec-profile-toggle');
+        if (toggleBtn) {
+          toggleBtn.addEventListener('click', function () {
+            profilePanelCollapsed = !profilePanelCollapsed;
+            if (profilePanelCollapsed) panel.classList.add('is-collapsed');
+            else panel.classList.remove('is-collapsed');
+            if (window.localStorage) {
+              window.localStorage.setItem('oec-profile-panel-collapsed', profilePanelCollapsed ? '1' : '0');
+            }
+            toggleBtn.textContent = profilePanelCollapsed
+              ? (uiLang === 'ta' ? 'விரி' : 'Expand')
+              : (uiLang === 'ta' ? 'சுருக்கு' : 'Collapse');
+          });
+        }
+
+        var missingProfileBtns = panel.querySelectorAll('[data-profile-missing="1"]');
+        missingProfileBtns.forEach(function (btn) {
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.alert(getProfileUnavailableMessage());
+          });
+        });
+      }
+
       fetch(configPath)
         .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
         .then(function (cfg) {
@@ -1038,9 +1317,26 @@
             if (party.profile && typeof party.profile === 'string') {
               profileUrl = party.profile;
             } else if (party.profile && typeof party.profile === 'object') {
-              profileUrl = party.profile[selectedLang] || party.profile.en || party.profile.ta || '';
+              profileUrl = party.profile[uiLang] || party.profile.en || party.profile.ta || '';
             }
-            if (!profileUrl) return;
+
+            var partyTag = '';
+            var enName = (party.name && party.name.en) ? String(party.name.en) : '';
+            if (enName && /\(([^\)]+)\)/.test(enName)) {
+              partyTag = RegExp.$1.trim().toUpperCase();
+            }
+            if (!partyTag && party.alias) {
+              var alias = String(party.alias);
+              if (/^cand-([a-z0-9()]+)$/i.test(alias)) {
+                partyTag = RegExp.$1.toUpperCase();
+              }
+            }
+
+            var meta = PARTY_META[partyTag] || null;
+            var partyWiki = meta ? meta.wiki : '';
+            var symbolText = meta ? meta.symbol : '';
+
+            if (!profileUrl && !partyWiki) return;
 
             var keys = [];
             langs.forEach(function (code) {
@@ -1051,9 +1347,29 @@
             });
             if (party.alias) keys.push(normalizeText(party.alias));
 
-            partyProfileEntries.push({ url: profileUrl, keys: keys.filter(Boolean) });
+            partyProfileEntries.push({
+              url: profileUrl,
+              partyUrl: partyWiki,
+              symbol: symbolText,
+              keys: keys.filter(Boolean)
+            });
+
+            var displayName = '';
+            if (party.short && party.short[uiLang]) displayName = party.short[uiLang];
+            else if (party.name && party.name[uiLang]) displayName = party.name[uiLang];
+            else if (party.short && party.short.en) displayName = party.short.en;
+            else if (party.name && party.name.en) displayName = party.name.en;
+            else displayName = party.alias || 'Candidate';
+
+            candidateLinkItems.push({
+              name: displayName,
+              symbol: symbolText,
+              profileUrl: profileUrl,
+              partyUrl: partyWiki
+            });
           });
           debugLog('candidate profile entries=' + partyProfileEntries.length);
+          renderCandidateProfilePanel();
 
           theses.forEach(function (thesis) {
             parties.forEach(function (party) {
@@ -1071,16 +1387,19 @@
           if (!container) return;
 
           function injectLinks () {
-            var pending = container.querySelectorAll('.chat-bubble:not([data-src-done])');
-            if (!pending.length && debugMode) {
-              var total = container.querySelectorAll('.chat-bubble').length;
-              debugLog('scan: pending=0 total=' + total);
+            var bubbles = container.querySelectorAll('.chat-bubble');
+            if (!bubbles.length && debugMode) {
+              debugLog('scan: bubbles=0');
             }
 
-            pending.forEach(function (bubble) {
-              bubble.setAttribute('data-src-done', '1');
+            bubbles.forEach(function (bubble) {
               var bubbleEl = bubble.querySelector('.chat-bubble__bubble') || bubble.querySelector('[class*="chat-bubble__bubble"]');
               if (!bubbleEl) return;
+
+              // Rebuild inline source block each pass so late renders/language switches stay correct.
+              var existingInfo = bubbleEl.querySelector('.oec-source-inline');
+              if (existingInfo) existingInfo.remove();
+
               var bubbleText = normalizeText(bubbleEl.textContent);
               var src = srcMap[bubbleText] || srcMap[bubbleText.substring(0, 80)] || '';
               var matchKind = src ? 'explanation-exact' : 'none';
@@ -1128,44 +1447,120 @@
             });
           }
 
-          function findProfileUrlForText(text) {
+          function findProfileEntryForText(text) {
             var norm = normalizeText(text);
-            if (!norm) return '';
+            if (!norm) return null;
             for (var i = 0; i < partyProfileEntries.length; i++) {
               var entry = partyProfileEntries[i];
               for (var j = 0; j < entry.keys.length; j++) {
                 var key = entry.keys[j];
                 if (!key) continue;
                 if (norm.indexOf(key) >= 0 || key.indexOf(norm) >= 0) {
-                  return entry.url;
+                  return entry;
                 }
               }
             }
-            return '';
+            return null;
           }
 
           function injectCandidateProfileLinks () {
             if (!partyProfileEntries.length) return;
-            var cards = container.querySelectorAll('.party-item:not([data-profile-done]), [class*="party-item"]:not([data-profile-done])');
-            cards.forEach(function (card) {
-              card.setAttribute('data-profile-done', '1');
-              if (card.querySelector('.oec-candidate-profile')) return;
 
-              var rawText = (card.textContent || '').replace(/\s+/g, ' ').trim();
-              var url = findProfileUrlForText(rawText);
-              if (!url) return;
+            var candidates = container.querySelectorAll(
+              'button, [role="button"], label, .party-item, [class*="party-item"], .base-button, [class*="party"]'
+            );
+
+            candidates.forEach(function (el) {
+              if (!el || el.closest('.oec-candidate-profile')) return;
+              var rawText = (el.textContent || '').replace(/\s+/g, ' ').trim();
+              if (!rawText || rawText.length < 3) return;
+
+              var entry = findProfileEntryForText(rawText);
+              if (!entry) return;
+
+              // Find a stable insertion anchor near the selectable control.
+              var anchor = el;
+              var partyBlock = el.closest('.party-item') || el.closest('[class*="party-item"]') || el.closest('[class*="party"]');
+              if (partyBlock) anchor = partyBlock;
+
+              var anchorKey = normalizeText((anchor.textContent || '').replace(/\s+/g, ' ').trim());
+              if (!anchorKey) return;
+
+              var existing = Array.prototype.slice.call(container.querySelectorAll('.oec-candidate-profile'))
+                .some(function (n) { return n.getAttribute('data-profile-key') === anchorKey; });
+              if (existing) return;
+
+              var insertParent = anchor.parentElement;
+              var insertAfter = anchor;
+              if (!insertParent) return;
+
+              // Keep link outside labels to avoid toggling checkboxes.
+              if (insertAfter.tagName && insertAfter.tagName.toLowerCase() === 'label' && insertAfter.parentElement) {
+                insertParent = insertAfter.parentElement;
+              }
 
               var holder = document.createElement('div');
               holder.className = 'oec-candidate-profile';
+              holder.setAttribute('data-profile-key', anchorKey);
+
+              if (entry.symbol) {
+                var symbol = document.createElement('span');
+                symbol.className = 'oec-party-symbol';
+                symbol.textContent = entry.symbol;
+                holder.appendChild(symbol);
+              }
+
+              var links = document.createElement('span');
+              links.className = 'oec-candidate-links';
 
               var link = document.createElement('a');
-              link.href = url;
-              link.target = '_blank';
-              link.rel = 'noopener noreferrer';
-              link.textContent = selectedLang === 'ta' ? 'சுயவிவரம்' : 'Profile';
+              link.textContent = uiLang === 'ta' ? 'சுயவிவரம்' : 'Profile';
 
-              holder.appendChild(link);
-              card.appendChild(holder);
+              if (entry.url) {
+                link.href = entry.url;
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+              } else {
+                link.href = '#';
+              }
+
+              // Prevent link interactions from toggling party selection.
+              ['click', 'mousedown', 'mouseup', 'touchstart', 'touchend', 'pointerdown', 'pointerup'].forEach(function (evt) {
+                link.addEventListener(evt, function (e) {
+                  e.stopPropagation();
+                });
+              });
+
+              if (!entry.url) {
+                link.classList.add('is-disabled');
+                link.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  window.alert(getProfileUnavailableMessage());
+                });
+              }
+
+              links.appendChild(link);
+
+              if (entry.partyUrl) {
+                var partyLink = document.createElement('a');
+                partyLink.href = entry.partyUrl;
+                partyLink.target = '_blank';
+                partyLink.rel = 'noopener noreferrer';
+                partyLink.textContent = uiLang === 'ta' ? 'கட்சி' : 'Party';
+                ['click', 'mousedown', 'mouseup', 'touchstart', 'touchend', 'pointerdown', 'pointerup'].forEach(function (evt) {
+                  partyLink.addEventListener(evt, function (e) {
+                    e.stopPropagation();
+                  });
+                });
+                links.appendChild(partyLink);
+              }
+
+              holder.appendChild(links);
+              if (insertAfter.nextSibling) {
+                insertParent.insertBefore(holder, insertAfter.nextSibling);
+              } else {
+                insertParent.appendChild(holder);
+              }
             });
           }
 
@@ -1176,6 +1571,12 @@
           observer.observe(container, { childList: true, subtree: true });
           injectLinks(); // catch anything already rendered
           injectCandidateProfileLinks();
+
+          // OEC updates some UI states asynchronously; periodic refresh keeps source labels in sync.
+          setInterval(function () {
+            injectLinks();
+            injectCandidateProfileLinks();
+          }, 1200);
         })
         .catch(function () { /* silently ignore – sources are optional */ });
     }());
