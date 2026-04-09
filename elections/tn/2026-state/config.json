@@ -25,8 +25,8 @@
                                          "ta":  "தமிழ்நாடு தேர்தல் திசைகாட்டிக்கு வரவேற்கிறோம்"
                                      },
                          "text":  {
-                                      "en":  "Six major parties contesting the 2026 Tamil Nadu State Assembly elections have been assessed on 15 policy theses covering governance, education, water rights, welfare, language, economy, agriculture and environment. Answer each thesis and see which party best represents your views. This tool is non-partisan and for civic information only.",
-                                      "ta":  "2026 தமிழ்நாடு சட்டசபை தேர்தலில் போட்டியிடும் ஆறு முக்கிய கட்சிகள் ஆட்சி, கல்வி, நீர் உரிமை, நலன்புரி, மொழி, பொருளாதாரம், வேளாண்மை மற்றும் சுற்றுச்சூழல் தொடர்பான 15 கொள்கை தீர்மானங்களில் மதிப்பீடு செய்யப்பட்டுள்ளன. ஒவ்வொரு தீர்மானத்திற்கும் பதிலளித்து எந்த கட்சி உங்கள் கருத்துகளை சிறப்பாக பிரதிநிதித்துவப்படுத்துகிறது என்பதை பாருங்கள்."
+                                      "en":  "Six major parties contesting the 2026 Tamil Nadu State Assembly elections have been assessed on 16 policy theses covering governance, education, health, water rights, welfare, language, economy, agriculture and environment. Answer each thesis and see which party best represents your views. Theses are derived from publicly available sources and party position notes should include source links. This tool is non-partisan, for civic information only, and does not collect or store personal user response data.",
+                                      "ta":  "2026 தமிழ்நாடு சட்டசபை தேர்தலில் போட்டியிடும் ஆறு முக்கிய கட்சிகள் ஆட்சி, கல்வி, சுகாதாரம், நீர் உரிமை, நலன்புரி, மொழி, பொருளாதாரம், வேளாண்மை மற்றும் சுற்றுச்சூழல் தொடர்பான 16 கொள்கை தீர்மானங்களில் மதிப்பீடு செய்யப்பட்டுள்ளன. ஒவ்வொரு தீர்மானத்திற்கும் பதிலளித்து எந்த கட்சி உங்கள் கருத்துகளை சிறப்பாக பிரதிநிதித்துவப்படுத்துகிறது என்பதை பாருங்கள். இந்த தீர்மானங்கள் பொதுமக்களுக்கு கிடைக்கும் ஆதாரங்களிலிருந்து தொகுக்கப்பட்டவை; கட்சி நிலைப்பாடுகளுக்கு ஆதார இணைப்புகள் சேர்க்கப்பட வேண்டும். இந்த கருவி சார்பற்ற குடிமக்கள் தகவல் கருவி; பயனர் பதில் தொடர்பான தனிப்பட்ட தரவை சேகரிக்கவோ சேமிக்கவோ இல்லை."
                                   }
                      },
     "parties":  [
@@ -237,6 +237,66 @@
                                                      "explanation":  {
                                                                          "en":  "PMK\u0027s position is nuanced — while it has criticised NEET\u0027s impact on the poor, it has also supported the exam as a merit check, particularly as Vanniyar students have benefited under it.",
                                                                          "ta":  "பாமகவின் நிலைப்பாடு நுட்பமானது. NEET-ஐ விமர்சித்தாலும், வன்னியர் மாணவர்கள் இதன் மூலம் பயனடைந்ததால் தேர்வை ஆதரிக்கும் முனைப்பும் உள்ளது."
+                                                                     },
+                                                     "source":  ""
+                                                 }
+                                     }
+                   },
+                   {
+                       "title":  {
+                                     "en":  "Public Health Spending",
+                                     "ta":  "பொது சுகாதார முதலீடு"
+                                 },
+                       "statement":  {
+                                         "en":  "Tamil Nadu should increase public health spending to strengthen Primary Health Centres, district hospitals, preventive care and staffing in underserved rural areas.",
+                                         "ta":  "முதன்மை சுகாதார மையங்கள், மாவட்ட மருத்துவமனைகள், தடுப்பு சிகிச்சை மற்றும் சேவை குறைவான கிராமப்புறங்களில் பணியாளர் வலுவூட்டலுக்காக தமிழ்நாடு பொது சுகாதார செலவினத்தை அதிகரிக்க வேண்டும்."
+                                     },
+                       "positions":  {
+                                         "dmk":  {
+                                                     "position":  "approve",
+                                                     "explanation":  {
+                                                                         "en":  "DMK has prioritized public health expansion through state schemes, government hospital upgrades and doorstep healthcare initiatives.",
+                                                                         "ta":  "திமுக அரசு மருத்துவமனை மேம்பாடு, மாநில சுகாதாரத் திட்டங்கள் மற்றும் மக்களிடம் சென்று சேரும் சிகிச்சை முயற்சிகள் மூலம் பொது சுகாதாரத்தை விரிவுபடுத்தி வருகிறது."
+                                                                     },
+                                                     "source":  ""
+                                                 },
+                                         "aiadmk":  {
+                                                        "position":  "approve",
+                                                        "explanation":  {
+                                                                            "en":  "AIADMK has historically supported expanding state health infrastructure, insurance coverage and district-level service delivery.",
+                                                                            "ta":  "அதிமுக மாநில சுகாதார கட்டமைப்பு, காப்பீட்டு பாதுகாப்பு மற்றும் மாவட்ட மட்ட சேவை வலையை விரிவுபடுத்துவதைக் காலத்துக்கு காலம் ஆதரித்துள்ளது."
+                                                                        },
+                                                        "source":  ""
+                                                    },
+                                         "bjp":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "BJP supports healthcare expansion but often emphasizes mixed public-private delivery and central scheme alignment over purely state-led spending increases.",
+                                                                         "ta":  "பாஜக சுகாதார விரிவாக்கத்தை ஆதரித்தாலும், முழுக்க மாநிலச் செலவு உயர்வை விட பொது-தனியார் கலப்பு சேவை மற்றும் மத்திய திட்ட ஒத்திசைவை அதிகம் வலியுறுத்துகிறது."
+                                                                     },
+                                                     "source":  ""
+                                                 },
+                                         "inc":  {
+                                                     "position":  "approve",
+                                                     "explanation":  {
+                                                                         "en":  "Congress generally supports stronger public healthcare systems, preventive care and higher social-sector expenditure.",
+                                                                         "ta":  "காங்கிரஸ் பொதுவாக வலுவான பொது சுகாதார அமைப்பு, தடுப்பு சிகிச்சை மற்றும் அதிக சமூகத் துறை செலவினத்தை ஆதரிக்கிறது."
+                                                                     },
+                                                     "source":  ""
+                                                 },
+                                         "dmdk":  {
+                                                      "position":  "approve",
+                                                      "explanation":  {
+                                                                          "en":  "DMDK has supported improving government hospitals and expanding affordable care access for low-income families.",
+                                                                          "ta":  "தேமுதிக அரசு மருத்துவமனை தரத்தை உயர்த்தி, குறைந்த வருமானக் குடும்பங்களுக்கு மலிவு சிகிச்சை அணுகலை விரிவுபடுத்த வேண்டும் என்று வலியுறுத்தி வருகிறது."
+                                                                      },
+                                                      "source":  ""
+                                                  },
+                                         "pmk":  {
+                                                     "position":  "approve",
+                                                     "explanation":  {
+                                                                         "en":  "PMK frequently highlights public health, preventive medicine and stronger rural health services as core governance priorities.",
+                                                                         "ta":  "பாமக பொதுச் சுகாதாரம், தடுப்பு மருத்துவம் மற்றும் வலுவான கிராமப்புற சுகாதார சேவைகளை முக்கிய ஆட்சிக் குறிக்கோள்களாக தொடர்ந்து முன்வைக்கிறது."
                                                                      },
                                                      "source":  ""
                                                  }

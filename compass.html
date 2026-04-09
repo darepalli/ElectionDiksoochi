@@ -60,7 +60,7 @@
     .error-page p  { max-width: 480px; color: #6b7280; }
     .error-page a  { color: #c0392b; font-weight: 600; }
 
-    /* Source citation links injected below party explanation bubbles */
+    /* Source citation link and popup for compare-screen positions */
     .oec-source-link {
       display: inline-block;
       margin-top: 0.6rem;
@@ -77,6 +77,60 @@
       background: #dbeafe;
       text-decoration: underline;
     }
+
+    .oec-source-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.45);
+    }
+    .oec-source-modal.is-open { display: flex; }
+    .oec-source-modal__card {
+      width: min(560px, 96vw);
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+      padding: 1rem;
+    }
+    .oec-source-modal__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 0.45rem;
+    }
+    .oec-source-modal__body {
+      font-size: 0.86rem;
+      color: #4b5563;
+      margin-bottom: 0.85rem;
+      word-break: break-word;
+    }
+    .oec-source-modal__actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.45rem;
+    }
+    .oec-source-btn {
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      background: #fff;
+      color: #111827;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.42rem 0.7rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .oec-source-btn--primary {
+      background: #2563eb;
+      border-color: #2563eb;
+      color: #fff;
+    }
+    .oec-source-btn--primary:hover { background: #1d4ed8; }
   </style>
 </head>
 <body>
@@ -107,8 +161,15 @@
     (function () {
       var SAFE_CONFIG_RE = /^elections\/[a-z]{2,}\/[a-z0-9._/-]+\/config\.json$/;
 
-      var params     = new URLSearchParams(window.location.search);
-      var configPath = params.get('config') || '';
+      function getParam(name) {
+        if (window.URLSearchParams) {
+          return new URLSearchParams(window.location.search).get(name) || '';
+        }
+        var match = new RegExp('[?&]' + name + '=([^&#]*)').exec(window.location.search);
+        return match ? decodeURIComponent(match[1].replace(/\+/g, ' ')) : '';
+      }
+
+      var configPath = getParam('config');
       var oecEl      = document.getElementById('oec-el');
       var wrapper    = document.getElementById('open-election-compass');
 
@@ -141,25 +202,84 @@
 
   <script>
     /*
-     * Source-link injector
-     * Fetches the same config.json that OEC loaded, builds a lookup table of
-     * explanation-text-prefix → source URL, then watches for OEC's .chat-bubble
-     * elements to appear (they render in the compare section after all answers
-     * are given). When one appears its .chat-bubble__bubble text is matched and
-     * a clickable "Source →" badge is appended.
-     *
-     * To add sources: set the "source" field on each position in config.json.
-     * Leave it as "" to show no link for that position.
+     * Source popup injector
+     * When a user clicks a party position in compare screen, OEC renders a
+     * chat bubble with the party explanation. We map that explanation to the
+     * source URL in config.json and show a popup with the source link.
      */
     (function () {
-      var SAFE_CONFIG_RE = /^\/|^elections\/[a-z]/;
       var configPath = '';
       var oecEl = document.getElementById('oec-el');
       if (oecEl) configPath = oecEl.getAttribute('load-url') || '';
       if (!configPath) return;
 
-      // Build prefix → source map for every language in the config
       var srcMap = {}; // key: first 60 chars of explanation text, value: URL
+      var pendingCompareClickAt = 0;
+
+      function matchesSelector(el, selector) {
+        var fn = el.matches || el.msMatchesSelector || el.webkitMatchesSelector;
+        return fn ? fn.call(el, selector) : false;
+      }
+
+      function closestAny(el, selectors) {
+        while (el && el.nodeType === 1) {
+          for (var i = 0; i < selectors.length; i++) {
+            if (matchesSelector(el, selectors[i])) return el;
+          }
+          el = el.parentElement;
+        }
+        return null;
+      }
+
+      function createModal () {
+        var modal = document.createElement('div');
+        modal.className = 'oec-source-modal';
+        modal.innerHTML =
+          '<div class="oec-source-modal__card" role="dialog" aria-modal="true" aria-label="Source link">'
+          + '<div class="oec-source-modal__title">Source for this party position</div>'
+          + '<div class="oec-source-modal__body" id="oec-source-modal-body"></div>'
+          + '<div class="oec-source-modal__actions">'
+          + '<button type="button" class="oec-source-btn" id="oec-source-close">Close</button>'
+          + '<a class="oec-source-btn oec-source-btn--primary" id="oec-source-open" target="_blank" rel="noopener noreferrer">Open Source</a>'
+          + '</div>'
+          + '</div>';
+        document.body.appendChild(modal);
+
+        modal.addEventListener('click', function (ev) {
+          if (ev.target === modal) modal.classList.remove('is-open');
+        });
+        modal.querySelector('#oec-source-close').addEventListener('click', function () {
+          modal.classList.remove('is-open');
+        });
+        document.addEventListener('keydown', function (ev) {
+          if (ev.key === 'Escape') modal.classList.remove('is-open');
+        });
+        return modal;
+      }
+
+      var modal = createModal();
+      var modalBody = modal.querySelector('#oec-source-modal-body');
+      var modalOpen = modal.querySelector('#oec-source-open');
+
+      function showSourcePopup (src) {
+        if (src) {
+          modalBody.textContent = src;
+          modalOpen.href = src;
+          modalOpen.style.display = 'inline-flex';
+        } else {
+          modalBody.textContent = 'No source link has been added for this party position yet.';
+          modalOpen.removeAttribute('href');
+          modalOpen.style.display = 'none';
+        }
+        modal.classList.add('is-open');
+      }
+
+      document.addEventListener('click', function (ev) {
+        var compareRoot = closestAny(ev.target, ['.compare-section']);
+        if (!compareRoot) return;
+        var trigger = closestAny(ev.target, ['button', '[role="button"]', '.chat-bubble__status', '.chat-bubble__party']);
+        if (trigger) pendingCompareClickAt = Date.now();
+      });
 
       fetch(configPath)
         .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
@@ -179,7 +299,6 @@
             });
           });
 
-          // Watch for OEC's .chat-bubble elements (compare section)
           var container = document.getElementById('open-election-compass');
           if (!container || !Object.keys(srcMap).length) return;
 
@@ -190,14 +309,28 @@
               if (!bubbleEl) return;
               var key = bubbleEl.textContent.trim().substring(0, 60);
               var src = srcMap[key];
-              if (!src) return;
+              if (!src) {
+                if (Date.now() - pendingCompareClickAt < 2500) {
+                  showSourcePopup('');
+                  pendingCompareClickAt = 0;
+                }
+                return;
+              }
               var a = document.createElement('a');
               a.href = src;
-              a.target = '_blank';
-              a.rel = 'noopener noreferrer';
+              a.setAttribute('role', 'button');
               a.className = 'oec-source-link';
               a.textContent = 'Source →';
+              a.addEventListener('click', function (ev) {
+                ev.preventDefault();
+                showSourcePopup(src);
+              });
               bubbleEl.appendChild(a);
+
+              if (Date.now() - pendingCompareClickAt < 2500) {
+                showSourcePopup(src);
+                pendingCompareClickAt = 0;
+              }
             });
           }
 

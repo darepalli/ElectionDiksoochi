@@ -301,6 +301,45 @@ a:hover { color: var(--primary-dk); }
   padding-top: .75rem;
 }
 
+/* ─── Transparency ─────────────────────────────────────────── */
+.transparency-section {
+  margin: 0 0 2rem;
+  padding: 1.25rem;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.transparency-section h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #9a3412;
+  margin-bottom: .5rem;
+}
+
+.transparency-section p {
+  font-size: .88rem;
+  color: #7c2d12;
+  margin-bottom: .55rem;
+}
+
+.transparency-note {
+  margin-bottom: 0;
+  font-size: .82rem;
+}
+
+.compat-list {
+  margin: 0 0 .8rem 1rem;
+  padding-left: .6rem;
+}
+
+.compat-list li {
+  margin-bottom: .3rem;
+  font-size: .86rem;
+  color: var(--muted);
+}
+
 /* ─── Footer ─────────────────────────────────────────────────── */
 .site-footer {
   background: var(--text);
