@@ -25,42 +25,42 @@
                                          "ta":  "Kavundampalayam: மாவட்ட முன்னுரிமை வேட்பாளர் திசைகாட்டி"
                                      },
                          "text":  {
-                                      "en":  "This constituency profile is auto-generated using official constituency name and district metadata. Candidate profiles and stance notes are structured placeholders tuned for Coimbatore district priorities (infrastructure, water, health, jobs and governance) and must be replaced with verified local candidates plus source-backed statements before public use. [Profile: urban]",
-                                      "ta":  "இந்த தொகுதி சுயவிவரம் அதிகாரப்பூர்வ தொகுதி பெயர் மற்றும் மாவட்ட தரவின் அடிப்படையில் தானாக உருவாக்கப்பட்டது. வேட்பாளர் சுயவிவரங்களும் நிலைப்பாடுகளும் Coimbatore மாவட்ட முன்னுரிமைகள் (அளவைத்தளம், தண்ணீர், சுகாதாரம், வேலைவாய்ப்பு, நிர்வாகம்) பொருந்தும் மாதிரி வடிவில் உள்ளன; பொதுப் பயன்பாட்டிற்கு முன் சரிபார்க்கப்பட்ட உள்ளூர் வேட்பாளர்கள் மற்றும் ஆதாரப்பூர்வ குறிப்புகளால் மாற்றப்பட வேண்டும்."
+                                      "en":  "Candidate names are baseline-mapped from public 2021 election records for this seat. They are provided as starting data and should be updated once 2026 final candidate notifications are published.",
+                                      "ta":  "Candidate baseline from public 2021 records; update this Tamil text after 2026 final nominations are published."
                                   }
                      },
     "parties":  [
                     {
-                        "alias":  "cand-dmk",
+                        "alias":  "cand-inc",
                         "name":  {
-                                     "en":  "DMK Alliance Candidate - Kavundampalayam",
+                                     "en":  "KP Surya Prakash (INC)",
                                      "ta":  "வேட்பாளர் A (தி.மு.க)"
                                  },
                         "short":  {
-                                      "en":  "DMK - Kavundampalayam",
+                                      "en":  "KP Surya Prakash / INC",
                                       "ta":  "A / தி.மு.க"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level DMK alliance candidate profile for Kavundampalayam in Coimbatore district, focused on civic delivery, welfare access, and infrastructure tracking.",
+                                            "en":  "Public-source mapping: KP Surya Prakash is listed as INC alliance candidate for this constituency on tnelections2026.in candidates explorer.",
                                             "ta":  "Kavundampalayam தொகுதிக்கான திமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
                                         },
                         "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam",
-                                        "ta":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam"
+                                        "en":  "https://en.wikipedia.org/wiki/Indian_National_Congress",
+                                        "ta":  "https://en.wikipedia.org/wiki/Indian_National_Congress"
                                     }
                     },
                     {
                         "alias":  "cand-aiadmk",
                         "name":  {
-                                     "en":  "AIADMK Alliance Candidate - Kavundampalayam",
+                                     "en":  "G Arun Kumar (AIADMK)",
                                      "ta":  "வேட்பாளர் B (அ.தி.மு.க)"
                                  },
                         "short":  {
-                                      "en":  "AIADMK - Kavundampalayam",
+                                      "en":  "G Arun Kumar / AIADMK",
                                       "ta":  "B / அ.தி.மு.க"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level AIADMK alliance candidate profile for Kavundampalayam in Coimbatore district, focused on local service delivery, neighborhood infrastructure, and administrative responsiveness.",
+                                            "en":  "Public-source mapping: G Arun Kumar is listed as ADMK alliance candidate for this constituency on tnelections2026.in candidates explorer.",
                                             "ta":  "Kavundampalayam தொகுதிக்கான அதிமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
                                         },
                         "profile":  {
@@ -69,41 +69,22 @@
                                     }
                     },
                     {
-                        "alias":  "cand-bjp",
+                        "alias":  "cand-tvk",
                         "name":  {
-                                     "en":  "BJP Alliance Candidate - Kavundampalayam",
-                                     "ta":  "வேட்பாளர் C (பி.ஜே.பி)"
+                                     "en":  "RT Kanimozhi (TVK)",
+                                     "ta":  "RT Kanimozhi (TVK)"
                                  },
                         "short":  {
-                                      "en":  "BJP - Kavundampalayam",
-                                      "ta":  "C / பி.ஜே.பி"
+                                      "en":  "RT Kanimozhi / TVK",
+                                      "ta":  "RT Kanimozhi / TVK"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level BJP alliance candidate profile for Kavundampalayam in Coimbatore district, focused on implementation efficiency, investment-led growth, and technology-enabled governance.",
-                                            "ta":  "Kavundampalayam தொகுதிக்கான பாஜக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
+                                            "en":  "Public-source mapping: RT Kanimozhi is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer.",
+                                            "ta":  "Public-source mapping: RT Kanimozhi is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer."
                                         },
                         "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party",
-                                        "ta":  "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party"
-                                    }
-                    },
-                    {
-                        "alias":  "cand-ind",
-                        "name":  {
-                                     "en":  "Independent Candidate - Kavundampalayam",
-                                     "ta":  "வேட்பாளர் D (சுயேட்சை)"
-                                 },
-                        "short":  {
-                                      "en":  "Ind. - Kavundampalayam",
-                                      "ta":  "D / சுயேட்சை"
-                                  },
-                        "description":  {
-                                            "en":  "Independent benchmark candidate profile for Kavundampalayam in Coimbatore district, focused on ward-level accountability, grievance tracking, and issue-by-issue policy positions.",
-                                            "ta":  "Kavundampalayam தொகுதிக்கான சுயேட்சை தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        },
-                        "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Independent_politician",
-                                        "ta":  "https://en.wikipedia.org/wiki/Independent_politician"
+                                        "en":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
                                     }
                     }
                 ],
@@ -118,13 +99,13 @@
                                          "ta":  "Kavundampalayam தொகுதியில் சாலை தரமும் வடிகாலும் காலக்கெடு கொண்ட வார்டு திட்டம் மூலம் மேம்படுத்தப்பட வேண்டும்."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
+                                         "cand-inc":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports integrated road relaying and storm-water drain upgrades in Kavundampalayam with local dashboards and time-bound completion targets.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -132,23 +113,15 @@
                                                                                  "en":  "Supports accelerated neighborhood roads and drainage maintenance in Kavundampalayam with stronger local body execution and escalation.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports corridor-based road upgrades, flood-spot mitigation, and engineering audits in Kavundampalayam for measurable outcomes.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports participatory local mapping in Kavundampalayam to prioritize potholes, waterlogging points, and maintenance accountability.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -162,13 +135,13 @@
                                          "ta":  "Kavundampalayam தொகுதியில் வீடுகளுக்கு நம்பகமான குழாய் குடிநீர் வழங்கல் அதிகரித்து டேங்கர் சார்பு குறைக்கப்பட வேண்டும்."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
+                                         "cand-inc":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports improving piped water reliability in Kavundampalayam through leakage reduction, source balancing, and equitable distribution.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -176,23 +149,15 @@
                                                                                  "en":  "Supports stronger distribution scheduling and storage reliability in Kavundampalayam to reduce tanker dependency.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports infrastructure-first reliability measures in Kavundampalayam, including monitoring, metering transparency, and pressure management.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports neighborhood-level water audits in Kavundampalayam and public reporting of supply disruptions for faster correction.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -206,13 +171,13 @@
                                          "ta":  "Kavundampalayam தொகுதிக்கு சேவை செய்கிற அரசு சுகாதார மையங்கள் மற்றும் மருத்துவமனைகளுக்கு கூடுதல் பணியாளர்கள் மற்றும் பரிசோதனை வசதி வழங்கப்பட வேண்டும்."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
+                                         "cand-inc":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports expanding PHC staffing, diagnostics, and referral coordination for residents of Kavundampalayam.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -220,23 +185,15 @@
                                                                                  "en":  "Supports strengthening public hospital access for Kavundampalayam with improved specialist availability and service reliability.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports better outcomes in Kavundampalayam through performance benchmarks, digital health workflows, and capacity expansion.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports local health grievance tracking in Kavundampalayam, especially for women, elderly, and low-income households.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -250,13 +207,13 @@
                                          "ta":  "Kavundampalayam தொகுதியில் பெண்கள் பாதுகாப்பை மேம்படுத்த தெரு விளக்குகள், CCTV மற்றும் பாதுகாப்பான பொது போக்குவரத்து நிறுத்தங்கள் அதிகரிக்கப்பட வேண்டும்."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
+                                         "cand-inc":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports expanded street-lighting audits, CCTV coverage, and safety patrol coordination in Kavundampalayam.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -264,23 +221,15 @@
                                                                                  "en":  "Supports women-centric mobility improvements in Kavundampalayam, including safer transit stops and complaint follow-through.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports technology-led safety interventions in Kavundampalayam, including monitoring and faster incident response pathways.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports community safety audits in Kavundampalayam with resident groups to identify and fix high-risk public spaces.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -294,13 +243,13 @@
                                          "ta":  "Kavundampalayam தொகுதியில் சிறு தொழில்கள் மற்றும் இளைஞர்களுக்கு MSME, திறன் பயிற்சி மற்றும் உள்ளூர் வேலைவாய்ப்பு ஆதரவு அதிகரிக்கப்பட வேண்டும்."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
+                                         "cand-inc":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports youth skilling and MSME support in Kavundampalayam, linked to district-level services and manufacturing demand.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -308,23 +257,15 @@
                                                                                  "en":  "Supports local enterprise growth in Kavundampalayam through job-linked training, small business support, and commerce facilitation.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports employment growth in Kavundampalayam through startup support, MSME financing, and market-led opportunity expansion.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports local job fairs and micro-enterprise support in Kavundampalayam with transparent beneficiary tracking.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -338,13 +279,13 @@
                                          "ta":  "தமிழ்நாடு ஒன்றிய அரசிடமிருந்து அதிக நிதி மற்றும் நிர்வாக தன்னாட்சி கோர வேண்டும்."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
+                                         "cand-inc":  {
                                                           "position":  "approve",
                                                           "explanation":  {
                                                                               "en":  "Supports stronger state fiscal and administrative autonomy to improve delivery flexibility in constituencies such as Kavundampalayam.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -352,23 +293,15 @@
                                                                                  "en":  "Supports broader state rights while maintaining cooperative federal engagement to protect constituency priorities in Kavundampalayam.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "reject",
-                                                          "explanation":  {
-                                                                              "en":  "Prefers stronger national policy coordination over expanded state autonomy, while emphasizing centrally aligned development delivery in Kavundampalayam.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
+                                         "cand-tvk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Takes an issue-specific view that balances state autonomy demands with practical implementation needs in Kavundampalayam.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    }
@@ -404,5 +337,8 @@
                                           "ta":  "../../../index.html"
                                       }
                          }
-                     ]
+                     ],
+    "candidateSource":  "https://en.wikipedia.org/wiki/2021_Tamil_Nadu_Legislative_Assembly_election",
+    "candidateSourceType":  "baseline-2021-prominent-parties-table",
+    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. TVK candidate mapped from https://tnelections2026.in/candidates.html"
 }

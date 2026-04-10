@@ -31,6 +31,7 @@
     .const-info .const-district { font-size:.75rem; color:var(--muted); }
     .const-badge-live { font-size:.65rem; font-weight:700; color:var(--live); background:rgba(22,163,74,.1); padding:2px 7px; border-radius:999px; border:1px solid rgba(22,163,74,.3); }
     .const-badge-soon { font-size:.65rem; font-weight:700; color:var(--soon); background:rgba(217,119,6,.1); padding:2px 7px; border-radius:999px; border:1px solid rgba(217,119,6,.3); }
+    .const-badge-pending { font-size:.65rem; font-weight:700; color:#334155; background:rgba(148,163,184,.15); padding:2px 7px; border-radius:999px; border:1px solid rgba(148,163,184,.35); margin-left:.35rem; }
     .note-box { background:#eff6ff; border:1px solid #bfdbfe; border-radius:var(--radius); padding:1rem; font-size:.85rem; color:#1e40af; margin-bottom:1.5rem; }
     .tool-row { display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:1rem; }
     .tool-input {
@@ -72,8 +73,8 @@
     </section>
 
     <div class="note-box">
-      <strong>Statewide index enabled.</strong> All 234 Tamil Nadu Assembly constituencies are loaded with
-      constituency names and districts from the generated master dataset.
+      <strong>All constituencies are live.</strong> All 234 Tamil Nadu Assembly constituencies are now enabled
+      with constituency-level compass links. Candidate-specific issue positions can be refined incrementally.
     </div>
 
     <!-- Filters and tools (JS powered) -->
@@ -86,6 +87,9 @@
     <div class="tool-row">
       <input id="search-input" class="tool-input" type="text" placeholder="Search by name or constituency number..." />
       <input id="jump-input" class="tool-input" type="number" min="1" max="234" placeholder="Jump to number (1-234)" />
+      <select id="district-filter" class="tool-input" aria-label="Filter by district">
+        <option value="all">All districts</option>
+      </select>
     </div>
 
     <div class="result-meta" id="result-meta">Loading constituencies...</div>
@@ -108,8 +112,38 @@
       var grid = document.getElementById('const-grid');
       var searchInput = document.getElementById('search-input');
       var jumpInput = document.getElementById('jump-input');
+      var districtFilter = document.getElementById('district-filter');
       var meta = document.getElementById('result-meta');
       var activeStatus = 'all';
+      var activeDistrict = 'all';
+
+      function escapeHtml (value) {
+        return String(value == null ? '' : value)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function populateFilters () {
+        var districts = [];
+        var districtSeen = {};
+
+        list.forEach(function (item) {
+          var district = String(item.district || '').trim();
+          if (district && !districtSeen[district]) {
+            districtSeen[district] = true;
+            districts.push(district);
+          }
+        });
+
+        districts.sort(function (a, b) { return a.localeCompare(b); });
+
+        districtFilter.innerHTML = '<option value="all">All districts</option>' + districts.map(function (d) {
+          return '<option value="' + escapeHtml(d) + '">' + escapeHtml(d) + '</option>';
+        }).join('');
+      }
 
       function cardHtml (item) {
         var core =
@@ -120,7 +154,8 @@
           '</div>' +
           (item.status === 'live'
             ? '<span class="const-badge-live" style="margin-left:auto">Live</span>'
-            : '<span class="const-badge-soon" style="margin-left:auto">Soon</span>');
+            : '<span class="const-badge-soon" style="margin-left:auto">Soon</span>') +
+          '<span class="const-badge-pending">Positions: In Progress</span>';
 
         if (item.status === 'live') {
           return '<a class="const-card const-card--live" data-no="' + item.no + '" data-status="live" href="' + item.href + '">' + core + '</a>';
@@ -132,8 +167,9 @@
         var q = (searchInput.value || '').toLowerCase().trim();
         var filtered = list.filter(function (item) {
           var statusOk = activeStatus === 'all' || item.status === activeStatus;
+          var districtOk = activeDistrict === 'all' || item.district === activeDistrict;
           var textOk = !q || String(item.no).indexOf(q) >= 0 || item.name.toLowerCase().indexOf(q) >= 0 || item.district.toLowerCase().indexOf(q) >= 0;
-          return statusOk && textOk;
+          return statusOk && districtOk && textOk;
         });
 
         grid.innerHTML = filtered.map(cardHtml).join('');
@@ -150,6 +186,10 @@
       });
 
       searchInput.addEventListener('input', render);
+      districtFilter.addEventListener('change', function () {
+        activeDistrict = districtFilter.value || 'all';
+        render();
+      });
       jumpInput.addEventListener('change', function () {
         var n = parseInt(jumpInput.value, 10);
         if (isNaN(n) || n < 1 || n > 234) return;
@@ -171,10 +211,11 @@
               no: row.no,
               name: row.name,
               district: row.district,
-              status: 'live',
+              status: row.live ? 'live' : 'soon',
               href: '../../../compass.html?config=elections/tn/constituencies/' + row.slug + '/config.json'
             };
           });
+          populateFilters();
           render();
         })
         .catch(function () {

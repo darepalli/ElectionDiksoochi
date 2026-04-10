@@ -25,23 +25,23 @@
                                          "ta":  "Edappadi: மாவட்ட முன்னுரிமை வேட்பாளர் திசைகாட்டி"
                                      },
                          "text":  {
-                                      "en":  "This constituency profile is auto-generated using official constituency name and district metadata. Candidate profiles and stance notes are structured placeholders tuned for Salem district priorities (infrastructure, water, health, jobs and governance) and must be replaced with verified local candidates plus source-backed statements before public use. [Profile: urban]",
-                                      "ta":  "இந்த தொகுதி சுயவிவரம் அதிகாரப்பூர்வ தொகுதி பெயர் மற்றும் மாவட்ட தரவின் அடிப்படையில் தானாக உருவாக்கப்பட்டது. வேட்பாளர் சுயவிவரங்களும் நிலைப்பாடுகளும் Salem மாவட்ட முன்னுரிமைகள் (அளவைத்தளம், தண்ணீர், சுகாதாரம், வேலைவாய்ப்பு, நிர்வாகம்) பொருந்தும் மாதிரி வடிவில் உள்ளன; பொதுப் பயன்பாட்டிற்கு முன் சரிபார்க்கப்பட்ட உள்ளூர் வேட்பாளர்கள் மற்றும் ஆதாரப்பூர்வ குறிப்புகளால் மாற்றப்பட வேண்டும்."
+                                      "en":  "Candidate names are baseline-mapped from public 2021 election records for this seat. They are provided as starting data and should be updated once 2026 final candidate notifications are published.",
+                                      "ta":  "Candidate baseline from public 2021 records; update this Tamil text after 2026 final nominations are published."
                                   }
                      },
     "parties":  [
                     {
                         "alias":  "cand-dmk",
                         "name":  {
-                                     "en":  "DMK Alliance Candidate - Edappadi",
+                                     "en":  "Kasi (DMK)",
                                      "ta":  "வேட்பாளர் A (தி.மு.க)"
                                  },
                         "short":  {
-                                      "en":  "DMK - Edappadi",
+                                      "en":  "Kasi / DMK",
                                       "ta":  "A / தி.மு.க"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level DMK alliance candidate profile for Edappadi in Salem district, focused on civic delivery, welfare access, and infrastructure tracking.",
+                                            "en":  "Public-source mapping: Kasi is listed as DMK alliance candidate for this constituency on tnelections2026.in candidates explorer.",
                                             "ta":  "Edappadi தொகுதிக்கான திமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
                                         },
                         "profile":  {
@@ -52,58 +52,20 @@
                     {
                         "alias":  "cand-aiadmk",
                         "name":  {
-                                     "en":  "AIADMK Alliance Candidate - Edappadi",
+                                     "en":  "K Palaniswami (AIADMK)",
                                      "ta":  "வேட்பாளர் B (அ.தி.மு.க)"
                                  },
                         "short":  {
-                                      "en":  "AIADMK - Edappadi",
+                                      "en":  "K Palaniswami / AIADMK",
                                       "ta":  "B / அ.தி.மு.க"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level AIADMK alliance candidate profile for Edappadi in Salem district, focused on local service delivery, neighborhood infrastructure, and administrative responsiveness.",
+                                            "en":  "Public-source mapping: K Palaniswami is listed as ADMK alliance candidate for this constituency on tnelections2026.in candidates explorer.",
                                             "ta":  "Edappadi தொகுதிக்கான அதிமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
                                         },
                         "profile":  {
                                         "en":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam",
                                         "ta":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam"
-                                    }
-                    },
-                    {
-                        "alias":  "cand-bjp",
-                        "name":  {
-                                     "en":  "BJP Alliance Candidate - Edappadi",
-                                     "ta":  "வேட்பாளர் C (பி.ஜே.பி)"
-                                 },
-                        "short":  {
-                                      "en":  "BJP - Edappadi",
-                                      "ta":  "C / பி.ஜே.பி"
-                                  },
-                        "description":  {
-                                            "en":  "Constituency-level BJP alliance candidate profile for Edappadi in Salem district, focused on implementation efficiency, investment-led growth, and technology-enabled governance.",
-                                            "ta":  "Edappadi தொகுதிக்கான பாஜக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        },
-                        "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party",
-                                        "ta":  "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party"
-                                    }
-                    },
-                    {
-                        "alias":  "cand-ind",
-                        "name":  {
-                                     "en":  "Independent Candidate - Edappadi",
-                                     "ta":  "வேட்பாளர் D (சுயேட்சை)"
-                                 },
-                        "short":  {
-                                      "en":  "Ind. - Edappadi",
-                                      "ta":  "D / சுயேட்சை"
-                                  },
-                        "description":  {
-                                            "en":  "Independent benchmark candidate profile for Edappadi in Salem district, focused on ward-level accountability, grievance tracking, and issue-by-issue policy positions.",
-                                            "ta":  "Edappadi தொகுதிக்கான சுயேட்சை தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        },
-                        "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Independent_politician",
-                                        "ta":  "https://en.wikipedia.org/wiki/Independent_politician"
                                     }
                     }
                 ],
@@ -124,7 +86,7 @@
                                                                               "en":  "Supports integrated road relaying and storm-water drain upgrades in Edappadi with local dashboards and time-bound completion targets.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -132,24 +94,8 @@
                                                                                  "en":  "Supports accelerated neighborhood roads and drainage maintenance in Edappadi with stronger local body execution and escalation.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports corridor-based road upgrades, flood-spot mitigation, and engineering audits in Edappadi for measurable outcomes.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports participatory local mapping in Edappadi to prioritize potholes, waterlogging points, and maintenance accountability.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
-                                                      }
+                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                         }
                                      }
                    },
                    {
@@ -168,7 +114,7 @@
                                                                               "en":  "Supports improving piped water reliability in Edappadi through leakage reduction, source balancing, and equitable distribution.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -176,24 +122,8 @@
                                                                                  "en":  "Supports stronger distribution scheduling and storage reliability in Edappadi to reduce tanker dependency.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports infrastructure-first reliability measures in Edappadi, including monitoring, metering transparency, and pressure management.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports neighborhood-level water audits in Edappadi and public reporting of supply disruptions for faster correction.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
-                                                      }
+                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                         }
                                      }
                    },
                    {
@@ -212,7 +142,7 @@
                                                                               "en":  "Supports expanding PHC staffing, diagnostics, and referral coordination for residents of Edappadi.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -220,24 +150,8 @@
                                                                                  "en":  "Supports strengthening public hospital access for Edappadi with improved specialist availability and service reliability.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports better outcomes in Edappadi through performance benchmarks, digital health workflows, and capacity expansion.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports local health grievance tracking in Edappadi, especially for women, elderly, and low-income households.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
-                                                      }
+                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                         }
                                      }
                    },
                    {
@@ -256,7 +170,7 @@
                                                                               "en":  "Supports expanded street-lighting audits, CCTV coverage, and safety patrol coordination in Edappadi.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -264,24 +178,8 @@
                                                                                  "en":  "Supports women-centric mobility improvements in Edappadi, including safer transit stops and complaint follow-through.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports technology-led safety interventions in Edappadi, including monitoring and faster incident response pathways.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports community safety audits in Edappadi with resident groups to identify and fix high-risk public spaces.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
-                                                      }
+                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                         }
                                      }
                    },
                    {
@@ -300,7 +198,7 @@
                                                                               "en":  "Supports youth skilling and MSME support in Edappadi, linked to district-level services and manufacturing demand.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -308,24 +206,8 @@
                                                                                  "en":  "Supports local enterprise growth in Edappadi through job-linked training, small business support, and commerce facilitation.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports employment growth in Edappadi through startup support, MSME financing, and market-led opportunity expansion.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports local job fairs and micro-enterprise support in Edappadi with transparent beneficiary tracking.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
-                                                      }
+                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                         }
                                      }
                    },
                    {
@@ -344,7 +226,7 @@
                                                                               "en":  "Supports stronger state fiscal and administrative autonomy to improve delivery flexibility in constituencies such as Edappadi.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -352,24 +234,8 @@
                                                                                  "en":  "Supports broader state rights while maintaining cooperative federal engagement to protect constituency priorities in Edappadi.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "reject",
-                                                          "explanation":  {
-                                                                              "en":  "Prefers stronger national policy coordination over expanded state autonomy, while emphasizing centrally aligned development delivery in Edappadi.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "neutral",
-                                                          "explanation":  {
-                                                                              "en":  "Takes an issue-specific view that balances state autonomy demands with practical implementation needs in Edappadi.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
-                                                      }
+                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                         }
                                      }
                    }
                ],
@@ -404,5 +270,8 @@
                                           "ta":  "../../../index.html"
                                       }
                          }
-                     ]
+                     ],
+    "candidateSource":  "https://en.wikipedia.org/wiki/2021_Tamil_Nadu_Legislative_Assembly_election",
+    "candidateSourceType":  "baseline-2021-prominent-parties-table",
+    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. Alliance candidates cross-verified from https://tnelections2026.in/candidates.html"
 }

@@ -25,24 +25,24 @@
                                          "ta":  "Kancheepuram: மாவட்ட முன்னுரிமை வேட்பாளர் திசைகாட்டி"
                                      },
                          "text":  {
-                                      "en":  "This constituency profile is auto-generated using official constituency name and district metadata. Candidate profiles and stance notes are structured placeholders tuned for Kancheepuram district priorities (infrastructure, water, health, jobs and governance) and must be replaced with verified local candidates plus source-backed statements before public use. [Profile: rural]",
-                                      "ta":  "இந்த தொகுதி சுயவிவரம் அதிகாரப்பூர்வ தொகுதி பெயர் மற்றும் மாவட்ட தரவின் அடிப்படையில் தானாக உருவாக்கப்பட்டது. வேட்பாளர் சுயவிவரங்களும் நிலைப்பாடுகளும் Kancheepuram மாவட்ட முன்னுரிமைகள் (அளவைத்தளம், தண்ணீர், சுகாதாரம், வேலைவாய்ப்பு, நிர்வாகம்) பொருந்தும் மாதிரி வடிவில் உள்ளன; பொதுப் பயன்பாட்டிற்கு முன் சரிபார்க்கப்பட்ட உள்ளூர் வேட்பாளர்கள் மற்றும் ஆதாரப்பூர்வ குறிப்புகளால் மாற்றப்பட வேண்டும்."
+                                      "en":  "Candidate names are baseline-mapped from public 2021 election records for this seat. They are provided as starting data and should be updated once 2026 final candidate notifications are published.",
+                                      "ta":  "Candidate baseline from public 2021 records; update this Tamil text after 2026 final nominations are published."
                                   }
                      },
     "parties":  [
                     {
                         "alias":  "cand-dmk",
                         "name":  {
-                                     "en":  "DMK Alliance Candidate - Kancheepuram",
-                                     "ta":  "வேட்பாளர் A (தி.மு.க)"
+                                     "en":  "Nithya Sugumar (DMK)",
+                                     "ta":  "சி. வி. எம். பி. எழிலரசன் (தி.மு.க)"
                                  },
                         "short":  {
-                                      "en":  "DMK - Kancheepuram",
-                                      "ta":  "A / தி.மு.க"
+                                      "en":  "Nithya Sugumar / DMK",
+                                      "ta":  "எழிலரசன் / தி.மு.க"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level DMK alliance candidate profile for Kancheepuram in Kancheepuram district, focused on civic delivery, welfare access, and infrastructure tracking.",
-                                            "ta":  "Kancheepuram தொகுதிக்கான திமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
+                                            "en":  "Public-source mapping: Nithya Sugumar is listed as DMK alliance candidate for this constituency on tnelections2026.in candidates explorer.",
+                                            "ta":  "பொது ஆதார அடிப்படை மேப்பிங்: காஞ்சீபுரம் தொகுதியில் 2021 சட்டசபை தேர்தலில் சி. வி. எம். பி. எழிலரசன் திமுக கூட்டணி வேட்பாளராக இருந்தார்."
                                         },
                         "profile":  {
                                         "en":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam",
@@ -52,16 +52,16 @@
                     {
                         "alias":  "cand-aiadmk",
                         "name":  {
-                                     "en":  "AIADMK Alliance Candidate - Kancheepuram",
-                                     "ta":  "வேட்பாளர் B (அ.தி.மு.க)"
+                                     "en":  "V Somasundaram (AIADMK)",
+                                     "ta":  "பி. மகேஷ் குமார் (பா.ம.க)"
                                  },
                         "short":  {
-                                      "en":  "AIADMK - Kancheepuram",
-                                      "ta":  "B / அ.தி.மு.க"
+                                      "en":  "V Somasundaram / AIADMK",
+                                      "ta":  "மகேஷ் குமார் / பா.ம.க"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level AIADMK alliance candidate profile for Kancheepuram in Kancheepuram district, focused on local service delivery, neighborhood infrastructure, and administrative responsiveness.",
-                                            "ta":  "Kancheepuram தொகுதிக்கான அதிமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
+                                            "en":  "Public-source mapping: V Somasundaram is listed as ADMK alliance candidate for this constituency on tnelections2026.in candidates explorer.",
+                                            "ta":  "பொது ஆதார அடிப்படை மேப்பிங்: காஞ்சீபுரம் தொகுதியில் 2021 சட்டசபை தேர்தலில் பி. மகேஷ் குமார் பா.ம.க (என்.டி.ஏ கூட்டணி) சார்பில் போட்டியிட்டார்."
                                         },
                         "profile":  {
                                         "en":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam",
@@ -69,41 +69,22 @@
                                     }
                     },
                     {
-                        "alias":  "cand-bjp",
+                        "alias":  "cand-tvk",
                         "name":  {
-                                     "en":  "BJP Alliance Candidate - Kancheepuram",
-                                     "ta":  "வேட்பாளர் C (பி.ஜே.பி)"
+                                     "en":  "RV Ranjithkumar (TVK)",
+                                     "ta":  "RV Ranjithkumar (TVK)"
                                  },
                         "short":  {
-                                      "en":  "BJP - Kancheepuram",
-                                      "ta":  "C / பி.ஜே.பி"
+                                      "en":  "RV Ranjithkumar / TVK",
+                                      "ta":  "RV Ranjithkumar / TVK"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level BJP alliance candidate profile for Kancheepuram in Kancheepuram district, focused on implementation efficiency, investment-led growth, and technology-enabled governance.",
-                                            "ta":  "Kancheepuram தொகுதிக்கான பாஜக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
+                                            "en":  "Public-source mapping: RV Ranjithkumar is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer.",
+                                            "ta":  "Public-source mapping: RV Ranjithkumar is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer."
                                         },
                         "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party",
-                                        "ta":  "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party"
-                                    }
-                    },
-                    {
-                        "alias":  "cand-ind",
-                        "name":  {
-                                     "en":  "Independent Candidate - Kancheepuram",
-                                     "ta":  "வேட்பாளர் D (சுயேட்சை)"
-                                 },
-                        "short":  {
-                                      "en":  "Ind. - Kancheepuram",
-                                      "ta":  "D / சுயேட்சை"
-                                  },
-                        "description":  {
-                                            "en":  "Independent benchmark candidate profile for Kancheepuram in Kancheepuram district, focused on ward-level accountability, grievance tracking, and issue-by-issue policy positions.",
-                                            "ta":  "Kancheepuram தொகுதிக்கான சுயேட்சை தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
-                                        },
-                        "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Independent_politician",
-                                        "ta":  "https://en.wikipedia.org/wiki/Independent_politician"
+                                        "en":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
                                     }
                     }
                 ],
@@ -124,31 +105,23 @@
                                                                               "en":  "Supports integrated road relaying and storm-water drain upgrades in Kancheepuram with local dashboards and time-bound completion targets.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports accelerated neighborhood roads and drainage maintenance in Kancheepuram with stronger local body execution and escalation.",
+                                                                                 "en":  "Baseline placeholder stance for the PMK candidate in this seat. Replace with source-backed 2026 statement.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports corridor-based road upgrades, flood-spot mitigation, and engineering audits in Kancheepuram for measurable outcomes.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports participatory local mapping in Kancheepuram to prioritize potholes, waterlogging points, and maintenance accountability.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -168,31 +141,23 @@
                                                                               "en":  "Supports improving piped water reliability in Kancheepuram through leakage reduction, source balancing, and equitable distribution.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports stronger distribution scheduling and storage reliability in Kancheepuram to reduce tanker dependency.",
+                                                                                 "en":  "Baseline placeholder stance for the PMK candidate in this seat. Replace with source-backed 2026 statement.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports infrastructure-first reliability measures in Kancheepuram, including monitoring, metering transparency, and pressure management.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports neighborhood-level water audits in Kancheepuram and public reporting of supply disruptions for faster correction.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -212,31 +177,23 @@
                                                                               "en":  "Supports expanding PHC staffing, diagnostics, and referral coordination for residents of Kancheepuram.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports strengthening public hospital access for Kancheepuram with improved specialist availability and service reliability.",
+                                                                                 "en":  "Baseline placeholder stance for the PMK candidate in this seat. Replace with source-backed 2026 statement.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports better outcomes in Kancheepuram through performance benchmarks, digital health workflows, and capacity expansion.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports local health grievance tracking in Kancheepuram, especially for women, elderly, and low-income households.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -256,31 +213,23 @@
                                                                               "en":  "Supports expanded street-lighting audits, CCTV coverage, and safety patrol coordination in Kancheepuram.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports women-centric mobility improvements in Kancheepuram, including safer transit stops and complaint follow-through.",
+                                                                                 "en":  "Baseline placeholder stance for the PMK candidate in this seat. Replace with source-backed 2026 statement.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports technology-led safety interventions in Kancheepuram, including monitoring and faster incident response pathways.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports community safety audits in Kancheepuram with resident groups to identify and fix high-risk public spaces.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -300,31 +249,23 @@
                                                                               "en":  "Supports youth skilling and MSME support in Kancheepuram, linked to district-level services and manufacturing demand.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports local enterprise growth in Kancheepuram through job-linked training, small business support, and commerce facilitation.",
+                                                                                 "en":  "Baseline placeholder stance for the PMK candidate in this seat. Replace with source-backed 2026 statement.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports employment growth in Kancheepuram through startup support, MSME financing, and market-led opportunity expansion.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports local job fairs and micro-enterprise support in Kancheepuram with transparent beneficiary tracking.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -344,31 +285,23 @@
                                                                               "en":  "Supports stronger state fiscal and administrative autonomy to improve delivery flexibility in constituencies such as Kancheepuram.",
                                                                               "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports broader state rights while maintaining cooperative federal engagement to protect constituency priorities in Kancheepuram.",
+                                                                                 "en":  "Baseline placeholder stance for the PMK candidate in this seat. Replace with source-backed 2026 statement.",
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "reject",
-                                                          "explanation":  {
-                                                                              "en":  "Prefers stronger national policy coordination over expanded state autonomy, while emphasizing centrally aligned development delivery in Kancheepuram.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
-                                                                          },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
+                                         "cand-tvk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Takes an issue-specific view that balances state autonomy demands with practical implementation needs in Kancheepuram.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    }
@@ -404,5 +337,8 @@
                                           "ta":  "../../../index.html"
                                       }
                          }
-                     ]
+                     ],
+    "candidateSource":  "https://en.wikipedia.org/wiki/2021_Tamil_Nadu_Legislative_Assembly_election",
+    "candidateSourceType":  "baseline-2021-prominent-parties-table",
+    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. TVK candidate mapped from https://tnelections2026.in/candidates.html"
 }

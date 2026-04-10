@@ -25,85 +25,66 @@
                                          "ta":  "Erode (East): à®®à®¾à®µà®Ÿà¯à®Ÿ à®®à¯à®©à¯à®©à¯à®°à®¿à®®à¯ˆ à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®¤à®¿à®šà¯ˆà®•à®¾à®Ÿà¯à®Ÿà®¿"
                                      },
                          "text":  {
-                                      "en":  "This constituency profile is auto-generated using official constituency name and district metadata. Candidate profiles and stance notes are structured placeholders tuned for Erode district priorities (infrastructure, water, health, jobs and governance) and must be replaced with verified local candidates plus source-backed statements before public use. [Profile: urban]",
-                                      "ta":  "à®‡à®¨à¯à®¤ à®¤à¯Šà®•à¯à®¤à®¿ à®šà¯à®¯à®µà®¿à®µà®°à®®à¯ à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®¤à¯Šà®•à¯à®¤à®¿ à®ªà¯†à®¯à®°à¯ à®®à®±à¯à®±à¯à®®à¯ à®®à®¾à®µà®Ÿà¯à®Ÿ à®¤à®°à®µà®¿à®©à¯ à®…à®Ÿà®¿à®ªà¯à®ªà®Ÿà¯ˆà®¯à®¿à®²à¯ à®¤à®¾à®©à®¾à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿà®¤à¯. à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®šà¯à®¯à®µà®¿à®µà®°à®™à¯à®•à®³à¯à®®à¯ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà®¾à®Ÿà¯à®•à®³à¯à®®à¯ Erode à®®à®¾à®µà®Ÿà¯à®Ÿ à®®à¯à®©à¯à®©à¯à®°à®¿à®®à¯ˆà®•à®³à¯ (à®…à®³à®µà¯ˆà®¤à¯à®¤à®³à®®à¯, à®¤à®£à¯à®£à¯€à®°à¯, à®šà¯à®•à®¾à®¤à®¾à®°à®®à¯, à®µà¯‡à®²à¯ˆà®µà®¾à®¯à¯à®ªà¯à®ªà¯, à®¨à®¿à®°à¯à®µà®¾à®•à®®à¯) à®ªà¯Šà®°à¯à®¨à¯à®¤à¯à®®à¯ à®®à®¾à®¤à®¿à®°à®¿ à®µà®Ÿà®¿à®µà®¿à®²à¯ à®‰à®³à¯à®³à®©; à®ªà¯Šà®¤à¯à®ªà¯ à®ªà®¯à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà®¿à®±à¯à®•à¯ à®®à¯à®©à¯ à®šà®°à®¿à®ªà®¾à®°à¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®‰à®³à¯à®³à¯‚à®°à¯ à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®†à®¤à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®•à¯à®±à®¿à®ªà¯à®ªà¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
+                                      "en":  "Candidate names are baseline-mapped from public 2021 election records for this seat. They are provided as starting data and should be updated once 2026 final candidate notifications are published.",
+                                      "ta":  "Candidate baseline from public 2021 records; update this Tamil text after 2026 final nominations are published."
                                   }
                      },
     "parties":  [
                     {
-                        "alias":  "cand-dmk",
+                        "alias":  "cand-inc",
                         "name":  {
-                                     "en":  "DMK Alliance Candidate - Erode (East)",
+                                     "en":  "Gopinath Palaniyappan (INC)",
                                      "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ A (à®¤à®¿.à®®à¯.à®•)"
                                  },
                         "short":  {
-                                      "en":  "DMK - Erode (East)",
+                                      "en":  "Gopinath Palaniyappan / INC",
                                       "ta":  "A / à®¤à®¿.à®®à¯.à®•"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level DMK alliance candidate profile for Erode (East) in Erode district, focused on civic delivery, welfare access, and infrastructure tracking.",
+                                            "en":  "Public-source mapping: Gopinath Palaniyappan is listed as INC alliance candidate for this constituency on tnelections2026.in candidates explorer.",
                                             "ta":  "Erode (East) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®¤à®¿à®®à¯à®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
                                         },
                         "profile":  {
-                                        "en":  "https://www.dmk.in/ta/party/ideology/",
-                                        "ta":  "https://www.dmk.in/ta/party/ideology/"
+                                        "en":  "https://en.wikipedia.org/wiki/Indian_National_Congress",
+                                        "ta":  "https://en.wikipedia.org/wiki/Indian_National_Congress"
                                     }
                     },
                     {
                         "alias":  "cand-aiadmk",
                         "name":  {
-                                     "en":  "AIADMK Alliance Candidate - Erode (East)",
+                                     "en":  "R Manoharan (AIADMK)",
                                      "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ B (à®….à®¤à®¿.à®®à¯.à®•)"
                                  },
                         "short":  {
-                                      "en":  "AIADMK - Erode (East)",
+                                      "en":  "R Manoharan / AIADMK",
                                       "ta":  "B / à®….à®¤à®¿.à®®à¯.à®•"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level AIADMK alliance candidate profile for Erode (East) in Erode district, focused on local service delivery, neighborhood infrastructure, and administrative responsiveness.",
+                                            "en":  "Public-source mapping: R Manoharan is listed as ADMK alliance candidate for this constituency on tnelections2026.in candidates explorer.",
                                             "ta":  "Erode (East) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®…à®¤à®¿à®®à¯à®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
                                         },
                         "profile":  {
-                                        "en":  "https://www.aiadmk.com/",
-                                        "ta":  "https://www.aiadmk.com/"
+                                        "en":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam"
                                     }
                     },
                     {
-                        "alias":  "cand-bjp",
+                        "alias":  "cand-tvk",
                         "name":  {
-                                     "en":  "BJP Alliance Candidate - Erode (East)",
-                                     "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ C (à®ªà®¿.à®œà¯‡.à®ªà®¿)"
+                                     "en":  "Mvijay Balaji (TVK)",
+                                     "ta":  "Mvijay Balaji (TVK)"
                                  },
                         "short":  {
-                                      "en":  "BJP - Erode (East)",
-                                      "ta":  "C / à®ªà®¿.à®œà¯‡.à®ªà®¿"
+                                      "en":  "Mvijay Balaji / TVK",
+                                      "ta":  "Mvijay Balaji / TVK"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level BJP alliance candidate profile for Erode (East) in Erode district, focused on implementation efficiency, investment-led growth, and technology-enabled governance.",
-                                            "ta":  "Erode (East) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®ªà®¾à®œà®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
+                                            "en":  "Public-source mapping: Mvijay Balaji is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer.",
+                                            "ta":  "Public-source mapping: Mvijay Balaji is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer."
                                         },
                         "profile":  {
-                                        "en":  "https://www.bjp.org/election-corner",
-                                        "ta":  "https://www.bjp.org/election-corner"
-                                    }
-                    },
-                    {
-                        "alias":  "cand-ind",
-                        "name":  {
-                                     "en":  "Independent Candidate - Erode (East)",
-                                     "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ D (à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ)"
-                                 },
-                        "short":  {
-                                      "en":  "Ind. - Erode (East)",
-                                      "ta":  "D / à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ"
-                                  },
-                        "description":  {
-                                            "en":  "Independent benchmark candidate profile for Erode (East) in Erode district, focused on ward-level accountability, grievance tracking, and issue-by-issue policy positions.",
-                                            "ta":  "Erode (East) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
-                                        },
-                        "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Independent_politician",
-                                        "ta":  "https://en.wikipedia.org/wiki/Independent_politician"
+                                        "en":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
                                     }
                     }
                 ],
@@ -118,37 +99,29 @@
                                          "ta":  "Erode (East) à®¤à¯Šà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®šà®¾à®²à¯ˆ à®¤à®°à®®à¯à®®à¯ à®µà®Ÿà®¿à®•à®¾à®²à¯à®®à¯ à®•à®¾à®²à®•à¯à®•à¯†à®Ÿà¯ à®•à¯Šà®£à¯à®Ÿ à®µà®¾à®°à¯à®Ÿà¯ à®¤à®¿à®Ÿà¯à®Ÿà®®à¯ à®®à¯‚à®²à®®à¯ à®®à¯‡à®®à¯à®ªà®Ÿà¯à®¤à¯à®¤à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports integrated road relaying and storm-water drain upgrades in Erode (East) with local dashboards and time-bound completion targets.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
-                                                      },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports accelerated neighborhood roads and drainage maintenance in Erode (East) with stronger local body execution and escalation.",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
+                                         "cand-inc":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports corridor-based road upgrades, flood-spot mitigation, and engineering audits in Erode (East) for measurable outcomes.",
+                                                                              "en":  "Supports integrated road relaying and storm-water drain upgrades in Erode (East) with local dashboards and time-bound completion targets.",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports participatory local mapping in Erode (East) to prioritize potholes, waterlogging points, and maintenance accountability.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -162,37 +135,29 @@
                                          "ta":  "Erode (East) à®¤à¯Šà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®µà¯€à®Ÿà¯à®•à®³à¯à®•à¯à®•à¯ à®¨à®®à¯à®ªà®•à®®à®¾à®© à®•à¯à®´à®¾à®¯à¯ à®•à¯à®Ÿà®¿à®¨à¯€à®°à¯ à®µà®´à®™à¯à®•à®²à¯ à®…à®¤à®¿à®•à®°à®¿à®¤à¯à®¤à¯ à®Ÿà¯‡à®™à¯à®•à®°à¯ à®šà®¾à®°à¯à®ªà¯ à®•à¯à®±à¯ˆà®•à¯à®•à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports improving piped water reliability in Erode (East) through leakage reduction, source balancing, and equitable distribution.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
-                                                      },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports stronger distribution scheduling and storage reliability in Erode (East) to reduce tanker dependency.",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
+                                         "cand-inc":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports infrastructure-first reliability measures in Erode (East), including monitoring, metering transparency, and pressure management.",
+                                                                              "en":  "Supports improving piped water reliability in Erode (East) through leakage reduction, source balancing, and equitable distribution.",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports neighborhood-level water audits in Erode (East) and public reporting of supply disruptions for faster correction.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -206,37 +171,29 @@
                                          "ta":  "Erode (East) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à¯ à®šà¯‡à®µà¯ˆ à®šà¯†à®¯à¯à®•à®¿à®± à®…à®°à®šà¯ à®šà¯à®•à®¾à®¤à®¾à®° à®®à¯ˆà®¯à®™à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®®à®°à¯à®¤à¯à®¤à¯à®µà®®à®©à¯ˆà®•à®³à¯à®•à¯à®•à¯ à®•à¯‚à®Ÿà¯à®¤à®²à¯ à®ªà®£à®¿à®¯à®¾à®³à®°à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®ªà®°à®¿à®šà¯‹à®¤à®©à¯ˆ à®µà®šà®¤à®¿ à®µà®´à®™à¯à®•à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports expanding PHC staffing, diagnostics, and referral coordination for residents of Erode (East).",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
-                                                      },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports strengthening public hospital access for Erode (East) with improved specialist availability and service reliability.",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
+                                         "cand-inc":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports better outcomes in Erode (East) through performance benchmarks, digital health workflows, and capacity expansion.",
+                                                                              "en":  "Supports expanding PHC staffing, diagnostics, and referral coordination for residents of Erode (East).",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports local health grievance tracking in Erode (East), especially for women, elderly, and low-income households.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -250,37 +207,29 @@
                                          "ta":  "Erode (East) à®¤à¯Šà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®ªà¯†à®£à¯à®•à®³à¯ à®ªà®¾à®¤à¯à®•à®¾à®ªà¯à®ªà¯ˆ à®®à¯‡à®®à¯à®ªà®Ÿà¯à®¤à¯à®¤ à®¤à¯†à®°à¯ à®µà®¿à®³à®•à¯à®•à¯à®•à®³à¯, CCTV à®®à®±à¯à®±à¯à®®à¯ à®ªà®¾à®¤à¯à®•à®¾à®ªà¯à®ªà®¾à®© à®ªà¯Šà®¤à¯ à®ªà¯‹à®•à¯à®•à¯à®µà®°à®¤à¯à®¤à¯ à®¨à®¿à®±à¯à®¤à¯à®¤à®™à¯à®•à®³à¯ à®…à®¤à®¿à®•à®°à®¿à®•à¯à®•à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports expanded street-lighting audits, CCTV coverage, and safety patrol coordination in Erode (East).",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
-                                                      },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports women-centric mobility improvements in Erode (East), including safer transit stops and complaint follow-through.",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
+                                         "cand-inc":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports technology-led safety interventions in Erode (East), including monitoring and faster incident response pathways.",
+                                                                              "en":  "Supports expanded street-lighting audits, CCTV coverage, and safety patrol coordination in Erode (East).",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports community safety audits in Erode (East) with resident groups to identify and fix high-risk public spaces.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -294,37 +243,29 @@
                                          "ta":  "Erode (East) à®¤à¯Šà®•à¯à®¤à®¿à®¯à®¿à®²à¯ à®šà®¿à®±à¯ à®¤à¯Šà®´à®¿à®²à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®‡à®³à¯ˆà®žà®°à¯à®•à®³à¯à®•à¯à®•à¯ MSME, à®¤à®¿à®±à®©à¯ à®ªà®¯à®¿à®±à¯à®šà®¿ à®®à®±à¯à®±à¯à®®à¯ à®‰à®³à¯à®³à¯‚à®°à¯ à®µà¯‡à®²à¯ˆà®µà®¾à®¯à¯à®ªà¯à®ªà¯ à®†à®¤à®°à®µà¯ à®…à®¤à®¿à®•à®°à®¿à®•à¯à®•à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports youth skilling and MSME support in Erode (East), linked to district-level services and manufacturing demand.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
-                                                      },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports local enterprise growth in Erode (East) through job-linked training, small business support, and commerce facilitation.",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
+                                         "cand-inc":  {
                                                           "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports employment growth in Erode (East) through startup support, MSME financing, and market-led opportunity expansion.",
+                                                                              "en":  "Supports youth skilling and MSME support in Erode (East), linked to district-level services and manufacturing demand.",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports local job fairs and micro-enterprise support in Erode (East) with transparent beneficiary tracking.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -338,37 +279,29 @@
                                          "ta":  "à®¤à®®à®¿à®´à¯à®¨à®¾à®Ÿà¯ à®’à®©à¯à®±à®¿à®¯ à®…à®°à®šà®¿à®Ÿà®®à®¿à®°à¯à®¨à¯à®¤à¯ à®…à®¤à®¿à®• à®¨à®¿à®¤à®¿ à®®à®±à¯à®±à¯à®®à¯ à®¨à®¿à®°à¯à®µà®¾à®• à®¤à®©à¯à®©à®¾à®Ÿà¯à®šà®¿ à®•à¯‹à®° à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
                                      },
                        "positions":  {
-                                         "cand-dmk":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports stronger state fiscal and administrative autonomy to improve delivery flexibility in constituencies such as Erode (East).",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
-                                                      },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
                                                                                  "en":  "Supports broader state rights while maintaining cooperative federal engagement to protect constituency priorities in Erode (East).",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "reject",
+                                         "cand-inc":  {
+                                                          "position":  "approve",
                                                           "explanation":  {
-                                                                              "en":  "Prefers stronger national policy coordination over expanded state autonomy, while emphasizing centrally aligned development delivery in Erode (East).",
+                                                                              "en":  "Supports stronger state fiscal and administrative autonomy to improve delivery flexibility in constituencies such as Erode (East).",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-ind":  {
+                                         "cand-tvk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Takes an issue-specific view that balances state autonomy demands with practical implementation needs in Erode (East).",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    }
@@ -404,5 +337,8 @@
                                           "ta":  "../../../index.html"
                                       }
                          }
-                     ]
+                     ],
+    "candidateSource":  "https://en.wikipedia.org/wiki/2021_Tamil_Nadu_Legislative_Assembly_election",
+    "candidateSourceType":  "baseline-2021-prominent-parties-table",
+    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. TVK candidate mapped from https://tnelections2026.in/candidates.html"
 }

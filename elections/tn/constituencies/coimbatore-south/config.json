@@ -25,85 +25,66 @@
                                          "ta":  "Coimbatore (South): à®®à®¾à®µà®Ÿà¯à®Ÿ à®®à¯à®©à¯à®©à¯à®°à®¿à®®à¯ˆ à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®¤à®¿à®šà¯ˆà®•à®¾à®Ÿà¯à®Ÿà®¿"
                                      },
                          "text":  {
-                                      "en":  "This constituency profile is auto-generated using official constituency name and district metadata. Candidate profiles and stance notes are structured placeholders tuned for Coimbatore district priorities (infrastructure, water, health, jobs and governance) and must be replaced with verified local candidates plus source-backed statements before public use. [Profile: urban]",
-                                      "ta":  "à®‡à®¨à¯à®¤ à®¤à¯Šà®•à¯à®¤à®¿ à®šà¯à®¯à®µà®¿à®µà®°à®®à¯ à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®¤à¯Šà®•à¯à®¤à®¿ à®ªà¯†à®¯à®°à¯ à®®à®±à¯à®±à¯à®®à¯ à®®à®¾à®µà®Ÿà¯à®Ÿ à®¤à®°à®µà®¿à®©à¯ à®…à®Ÿà®¿à®ªà¯à®ªà®Ÿà¯ˆà®¯à®¿à®²à¯ à®¤à®¾à®©à®¾à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿà®¤à¯. à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®šà¯à®¯à®µà®¿à®µà®°à®™à¯à®•à®³à¯à®®à¯ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà®¾à®Ÿà¯à®•à®³à¯à®®à¯ Coimbatore à®®à®¾à®µà®Ÿà¯à®Ÿ à®®à¯à®©à¯à®©à¯à®°à®¿à®®à¯ˆà®•à®³à¯ (à®…à®³à®µà¯ˆà®¤à¯à®¤à®³à®®à¯, à®¤à®£à¯à®£à¯€à®°à¯, à®šà¯à®•à®¾à®¤à®¾à®°à®®à¯, à®µà¯‡à®²à¯ˆà®µà®¾à®¯à¯à®ªà¯à®ªà¯, à®¨à®¿à®°à¯à®µà®¾à®•à®®à¯) à®ªà¯Šà®°à¯à®¨à¯à®¤à¯à®®à¯ à®®à®¾à®¤à®¿à®°à®¿ à®µà®Ÿà®¿à®µà®¿à®²à¯ à®‰à®³à¯à®³à®©; à®ªà¯Šà®¤à¯à®ªà¯ à®ªà®¯à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà®¿à®±à¯à®•à¯ à®®à¯à®©à¯ à®šà®°à®¿à®ªà®¾à®°à¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®‰à®³à¯à®³à¯‚à®°à¯ à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®†à®¤à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®•à¯à®±à®¿à®ªà¯à®ªà¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
+                                      "en":  "Candidate names are baseline-mapped from public 2021 election records for this seat. They are provided as starting data and should be updated once 2026 final candidate notifications are published.",
+                                      "ta":  "Candidate baseline from public 2021 records; update this Tamil text after 2026 final nominations are published."
                                   }
                      },
     "parties":  [
                     {
                         "alias":  "cand-dmk",
                         "name":  {
-                                     "en":  "DMK Alliance Candidate - Coimbatore (South)",
+                                     "en":  "V Senthil Balaji (DMK)",
                                      "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ A (à®¤à®¿.à®®à¯.à®•)"
                                  },
                         "short":  {
-                                      "en":  "DMK - Coimbatore (South)",
+                                      "en":  "V Senthil Balaji / DMK",
                                       "ta":  "A / à®¤à®¿.à®®à¯.à®•"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level DMK alliance candidate profile for Coimbatore (South) in Coimbatore district, focused on civic delivery, welfare access, and infrastructure tracking.",
+                                            "en":  "Public-source mapping: V Senthil Balaji is listed as DMK alliance candidate for this constituency on tnelections2026.in candidates explorer.",
                                             "ta":  "Coimbatore (South) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®¤à®¿à®®à¯à®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
                                         },
                         "profile":  {
-                                        "en":  "https://www.dmk.in/ta/party/ideology/",
-                                        "ta":  "https://www.dmk.in/ta/party/ideology/"
+                                        "en":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam"
                                     }
                     },
                     {
                         "alias":  "cand-aiadmk",
                         "name":  {
-                                     "en":  "AIADMK Alliance Candidate - Coimbatore (South)",
+                                     "en":  "K Arjunan (AIADMK)",
                                      "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ B (à®….à®¤à®¿.à®®à¯.à®•)"
                                  },
                         "short":  {
-                                      "en":  "AIADMK - Coimbatore (South)",
+                                      "en":  "K Arjunan / AIADMK",
                                       "ta":  "B / à®….à®¤à®¿.à®®à¯.à®•"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level AIADMK alliance candidate profile for Coimbatore (South) in Coimbatore district, focused on local service delivery, neighborhood infrastructure, and administrative responsiveness.",
+                                            "en":  "Public-source mapping: K Arjunan is listed as ADMK alliance candidate for this constituency on tnelections2026.in candidates explorer.",
                                             "ta":  "Coimbatore (South) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®…à®¤à®¿à®®à¯à®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
                                         },
                         "profile":  {
-                                        "en":  "https://www.aiadmk.com/",
-                                        "ta":  "https://www.aiadmk.com/"
+                                        "en":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam"
                                     }
                     },
                     {
-                        "alias":  "cand-bjp",
+                        "alias":  "cand-tvk",
                         "name":  {
-                                     "en":  "BJP Alliance Candidate - Coimbatore (South)",
-                                     "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ C (à®ªà®¿.à®œà¯‡.à®ªà®¿)"
+                                     "en":  "V Senthil Kumar (TVK)",
+                                     "ta":  "V Senthil Kumar (TVK)"
                                  },
                         "short":  {
-                                      "en":  "BJP - Coimbatore (South)",
-                                      "ta":  "C / à®ªà®¿.à®œà¯‡.à®ªà®¿"
+                                      "en":  "V Senthil Kumar / TVK",
+                                      "ta":  "V Senthil Kumar / TVK"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level BJP alliance candidate profile for Coimbatore (South) in Coimbatore district, focused on implementation efficiency, investment-led growth, and technology-enabled governance.",
-                                            "ta":  "Coimbatore (South) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®ªà®¾à®œà®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
+                                            "en":  "Public-source mapping: V Senthil Kumar is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer.",
+                                            "ta":  "Public-source mapping: V Senthil Kumar is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer."
                                         },
                         "profile":  {
-                                        "en":  "https://www.bjp.org/election-corner",
-                                        "ta":  "https://www.bjp.org/election-corner"
-                                    }
-                    },
-                    {
-                        "alias":  "cand-ind",
-                        "name":  {
-                                     "en":  "Independent Candidate - Coimbatore (South)",
-                                     "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ D (à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ)"
-                                 },
-                        "short":  {
-                                      "en":  "Ind. - Coimbatore (South)",
-                                      "ta":  "D / à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ"
-                                  },
-                        "description":  {
-                                            "en":  "Independent benchmark candidate profile for Coimbatore (South) in Coimbatore district, focused on ward-level accountability, grievance tracking, and issue-by-issue policy positions.",
-                                            "ta":  "Coimbatore (South) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
-                                        },
-                        "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Independent_politician",
-                                        "ta":  "https://en.wikipedia.org/wiki/Independent_politician"
+                                        "en":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
                                     }
                     }
                 ],
@@ -124,7 +105,7 @@
                                                                               "en":  "Supports integrated road relaying and storm-water drain upgrades in Coimbatore (South) with local dashboards and time-bound completion targets.",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -132,23 +113,15 @@
                                                                                  "en":  "Supports accelerated neighborhood roads and drainage maintenance in Coimbatore (South) with stronger local body execution and escalation.",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports corridor-based road upgrades, flood-spot mitigation, and engineering audits in Coimbatore (South) for measurable outcomes.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports participatory local mapping in Coimbatore (South) to prioritize potholes, waterlogging points, and maintenance accountability.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -168,7 +141,7 @@
                                                                               "en":  "Supports improving piped water reliability in Coimbatore (South) through leakage reduction, source balancing, and equitable distribution.",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -176,23 +149,15 @@
                                                                                  "en":  "Supports stronger distribution scheduling and storage reliability in Coimbatore (South) to reduce tanker dependency.",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports infrastructure-first reliability measures in Coimbatore (South), including monitoring, metering transparency, and pressure management.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports neighborhood-level water audits in Coimbatore (South) and public reporting of supply disruptions for faster correction.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -212,7 +177,7 @@
                                                                               "en":  "Supports expanding PHC staffing, diagnostics, and referral coordination for residents of Coimbatore (South).",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -220,23 +185,15 @@
                                                                                  "en":  "Supports strengthening public hospital access for Coimbatore (South) with improved specialist availability and service reliability.",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports better outcomes in Coimbatore (South) through performance benchmarks, digital health workflows, and capacity expansion.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports local health grievance tracking in Coimbatore (South), especially for women, elderly, and low-income households.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -256,7 +213,7 @@
                                                                               "en":  "Supports expanded street-lighting audits, CCTV coverage, and safety patrol coordination in Coimbatore (South).",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -264,23 +221,15 @@
                                                                                  "en":  "Supports women-centric mobility improvements in Coimbatore (South), including safer transit stops and complaint follow-through.",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports technology-led safety interventions in Coimbatore (South), including monitoring and faster incident response pathways.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports community safety audits in Coimbatore (South) with resident groups to identify and fix high-risk public spaces.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -300,7 +249,7 @@
                                                                               "en":  "Supports youth skilling and MSME support in Coimbatore (South), linked to district-level services and manufacturing demand.",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -308,23 +257,15 @@
                                                                                  "en":  "Supports local enterprise growth in Coimbatore (South) through job-linked training, small business support, and commerce facilitation.",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports employment growth in Coimbatore (South) through startup support, MSME financing, and market-led opportunity expansion.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports local job fairs and micro-enterprise support in Coimbatore (South) with transparent beneficiary tracking.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -344,7 +285,7 @@
                                                                               "en":  "Supports stronger state fiscal and administrative autonomy to improve delivery flexibility in constituencies such as Coimbatore (South).",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
@@ -352,23 +293,15 @@
                                                                                  "en":  "Supports broader state rights while maintaining cooperative federal engagement to protect constituency priorities in Coimbatore (South).",
                                                                                  "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                              },
-                                                             "source":  "https://www.aiadmk.com/"
+                                                             "source":  "https://tnelections2026.in/candidates.html"
                                                          },
-                                         "cand-bjp":  {
-                                                          "position":  "reject",
-                                                          "explanation":  {
-                                                                              "en":  "Prefers stronger national policy coordination over expanded state autonomy, while emphasizing centrally aligned development delivery in Coimbatore (South).",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
+                                         "cand-tvk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Takes an issue-specific view that balances state autonomy demands with practical implementation needs in Coimbatore (South).",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    }
@@ -404,5 +337,8 @@
                                           "ta":  "../../../index.html"
                                       }
                          }
-                     ]
+                     ],
+    "candidateSource":  "https://en.wikipedia.org/wiki/2021_Tamil_Nadu_Legislative_Assembly_election",
+    "candidateSourceType":  "baseline-2021-prominent-parties-table",
+    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. TVK candidate mapped from https://tnelections2026.in/candidates.html"
 }

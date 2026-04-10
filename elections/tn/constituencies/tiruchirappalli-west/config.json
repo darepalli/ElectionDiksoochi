@@ -25,85 +25,66 @@
                                          "ta":  "Tiruchirappalli (West): à®®à®¾à®µà®Ÿà¯à®Ÿ à®®à¯à®©à¯à®©à¯à®°à®¿à®®à¯ˆ à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®¤à®¿à®šà¯ˆà®•à®¾à®Ÿà¯à®Ÿà®¿"
                                      },
                          "text":  {
-                                      "en":  "This constituency profile is auto-generated using official constituency name and district metadata. Candidate profiles and stance notes are structured placeholders tuned for Tiruchirappalli district priorities (infrastructure, water, health, jobs and governance) and must be replaced with verified local candidates plus source-backed statements before public use. [Profile: urban]",
-                                      "ta":  "à®‡à®¨à¯à®¤ à®¤à¯Šà®•à¯à®¤à®¿ à®šà¯à®¯à®µà®¿à®µà®°à®®à¯ à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®¤à¯Šà®•à¯à®¤à®¿ à®ªà¯†à®¯à®°à¯ à®®à®±à¯à®±à¯à®®à¯ à®®à®¾à®µà®Ÿà¯à®Ÿ à®¤à®°à®µà®¿à®©à¯ à®…à®Ÿà®¿à®ªà¯à®ªà®Ÿà¯ˆà®¯à®¿à®²à¯ à®¤à®¾à®©à®¾à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿà®¤à¯. à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®šà¯à®¯à®µà®¿à®µà®°à®™à¯à®•à®³à¯à®®à¯ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà®¾à®Ÿà¯à®•à®³à¯à®®à¯ Tiruchirappalli à®®à®¾à®µà®Ÿà¯à®Ÿ à®®à¯à®©à¯à®©à¯à®°à®¿à®®à¯ˆà®•à®³à¯ (à®…à®³à®µà¯ˆà®¤à¯à®¤à®³à®®à¯, à®¤à®£à¯à®£à¯€à®°à¯, à®šà¯à®•à®¾à®¤à®¾à®°à®®à¯, à®µà¯‡à®²à¯ˆà®µà®¾à®¯à¯à®ªà¯à®ªà¯, à®¨à®¿à®°à¯à®µà®¾à®•à®®à¯) à®ªà¯Šà®°à¯à®¨à¯à®¤à¯à®®à¯ à®®à®¾à®¤à®¿à®°à®¿ à®µà®Ÿà®¿à®µà®¿à®²à¯ à®‰à®³à¯à®³à®©; à®ªà¯Šà®¤à¯à®ªà¯ à®ªà®¯à®©à¯à®ªà®¾à®Ÿà¯à®Ÿà®¿à®±à¯à®•à¯ à®®à¯à®©à¯ à®šà®°à®¿à®ªà®¾à®°à¯à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®‰à®³à¯à®³à¯‚à®°à¯ à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯à®•à®³à¯ à®®à®±à¯à®±à¯à®®à¯ à®†à®¤à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®•à¯à®±à®¿à®ªà¯à®ªà¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®ªà¯à®ªà®Ÿ à®µà¯‡à®£à¯à®Ÿà¯à®®à¯."
+                                      "en":  "Candidate names are baseline-mapped from public 2021 election records for this seat. They are provided as starting data and should be updated once 2026 final candidate notifications are published.",
+                                      "ta":  "Candidate baseline from public 2021 records; update this Tamil text after 2026 final nominations are published."
                                   }
                      },
     "parties":  [
                     {
                         "alias":  "cand-dmk",
                         "name":  {
-                                     "en":  "DMK Alliance Candidate - Tiruchirappalli (West)",
+                                     "en":  "KN Nehru (DMK)",
                                      "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ A (à®¤à®¿.à®®à¯.à®•)"
                                  },
                         "short":  {
-                                      "en":  "DMK - Tiruchirappalli (West)",
+                                      "en":  "KN Nehru / DMK",
                                       "ta":  "A / à®¤à®¿.à®®à¯.à®•"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level DMK alliance candidate profile for Tiruchirappalli (West) in Tiruchirappalli district, focused on civic delivery, welfare access, and infrastructure tracking.",
+                                            "en":  "Public-source mapping: KN Nehru is listed as DMK alliance candidate for this constituency on tnelections2026.in candidates explorer.",
                                             "ta":  "Tiruchirappalli (West) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®¤à®¿à®®à¯à®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
                                         },
                         "profile":  {
-                                        "en":  "https://www.dmk.in/ta/party/ideology/",
-                                        "ta":  "https://www.dmk.in/ta/party/ideology/"
+                                        "en":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam"
                                     }
                     },
                     {
-                        "alias":  "cand-aiadmk",
+                        "alias":  "cand-ammk",
                         "name":  {
-                                     "en":  "AIADMK Alliance Candidate - Tiruchirappalli (West)",
+                                     "en":  "M Rajasekharan (AMMK)",
                                      "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ B (à®….à®¤à®¿.à®®à¯.à®•)"
                                  },
                         "short":  {
-                                      "en":  "AIADMK - Tiruchirappalli (West)",
+                                      "en":  "M Rajasekharan / AMMK",
                                       "ta":  "B / à®….à®¤à®¿.à®®à¯.à®•"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level AIADMK alliance candidate profile for Tiruchirappalli (West) in Tiruchirappalli district, focused on local service delivery, neighborhood infrastructure, and administrative responsiveness.",
+                                            "en":  "Public-source mapping: M Rajasekharan is listed as AMMK alliance candidate for this constituency on tnelections2026.in candidates explorer.",
                                             "ta":  "Tiruchirappalli (West) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®…à®¤à®¿à®®à¯à®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
                                         },
                         "profile":  {
-                                        "en":  "https://www.aiadmk.com/",
-                                        "ta":  "https://www.aiadmk.com/"
+                                        "en":  "https://en.wikipedia.org/wiki/Amma_Makkal_Munneetra_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/Amma_Makkal_Munneetra_Kazhagam"
                                     }
                     },
                     {
-                        "alias":  "cand-bjp",
+                        "alias":  "cand-tvk",
                         "name":  {
-                                     "en":  "BJP Alliance Candidate - Tiruchirappalli (West)",
-                                     "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ C (à®ªà®¿.à®œà¯‡.à®ªà®¿)"
+                                     "en":  "G Ramamoorthy (TVK)",
+                                     "ta":  "G Ramamoorthy (TVK)"
                                  },
                         "short":  {
-                                      "en":  "BJP - Tiruchirappalli (West)",
-                                      "ta":  "C / à®ªà®¿.à®œà¯‡.à®ªà®¿"
+                                      "en":  "G Ramamoorthy / TVK",
+                                      "ta":  "G Ramamoorthy / TVK"
                                   },
                         "description":  {
-                                            "en":  "Constituency-level BJP alliance candidate profile for Tiruchirappalli (West) in Tiruchirappalli district, focused on implementation efficiency, investment-led growth, and technology-enabled governance.",
-                                            "ta":  "Tiruchirappalli (West) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®ªà®¾à®œà®• à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
+                                            "en":  "Public-source mapping: G Ramamoorthy is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer.",
+                                            "ta":  "Public-source mapping: G Ramamoorthy is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer."
                                         },
                         "profile":  {
-                                        "en":  "https://www.bjp.org/election-corner",
-                                        "ta":  "https://www.bjp.org/election-corner"
-                                    }
-                    },
-                    {
-                        "alias":  "cand-ind",
-                        "name":  {
-                                     "en":  "Independent Candidate - Tiruchirappalli (West)",
-                                     "ta":  "à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ D (à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ)"
-                                 },
-                        "short":  {
-                                      "en":  "Ind. - Tiruchirappalli (West)",
-                                      "ta":  "D / à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ"
-                                  },
-                        "description":  {
-                                            "en":  "Independent benchmark candidate profile for Tiruchirappalli (West) in Tiruchirappalli district, focused on ward-level accountability, grievance tracking, and issue-by-issue policy positions.",
-                                            "ta":  "Tiruchirappalli (West) à®¤à¯Šà®•à¯à®¤à®¿à®•à¯à®•à®¾à®© à®šà¯à®¯à¯‡à®Ÿà¯à®šà¯ˆ à®¤à®±à¯à®•à®¾à®²à®¿à®• à®šà¯à®¯à®µà®¿à®µà®°à®®à¯. à®‰à®£à¯à®®à¯ˆà®¯à®¾à®© à®µà¯‡à®Ÿà¯à®ªà®¾à®³à®°à¯ à®µà®¿à®µà®°à®™à¯à®•à®³à®¾à®²à¯ à®®à®¾à®±à¯à®±à®µà¯à®®à¯."
-                                        },
-                        "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Independent_politician",
-                                        "ta":  "https://en.wikipedia.org/wiki/Independent_politician"
+                                        "en":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam",
+                                        "ta":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
                                     }
                     }
                 ],
@@ -124,31 +105,23 @@
                                                                               "en":  "Supports integrated road relaying and storm-water drain upgrades in Tiruchirappalli (West) with local dashboards and time-bound completion targets.",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-aiadmk":  {
-                                                             "position":  "approve",
-                                                             "explanation":  {
-                                                                                 "en":  "Supports accelerated neighborhood roads and drainage maintenance in Tiruchirappalli (West) with stronger local body execution and escalation.",
-                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                             },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-ammk":  {
+                                                           "position":  "approve",
+                                                           "explanation":  {
+                                                                               "en":  "Supports accelerated neighborhood roads and drainage maintenance in Tiruchirappalli (West) with stronger local body execution and escalation.",
+                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                           },
+                                                           "source":  "https://tnelections2026.in/candidates.html"
+                                                       },
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports corridor-based road upgrades, flood-spot mitigation, and engineering audits in Tiruchirappalli (West) for measurable outcomes.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports participatory local mapping in Tiruchirappalli (West) to prioritize potholes, waterlogging points, and maintenance accountability.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -168,31 +141,23 @@
                                                                               "en":  "Supports improving piped water reliability in Tiruchirappalli (West) through leakage reduction, source balancing, and equitable distribution.",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-aiadmk":  {
-                                                             "position":  "approve",
-                                                             "explanation":  {
-                                                                                 "en":  "Supports stronger distribution scheduling and storage reliability in Tiruchirappalli (West) to reduce tanker dependency.",
-                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                             },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-ammk":  {
+                                                           "position":  "approve",
+                                                           "explanation":  {
+                                                                               "en":  "Supports stronger distribution scheduling and storage reliability in Tiruchirappalli (West) to reduce tanker dependency.",
+                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                           },
+                                                           "source":  "https://tnelections2026.in/candidates.html"
+                                                       },
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports infrastructure-first reliability measures in Tiruchirappalli (West), including monitoring, metering transparency, and pressure management.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports neighborhood-level water audits in Tiruchirappalli (West) and public reporting of supply disruptions for faster correction.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -212,31 +177,23 @@
                                                                               "en":  "Supports expanding PHC staffing, diagnostics, and referral coordination for residents of Tiruchirappalli (West).",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-aiadmk":  {
-                                                             "position":  "approve",
-                                                             "explanation":  {
-                                                                                 "en":  "Supports strengthening public hospital access for Tiruchirappalli (West) with improved specialist availability and service reliability.",
-                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                             },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-ammk":  {
+                                                           "position":  "approve",
+                                                           "explanation":  {
+                                                                               "en":  "Supports strengthening public hospital access for Tiruchirappalli (West) with improved specialist availability and service reliability.",
+                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                           },
+                                                           "source":  "https://tnelections2026.in/candidates.html"
+                                                       },
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports better outcomes in Tiruchirappalli (West) through performance benchmarks, digital health workflows, and capacity expansion.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports local health grievance tracking in Tiruchirappalli (West), especially for women, elderly, and low-income households.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -256,31 +213,23 @@
                                                                               "en":  "Supports expanded street-lighting audits, CCTV coverage, and safety patrol coordination in Tiruchirappalli (West).",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-aiadmk":  {
-                                                             "position":  "approve",
-                                                             "explanation":  {
-                                                                                 "en":  "Supports women-centric mobility improvements in Tiruchirappalli (West), including safer transit stops and complaint follow-through.",
-                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                             },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-ammk":  {
+                                                           "position":  "approve",
+                                                           "explanation":  {
+                                                                               "en":  "Supports women-centric mobility improvements in Tiruchirappalli (West), including safer transit stops and complaint follow-through.",
+                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                           },
+                                                           "source":  "https://tnelections2026.in/candidates.html"
+                                                       },
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports technology-led safety interventions in Tiruchirappalli (West), including monitoring and faster incident response pathways.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports community safety audits in Tiruchirappalli (West) with resident groups to identify and fix high-risk public spaces.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -300,31 +249,23 @@
                                                                               "en":  "Supports youth skilling and MSME support in Tiruchirappalli (West), linked to district-level services and manufacturing demand.",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-aiadmk":  {
-                                                             "position":  "approve",
-                                                             "explanation":  {
-                                                                                 "en":  "Supports local enterprise growth in Tiruchirappalli (West) through job-linked training, small business support, and commerce facilitation.",
-                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                             },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "approve",
+                                         "cand-ammk":  {
+                                                           "position":  "approve",
+                                                           "explanation":  {
+                                                                               "en":  "Supports local enterprise growth in Tiruchirappalli (West) through job-linked training, small business support, and commerce facilitation.",
+                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                           },
+                                                           "source":  "https://tnelections2026.in/candidates.html"
+                                                       },
+                                         "cand-tvk":  {
+                                                          "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Supports employment growth in Tiruchirappalli (West) through startup support, MSME financing, and market-led opportunity expansion.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
-                                                          "position":  "approve",
-                                                          "explanation":  {
-                                                                              "en":  "Supports local job fairs and micro-enterprise support in Tiruchirappalli (West) with transparent beneficiary tracking.",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -344,31 +285,23 @@
                                                                               "en":  "Supports stronger state fiscal and administrative autonomy to improve delivery flexibility in constituencies such as Tiruchirappalli (West).",
                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
                                                                           },
-                                                          "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       },
-                                         "cand-aiadmk":  {
-                                                             "position":  "approve",
-                                                             "explanation":  {
-                                                                                 "en":  "Supports broader state rights while maintaining cooperative federal engagement to protect constituency priorities in Tiruchirappalli (West).",
-                                                                                 "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                             },
-                                                             "source":  "https://www.aiadmk.com/"
-                                                         },
-                                         "cand-bjp":  {
-                                                          "position":  "reject",
-                                                          "explanation":  {
-                                                                              "en":  "Prefers stronger national policy coordination over expanded state autonomy, while emphasizing centrally aligned development delivery in Tiruchirappalli (West).",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
-                                                                          },
-                                                          "source":  "https://www.bjp.org/election-corner"
-                                                      },
-                                         "cand-ind":  {
+                                         "cand-ammk":  {
+                                                           "position":  "approve",
+                                                           "explanation":  {
+                                                                               "en":  "Supports broader state rights while maintaining cooperative federal engagement to protect constituency priorities in Tiruchirappalli (West).",
+                                                                               "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                           },
+                                                           "source":  "https://tnelections2026.in/candidates.html"
+                                                       },
+                                         "cand-tvk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "Takes an issue-specific view that balances state autonomy demands with practical implementation needs in Tiruchirappalli (West).",
-                                                                              "ta":  "à®¤à®±à¯à®•à®¾à®²à®¿à®• à®‰à®°à¯à®µà®¾à®•à¯à®•à®ªà¯à®ªà®Ÿà¯à®Ÿ à®¨à®¿à®²à¯ˆà®ªà¯à®ªà¯. à®…à®¤à®¿à®•à®¾à®°à®ªà¯à®ªà¯‚à®°à¯à®µ à®†à®¤à®¾à®°à®™à¯à®•à®³à¯ à®•à®¿à®Ÿà¯ˆà®•à¯à®•à¯à®®à¯ à®ªà¯‹à®¤à¯ à®ªà¯à®¤à¯à®ªà¯à®ªà®¿à®•à¯à®•à®µà¯à®®à¯."
+                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
                                                                           },
-                                                          "source":  "https://eci.gov.in/"
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    }
@@ -404,5 +337,8 @@
                                           "ta":  "../../../index.html"
                                       }
                          }
-                     ]
+                     ],
+    "candidateSource":  "https://en.wikipedia.org/wiki/2021_Tamil_Nadu_Legislative_Assembly_election",
+    "candidateSourceType":  "baseline-2021-prominent-parties-table",
+    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. TVK candidate mapped from https://tnelections2026.in/candidates.html"
 }

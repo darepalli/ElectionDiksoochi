@@ -510,6 +510,43 @@
       margin-bottom: 0.35rem;
     }
 
+    .oec-incumbent-chair {
+      display: inline-block;
+      margin-right: 0.24rem;
+      font-size: 0.86rem;
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    .oec-profile-panel__name a {
+      color: #1d4ed8;
+      text-decoration: none;
+      border-bottom: 1px dotted #93c5fd;
+    }
+
+    .oec-profile-panel__name a:hover {
+      text-decoration: underline;
+    }
+
+    .oec-profile-panel__party {
+      margin: 0 0 0.35rem;
+      color: #475569;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+
+    .oec-profile-panel__party a {
+      color: #0f766e;
+      text-decoration: none;
+      border-bottom: 1px dotted #5eead4;
+    }
+
+    .oec-profile-panel__party a:hover {
+      text-decoration: underline;
+    }
+
     .oec-profile-panel__actions {
       display: inline-flex;
       gap: 0.4rem;
@@ -1302,7 +1339,9 @@
       var explanationMetaMap = {}; // key: normalized explanation text, value: { partyAlias, thesisTitleEn, position, source, explanationRaw }
       var partyAliasByDisplayKey = {}; // key: normalized party label, value: party alias
       var partyProfileEntries = []; // [{ url, keys[] }]
-      var candidateLinkItems = []; // [{ name, symbol, profileUrl, partyUrl }]
+      var candidateLinkItems = []; // [{ candidateName, partyName, profileUrl, partyUrl }]
+      var incumbentCandidateNameMap = {}; // key: normalized candidate name, value: true
+      var incumbentCandidateFallback = null; // { candidateName, partyName }
       var PARTY_META = {
         'DMK': { symbol: 'â˜€ Rising Sun', wiki: 'https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam' },
         'AIADMK': { symbol: 'ðŸƒ Two Leaves', wiki: 'https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam' },
@@ -1580,6 +1619,109 @@
           .trim();
       }
 
+      function getConstituencySlugFromConfigPath() {
+        var safePath = getConfigPathForQuery(configPath);
+        var m = /^elections\/tn\/constituencies\/([^/]+)\/config\.json$/i.exec(safePath || '');
+        return m ? String(m[1] || '').trim() : '';
+      }
+
+      function parseCandidatesBundle(rawText) {
+        var raw = String(rawText || '');
+        var eq = raw.indexOf('=');
+        if (eq < 0) return [];
+        var jsonText = raw.substring(eq + 1).trim();
+        if (jsonText.slice(-1) === ';') jsonText = jsonText.slice(0, -1);
+        try {
+          var parsed = JSON.parse(jsonText);
+          return Array.isArray(parsed) ? parsed : [];
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function applyIncumbentFlagsToCandidateItems() {
+        candidateLinkItems = candidateLinkItems.filter(function (item) {
+          return !item.syntheticIncumbentOnly;
+        });
+
+        var hasIncumbentInList = false;
+        candidateLinkItems.forEach(function (item) {
+          var nm = normalizeText(item.candidateName || item.name || '');
+          item.isIncumbent = !!(nm && incumbentCandidateNameMap[nm]);
+          if (item.isIncumbent) hasIncumbentInList = true;
+        });
+
+        if (!hasIncumbentInList && incumbentCandidateFallback && incumbentCandidateFallback.candidateName) {
+          candidateLinkItems.push({
+            name: incumbentCandidateFallback.candidateName,
+            candidateName: incumbentCandidateFallback.candidateName,
+            partyName: incumbentCandidateFallback.partyName || 'Party',
+            isIncumbent: true,
+            profileUrl: '',
+            partyUrl: '',
+            syntheticIncumbentOnly: true
+          });
+        }
+      }
+
+      function loadIncumbentsForCurrentConstituency() {
+        var slug = getConstituencySlugFromConfigPath();
+        if (!slug) return Promise.resolve();
+
+        var metaUrl = withNoCache('elections/tn/constituencies/constituencies.json', noCacheToken);
+        var bundleUrl = withNoCache('https://tnelections2026.in/data/candidates_bundle.min.js', noCacheToken);
+
+        return fetch(metaUrl, { cache: 'no-store' })
+          .then(function (res) { return res.ok ? res.json() : Promise.reject(new Error('meta fetch failed')); })
+          .then(function (meta) {
+            var rows = (meta && meta.constituencies) || [];
+            var found = null;
+            for (var i = 0; i < rows.length; i++) {
+              if (String(rows[i].slug || '') === slug) {
+                found = rows[i];
+                break;
+              }
+            }
+            if (!found || !found.no) return;
+            var acNo = Number(found.no) || 0;
+            if (!acNo) return;
+
+            return fetch(bundleUrl, { cache: 'no-store' })
+              .then(function (res) { return res.ok ? res.text() : Promise.reject(new Error('bundle fetch failed')); })
+              .then(function (text) {
+                var candidates = parseCandidatesBundle(text);
+                var map = {};
+                var incumbentRow = null;
+                candidates.forEach(function (c) {
+                  var sameSeat = Number(c && c.acNo) === acNo;
+                  var incumbent = !!(c && (c.incumbent === true || String(c.incumbent).toLowerCase() === 'true'));
+                  var name = c && c.name ? normalizeText(c.name) : '';
+                  if (sameSeat && incumbent && name) {
+                    map[name] = true;
+                    if (!incumbentRow) incumbentRow = c;
+                  }
+                });
+                incumbentCandidateNameMap = map;
+
+                if (incumbentRow && incumbentRow.name) {
+                  var partyCode = (incumbentRow.party && incumbentRow.party.code) ? String(incumbentRow.party.code).toUpperCase() : '';
+                  var partyName = (incumbentRow.party && incumbentRow.party.name) ? String(incumbentRow.party.name) : '';
+                  if (partyCode === 'ADMK') partyCode = 'AIADMK';
+                  incumbentCandidateFallback = {
+                    candidateName: String(incumbentRow.name).trim(),
+                    partyName: partyCode || partyName || 'Party'
+                  };
+                } else {
+                  incumbentCandidateFallback = null;
+                }
+              });
+          })
+          .catch(function () {
+            incumbentCandidateNameMap = {};
+            incumbentCandidateFallback = null;
+          });
+      }
+
       function addExplanationSource (text, src) {
         if (!text || !src) return;
         var full = normalizeText(text);
@@ -1829,7 +1971,7 @@
         if (profilePanelCollapsed) panel.classList.add('is-collapsed');
         else panel.classList.remove('is-collapsed');
 
-        var title = uiLang === 'ta' ? 'à®•à®Ÿà¯à®šà®¿à®•à®³à¯ & à®‡à®£à¯ˆà®ªà¯à®ªà¯à®•à®³à¯' : 'Parties & Links';
+        var title = uiLang === 'ta' ? 'Candidate Links' : 'Candidate Links';
         var toggleText = profilePanelCollapsed
           ? (uiLang === 'ta' ? 'à®µà®¿à®°à®¿' : 'Expand')
           : (uiLang === 'ta' ? 'à®šà¯à®°à¯à®•à¯à®•à¯' : 'Collapse');
@@ -1851,57 +1993,32 @@
         html += '<button type="button" class="oec-profile-toggle" id="oec-profile-toggle">' + escapeHtml(toggleText) + '</button>';
         html += '</div>';
         html += '<div class="oec-profile-panel__body">';
-        var allianceOrder = ['dmk', 'aiadmk', 'bjp', 'ind'];
-        var groups = {};
+        html += '<div class="oec-profile-panel__list">';
         candidateLinkItems.forEach(function (item) {
-          if (!groups[item.allianceKey]) {
-            groups[item.allianceKey] = {
-              key: item.allianceKey,
-              aliasKey: item.allianceAliasKey || item.allianceKey,
-              label: item.allianceLabel,
-              membersText: item.allianceMembers || '',
-              items: []
-            };
+          var nameHtml = escapeHtml(item.candidateName || item.name || 'Candidate');
+          if (item.isIncumbent) {
+            nameHtml = '<span class="oec-incumbent-chair" title="Sitting MLA" aria-label="Sitting MLA">🪑</span>' + nameHtml;
           }
-          if (!groups[item.allianceKey].aliasKey && item.allianceAliasKey) {
-            groups[item.allianceKey].aliasKey = item.allianceAliasKey;
-          }
-          if (!groups[item.allianceKey].membersText && item.allianceMembers) {
-            groups[item.allianceKey].membersText = item.allianceMembers;
-          }
-          groups[item.allianceKey].items.push(item);
-        });
-
-        allianceOrder.forEach(function (allianceKey) {
-          var group = groups[allianceKey];
-          if (!group || !group.items.length) return;
-          var isGroupCollapsed = !!groupCollapsedState[group.key];
-          var groupSeatRows = getAllianceSeatRows(group.aliasKey);
-          var groupHeaderSymbol = (groupSeatRows[0] && groupSeatRows[0].symbol) ? groupSeatRows[0].symbol : '';
-          var groupToggleText = isGroupCollapsed
-            ? (uiLang === 'ta' ? 'à®µà®¿à®°à®¿' : 'Expand')
-            : (uiLang === 'ta' ? 'à®šà¯à®°à¯à®•à¯à®•à¯' : 'Collapse');
-
-          html += '<section class="oec-profile-panel__group" data-alliance="' + escapeHtml(group.key) + '">';
-          html += '<div class="oec-profile-panel__group-head">';
-          html += '<h5 class="oec-profile-panel__group-title">';
-          if (groupHeaderSymbol) {
-            html += '<span class="oec-alliance-header-symbol">' + escapeHtml(groupHeaderSymbol) + '</span>';
+          html += '<div class="oec-profile-panel__item">';
+          html += '<div class="oec-profile-panel__name">';
+          if (item.profileUrl) {
+            html += '<a href="' + escapeAttrValue(item.profileUrl) + '" target="_blank" rel="noopener noreferrer">' + nameHtml + '</a>';
           } else {
-            html += '<span class="oec-alliance-dot" data-alliance="' + escapeHtml(group.key) + '"></span>';
+            html += '<span>' + nameHtml + '</span>';
           }
-          html += '<span>' + escapeHtml(group.label) + '</span>';
-          html += '</h5>';
-          html += '<button type="button" class="oec-group-toggle" data-group-key="' + escapeHtml(group.key) + '">' + escapeHtml(groupToggleText) + '</button>';
           html += '</div>';
-          html += '<div class="oec-profile-panel__group-body' + (isGroupCollapsed ? ' is-collapsed' : '') + '">';
-          if (group.membersText) {
-            html += '<p class="oec-profile-panel__group-members">' + escapeHtml(group.membersText) + '</p>';
+          if (item.partyName) {
+            html += '<p class="oec-profile-panel__party">';
+            if (item.partyUrl) {
+              html += '<a href="' + escapeAttrValue(item.partyUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.partyName) + '</a>';
+            } else {
+              html += escapeHtml(item.partyName);
+            }
+            html += '</p>';
           }
-          html += renderAllianceSeatRows(group.aliasKey);
-          html += '</div></section>';
+          html += '</div>';
         });
-
+        html += '</div>';
         html += '</div>';
         panel.innerHTML = html;
 
@@ -1920,21 +2037,6 @@
           });
         }
 
-        var groupToggles = panel.querySelectorAll('.oec-group-toggle');
-        groupToggles.forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            var key = btn.getAttribute('data-group-key') || '';
-            if (!key) return;
-            var body = btn.closest('.oec-profile-panel__group') && btn.closest('.oec-profile-panel__group').querySelector('.oec-profile-panel__group-body');
-            if (!body) return;
-            var collapsed = body.classList.toggle('is-collapsed');
-            groupCollapsedState[key] = collapsed;
-            persistCollapsedGroupState(groupCollapsedState);
-            btn.textContent = collapsed
-              ? (uiLang === 'ta' ? 'à®µà®¿à®°à®¿' : 'Expand')
-              : (uiLang === 'ta' ? 'à®šà¯à®°à¯à®•à¯à®•à¯' : 'Collapse');
-          });
-        });
       }
 
       var noCacheToken = String(Date.now());
@@ -2065,21 +2167,39 @@
             else if (party.name && party.name.en) displayName = party.name.en;
             else displayName = party.alias || 'Candidate';
 
-            var allianceMeta = getAllianceMetaForParty(party, partyTag);
+            var candidateName = '';
+            var nameFromUi = (party.name && party.name[uiLang]) ? String(party.name[uiLang]) : '';
+            var nameFromEn = (party.name && party.name.en) ? String(party.name.en) : '';
+            var rawName = nameFromUi || nameFromEn || displayName;
+            var nameMatch = /^(.*?)(?:\s*\(([^\)]+)\))?$/.exec(rawName);
+            if (nameMatch) {
+              candidateName = (nameMatch[1] || '').trim() || displayName;
+              if (!partyTag && nameMatch[2]) {
+                partyTag = String(nameMatch[2]).trim().toUpperCase();
+              }
+            } else {
+              candidateName = displayName;
+            }
+
+            var partyLabel = partyTag || 'Party';
+            if (partyLabel === 'ADMK') partyLabel = 'AIADMK';
 
             candidateLinkItems.push({
               name: displayName,
-              symbol: symbolText,
+              candidateName: candidateName,
+              partyName: partyLabel,
+              isIncumbent: false,
               profileUrl: profileUrl,
-              partyUrl: partyWiki,
-              allianceKey: allianceMeta.key,
-              allianceAliasKey: allianceMeta.aliasKey,
-              allianceLabel: allianceMeta.label,
-              allianceMembers: allianceMeta.membersText || ''
+              partyUrl: partyWiki
             });
           });
+          applyIncumbentFlagsToCandidateItems();
           debugLog('candidate profile entries=' + partyProfileEntries.length);
           renderCandidateProfilePanel();
+          loadIncumbentsForCurrentConstituency().then(function () {
+            applyIncumbentFlagsToCandidateItems();
+            renderCandidateProfilePanel();
+          });
 
           theses.forEach(function (thesis) {
             parties.forEach(function (party) {
