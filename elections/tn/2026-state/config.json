@@ -78,6 +78,7 @@
                 ],
     "allianceMetadata":  {
                              "dmk-alliance":  {
+                                                  "majorMembers":  ["DMK", "INC"],
                                                   "displayMembers":  {
                                                                          "en":  [
                                                                                     "DMK",
@@ -98,6 +99,7 @@
                                                   "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
                                               },
                              "aiadmk-alliance":  {
+                                                     "majorMembers":  ["AIADMK", "BJP"],
                                                      "displayMembers":  {
                                                                             "en":  [
                                                                                        "AIADMK",
@@ -753,5 +755,58 @@
                                           "ta":  "https://github.com/darepalli/ElectionDiksoochi"
                                       }
                          }
-                     ]
+                     ],
+    "alliancePartnerSeats":  {
+        "dmk-alliance":  [
+            { "code": "DMK", "name": "DMK", "symbol": "☀", "seats": 176,
+              "links": [ { "label": "Website", "url": "https://www.dmk.in/" }, { "label": "Manifesto", "url": "https://www.thehindu.com/incoming/70799704-dmk-manifesto-2026pdf" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "INC", "name": "INC", "symbol": "✋", "seats": 28,
+              "links": [ { "label": "Website", "url": "https://www.inc.in/" }, { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Indian_National_Congress" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "DMDK", "name": "DMDK", "symbol": "🥁", "seats": 10,
+              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Desiya_Murpokku_Dravida_Kazhagam" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "VCK", "name": "VCK", "symbol": "💠", "seats": 8,
+              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Viduthalai_Chiruthaigal_Katchi" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "CPI(M)", "name": "CPI(M)", "symbol": "🔨", "seats": 5,
+              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Communist_Party_of_India_(Marxist)" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "CPI", "name": "CPI", "symbol": "🌾", "seats": 5,
+              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Communist_Party_of_India" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "IUML", "name": "IUML", "symbol": "🪜", "seats": 2,
+              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Indian_Union_Muslim_League" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" }
+        ],
+        "aiadmk-alliance":  [
+            { "code": "AIADMK", "name": "AIADMK", "symbol": "🍃", "seats": 172,
+              "links": [ { "label": "Website", "url": "https://www.aiadmk.com/" }, { "label": "Manifesto", "url": "https://www.thehindu.com/news/resources/70779689-aiadmk-manifestotn-assembly-election-2026pdf" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "BJP", "name": "BJP", "symbol": "🪷", "seats": 33,
+              "links": [ { "label": "Website", "url": "https://www.bjp.org/" }, { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "PMK", "name": "PMK", "symbol": "🥭", "seats": 18,
+              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Pattali_Makkal_Katchi" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "AMMK", "name": "AMMK", "symbol": "🍲", "seats": 11,
+              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Amma_Makkal_Munneetra_Kazhagam" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "TMC(M)", "name": "TMC(M)", "symbol": "🪷", "seats": 5,
+              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Tamil_Maanila_Congress_(Moopanar)" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "IJK", "name": "IJK", "symbol": "🍃", "seats": 2,
+              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Indhiya_Jananayaga_Katchi" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
+            { "code": "SIFB", "name": "South Indian Forward Bloc", "symbol": "🪷", "seats": 1,
+              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/South_Indian_Forward_Bloc" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" }
+        ],
+        "tvk":  [
+            { "code": "TVK", "name": "Tamilaga Vettri Kazhagam", "symbol": "⭐", "seats": 233,
+              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam" } ],
+              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" }
+        ]
+    }
 }
