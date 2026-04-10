@@ -1163,6 +1163,7 @@
       border-radius: 10px;
       background: #ffffff;
       overflow: auto;
+      -webkit-overflow-scrolling: touch;
       margin-top: 0.7rem;
     }
 
@@ -1314,12 +1315,41 @@
         padding-right: 0.65rem;
       }
 
+      .pagewise-thesis-title,
+      .pagewise-thesis-statement,
+      .pagewise-result-card__name,
+      .pagewise-comparison-table th,
+      .pagewise-comparison-table td {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
       .pagewise-stance-grid {
         grid-template-columns: 1fr;
       }
 
       .pagewise-nav {
+        gap: 0.45rem;
         padding-bottom: calc(0.8rem + env(safe-area-inset-bottom, 0px));
+      }
+
+      .pagewise-btn {
+        min-width: 0;
+        flex: 1;
+        padding-left: 0.55rem;
+        padding-right: 0.55rem;
+      }
+
+      .oec-profile-panel__group-members {
+        font-size: 0.68rem;
+        overflow-x: visible;
+      }
+
+      .oec-alliance-members-line {
+        flex-wrap: wrap;
+        white-space: normal;
+        min-width: 0;
+        row-gap: 0.16rem;
       }
 
       .feedback-btn {
@@ -2167,7 +2197,34 @@
         }
       }
 
-      function buildComparisonTableHtml(rows, parties, thesisStateMap) {
+      function escapeRegExp(value) {
+        return String(value || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      }
+
+      function stripAreaPrefixFromTitle(titleText) {
+        var title = String(titleText || '');
+        if (!title) return title;
+
+        var patterns = [];
+        AREA_DEFS.forEach(function (area) {
+          if (area && area.en) patterns.push(String(area.en));
+          if (area && area.ta) patterns.push(String(area.ta));
+        });
+
+        for (var i = 0; i < patterns.length; i++) {
+          var label = patterns[i];
+          if (!label) continue;
+          var escaped = escapeRegExp(label);
+          var wrappedRe = new RegExp('^\\s*\\[\\s*' + escaped + '\\s*\\]\\s*', 'i');
+          var prefixRe = new RegExp('^\\s*' + escaped + '\\s*[-:|]\\s*', 'i');
+          title = title.replace(wrappedRe, '');
+          title = title.replace(prefixRe, '');
+        }
+        return title.trim();
+      }
+
+      function buildComparisonTableHtml(rows, parties, thesisStateMap, options) {
+        var hideAreaPrefix = !!(options && options.hideAreaPrefix);
         if (!rows.length) {
           return '<p>' + escapeHtml(getLocalizedText(selectedLang, 'No theses available in this area.', 'இந்த பகுதியில் தீர்மானங்கள் இல்லை.')) + '</p>';
         }
@@ -2178,6 +2235,7 @@
 
         var bodyRows = rows.map(function (row) {
           var title = getLocalizedValue(selectedLang, row.thesis.title, 'Thesis ' + (row.idx + 1));
+          if (hideAreaPrefix) title = stripAreaPrefixFromTitle(title);
           var userState = thesisStateMap[row.id] || { response: 'neutral', important: false };
           var userLabel = getResponseLabel(selectedLang, userState.response || 'neutral');
 
@@ -2243,6 +2301,11 @@
         return out;
       }
 
+      function isConstituencyConfig(configPathValue) {
+        var path = String(configPathValue || '').toLowerCase();
+        return path.indexOf('/constituencies/') >= 0;
+      }
+
       function computePagewiseScores(cfg, thesisStateMap) {
         var parties = cfg.parties || [];
         var theses = cfg.theses || [];
@@ -2271,10 +2334,11 @@
         }).sort(function (a, b) { return b.score - a.score; });
       }
 
-      function renderPageWiseCompass(cfg, selectedAreas) {
+      function renderPageWiseCompass(cfg, selectedAreas, options) {
         var theses = cfg.theses || [];
         var parties = cfg.parties || [];
         if (!theses.length || !parties.length) return false;
+        var singlePageMode = !!(options && options.singlePageMode);
 
         wrapper.setAttribute('data-mode', 'pagewise');
         mountPagewiseProfilePanel(cfg);
@@ -2304,9 +2368,13 @@
         });
 
         var pages = [{ type: 'overview', key: 'overview' }];
-        areaOrder.forEach(function (key) {
-          if ((thesesByArea[key] || []).length) pages.push({ type: 'area', key: key });
-        });
+        if (singlePageMode) {
+          pages.push({ type: 'all', key: 'all' });
+        } else {
+          areaOrder.forEach(function (key) {
+            if ((thesesByArea[key] || []).length) pages.push({ type: 'area', key: key });
+          });
+        }
         pages.push({ type: 'results', key: 'results' });
 
         var stanceOptions = [
@@ -2322,13 +2390,19 @@
 
         function renderOverviewPage() {
           var overviewTitle = getLocalizedText(selectedLang, 'How This Compass Works', 'இந்த காம்பஸ் எப்படி செயல்படுகிறது');
-          var overviewBody = getLocalizedText(
-            selectedLang,
-            'You will now answer area by area. Each area is shown on one page with all its theses together. Use Next and Previous to navigate pages.',
-            'இப்போது நீங்கள் பகுதி வாரியாக பதிலளிப்பீர்கள். ஒவ்வொரு பகுதியும் அந்த பகுதியில் உள்ள அனைத்து தீர்மானங்களுடன் ஒரே பக்கத்தில் காட்டப்படும். பக்கங்களுக்கு இடையில் செல்ல Next மற்றும் Previous ஐ பயன்படுத்தவும்.'
-          );
+          var overviewBody = singlePageMode
+            ? getLocalizedText(
+              selectedLang,
+              'This constituency has fewer theses, so all of them are shown together on a single page. Use Next and Previous to navigate.',
+              'இந்த தொகுதியில் தீர்மானங்கள் குறைவாக உள்ளதால், அனைத்தும் ஒரே பக்கத்தில் காட்டப்படும். பக்கங்களுக்கு இடையில் செல்ல Next மற்றும் Previous ஐ பயன்படுத்தவும்.'
+            )
+            : getLocalizedText(
+              selectedLang,
+              'You will now answer area by area. Each area is shown on one page with all its theses together. Use Next and Previous to navigate pages.',
+              'இப்போது நீங்கள் பகுதி வாரியாக பதிலளிப்பீர்கள். ஒவ்வொரு பகுதியும் அந்த பகுதியில் உள்ள அனைத்து தீர்மானங்களுடன் ஒரே பக்கத்தில் காட்டப்படும். பக்கங்களுக்கு இடையில் செல்ல Next மற்றும் Previous ஐ பயன்படுத்தவும்.'
+            );
 
-          var areaPills = areaOrder.map(function (k) {
+          var areaPills = singlePageMode ? '' : areaOrder.map(function (k) {
             var isPriority = (selectedAreas || []).indexOf(k) >= 0;
             var cls = 'pagewise-area-pill' + (isPriority ? ' is-priority' : '');
             return '<div class="' + cls + '">' + escapeHtml(getAreaLabelByKey(selectedLang, k)) + '</div>';
@@ -2338,7 +2412,7 @@
             + '<section class="pagewise-header">'
             + '<h2>' + escapeHtml(overviewTitle) + '</h2>'
             + '<p>' + escapeHtml(overviewBody) + '</p>'
-            + '<div class="pagewise-area-list">' + areaPills + '</div>'
+            + (areaPills ? '<div class="pagewise-area-list">' + areaPills + '</div>' : '')
             + '</section>';
         }
 
@@ -2418,7 +2492,52 @@
               'உங்கள் பதில், ஒவ்வொரு கட்சியின் நிலைப்பாடு, விளக்கம் மற்றும் ஆதார இணைப்புகள் இதில் உள்ளன.'
             )) + '</p>'
             + '</section>'
-            + buildComparisonTableHtml(allRows, parties, thesisStateMap);
+            + buildComparisonTableHtml(allRows, parties, thesisStateMap, { hideAreaPrefix: singlePageMode });
+        }
+
+        function renderAllThesesPage() {
+          var allRows = [];
+          areaOrder.forEach(function (k) {
+            var rows = thesesByArea[k] || [];
+            for (var i = 0; i < rows.length; i++) allRows.push(rows[i]);
+          });
+
+          var cards = allRows.map(function (row) {
+            var title = getLocalizedValue(selectedLang, row.thesis.title, 'Thesis ' + (row.idx + 1));
+            var statement = getLocalizedValue(selectedLang, row.thesis.statement, '');
+            var state = thesisStateMap[row.id] || { response: '', important: false };
+            var stanceHtml = stanceOptions.map(function (opt) {
+              var label = selectedLang === 'ta' ? opt.ta : opt.en;
+              var checked = state.response === opt.token ? ' checked' : '';
+              return ''
+                + '<label class="pagewise-stance">'
+                + '<input type="radio" name="resp-' + row.id + '" data-thesis-id="' + row.id + '" value="' + opt.token + '"' + checked + '>'
+                + '<span>' + escapeHtml(label) + '</span>'
+                + '</label>';
+            }).join('');
+
+            return ''
+              + '<article class="pagewise-thesis-card">'
+              + '<div class="pagewise-thesis-title">' + escapeHtml(title) + '</div>'
+              + '<div class="pagewise-thesis-statement">' + escapeHtml(statement) + '</div>'
+              + '<label class="pagewise-important">'
+              + '<input type="checkbox" data-important-id="' + row.id + '"' + (state.important ? ' checked' : '') + '>'
+              + '<span>' + escapeHtml(getLocalizedText(selectedLang, 'Important to me', 'எனக்கு முக்கியம்')) + '</span>'
+              + '</label>'
+              + '<div class="pagewise-stance-grid">' + stanceHtml + '</div>'
+              + '</article>';
+          }).join('');
+
+          return ''
+            + '<section class="pagewise-header">'
+            + '<h2>' + escapeHtml(getLocalizedText(selectedLang, 'All Theses', 'அனைத்து தீர்மானங்கள்')) + '</h2>'
+            + '<p>' + escapeHtml(getLocalizedText(
+              selectedLang,
+              'Answer all constituency theses on this single page. You can review and edit before viewing results.',
+              'தொகுதியின் அனைத்து தீர்மானங்களுக்கும் இந்த ஒரே பக்கத்தில் பதிலளிக்கவும். முடிவுகளை பார்க்கும் முன் திருத்தலாம்.'
+            )) + '</p>'
+            + '</section>'
+            + cards;
         }
 
         function navLabelForNext(pageIndex) {
@@ -2434,6 +2553,7 @@
           var content = '';
           if (page.type === 'overview') content = renderOverviewPage();
           else if (page.type === 'area') content = renderAreaPage(page);
+          else if (page.type === 'all') content = renderAllThesesPage();
           else content = renderResultsPage();
 
           var prevDisabled = currentPageIndex === 0 ? ' disabled' : '';
@@ -2602,7 +2722,8 @@
         })
         .then(function (cfg) {
           var prepared = injectTamilOverwrites(cfg);
-          var canUseAreaPicker = !randomResultsQuery && !partyPositionsQuery;
+          var isConstituencyCompass = isConstituencyConfig(configPath);
+          var canUseAreaPicker = !randomResultsQuery && !partyPositionsQuery && !isConstituencyCompass;
           if (!canUseAreaPicker) return { cfg: prepared, selectedAreas: [] };
           return askAreaPrioritySelection(prepared, configPath).then(function (selectedAreas) {
             applyAreaPriorityToTheses(prepared, selectedAreas);
@@ -2612,8 +2733,9 @@
         .then(function (payload) {
           var preparedCfg = payload.cfg;
           var selectedAreas = payload.selectedAreas || [];
+          var isConstituencyCompass = isConstituencyConfig(configPath);
           pageWiseController = null;
-          if (pageWiseEnabled && renderPageWiseCompass(preparedCfg, selectedAreas)) {
+          if (pageWiseEnabled && renderPageWiseCompass(preparedCfg, selectedAreas, { singlePageMode: isConstituencyCompass })) {
             return;
           }
           wrapper.setAttribute('data-mode', 'oec');
