@@ -1267,6 +1267,17 @@
       var hostName = String(window.location.hostname || '').toLowerCase();
       var isLocalhost = hostName === 'localhost' || hostName === '127.0.0.1' || hostName === '::1' || hostName === '[::1]';
 
+      function withNoCache(url, token) {
+        var key = token || String(Date.now());
+        try {
+          var u = new URL(url, window.location.href);
+          u.searchParams.set('_oecv', key);
+          return u.toString();
+        } catch (e) {
+          return String(url) + (String(url).indexOf('?') >= 0 ? '&' : '?') + '_oecv=' + encodeURIComponent(key);
+        }
+      }
+
       function normalizeLang(value) {
         var raw = String(value || '').toLowerCase();
         return raw.indexOf('ta') === 0 ? 'ta' : 'en';
