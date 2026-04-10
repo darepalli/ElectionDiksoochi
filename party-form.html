@@ -277,10 +277,58 @@
       if (p) {
         loadElection(p);
       } else {
-        hide('loading');
-        show('selector-section');
+        populateElectionSelector().finally(function () {
+          hide('loading');
+          show('selector-section');
+        });
       }
     })();
+
+    function populateElectionSelector() {
+      var select = document.getElementById('election-select');
+      if (!select) return Promise.resolve();
+
+      return fetch('elections/tn/constituencies/constituencies.json')
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function (data) {
+          var list = (data && Array.isArray(data.constituencies)) ? data.constituencies : [];
+          var live = list.filter(function (c) {
+            return !!(c && c.live && c.slug);
+          }).sort(function (a, b) {
+            return Number(a.no || 0) - Number(b.no || 0);
+          });
+          if (!live.length) return;
+
+          // Remove old static constituency options if present and keep top-level election options.
+          var removeVals = {
+            'elections/tn/constituencies/chennai-central/config.json': true,
+            'elections/tn/constituencies/coimbatore-south/config.json': true
+          };
+          for (var i = select.options.length - 1; i >= 0; i--) {
+            var v = select.options[i].value;
+            if (removeVals[v]) select.remove(i);
+          }
+
+          var group = document.createElement('optgroup');
+          group.label = 'Tamil Nadu 2026 - Constituencies (' + live.length + ')';
+          live.forEach(function (c) {
+            var opt = document.createElement('option');
+            var no = Number(c.no || 0);
+            var noText = no > 0 ? String(no).padStart(3, '0') + ' - ' : '';
+            var district = c.district ? ' (' + c.district + ')' : '';
+            opt.value = 'elections/tn/constituencies/' + c.slug + '/config.json';
+            opt.textContent = 'TN 2026 - ' + noText + c.name + district;
+            group.appendChild(opt);
+          });
+          select.appendChild(group);
+        })
+        .catch(function () {
+          // Keep existing static options if dynamic list fetch fails.
+        });
+    }
 
     function loadFromSelector() {
       var val = document.getElementById('election-select').value;

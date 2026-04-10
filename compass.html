@@ -1400,13 +1400,13 @@
 
   <!-- Back navigation bar -->
   <div class="back-bar">
-    <a href="index.html">â† All Elections</a>
+    <a href="index.html">&larr; All Elections</a>
     <span class="sep">|</span>
     <span class="current-label" id="back-label">Election Compass</span>
     <span class="spacer"></span>
     <div class="language-switch" role="group" aria-label="Language selector">
       <button type="button" class="lang-btn" data-lang="en" id="lang-en">EN</button>
-      <button type="button" class="lang-btn" data-lang="ta" id="lang-ta">à®¤à®®à®¿à®´à¯</button>
+      <button type="button" class="lang-btn" data-lang="ta" id="lang-ta">&#2980;&#2990;&#3007;&#2996;&#3021;</button>
     </div>
     <div class="party-links-wrap" id="party-links-wrap">
       <button type="button" class="party-links-trigger" id="party-links-toggle">Party Links</button>
@@ -1837,7 +1837,7 @@
         var t = String(text || '').toLowerCase().replace(/\s+/g, ' ').trim();
         if (!t) return false;
         if (lang === 'ta') {
-          return t.indexOf('à®¤à®®à®¿à®´à¯') >= 0 || t === 'ta' || t === 'tam';
+          return t.indexOf('\u0ba4\u0bae\u0bbf\u0bb4\u0bcd') >= 0 || t.indexOf('à®¤à®®à®¿à®´à¯') >= 0 || t === 'ta' || t === 'tam';
         }
         return t.indexOf('english') >= 0 || t === 'en';
       }
@@ -2188,6 +2188,9 @@
               allianceSource = seatRows[sr].source;
               break;
             }
+          }
+          if (!allianceSource && md && typeof md.source === 'string') {
+            allianceSource = md.source;
           }
 
           html += '<div class="oec-profile-panel__group" data-alliance="' + escapeHtml(allianceUiKey) + '">';
