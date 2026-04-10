@@ -1,4 +1,4 @@
-{
+﻿{
     "version":  "1",
     "algorithm":  "hybrid",
     "languages":  [
@@ -86,6 +86,25 @@
                                         "en":  "https://www.tnelections.info/parties#tvk",
                                         "ta":  "https://www.tnelections.info/parties#tvk"
                                     }
+                    },
+                    {
+                        "alias":  "ntk",
+                        "name":  {
+                                     "ta":  "நாம் தமிழர் கட்சி",
+                                     "en":  "Naam Tamilar Katchi"
+                                 },
+                        "short":  {
+                                      "ta":  "நா.த.க",
+                                      "en":  "NTK"
+                                  },
+                        "description":  {
+                                            "ta":  "சீமான் தலைமையிலான நாம் தமிழர் கட்சி (NTK).",
+                                            "en":  "Naam Tamilar Katchi (NTK) led by Seeman."
+                                        },
+                        "profile":  {
+                                        "en":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi",
+                                        "ta":  "https://ta.wikipedia.org/wiki/நாம்_தமிழர்_கட்சி"
+                                    }
                     }
                 ],
     "allianceMetadata":  {
@@ -162,6 +181,20 @@
                                                                     "TVK"
                                                                 ],
                                          "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                     },
+                             "ntk":  {
+                                         "displayMembers":  {
+                                                                "en":  [
+                                                                           "NTK"
+                                                                       ],
+                                                                "ta":  [
+                                                                           "நாம் தமிழர் கட்சி"
+                                                                       ]
+                                                            },
+                                         "stanceModelMembers":  [
+                                                                    "NTK"
+                                                                ],
+                                         "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                      }
                          },
     "theses":  [
@@ -198,6 +231,14 @@
                                                                          "ta":  "TVK-யின் பொது அறிக்கைகள் தமிழ்நாட்டு உரிமைகள் மற்றும் பொறுப்பான ஆட்சியை வலியுறுத்துகின்றன; ஆனால் நிதி மற்றும் சட்ட தன்னாட்சி குறித்த முழுமையான அதிகாரப்பூர்வ கொள்கை ஆவணம் இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
                                                                      },
                                                      "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam#Ideology"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -234,6 +275,14 @@
                                                                          "ta":  "மாணவர் சமத்துவம் மற்றும் சேர்க்கை அழுத்தக் குறைப்பு குறித்து TVK-யின் பொது குறிப்புகள் கவலை காட்டுகின்றன; ஆனால் NEET குறித்து முழுமையான அதிகாரப்பூர்வ கொள்கை இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
                                                                      },
                                                      "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -270,6 +319,14 @@
                                                                          "ta":  "Stated position (2026): Manifesto promise tracked for this category. Past performance signal: TVK 2026: சுகாதாரம் அடிப்படை உரிமை + அனைத்து பள்ளி-கல்லூரிகளிலும் \u0027Drug-Free Zone\u0027."
                                                                      },
                                                      "source":  "https://www.newsbytesapp.com/news/politics/tvk-s-vijay-unveils-poll-manifesto/story"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -306,6 +363,14 @@
                                                                          "ta":  "இடமாநில நதி விவகாரங்களில் தமிழ்நாட்டு உரிமைகள் பாதுகாக்கப்பட வேண்டும் என TVK பொது குறிப்புகள் தெரிவிக்கின்றன; ஆனால் காவிரி அமலாக்கத்திற்கான விரிவான அதிகாரப்பூர்வ செயல்திட்டம் இன்னும் கிடைக்கவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
                                                                      },
                                                      "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -342,6 +407,14 @@
                                                                          "ta":  "மது தொடர்பான சமூக பாதிப்புகள் குறித்து TVK பொது விவாதங்களில் குறிப்பிடப்பட்டுள்ளது; ஆனால் கட்டப்படியான மது தடை மற்றும் அமலாக்கம் குறித்த உறுதியான அதிகாரப்பூர்வ கொள்கை இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
                                                                      },
                                                      "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -378,6 +451,14 @@
                                                                          "ta":  "தமிழ் மொழி உரிமையை ஆதரிக்கும் நிலை TVK பொது அறிக்கைகளில் பொதுவாகத் தெரிகிறது; ஆனால் இருமொழிக் கல்வி அமலாக்கம் குறித்த முழுமையான அதிகாரப்பூர்வ குறிப்பேடு இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
                                                                      },
                                                      "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam#Ideology"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -414,6 +495,14 @@
                                                                          "ta":  "குடும்பங்களும் விவசாயிகளும் எதிர்கொள்ளும் செலவுசுமை குறித்து TVK பொது அறிக்கைகள் பேசுகின்றன; ஆனால் இலவச மின்சாரத் திட்ட தகுதி மற்றும் மானியம் வடிவமைப்பு குறித்த விரிவான அதிகாரப்பூர்வ நிலை இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
                                                                      },
                                                      "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -450,6 +539,14 @@
                                                                          "ta":  "சமூக நீதி மற்றும் உள்ளடக்கம் குறித்து TVK பொது குறிப்புகள் உள்ளன; ஆனால் இடஒதுக்கீட்டு சதவீத மாற்றம் குறித்த துல்லியமான அதிகாரப்பூர்வ கட்டமைப்பு இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
                                                                      },
                                                      "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -486,6 +583,14 @@
                                                                          "ta":  "Stated position (2026): 5 ஏக்கருக்கும் குறைவான நிலம் உடைய விவசாயிகளுக்கு கூட்டுறவு வங்கி பயிர்க்கடன் முழுமையாக தள்ளுபடி Past performance signal: TVK: 5 ஏக்கருக்கு கீழ் 100% கடன் தள்ளுபடி + 5 ஏக்கருக்கு மேல் 50% + 2 ஏக்கருக்கு கீழ் விவசாயி பிள்ளைகளுக்கு இலவச கல்வி."
                                                                      },
                                                      "source":  "https://www.newsbytesapp.com/news/politics/tvk-s-vijay-unveils-poll-manifesto/story"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -522,6 +627,14 @@
                                                                          "ta":  "நிலைத்த வளர்ச்சி குறித்து TVK பொது செய்திகள் ஆதரவு அளிக்கின்றன; ஆனால் புதுப்பிக்கத்தக்க ஆற்றல் இலக்குகள் மற்றும் மாற்றக் காலக்கட்டம் குறித்த விரிவான அதிகாரப்பூர்வ திட்டம் இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
                                                                      },
                                                      "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -558,6 +671,14 @@
                                                                          "ta":  "குடும்பங்களுக்கு நல ஆதரவு தேவை குறித்து TVK பொது குறிப்புகள் உள்ளன; ஆனால் பயன் அளவு மற்றும் நிதி விவரங்களுடன் UBI குறித்த அதிகாரப்பூர்வ வடிவமைப்பு இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
                                                                      },
                                                      "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -594,6 +715,14 @@
                                                                          "ta":  "நலத்திட்ட வழங்கலை வலுப்படுத்த வேண்டும் என TVK பொதுக் குறிப்புகள் ஆதரிக்கின்றன; ஆனால் PDS விரிவாக்கம் மற்றும் பொருட்கள் வரம்பு குறித்த முழுமையான அதிகாரப்பூர்வ திட்டம் இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
                                                                      },
                                                      "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -630,6 +759,14 @@
                                                                          "ta":  "Stated position (2026): \u0027படைப்பாற்றல் தொழில்முனைவோர் திட்டம்\u0027 — இளம் தொழில்முனைவோருக்கு ₹25 லட சம் வரை வட்டியில்லா கடன் — ஜாமீன் இல்லை Past performance signal: TVK 2026: 500 \u0027Creative Schools\u0027 + ₹20 லட்சம் வட்டியில்லா கல்விக் கடன் (12ஆம் வகுப்பு முதல் PhD) + TNPSC நிர்ணயித்த கால அட்டவணையில்."
                                                                      },
                                                      "source":  "https://thefederal.com/elections-2026/tamil-nadu-elections-2026-vijay-tvk-releases-poll-manifesto-targets-youth-voters-236677"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -666,6 +803,14 @@
                                                                          "ta":  "Stated position (2026): அரசு ஊழியர்கள் அல்லாத அனைத்து பெண்களுக்கும் மாதம் ₹2,500 நேரடி பண உதவி (60 வயது வரை) — தற்போதைய DMK திட்டத்தை விட அதிகம் Past performance signal: TVK 2026: அனைத்து பெண்களுக்கும் மாதம் ₹2,500 — மூன்று கட்சிகளிலும் அதிகம். (அரசு ஊழியர்கள் தவிர, வயது 60 வரை)"
                                                                      },
                                                      "source":  "https://www.tconews.in/blog/news-2/tvk-chief-vijay-rolls-out-women-centric-welfare-promises-847"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -702,6 +847,14 @@
                                                                          "ta":  "Stated position (2026): தமிழ்நாடு இளையோர் ஆலோசனை மன்றம் — அரசின் கொள்கை முடிவுகளில் இளையோருக்கு நேரடி பங்கு Past performance signal: TVK 2026: பட்டதாரிகளுக்கு ₹4,000/மாதம் + 5 லட்சம் internship/ஆண்டு (₹10,000/மாதம்) + தனியார் வேலையில் 75% TN பங்கு + ₹25 லட்சம் வட்டியில்லா தொழில் கடன்."
                                                                      },
                                                      "source":  "https://thefederal.com/elections-2026/tamil-nadu-elections-2026-vijay-tvk-releases-poll-manifesto-targets-youth-voters-236677"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -738,6 +891,14 @@
                                                                          "ta":  "Stated position (2026): \u0027படைப்பாற்றல் தொழில்முனைவோர் திட்டம்\u0027 — இளம் தொழில்முனைவோருக்கு ₹25 லட சம் வரை வட்டியில்லா கடன் — ஜாமீன் இல்லை Past performance signal: TVK 2026: 500 \u0027Creative Schools\u0027 + ₹20 லட்சம் வட்டியில்லா கல்விக் கடன் (12ஆம் வகுப்பு முதல் PhD) + TNPSC நிர்ணயித்த கால அட்டவணையில்."
                                                                      },
                                                      "source":  "https://thefederal.com/elections-2026/tamil-nadu-elections-2026-vijay-tvk-releases-poll-manifesto-targets-youth-voters-236677"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -774,6 +935,14 @@
                                                                          "ta":  "இந்த தீஸிஸ் வரையறைக்குள் நேரடியாக பொருந்தும் கோவில் நிர்வாக உறுதிப்பாடு தற்போதைய 2026 manifesto dataset-ல் தெளிவாக கிடைக்காததால் நடுநிலை நிலை தொடர்கிறது."
                                                                      },
                                                      "source":  "https://www.tnelections.info/manifesto"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    },
@@ -810,6 +979,14 @@
                                                                          "ta":  "இந்த விரிவாக்கப்பட்ட இலக்கு நல ஆதரவு தீஸிஸுக்கு நேரடியாக பொருந்தும், அளவிடக்கூடிய உறுதிப்பாடு தற்போதைய 2026 manifesto dataset-ல் தெளிவாக இல்லை என்பதால் நடுநிலை நிலை தொடர்கிறது."
                                                                      },
                                                      "source":  "https://www.tnelections.info/manifesto"
+                                                 },
+                                         "ntk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "NTK positions are mapped as neutral in this release pending a fully consolidated 2026 official thesis-wise policy publication in the project source format.",
+                                                                         "ta":  "2026 தேர்தலுக்கான முழுமையான தீர்மான வாரியான அதிகாரப்பூர்வ கொள்கை வெளியீடு திட்ட வடிவத்தில் ஒருங்கிணைக்கப்படாததால், இந்த பதிப்பில் NTK நிலைப்பாடுகள் நடுநிலையாகக் காட்டப்படுகின்றன."
+                                                                     },
+                                                     "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                                  }
                                      }
                    }
@@ -1055,6 +1232,7 @@
                                                  "name":  "Tamilaga Vettri Kazhagam",
                                                  "symbol":  "⭐",
                                                  "seats":  233,
+                                                 "flagColor":  "#f59e0b",
                                                  "links":  [
                                                                {
                                                                    "label":  "Wikipedia",
@@ -1062,6 +1240,22 @@
                                                                }
                                                            ],
                                                  "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                             }
+                                         ],
+                                 "ntk":  [
+                                             {
+                                                 "code":  "NTK",
+                                                 "name":  "Naam Tamilar Katchi",
+                                                 "symbol":  "🎤",
+                                                 "seats":  234,
+                                                 "flagColor":  "#be123c",
+                                                 "links":  [
+                                                               {
+                                                                   "label":  "Wikipedia",
+                                                                   "url":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
+                                                               }
+                                                           ],
+                                                 "source":  "https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi"
                                              }
                                          ]
                              },

@@ -398,6 +398,16 @@
       --alliance-bg: #f8fafc;
     }
 
+    .oec-profile-panel__group[data-alliance="tvk"] {
+      --alliance-accent: #f59e0b;
+      --alliance-bg: #fffbeb;
+    }
+
+    .oec-profile-panel__group[data-alliance="ntk"] {
+      --alliance-accent: #be123c;
+      --alliance-bg: #fff1f2;
+    }
+
     .oec-profile-panel__group-title {
       display: inline-flex;
       align-items: center;
@@ -656,6 +666,53 @@
 
     .oec-alliance-dot[data-alliance="ind"] {
       background: #475569;
+    }
+
+    .oec-alliance-dot[data-alliance="tvk"] {
+      background: #f59e0b;
+    }
+
+    .oec-alliance-dot[data-alliance="ntk"] {
+      background: #be123c;
+    }
+
+    .oec-alliance-single-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.32rem;
+      border: 1px solid color-mix(in srgb, var(--alliance-accent) 26%, #e2e8f0);
+      background: color-mix(in srgb, var(--alliance-accent) 8%, #ffffff);
+      border-radius: 999px;
+      padding: 0.18rem 0.5rem;
+      margin: 0.16rem 0 0.28rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #334155;
+      line-height: 1.2;
+      white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .oec-alliance-single-row--head {
+      margin: 0;
+    }
+
+    .oec-alliance-single-dot {
+      width: 0.48rem;
+      height: 0.48rem;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 23, 42, 0.14);
+      flex: 0 0 0.48rem;
+    }
+
+    .oec-alliance-single-link {
+      font-size: inherit;
+      font-weight: 700;
+    }
+
+    .oec-alliance-single-link:hover {
+      text-decoration: underline;
     }
 
     .oec-profile-panel__name {
@@ -2022,7 +2079,8 @@
       var PAGEWISE_PARTY_META = {
         'dmk-alliance': { wiki: 'https://www.tnelections.info/parties#dmk', candidate: 'DMK Alliance' },
         'aiadmk-alliance': { wiki: 'https://www.tnelections.info/parties#aiadmk', candidate: 'AIADMK Alliance' },
-        'tvk': { wiki: 'https://www.tnelections.info/parties#tvk', candidate: 'TVK' }
+        'tvk': { wiki: 'https://www.tnelections.info/parties#tvk', candidate: 'TVK' },
+        'ntk': { wiki: 'https://en.wikipedia.org/wiki/Naam_Tamizhar_Katchi', candidate: 'NTK' }
       };
 
       function getPagewiseAllianceUiKey(alias) {
@@ -2030,6 +2088,8 @@
         if (a === 'dmk-alliance') return 'dmk';
         if (a === 'aiadmk-alliance') return 'aiadmk';
         if (a === 'bjp-alliance') return 'bjp';
+        if (a === 'tvk') return 'tvk';
+        if (a === 'ntk') return 'ntk';
         return 'ind';
       }
 
@@ -2042,10 +2102,57 @@
           dmk: ['#dc2626', '#ef4444', '#f97316', '#f59e0b', '#84cc16', '#22c55e', '#06b6d4'],
           aiadmk: ['#16a34a', '#22c55e', '#84cc16', '#65a30d', '#0ea5e9', '#0284c7', '#f59e0b'],
           bjp: ['#ea580c', '#f97316', '#fb923c', '#f59e0b', '#84cc16', '#22c55e', '#0ea5e9'],
+          tvk: ['#f59e0b', '#fbbf24', '#f97316', '#eab308'],
+          ntk: ['#be123c', '#e11d48', '#9f1239', '#f43f5e'],
           ind: ['#475569', '#64748b', '#94a3b8', '#0ea5e9', '#14b8a6', '#22c55e', '#f59e0b']
         };
         var p = palettes[allianceUiKey] || palettes.ind;
         return p[index % p.length];
+      }
+
+      function getSeatRowColor(row, index, allianceUiKey) {
+        if (row && typeof row.flagColor === 'string' && row.flagColor.trim()) return row.flagColor.trim();
+        if (row && typeof row.flagColour === 'string' && row.flagColour.trim()) return row.flagColour.trim();
+        return getAllianceSegmentColor(index, allianceUiKey);
+      }
+
+      function getSinglePartySeatRow(rows) {
+        if (!Array.isArray(rows) || !rows.length) return null;
+        var nonZeroRows = rows.filter(function (row) { return (Number(row && row.seats) || 0) > 0; });
+        return nonZeroRows.length === 1 ? nonZeroRows[0] : null;
+      }
+
+      function getPartyProfileUrlFromConfig(party) {
+        if (!party) return '';
+        if (party.partyProfile && typeof party.partyProfile === 'string') return party.partyProfile;
+        if (party.partyProfile && typeof party.partyProfile === 'object') {
+          return party.partyProfile[selectedLang] || party.partyProfile.en || party.partyProfile.ta || '';
+        }
+        if (party.profile && typeof party.profile === 'string') return party.profile;
+        if (party.profile && typeof party.profile === 'object') {
+          return party.profile[selectedLang] || party.profile.en || party.profile.ta || '';
+        }
+        return '';
+      }
+
+      function renderSinglePartySeatInfo(rows, allianceUiKey, partyProfileUrl, isHeader) {
+        var row = getSinglePartySeatRow(rows);
+        if (!row) return '';
+        var color = getSeatRowColor(row, 0, allianceUiKey);
+        var symbol = row.symbol ? String(row.symbol) + ' ' : '';
+        var code = row.code || row.name || 'Party';
+        var seats = Number(row.seats) || 0;
+        var links = Array.isArray(row.links) ? row.links : [];
+        var rowProfileUrl = links.length && links[0] && links[0].url ? links[0].url : '';
+        var profileUrl = rowProfileUrl || partyProfileUrl || '';
+        var label = escapeHtml(symbol + code + ' ' + seats);
+        var rowClass = 'oec-alliance-single-row' + (isHeader ? ' oec-alliance-single-row--head' : '');
+        return '<div class="' + rowClass + '">'
+          + '<span class="oec-alliance-single-dot" style="background:' + escapeHtml(color) + '"></span>'
+          + (profileUrl
+            ? ('<a class="oec-alliance-seat-link oec-alliance-single-link" href="' + escapeHtml(profileUrl) + '" target="_blank" rel="noopener noreferrer">' + label + '</a>')
+            : ('<span>' + label + '</span>'))
+          + '</div>';
       }
 
       function renderLinkedAllianceMembers(members, seatRows) {
@@ -2063,6 +2170,8 @@
 
       function renderAlliancePieChart(rows, allianceUiKey) {
         if (!Array.isArray(rows) || !rows.length) return '';
+        var nonZeroRows = rows.filter(function (row) { return (Number(row && row.seats) || 0) > 0; });
+        if (nonZeroRows.length <= 1) return '';
         var total = 0;
         rows.forEach(function (row) { total += (Number(row.seats) || 0); });
         if (!total) return '';
@@ -2072,7 +2181,7 @@
         rows.forEach(function (row, idx) {
           var seats = Number(row.seats) || 0;
           if (!seats) return;
-          var color = getAllianceSegmentColor(idx, allianceUiKey);
+          var color = getSeatRowColor(row, idx, allianceUiKey);
           var pct = (seats / total) * 100;
           var start = acc;
           var end = acc + pct;
@@ -2087,7 +2196,7 @@
         rows.forEach(function (row, idx) {
           var seats = Number(row.seats) || 0;
           if (!seats) return;
-          var color = getAllianceSegmentColor(idx, allianceUiKey);
+          var color = getSeatRowColor(row, idx, allianceUiKey);
           var symbol = row.symbol ? String(row.symbol) + ' ' : '';
           var shortName = row.code || row.name || 'Party';
           var links = Array.isArray(row.links) ? row.links : [];
@@ -2178,10 +2287,12 @@
           var alias = String(party.alias || '');
           var allianceUiKey = getPagewiseAllianceUiKey(alias);
           var displayLabel = getPartyDisplayName(selectedLang, party);
+          var partyProfileUrl = getPartyProfileUrlFromConfig(party);
           var md = metadata[alias] || {};
           var members = (md.displayMembers && (md.displayMembers[selectedLang] || md.displayMembers.en || md.displayMembers.ta)) || [];
           var membersHtml = renderLinkedAllianceMembers(members, seatMap[alias] || []);
           var seatRows = seatMap[alias] || [];
+          var singleSeatRow = getSinglePartySeatRow(seatRows);
           var allianceSource = '';
           for (var sr = 0; sr < seatRows.length; sr++) {
             if (seatRows[sr] && seatRows[sr].source) {
@@ -2195,15 +2306,22 @@
 
           html += '<div class="oec-profile-panel__group" data-alliance="' + escapeHtml(allianceUiKey) + '">';
           html += '<div class="oec-profile-panel__group-head">';
-          html += '<h5 class="oec-profile-panel__group-title"><span class="oec-alliance-dot" data-alliance="' + escapeHtml(allianceUiKey) + '"></span>' + escapeHtml(displayLabel) + '</h5>';
+          if (singleSeatRow) {
+            html += renderSinglePartySeatInfo(seatRows, allianceUiKey, partyProfileUrl, true);
+          } else {
+            html += '<h5 class="oec-profile-panel__group-title"><span class="oec-alliance-dot" data-alliance="' + escapeHtml(allianceUiKey) + '"></span>' + escapeHtml(displayLabel) + '</h5>';
+          }
           html += '</div>';
-          if (membersHtml) {
+          if (!singleSeatRow && membersHtml) {
             html += '<p class="oec-profile-panel__group-members">' + membersHtml + '</p>';
           }
           if (allianceSource) {
             html += '<p class="oec-alliance-source"><a class="oec-alliance-seat-link" href="' + escapeHtml(allianceSource) + '" target="_blank" rel="noopener noreferrer">'
               + escapeHtml(getLocalizedText(selectedLang, 'Seat-share source', 'இருக்கை பகிர்வு மூலம்'))
               + '</a></p>';
+          }
+          if (!singleSeatRow) {
+            html += renderSinglePartySeatInfo(seatRows, allianceUiKey, partyProfileUrl, false);
           }
           html += renderAlliancePieChart(seatRows, allianceUiKey);
           html += '</div>';
