@@ -174,10 +174,10 @@
                                          "cand-ntk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
-                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                              "en":  "NTK policy materials include broad infrastructure and public-service themes, but this local roads/drainage execution thesis is kept neutral until a directly mapped constituency-level commitment is published.",
+                                                                              "ta":  "NTK policy materials include broad infrastructure and public-service themes, but this local roads/drainage execution thesis is kept neutral until a directly mapped constituency-level commitment is published."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://makkalarasu.in/assets/NTK-2026-Manifesto.pdf"
                                                       }
                                      }
                    },
@@ -222,10 +222,10 @@
                                          "cand-ntk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
-                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                              "en":  "NTK policy positions emphasize Tamil identity and cultural protection themes, but this specific heritage-zone implementation thesis is kept neutral pending a directly mapped local policy commitment.",
+                                                                              "ta":  "NTK policy positions emphasize Tamil identity and cultural protection themes, but this specific heritage-zone implementation thesis is kept neutral pending a directly mapped local policy commitment."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://www.naamtamilar.org/policies/"
                                                       }
                                      }
                    },
@@ -270,10 +270,10 @@
                                          "cand-ntk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
-                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                              "en":  "NTK manifesto and campaign material emphasize Tamil youth livelihood and local enterprise priorities; this thesis is mapped neutral here pending a directly quantified constituency-level MSME/vendor implementation commitment.",
+                                                                              "ta":  "NTK manifesto and campaign material emphasize Tamil youth livelihood and local enterprise priorities; this thesis is mapped neutral here pending a directly quantified constituency-level MSME/vendor implementation commitment."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://makkalarasu.in/assets/NTK-2026-Manifesto.pdf"
                                                       }
                                      }
                    },
@@ -320,10 +320,10 @@
                                          "cand-ntk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
-                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                              "en":  "NTK manifesto material includes broad public-service commitments, but this local transport-service thesis is kept neutral until a directly quantified constituency-level commitment is mapped.",
+                                                                              "ta":  "NTK manifesto material includes broad public-service commitments, but this local transport-service thesis is kept neutral until a directly quantified constituency-level commitment is mapped."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://makkalarasu.in/assets/NTK-2026-Manifesto.pdf"
                                                       }
                                      }
                    },
@@ -370,10 +370,10 @@
                                          "cand-ntk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
-                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                              "en":  "NTK manifesto material includes social-welfare commitments; this affordable-housing thesis is kept neutral here until a directly mapped and quantified constituency implementation commitment is published.",
+                                                                              "ta":  "NTK manifesto material includes social-welfare commitments; this affordable-housing thesis is kept neutral here until a directly mapped and quantified constituency implementation commitment is published."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://makkalarasu.in/assets/NTK-2026-Manifesto.pdf"
                                                       }
                                      }
                    }
@@ -412,5 +412,5 @@
                      ],
     "candidateSource":  "https://en.wikipedia.org/wiki/List_of_constituencies_of_the_Tamil_Nadu_Legislative_Assembly",
     "candidateSourceType":  "legacy-non-assembly-config",
-    "candidateSourceNote":  "This slug is not part of the 234 Tamil Nadu Assembly constituency list used for phase-1 baseline mapping; kept as legacy custom config and excluded from automated contesting-party cleanup. Thesis positions enriched from https://www.tnelections.info/manifesto and party_facts (one-time run). NTK candidate mapped from https://tnelections2026.in/candidates.html"
+    "candidateSourceNote":  "This slug is not part of the 234 Tamil Nadu Assembly constituency list used for phase-1 baseline mapping; kept as legacy custom config and excluded from automated contesting-party cleanup. Thesis positions enriched from https://www.tnelections.info/manifesto and party_facts (one-time run). NTK candidate mapped from https://tnelections2026.in/candidates.html NTK thesis positions refined from naamtamilar.org and NTK manifesto links (source-mapped pass)."
 }
