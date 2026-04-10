@@ -1,4 +1,4 @@
-﻿{
+{
     "version":  "1",
     "algorithm":  "hybrid",
     "languages":  [
@@ -43,7 +43,11 @@
                         "description":  {
                                             "ta":  "மாநில அளவில் கிடைக்கும் உறுப்பினர் கட்சி நிலைப்பாடுகளை (DMK, INC, DMDK) இணைத்து வழங்கும் ஒருங்கிணைந்த நிலை.",
                                             "en":  "State-level combined stand using available member-party positions: DMK, INC and DMDK."
-                                        }
+                                        },
+                        "profile":  {
+                                        "en":  "https://www.tnelections.info/parties#dmk",
+                                        "ta":  "https://www.tnelections.info/parties#dmk"
+                                    }
                     },
                     {
                         "alias":  "aiadmk-alliance",
@@ -58,7 +62,11 @@
                         "description":  {
                                             "ta":  "மாநில அளவில் கிடைக்கும் உறுப்பினர் கட்சி நிலைப்பாடுகளை (AIADMK, BJP, PMK) இணைத்து வழங்கும் ஒருங்கிணைந்த நிலை.",
                                             "en":  "State-level combined stand using available member-party positions: AIADMK, BJP and PMK."
-                                        }
+                                        },
+                        "profile":  {
+                                        "en":  "https://www.tnelections.info/parties#aiadmk",
+                                        "ta":  "https://www.tnelections.info/parties#aiadmk"
+                                    }
                     },
                     {
                         "alias":  "tvk",
@@ -73,12 +81,19 @@
                         "description":  {
                                             "ta":  "விஜய் தலைமையிலான தமிழக வெற்றி கழகம் (TVK).",
                                             "en":  "Tamilaga Vettri Kazhagam (TVK) led by Vijay."
-                                        }
+                                        },
+                        "profile":  {
+                                        "en":  "https://www.tnelections.info/parties#tvk",
+                                        "ta":  "https://www.tnelections.info/parties#tvk"
+                                    }
                     }
                 ],
     "allianceMetadata":  {
                              "dmk-alliance":  {
-                                                  "majorMembers":  ["DMK", "INC"],
+                                                  "majorMembers":  [
+                                                                       "DMK",
+                                                                       "INC"
+                                                                   ],
                                                   "displayMembers":  {
                                                                          "en":  [
                                                                                     "DMK",
@@ -99,7 +114,10 @@
                                                   "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
                                               },
                              "aiadmk-alliance":  {
-                                                     "majorMembers":  ["AIADMK", "BJP"],
+                                                     "majorMembers":  [
+                                                                          "AIADMK",
+                                                                          "BJP"
+                                                                      ],
                                                      "displayMembers":  {
                                                                             "en":  [
                                                                                        "AIADMK",
@@ -230,28 +248,28 @@
                                      },
                        "positions":  {
                                          "dmk-alliance":  {
-                                                              "position":  "approve",
+                                                              "position":  "strongly-approve",
                                                               "explanation":  {
-                                                                                  "en":  "Alliance position is aligned across members (DMK, INC, DMDK): approve.",
-                                                                                  "ta":  "இந்த கூட்டணியின் உறுப்பினர்கள் (DMK, INC, DMDK) அனைவரும் ஒரே நிலைப்பாட்டில் உள்ளனர்: approve."
+                                                                                  "en":  "Stated position (2026): HPV vaccination for all girls under 14 years — prevent cervical cancer Past performance signal: DMK\u0027s 2026 manifesto: expand CMCHIS to ₹10 lakh/year coverage (from ₹5 lakh) + raise income ceiling to ₹5 lakh + double dialysis units in government hospitals.",
+                                                                                  "ta":  "Stated position (2026): 14 வயதுக்குட்பட்ட அனைத்துப் பெண் குழந்தைகளுக்கும் HPV தடுப்பூசி Past performance signal: DMK 2026: CMCHIS ₹5 லட்சம் → ₹10 லட்சம் + வருமான வரம்பு ₹5 லட்சம் + அரசு மருத்துவமனையில் dialysis இரட்டிப்பு."
                                                                               },
-                                                              "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                              "source":  "https://www.dnaindia.com/india/report-tamil-nadu-election-2026-cm-mk-stalin-dmk-s-superstar-manifesto-focuses-on-breakfast-scheme-kalaignar-magalir-urimai-thittam-enhancement-details-here-3204549"
                                                           },
                                          "aiadmk-alliance":  {
-                                                                 "position":  "neutral",
+                                                                 "position":  "strongly-approve",
                                                                  "explanation":  {
-                                                                                     "en":  "Alliance members hold different positions on this thesis. Combined presentation: AIADMK: approve; BJP: neutral; PMK: approve.",
-                                                                                     "ta":  "இந்த கருத்தில் கூட்டணி உறுப்பினர்களின் நிலைப்பாடுகள் மாறுபடுகின்றன. ஒருங்கிணைந்த காட்சி: AIADMK: approve; BJP: neutral; PMK: approve."
+                                                                                     "en":  "Stated position (2026): Expansion of Amma Unavagam canteens across all districts with improved menu and quality Past performance signal: CMCHIS (covering 1.48 crore families with free treatment up to ₹5 lakh/year at 1,700+ hospitals) was launched under AIADMK — DMK retained it in 2021 acknowledging its value.",
+                                                                                     "ta":  "Stated position (2026): அம்மா உணவகங்களை அனைத்து மாவட்டங்களிலும் விரிவாக்கம்; மேம்படுத்தப்பட்ட மெனு Past performance signal: CMCHIS (AIADMK தொடங்கியது) — 1.48 கோடி குடும்பங்களுக்கு ₹5 லட்சம் வரை இலவச சிகிச்சை. DMK ஆட்சிக்கு வந்தும் இந்த திட்டத்தை தொடர்கிறது."
                                                                                  },
-                                                                 "source":  "https://www.aiadmk.com/"
+                                                                 "source":  "https://www.cmchistn.com/"
                                                              },
                                          "tvk":  {
                                                      "position":  "neutral",
                                                      "explanation":  {
-                                                                         "en":  "TVK public communication supports stronger public services including healthcare quality, but thesis-level fiscal commitments on health spending are not yet formally published; marked neutral in this version.",
-                                                                         "ta":  "சுகாதாரத் தரம் உட்பட அரசு சேவைகள் வலுப்படுத்தப்பட வேண்டும் என TVK பொதுச் செய்திகள் கூறுகின்றன; ஆனால் சுகாதார செலவீனத்திற்கான தலைப்புவாரியான நிதி உறுதிப்பாடுகள் இன்னும் அதிகாரப்பூர்வமாக வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
+                                                                         "en":  "Stated position (2026): Manifesto promise tracked for this category. Past performance signal: TVK\u0027s 2026 manifesto commits to treating healthcare as a fundamental right + \u0027Drug-Free Tamil Nadu\u0027 with anti-drug zones in all schools and colleges.",
+                                                                         "ta":  "Stated position (2026): Manifesto promise tracked for this category. Past performance signal: TVK 2026: சுகாதாரம் அடிப்படை உரிமை + அனைத்து பள்ளி-கல்லூரிகளிலும் \u0027Drug-Free Zone\u0027."
                                                                      },
-                                                     "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                     "source":  "https://www.newsbytesapp.com/news/politics/tvk-s-vijay-unveils-poll-manifesto/story"
                                                  }
                                      }
                    },
@@ -374,20 +392,20 @@
                                      },
                        "positions":  {
                                          "dmk-alliance":  {
-                                                              "position":  "approve",
+                                                              "position":  "strongly-approve",
                                                               "explanation":  {
-                                                                                  "en":  "Alliance position is aligned across members (DMK, INC, DMDK): approve.",
-                                                                                  "ta":  "இந்த கூட்டணியின் உறுப்பினர்கள் (DMK, INC, DMDK) அனைவரும் ஒரே நிலைப்பாட்டில் உள்ளனர்: approve."
+                                                                                  "en":  "Stated position (2026): Increase Kalaignar Magalir Urimai Thittam (women\u0027s rights scheme) from ₹1,000 to ₹2,000 per month for eligible women Past performance signal: Past performance facts were reviewed for this category.",
+                                                                                  "ta":  "Stated position (2026): கலைஞர் மகளிர் உரிமைத் தொகை ₹1,000-லிருந்து ₹2,000-ஆக உயர்த்தப்படும் Past performance signal: Past performance facts were reviewed for this category."
                                                                               },
-                                                              "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                              "source":  "https://www.tnelections.info/manifesto"
                                                           },
                                          "aiadmk-alliance":  {
-                                                                 "position":  "neutral",
+                                                                 "position":  "strongly-approve",
                                                                  "explanation":  {
-                                                                                     "en":  "Alliance members hold different positions on this thesis. Combined presentation: AIADMK: approve; BJP: reject; PMK: approve.",
-                                                                                     "ta":  "இந்த கருத்தில் கூட்டணி உறுப்பினர்களின் நிலைப்பாடுகள் மாறுபடுகின்றன. ஒருங்கிணைந்த காட்சி: AIADMK: approve; BJP: reject; PMK: approve."
+                                                                                     "en":  "Stated position (2026): Rs.10,000 one-time family assistance grant to every family immediately upon assuming power Past performance signal: Past performance facts were reviewed for this category.",
+                                                                                     "ta":  "Stated position (2026): ஆட்சியில் அமர்ந்தவுடன் ஒவ்வொரு குடும்பத்திற்கும் ₹10,000 ஒருமுறை உதவித்தொகை Past performance signal: Past performance facts were reviewed for this category."
                                                                                  },
-                                                                 "source":  "https://www.aiadmk.com/"
+                                                                 "source":  "https://www.tnelections.info/manifesto"
                                                              },
                                          "tvk":  {
                                                      "position":  "neutral",
@@ -446,28 +464,28 @@
                                      },
                        "positions":  {
                                          "dmk-alliance":  {
-                                                              "position":  "approve",
+                                                              "position":  "strongly-approve",
                                                               "explanation":  {
-                                                                                  "en":  "Alliance position is aligned across members (DMK, INC, DMDK): approve.",
-                                                                                  "ta":  "இந்த கூட்டணியின் உறுப்பினர்கள் (DMK, INC, DMDK) அனைவரும் ஒரே நிலைப்பாட்டில் உள்ளனர்: approve."
+                                                                                  "en":  "Stated position (2026): Free electricity for agricultural pump sets for 20 lakh farmers (up from current partial subsidy) Past performance signal: DMK\u0027s 2026 manifesto: paddy MSP ₹3,500/quintal, sugarcane ₹4,500/tonne, milk price hike ₹5/litre, free electric pumps for 20 lakh farmers.",
+                                                                                  "ta":  "Stated position (2026): 20 லட்சம் விவசாயிகளுக்கு இலவச மின்சாரம் வழங்கப்படும் Past performance signal: DMK 2026: நெல் ₹3,500/குவிண்டால், கரும்பு ₹4,500/டன், பால் ₹5 உயர்வு, 20 லட்சம் விவசாயிகளுக்கு இலவச மின்மோட்டார்."
                                                                               },
-                                                              "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                              "source":  "https://www.dnaindia.com/india/report-tamil-nadu-election-2026-cm-mk-stalin-dmk-s-superstar-manifesto-focuses-on-breakfast-scheme-kalaignar-magalir-urimai-thittam-enhancement-details-here-3204549"
                                                           },
                                          "aiadmk-alliance":  {
-                                                                 "position":  "approve",
+                                                                 "position":  "strongly-approve",
                                                                  "explanation":  {
-                                                                                     "en":  "Alliance position is aligned across members (AIADMK, BJP, PMK): approve.",
-                                                                                     "ta":  "இந்த கூட்டணியின் உறுப்பினர்கள் (AIADMK, BJP, PMK) அனைவரும் ஒரே நிலைப்பாட்டில் உள்ளனர்: approve."
+                                                                                     "en":  "Stated position (2026): Increase MGNREGS work days from 100 to 150 days per year for rural workers Past performance signal: AIADMK\u0027s 2026 manifesto: full crop loan waiver from cooperative societies + paddy MSP ₹3,500 + 100% solar pump subsidy + ₹25 lakh accident compensation for fishermen.",
+                                                                                     "ta":  "Stated position (2026): MGNREGS வேலை நாட்களை 100-லிருந்து 150 நாட்களாக அதிகரிக்க மத்திய அரசை வலியுறுத்துவோம் Past performance signal: AIADMK 2026: கூட்டுறவு கடன் முழு தள்ளுபடி + நெல் ₹3,500 + 100% சோலார் பம்ப் மானியம் + மீனவர்களுக்கு ₹25 லட்சம்."
                                                                                  },
-                                                                 "source":  "https://www.aiadmk.com/"
+                                                                 "source":  "https://www.dtnext.in/news/politics/2026-tn-electionsaiadmk-offers-free-fridge-in-full-manifesto"
                                                              },
                                          "tvk":  {
-                                                     "position":  "neutral",
+                                                     "position":  "strongly-approve",
                                                      "explanation":  {
-                                                                         "en":  "TVK public communication has highlighted farmer welfare and fair pricing, but a fully specified official MSP guarantee mechanism is not yet published; marked neutral in this version.",
-                                                                         "ta":  "விவசாய நலன் மற்றும் நியாயமான விலை குறித்து TVK பொது தகவல்கள் வலியுறுத்துகின்றன; ஆனால் MSP உத்தரவாதத்திற்கான முழுமையான அதிகாரப்பூர்வ செயன்முறை இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
+                                                                         "en":  "Stated position (2026): Full waiver of crop loans from agricultural cooperative banks for farmers owning less than 5 acres Past performance signal: TVK: 100% crop loan waiver for farmers under 5 acres + 50% for above 5 acres + free higher education for children of farmers owning less than 2 acres.",
+                                                                         "ta":  "Stated position (2026): 5 ஏக்கருக்கும் குறைவான நிலம் உடைய விவசாயிகளுக்கு கூட்டுறவு வங்கி பயிர்க்கடன் முழுமையாக தள்ளுபடி Past performance signal: TVK: 5 ஏக்கருக்கு கீழ் 100% கடன் தள்ளுபடி + 5 ஏக்கருக்கு மேல் 50% + 2 ஏக்கருக்கு கீழ் விவசாயி பிள்ளைகளுக்கு இலவச கல்வி."
                                                                      },
-                                                     "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                     "source":  "https://www.newsbytesapp.com/news/politics/tvk-s-vijay-unveils-poll-manifesto/story"
                                                  }
                                      }
                    },
@@ -590,28 +608,28 @@
                                      },
                        "positions":  {
                                          "dmk-alliance":  {
-                                                              "position":  "approve",
+                                                              "position":  "strongly-approve",
                                                               "explanation":  {
-                                                                                  "en":  "Alliance position is aligned across members (DMK, INC, DMDK): approve.",
-                                                                                  "ta":  "இந்த கூட்டணியின் உறுப்பினர்கள் (DMK, INC, DMDK) அனைவரும் ஒரே நிலைப்பாட்டில் உள்ளனர்: approve."
+                                                                                  "en":  "Stated position (2026): Zero Dropout Tamil Nadu — eliminate all school dropouts through monitoring, meals, and incentives Past performance signal: DMK\u0027s 2026 manifesto: free laptops for 35 lakh college students + ₹1,500/month student stipend + expand free school breakfast to Class 8.",
+                                                                                  "ta":  "Stated position (2026): பள்ளி இடைநிற்றல் இல்லாத தமிழ்நாடு — Zero Dropout TN Past performance signal: DMK 2026: 35 லட்சம் கல்லூரி மாணவர்களுக்கு இலவச laptop + ₹1,500/மாதம் + காலை உணவு 8ஆம் வகுப்பு வரை."
                                                                               },
-                                                              "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                              "source":  "https://voterlist.co.in/dmk-manifesto-2026-tamil-nadu-elections/"
                                                           },
                                          "aiadmk-alliance":  {
-                                                                 "position":  "neutral",
+                                                                 "position":  "strongly-approve",
                                                                  "explanation":  {
-                                                                                     "en":  "Alliance members hold different positions on this thesis. Combined presentation: AIADMK: neutral; BJP: reject; PMK: approve.",
-                                                                                     "ta":  "இந்த கருத்தில் கூட்டணி உறுப்பினர்களின் நிலைப்பாடுகள் மாறுபடுகின்றன. ஒருங்கிணைந்த காட்சி: AIADMK: neutral; BJP: reject; PMK: approve."
+                                                                                     "en":  "Stated position (2026): Education loan waiver for students who have taken loans for higher education Past performance signal: AIADMK\u0027s 2026 manifesto: raise NEET reservation for government school students from 7.5% → 10% + education loan waiver for poor students.",
+                                                                                     "ta":  "Stated position (2026): உயர்கல்விக்கு கல்விக் கடன் வாங்கிய மாணவர்களுக்கு கடன் தள்ளுபடி Past performance signal: AIADMK 2026: அரசு பள்ளி மாணவர்களுக்கு NEET இட ஒதுக்கீடு 7.5% → 10% + ஏழை மாணவர்களின் கல்விக் கடன் தள்ளுபடி."
                                                                                  },
-                                                                 "source":  "https://www.aiadmk.com/"
+                                                                 "source":  "https://www.livechennai.com/detailnews.asp?catid=\u0026newsid=79092"
                                                              },
                                          "tvk":  {
-                                                     "position":  "neutral",
+                                                     "position":  "strongly-approve",
                                                      "explanation":  {
-                                                                         "en":  "TVK public statements have raised education affordability concerns, but a detailed officially published policy on private-school fee regulation and enforcement is not yet available; marked neutral in this version.",
-                                                                         "ta":  "கல்வி செலவுசுமை குறித்து TVK பொதுச் செய்திகள் கவலை தெரிவிக்கின்றன; ஆனால் தனியார் பள்ளி கட்டண கட்டுப்பாடு மற்றும் அமலாக்கம் குறித்த விரிவான அதிகாரப்பூர்வ கொள்கை இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
+                                                                         "en":  "Stated position (2026): Interest-free loans up to ₹25 lakh for young entrepreneurs — no guarantors, no collateral (\u0027Creative Entrepreneurs Scheme\u0027) Past performance signal: TVK\u0027s 2026 manifesto: 500 Creative Schools + interest-free ₹20 lakh education loans (Class 12 to PhD, no guarantee) + education loan waiver for poor students + TNPSC on a fixed transparent schedule.",
+                                                                         "ta":  "Stated position (2026): \u0027படைப்பாற்றல் தொழில்முனைவோர் திட்டம்\u0027 — இளம் தொழில்முனைவோருக்கு ₹25 லட சம் வரை வட்டியில்லா கடன் — ஜாமீன் இல்லை Past performance signal: TVK 2026: 500 \u0027Creative Schools\u0027 + ₹20 லட்சம் வட்டியில்லா கல்விக் கடன் (12ஆம் வகுப்பு முதல் PhD) + TNPSC நிர்ணயித்த கால அட்டவணையில்."
                                                                      },
-                                                     "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                     "source":  "https://thefederal.com/elections-2026/tamil-nadu-elections-2026-vijay-tvk-releases-poll-manifesto-targets-youth-voters-236677"
                                                  }
                                      }
                    },
@@ -626,28 +644,28 @@
                                      },
                        "positions":  {
                                          "dmk-alliance":  {
-                                                              "position":  "approve",
+                                                              "position":  "strongly-approve",
                                                               "explanation":  {
-                                                                                  "en":  "Alliance position is aligned across members (DMK, INC, DMDK): approve.",
-                                                                                  "ta":  "இந்த கூட்டணியின் உறுப்பினர்கள் (DMK, INC, DMDK) அனைவரும் ஒரே நிலைப்பாட்டில் உள்ளனர்: approve."
+                                                                                  "en":  "Stated position (2026): Increase women\u0027s SHG bank loan ceiling from ₹2 lakh crore in 5 years; priority government procurement from SHG products Past performance signal: DMK\u0027s 2026 manifesto promises to increase Magalir Urimai Thogai from the current ₹1,000/month to ₹2,000/month for 1.37 crore women beneficiaries.",
+                                                                                  "ta":  "Stated position (2026): மகளிர் குழுக்களுக்கு ₹2 லட்சம் கோடி வங்கிக்கடன்; அரசு கொள்முதலில் முன்னுரிமை Past performance signal: DMK 2026: மகளிர் உரிமைத் திட்டம் ₹1,000 → ₹2,000/மாதம் — 1.37 கோடி பெண்களுக்கு."
                                                                               },
-                                                              "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                              "source":  "https://www.newsx.com/elections/dmk-manifesto-2026-stalin-promises-rs-2000-per-month-for-women-50-lakh-jobs-with-pay-hike-ahead-of-2026-assembly-elections-check-key-highlights-here-190671/"
                                                           },
                                          "aiadmk-alliance":  {
-                                                                 "position":  "approve",
+                                                                 "position":  "strongly-approve",
                                                                  "explanation":  {
-                                                                                     "en":  "Alliance position is aligned across members (AIADMK, BJP, PMK): approve.",
-                                                                                     "ta":  "இந்த கூட்டணியின் உறுப்பினர்கள் (AIADMK, BJP, PMK) அனைவரும் ஒரே நிலைப்பாட்டில் உள்ளனர்: approve."
+                                                                                     "en":  "Stated position (2026): Amma Two-Wheeler scheme — ₹25,000 subsidy for 5 lakh women to buy two-wheelers Past performance signal: AIADMK\u0027s 2026 manifesto promises ₹2,000/month (Kula Vilakku Scheme) to female head of every ration card family + ₹25,000 two-wheeler subsidy for working women + free refrigerator.",
+                                                                                     "ta":  "Stated position (2026): அம்மா இரு சக்கர வாகன திட்டம் — 5 லட்சம் பெண்களுக்கு ₹25,000 மானியம் Past performance signal: AIADMK 2026: குல விளக்கு திட்டம் ₹2,000/மாதம் + வேலைக்கு போகும் பெண்களுக்கு ₹25,000 இரு சக்கர மானியம் + இலவச ஃபிரிட்ஜ்."
                                                                                  },
-                                                                 "source":  "https://www.aiadmk.com/"
+                                                                 "source":  "https://www.dtnext.in/news/politics/2026-tn-electionsaiadmk-offers-free-fridge-in-full-manifesto"
                                                              },
                                          "tvk":  {
-                                                     "position":  "neutral",
+                                                     "position":  "strongly-approve",
                                                      "explanation":  {
-                                                                         "en":  "Public TVK messaging supports stronger public safety responsiveness, but a thesis-specific officially published legal package on women\u0027s safety is not yet available; marked neutral in this version.",
-                                                                         "ta":  "பொது பாதுகாப்பு திறன் வலுப்படுத்தப்பட வேண்டும் என TVK பொது அறிக்கைகள் கூறுகின்றன; ஆனால் பெண்கள் பாதுகாப்பு சட்டங்களுக்கு தொடர்பான தலைப்புவாரியான அதிகாரப்பூர்வ சட்டத் திட்டம் இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
+                                                                         "en":  "Stated position (2026): ₹2,500/month cash transfer to all women (excluding government employees) until age 60 — outbids current DMK Kalaignar Magalir Urimai Thogai of ₹1,000 Past performance signal: TVK\u0027s 2026 manifesto promises ₹2,500/month for all women (excluding government employees, up to age 60) — the highest women\u0027s cash transfer offer of all three parties.",
+                                                                         "ta":  "Stated position (2026): அரசு ஊழியர்கள் அல்லாத அனைத்து பெண்களுக்கும் மாதம் ₹2,500 நேரடி பண உதவி (60 வயது வரை) — தற்போதைய DMK திட்டத்தை விட அதிகம் Past performance signal: TVK 2026: அனைத்து பெண்களுக்கும் மாதம் ₹2,500 — மூன்று கட்சிகளிலும் அதிகம். (அரசு ஊழியர்கள் தவிர, வயது 60 வரை)"
                                                                      },
-                                                     "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                     "source":  "https://www.tconews.in/blog/news-2/tvk-chief-vijay-rolls-out-women-centric-welfare-promises-847"
                                                  }
                                      }
                    },
@@ -662,28 +680,28 @@
                                      },
                        "positions":  {
                                          "dmk-alliance":  {
-                                                              "position":  "neutral",
+                                                              "position":  "strongly-approve",
                                                               "explanation":  {
-                                                                                  "en":  "Alliance members hold different positions on this thesis. Combined presentation: DMK: approve; INC: approve; DMDK: neutral.",
-                                                                                  "ta":  "இந்த கருத்தில் கூட்டணி உறுப்பினர்களின் நிலைப்பாடுகள் மாறுபடுகின்றன. ஒருங்கிணைந்த காட்சி: DMK: approve; INC: approve; DMDK: neutral."
+                                                                                  "en":  "Stated position (2026): Tamil Nadu to become a $1 trillion economy by 2030 — attract ₹18 lakh crore investment, 50 lakh jobs Past performance signal: DMK\u0027s 2026 manifesto promises 50 lakh jobs over 5 years + fill 1.5 lakh government vacancies + Naan Mudhalvan with ₹1,500/month stipend. 41.38 lakh already trained — a real delivery.",
+                                                                                  "ta":  "Stated position (2026): தமிழ்நாட்டை 2030-க்குள் $1 டிரில்லியன் பொருளாதாரமாக மாற்றுவோம் Past performance signal: DMK 2026: 5 ஆண்டில் 50 லட்சம் வேலைகள் + 1.5 லட்சம் அரசு காலிப்பணியிடம் + நான் முதல்வன் ₹1,500/மாதம். 41.38 லட்சம் பேர் பயிற்சி — உண்மையான சாதனை."
                                                                               },
-                                                              "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                              "source":  "https://www.thehindu.com/news/national/tamil-nadu/4138-lakh-students-1-lakh-teachers-trained-under-naan-mudhalvan-scheme-tn-government/article69779806.ece"
                                                           },
                                          "aiadmk-alliance":  {
-                                                                 "position":  "neutral",
+                                                                 "position":  "strongly-approve",
                                                                  "explanation":  {
-                                                                                     "en":  "Alliance members hold different positions on this thesis. Combined presentation: AIADMK: approve; BJP: approve; PMK: neutral.",
-                                                                                     "ta":  "இந்த கருத்தில் கூட்டணி உறுப்பினர்களின் நிலைப்பாடுகள் மாறுபடுகின்றன. ஒருங்கிணைந்த காட்சி: AIADMK: approve; BJP: approve; PMK: neutral."
+                                                                                     "en":  "Stated position (2026): Easy loans for small traders and MSME entrepreneurs; single window for all business registrations Past performance signal: AIADMK\u0027s 2026 manifesto promises ₹2,000/month unemployment allowance for graduates and ₹1,000/month for Class 12 pass (non-graduates) who remain jobless.",
+                                                                                     "ta":  "Stated position (2026): சிறு வணிகர்களுக்கும் MSME தொழில்முனைவோருக்கும் எளிதான கடன் வசதி Past performance signal: AIADMK 2026: வேலையில்லாத பட்டதாரிகளுக்கு ₹2,000/மாதம், 12ஆம் வகுப்பு தேர்ச்சியாளர்களுக்கு ₹1,000/மாதம்."
                                                                                  },
-                                                                 "source":  "https://www.aiadmk.com/"
+                                                                 "source":  "https://www.livechennai.com/detailnews.asp?catid=\u0026newsid=79092"
                                                              },
                                          "tvk":  {
-                                                     "position":  "neutral",
+                                                     "position":  "strongly-approve",
                                                      "explanation":  {
-                                                                         "en":  "TVK public communication supports employment-oriented industrial growth, but a detailed officially published policy on zone governance, safeguards and land approach is not yet available; marked neutral in this version.",
-                                                                         "ta":  "வேலைவாய்ப்பு மையப்படுத்திய தொழில் வளர்ச்சிக்கு TVK பொதுச் செய்திகள் ஆதரவு அளிக்கின்றன; ஆனால் தொழில் மண்டல ஆட்சி, பாதுகாப்பு மற்றும் நில அணுகுமுறை குறித்த விரிவான அதிகாரப்பூர்வ கொள்கை இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
+                                                                         "en":  "Stated position (2026): Tamil Nadu Youth Advisory Council — dedicated body to give youth direct input into state policy decisions Past performance signal: TVK\u0027s 2026 manifesto promises ₹4,000/month graduate unemployment allowance + 5 lakh paid internships per year (₹10,000/month) + 75% Tamil quota in private jobs + interest-free ₹25 lakh startup loans.",
+                                                                         "ta":  "Stated position (2026): தமிழ்நாடு இளையோர் ஆலோசனை மன்றம் — அரசின் கொள்கை முடிவுகளில் இளையோருக்கு நேரடி பங்கு Past performance signal: TVK 2026: பட்டதாரிகளுக்கு ₹4,000/மாதம் + 5 லட்சம் internship/ஆண்டு (₹10,000/மாதம்) + தனியார் வேலையில் 75% TN பங்கு + ₹25 லட்சம் வட்டியில்லா தொழில் கடன்."
                                                                      },
-                                                     "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                     "source":  "https://thefederal.com/elections-2026/tamil-nadu-elections-2026-vijay-tvk-releases-poll-manifesto-targets-youth-voters-236677"
                                                  }
                                      }
                    },
@@ -698,28 +716,28 @@
                                      },
                        "positions":  {
                                          "dmk-alliance":  {
-                                                              "position":  "approve",
+                                                              "position":  "strongly-approve",
                                                               "explanation":  {
-                                                                                  "en":  "Alliance position is aligned across members (DMK, INC, DMDK): approve.",
-                                                                                  "ta":  "இந்த கூட்டணியின் உறுப்பினர்கள் (DMK, INC, DMDK) அனைவரும் ஒரே நிலைப்பாட்டில் உள்ளனர்: approve."
+                                                                                  "en":  "Stated position (2026): Zero Dropout Tamil Nadu — eliminate all school dropouts through monitoring, meals, and incentives Past performance signal: DMK\u0027s 2026 manifesto: free laptops for 35 lakh college students + ₹1,500/month student stipend + expand free school breakfast to Class 8.",
+                                                                                  "ta":  "Stated position (2026): பள்ளி இடைநிற்றல் இல்லாத தமிழ்நாடு — Zero Dropout TN Past performance signal: DMK 2026: 35 லட்சம் கல்லூரி மாணவர்களுக்கு இலவச laptop + ₹1,500/மாதம் + காலை உணவு 8ஆம் வகுப்பு வரை."
                                                                               },
-                                                              "source":  "https://www.dmk.in/ta/party/ideology/"
+                                                              "source":  "https://voterlist.co.in/dmk-manifesto-2026-tamil-nadu-elections/"
                                                           },
                                          "aiadmk-alliance":  {
-                                                                 "position":  "neutral",
+                                                                 "position":  "strongly-approve",
                                                                  "explanation":  {
-                                                                                     "en":  "Alliance members hold different positions on this thesis. Combined presentation: AIADMK: approve; BJP: neutral; PMK: approve.",
-                                                                                     "ta":  "இந்த கருத்தில் கூட்டணி உறுப்பினர்களின் நிலைப்பாடுகள் மாறுபடுகின்றன. ஒருங்கிணைந்த காட்சி: AIADMK: approve; BJP: neutral; PMK: approve."
+                                                                                     "en":  "Stated position (2026): Education loan waiver for students who have taken loans for higher education Past performance signal: AIADMK\u0027s 2026 manifesto: raise NEET reservation for government school students from 7.5% → 10% + education loan waiver for poor students.",
+                                                                                     "ta":  "Stated position (2026): உயர்கல்விக்கு கல்விக் கடன் வாங்கிய மாணவர்களுக்கு கடன் தள்ளுபடி Past performance signal: AIADMK 2026: அரசு பள்ளி மாணவர்களுக்கு NEET இட ஒதுக்கீடு 7.5% → 10% + ஏழை மாணவர்களின் கல்விக் கடன் தள்ளுபடி."
                                                                                  },
-                                                                 "source":  "https://www.aiadmk.com/"
+                                                                 "source":  "https://www.livechennai.com/detailnews.asp?catid=\u0026newsid=79092"
                                                              },
                                          "tvk":  {
-                                                     "position":  "neutral",
+                                                     "position":  "strongly-approve",
                                                      "explanation":  {
-                                                                         "en":  "Public-source TVK messaging generally emphasises Tamil language pride and access, but a complete officially published school-medium framework is not yet available; marked neutral in this version.",
-                                                                         "ta":  "தமிழ் மொழி பெருமை மற்றும் அணுகலை TVK பொது அறிக்கைகள் வலியுறுத்துகின்றன; ஆனால் பள்ளி பயிற்று மொழி குறித்த முழுமையான அதிகாரப்பூர்வ கட்டமைப்பு இன்னும் வெளியிடப்படவில்லை. எனவே இந்த பதிப்பில் நடுநிலையாகக் குறிக்கப்பட்டுள்ளது."
+                                                                         "en":  "Stated position (2026): Interest-free loans up to ₹25 lakh for young entrepreneurs — no guarantors, no collateral (\u0027Creative Entrepreneurs Scheme\u0027) Past performance signal: TVK\u0027s 2026 manifesto: 500 Creative Schools + interest-free ₹20 lakh education loans (Class 12 to PhD, no guarantee) + education loan waiver for poor students + TNPSC on a fixed transparent schedule.",
+                                                                         "ta":  "Stated position (2026): \u0027படைப்பாற்றல் தொழில்முனைவோர் திட்டம்\u0027 — இளம் தொழில்முனைவோருக்கு ₹25 லட சம் வரை வட்டியில்லா கடன் — ஜாமீன் இல்லை Past performance signal: TVK 2026: 500 \u0027Creative Schools\u0027 + ₹20 லட்சம் வட்டியில்லா கல்விக் கடன் (12ஆம் வகுப்பு முதல் PhD) + TNPSC நிர்ணயித்த கால அட்டவணையில்."
                                                                      },
-                                                     "source":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam#Ideology"
+                                                     "source":  "https://thefederal.com/elections-2026/tamil-nadu-elections-2026-vijay-tvk-releases-poll-manifesto-targets-youth-voters-236677"
                                                  }
                                      }
                    }
@@ -757,56 +775,223 @@
                          }
                      ],
     "alliancePartnerSeats":  {
-        "dmk-alliance":  [
-            { "code": "DMK", "name": "DMK", "symbol": "☀", "seats": 176,
-              "links": [ { "label": "Website", "url": "https://www.dmk.in/" }, { "label": "Manifesto", "url": "https://www.thehindu.com/incoming/70799704-dmk-manifesto-2026pdf" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "INC", "name": "INC", "symbol": "✋", "seats": 28,
-              "links": [ { "label": "Website", "url": "https://www.inc.in/" }, { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Indian_National_Congress" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "DMDK", "name": "DMDK", "symbol": "🥁", "seats": 10,
-              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Desiya_Murpokku_Dravida_Kazhagam" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "VCK", "name": "VCK", "symbol": "💠", "seats": 8,
-              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Viduthalai_Chiruthaigal_Katchi" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "CPI(M)", "name": "CPI(M)", "symbol": "🔨", "seats": 5,
-              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Communist_Party_of_India_(Marxist)" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "CPI", "name": "CPI", "symbol": "🌾", "seats": 5,
-              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Communist_Party_of_India" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "IUML", "name": "IUML", "symbol": "🪜", "seats": 2,
-              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Indian_Union_Muslim_League" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" }
-        ],
-        "aiadmk-alliance":  [
-            { "code": "AIADMK", "name": "AIADMK", "symbol": "🍃", "seats": 172,
-              "links": [ { "label": "Website", "url": "https://www.aiadmk.com/" }, { "label": "Manifesto", "url": "https://www.thehindu.com/news/resources/70779689-aiadmk-manifestotn-assembly-election-2026pdf" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "BJP", "name": "BJP", "symbol": "🪷", "seats": 33,
-              "links": [ { "label": "Website", "url": "https://www.bjp.org/" }, { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "PMK", "name": "PMK", "symbol": "🥭", "seats": 18,
-              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Pattali_Makkal_Katchi" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "AMMK", "name": "AMMK", "symbol": "🍲", "seats": 11,
-              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Amma_Makkal_Munneetra_Kazhagam" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "TMC(M)", "name": "TMC(M)", "symbol": "🪷", "seats": 5,
-              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Tamil_Maanila_Congress_(Moopanar)" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "IJK", "name": "IJK", "symbol": "🍃", "seats": 2,
-              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Indhiya_Jananayaga_Katchi" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" },
-            { "code": "SIFB", "name": "South Indian Forward Bloc", "symbol": "🪷", "seats": 1,
-              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/South_Indian_Forward_Bloc" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" }
-        ],
-        "tvk":  [
-            { "code": "TVK", "name": "Tamilaga Vettri Kazhagam", "symbol": "⭐", "seats": 233,
-              "links": [ { "label": "Wikipedia", "url": "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam" } ],
-              "source": "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" }
-        ]
-    }
+                                 "dmk-alliance":  [
+                                                      {
+                                                          "code":  "DMK",
+                                                          "name":  "DMK",
+                                                          "symbol":  "☀",
+                                                          "seats":  176,
+                                                          "links":  [
+                                                                        {
+                                                                            "label":  "Website",
+                                                                            "url":  "https://www.dmk.in/"
+                                                                        },
+                                                                        {
+                                                                            "label":  "Manifesto",
+                                                                            "url":  "https://www.thehindu.com/incoming/70799704-dmk-manifesto-2026pdf"
+                                                                        }
+                                                                    ],
+                                                          "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                      },
+                                                      {
+                                                          "code":  "INC",
+                                                          "name":  "INC",
+                                                          "symbol":  "✋",
+                                                          "seats":  28,
+                                                          "links":  [
+                                                                        {
+                                                                            "label":  "Website",
+                                                                            "url":  "https://www.inc.in/"
+                                                                        },
+                                                                        {
+                                                                            "label":  "Wikipedia",
+                                                                            "url":  "https://en.wikipedia.org/wiki/Indian_National_Congress"
+                                                                        }
+                                                                    ],
+                                                          "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                      },
+                                                      {
+                                                          "code":  "DMDK",
+                                                          "name":  "DMDK",
+                                                          "symbol":  "🥁",
+                                                          "seats":  10,
+                                                          "links":  [
+                                                                        {
+                                                                            "label":  "Wikipedia",
+                                                                            "url":  "https://en.wikipedia.org/wiki/Desiya_Murpokku_Dravida_Kazhagam"
+                                                                        }
+                                                                    ],
+                                                          "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                      },
+                                                      {
+                                                          "code":  "VCK",
+                                                          "name":  "VCK",
+                                                          "symbol":  "💠",
+                                                          "seats":  8,
+                                                          "links":  [
+                                                                        {
+                                                                            "label":  "Wikipedia",
+                                                                            "url":  "https://en.wikipedia.org/wiki/Viduthalai_Chiruthaigal_Katchi"
+                                                                        }
+                                                                    ],
+                                                          "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                      },
+                                                      {
+                                                          "code":  "CPI(M)",
+                                                          "name":  "CPI(M)",
+                                                          "symbol":  "🔨",
+                                                          "seats":  5,
+                                                          "links":  [
+                                                                        {
+                                                                            "label":  "Wikipedia",
+                                                                            "url":  "https://en.wikipedia.org/wiki/Communist_Party_of_India_(Marxist)"
+                                                                        }
+                                                                    ],
+                                                          "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                      },
+                                                      {
+                                                          "code":  "CPI",
+                                                          "name":  "CPI",
+                                                          "symbol":  "🌾",
+                                                          "seats":  5,
+                                                          "links":  [
+                                                                        {
+                                                                            "label":  "Wikipedia",
+                                                                            "url":  "https://en.wikipedia.org/wiki/Communist_Party_of_India"
+                                                                        }
+                                                                    ],
+                                                          "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                      },
+                                                      {
+                                                          "code":  "IUML",
+                                                          "name":  "IUML",
+                                                          "symbol":  "🪜",
+                                                          "seats":  2,
+                                                          "links":  [
+                                                                        {
+                                                                            "label":  "Wikipedia",
+                                                                            "url":  "https://en.wikipedia.org/wiki/Indian_Union_Muslim_League"
+                                                                        }
+                                                                    ],
+                                                          "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                      }
+                                                  ],
+                                 "aiadmk-alliance":  [
+                                                         {
+                                                             "code":  "AIADMK",
+                                                             "name":  "AIADMK",
+                                                             "symbol":  "🍃",
+                                                             "seats":  172,
+                                                             "links":  [
+                                                                           {
+                                                                               "label":  "Website",
+                                                                               "url":  "https://www.aiadmk.com/"
+                                                                           },
+                                                                           {
+                                                                               "label":  "Manifesto",
+                                                                               "url":  "https://www.thehindu.com/news/resources/70779689-aiadmk-manifestotn-assembly-election-2026pdf"
+                                                                           }
+                                                                       ],
+                                                             "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                         },
+                                                         {
+                                                             "code":  "BJP",
+                                                             "name":  "BJP",
+                                                             "symbol":  "🪷",
+                                                             "seats":  33,
+                                                             "links":  [
+                                                                           {
+                                                                               "label":  "Website",
+                                                                               "url":  "https://www.bjp.org/"
+                                                                           },
+                                                                           {
+                                                                               "label":  "Wikipedia",
+                                                                               "url":  "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party"
+                                                                           }
+                                                                       ],
+                                                             "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                         },
+                                                         {
+                                                             "code":  "PMK",
+                                                             "name":  "PMK",
+                                                             "symbol":  "🥭",
+                                                             "seats":  18,
+                                                             "links":  [
+                                                                           {
+                                                                               "label":  "Wikipedia",
+                                                                               "url":  "https://en.wikipedia.org/wiki/Pattali_Makkal_Katchi"
+                                                                           }
+                                                                       ],
+                                                             "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                         },
+                                                         {
+                                                             "code":  "AMMK",
+                                                             "name":  "AMMK",
+                                                             "symbol":  "🍲",
+                                                             "seats":  11,
+                                                             "links":  [
+                                                                           {
+                                                                               "label":  "Wikipedia",
+                                                                               "url":  "https://en.wikipedia.org/wiki/Amma_Makkal_Munneetra_Kazhagam"
+                                                                           }
+                                                                       ],
+                                                             "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                         },
+                                                         {
+                                                             "code":  "TMC(M)",
+                                                             "name":  "TMC(M)",
+                                                             "symbol":  "🪷",
+                                                             "seats":  5,
+                                                             "links":  [
+                                                                           {
+                                                                               "label":  "Wikipedia",
+                                                                               "url":  "https://en.wikipedia.org/wiki/Tamil_Maanila_Congress_(Moopanar)"
+                                                                           }
+                                                                       ],
+                                                             "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                         },
+                                                         {
+                                                             "code":  "IJK",
+                                                             "name":  "IJK",
+                                                             "symbol":  "🍃",
+                                                             "seats":  2,
+                                                             "links":  [
+                                                                           {
+                                                                               "label":  "Wikipedia",
+                                                                               "url":  "https://en.wikipedia.org/wiki/Indhiya_Jananayaga_Katchi"
+                                                                           }
+                                                                       ],
+                                                             "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                         },
+                                                         {
+                                                             "code":  "SIFB",
+                                                             "name":  "South Indian Forward Bloc",
+                                                             "symbol":  "🪷",
+                                                             "seats":  1,
+                                                             "links":  [
+                                                                           {
+                                                                               "label":  "Wikipedia",
+                                                                               "url":  "https://en.wikipedia.org/wiki/South_Indian_Forward_Bloc"
+                                                                           }
+                                                                       ],
+                                                             "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                                         }
+                                                     ],
+                                 "tvk":  [
+                                             {
+                                                 "code":  "TVK",
+                                                 "name":  "Tamilaga Vettri Kazhagam",
+                                                 "symbol":  "⭐",
+                                                 "seats":  233,
+                                                 "links":  [
+                                                               {
+                                                                   "label":  "Wikipedia",
+                                                                   "url":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
+                                                               }
+                                                           ],
+                                                 "source":  "https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election"
+                                             }
+                                         ]
+                             },
+    "candidateSourceNote":  "Thesis positions enriched from https://www.tnelections.info/manifesto and party_facts (one-time run)."
 }

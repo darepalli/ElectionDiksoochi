@@ -45,9 +45,13 @@
                                             "ta":  "Dindigul தொகுதிக்கான திமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
                                         },
                         "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam",
-                                        "ta":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam"
-                                    }
+                                        "en":  "https://www.tnelections.info/parties#dmk",
+                                        "ta":  "https://www.tnelections.info/parties#dmk"
+                                    },
+                        "partyProfile":  {
+                                             "en":  "https://www.tnelections.info/parties#dmk",
+                                             "ta":  "https://www.tnelections.info/parties#dmk"
+                                         }
                     },
                     {
                         "alias":  "cand-aiadmk",
@@ -64,9 +68,13 @@
                                             "ta":  "Dindigul தொகுதிக்கான அதிமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
                                         },
                         "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam",
-                                        "ta":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam"
-                                    }
+                                        "en":  "https://www.tnelections.info/parties#aiadmk",
+                                        "ta":  "https://www.tnelections.info/parties#aiadmk"
+                                    },
+                        "partyProfile":  {
+                                             "en":  "https://www.tnelections.info/parties#aiadmk",
+                                             "ta":  "https://www.tnelections.info/parties#aiadmk"
+                                         }
                     },
                     {
                         "alias":  "cand-tvk",
@@ -83,9 +91,13 @@
                                             "ta":  "Public-source mapping: Nazeer Raja is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer."
                                         },
                         "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam",
-                                        "ta":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
-                                    }
+                                        "en":  "https://www.tnelections.info/parties#tvk",
+                                        "ta":  "https://www.tnelections.info/parties#tvk"
+                                    },
+                        "partyProfile":  {
+                                             "en":  "https://www.tnelections.info/parties#tvk",
+                                             "ta":  "https://www.tnelections.info/parties#tvk"
+                                         }
                     }
                 ],
     "theses":  [
@@ -100,20 +112,20 @@
                                      },
                        "positions":  {
                                          "cand-aiadmk":  {
-                                                             "position":  "approve",
+                                                             "position":  "strongly-approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports accelerated neighborhood roads and drainage maintenance in Dindigul with stronger local body execution and escalation.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "en":  "Stated position (2026): Free bus travel for all citizens (men and women) on government buses Past performance signal: Past performance facts were reviewed for this category.",
+                                                                                 "ta":  "Stated position (2026): அரசு பேரந்துகளில் அனைத்து குடிமக்களுக்கும் இலவசப் பயணம் Past performance signal: Past performance facts were reviewed for this category."
                                                                              },
-                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                             "source":  "https://www.tnelections.info/manifesto"
                                                          },
                                          "cand-dmk":  {
-                                                          "position":  "approve",
+                                                          "position":  "strongly-approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports integrated road relaying and storm-water drain upgrades in Dindigul with local dashboards and time-bound completion targets.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "Stated position (2026): 10,000 new modern buses for public transport within 5 years Past performance signal: Past performance facts were reviewed for this category.",
+                                                                              "ta":  "Stated position (2026): ஐந்து ஆண்டுகளில் 10,000 புதிய நவீன பேரந்துகள் Past performance signal: Past performance facts were reviewed for this category."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://www.tnelections.info/manifesto"
                                                       },
                                          "cand-tvk":  {
                                                           "position":  "neutral",
@@ -172,28 +184,28 @@
                                      },
                        "positions":  {
                                          "cand-aiadmk":  {
-                                                             "position":  "approve",
+                                                             "position":  "strongly-approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports strengthening public hospital access for Dindigul with improved specialist availability and service reliability.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "en":  "Stated position (2026): Expansion of Amma Unavagam canteens across all districts with improved menu and quality Past performance signal: CMCHIS (covering 1.48 crore families with free treatment up to ₹5 lakh/year at 1,700+ hospitals) was launched under AIADMK — DMK retained it in 2021 acknowledging its value.",
+                                                                                 "ta":  "Stated position (2026): அம்மா உணவகங்களை அனைத்து மாவட்டங்களிலும் விரிவாக்கம்; மேம்படுத்தப்பட்ட மெனு Past performance signal: CMCHIS (AIADMK தொடங்கியது) — 1.48 கோடி குடும்பங்களுக்கு ₹5 லட்சம் வரை இலவச சிகிச்சை. DMK ஆட்சிக்கு வந்தும் இந்த திட்டத்தை தொடர்கிறது."
                                                                              },
-                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                             "source":  "https://www.cmchistn.com/"
                                                          },
                                          "cand-dmk":  {
-                                                          "position":  "approve",
+                                                          "position":  "strongly-approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports expanding PHC staffing, diagnostics, and referral coordination for residents of Dindigul.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "Stated position (2026): HPV vaccination for all girls under 14 years — prevent cervical cancer Past performance signal: DMK\u0027s 2026 manifesto: expand CMCHIS to ₹10 lakh/year coverage (from ₹5 lakh) + raise income ceiling to ₹5 lakh + double dialysis units in government hospitals.",
+                                                                              "ta":  "Stated position (2026): 14 வயதுக்குட்பட்ட அனைத்துப் பெண் குழந்தைகளுக்கும் HPV தடுப்பூசி Past performance signal: DMK 2026: CMCHIS ₹5 லட்சம் → ₹10 லட்சம் + வருமான வரம்பு ₹5 லட்சம் + அரசு மருத்துவமனையில் dialysis இரட்டிப்பு."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://www.dnaindia.com/india/report-tamil-nadu-election-2026-cm-mk-stalin-dmk-s-superstar-manifesto-focuses-on-breakfast-scheme-kalaignar-magalir-urimai-thittam-enhancement-details-here-3204549"
                                                       },
                                          "cand-tvk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
-                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                              "en":  "Stated position (2026): Manifesto promise tracked for this category. Past performance signal: TVK\u0027s 2026 manifesto commits to treating healthcare as a fundamental right + \u0027Drug-Free Tamil Nadu\u0027 with anti-drug zones in all schools and colleges.",
+                                                                              "ta":  "Stated position (2026): Manifesto promise tracked for this category. Past performance signal: TVK 2026: சுகாதாரம் அடிப்படை உரிமை + அனைத்து பள்ளி-கல்லூரிகளிலும் \u0027Drug-Free Zone\u0027."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://www.newsbytesapp.com/news/politics/tvk-s-vijay-unveils-poll-manifesto/story"
                                                       }
                                      }
                    },
@@ -208,28 +220,28 @@
                                      },
                        "positions":  {
                                          "cand-aiadmk":  {
-                                                             "position":  "approve",
+                                                             "position":  "strongly-approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports women-centric mobility improvements in Dindigul, including safer transit stops and complaint follow-through.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "en":  "Stated position (2026): Amma Two-Wheeler scheme — ₹25,000 subsidy for 5 lakh women to buy two-wheelers Past performance signal: AIADMK\u0027s 2026 manifesto promises ₹2,000/month (Kula Vilakku Scheme) to female head of every ration card family + ₹25,000 two-wheeler subsidy for working women + free refrigerator.",
+                                                                                 "ta":  "Stated position (2026): அம்மா இரு சக்கர வாகன திட்டம் — 5 லட்சம் பெண்களுக்கு ₹25,000 மானியம் Past performance signal: AIADMK 2026: குல விளக்கு திட்டம் ₹2,000/மாதம் + வேலைக்கு போகும் பெண்களுக்கு ₹25,000 இரு சக்கர மானியம் + இலவச ஃபிரிட்ஜ்."
                                                                              },
-                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                             "source":  "https://www.dtnext.in/news/politics/2026-tn-electionsaiadmk-offers-free-fridge-in-full-manifesto"
                                                          },
                                          "cand-dmk":  {
-                                                          "position":  "approve",
+                                                          "position":  "strongly-approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports expanded street-lighting audits, CCTV coverage, and safety patrol coordination in Dindigul.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "Stated position (2026): Increase women\u0027s SHG bank loan ceiling from ₹2 lakh crore in 5 years; priority government procurement from SHG products Past performance signal: DMK\u0027s 2026 manifesto promises to increase Magalir Urimai Thogai from the current ₹1,000/month to ₹2,000/month for 1.37 crore women beneficiaries.",
+                                                                              "ta":  "Stated position (2026): மகளிர் குழுக்களுக்கு ₹2 லட்சம் கோடி வங்கிக்கடன்; அரசு கொள்முதலில் முன்னுரிமை Past performance signal: DMK 2026: மகளிர் உரிமைத் திட்டம் ₹1,000 → ₹2,000/மாதம் — 1.37 கோடி பெண்களுக்கு."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://www.newsx.com/elections/dmk-manifesto-2026-stalin-promises-rs-2000-per-month-for-women-50-lakh-jobs-with-pay-hike-ahead-of-2026-assembly-elections-check-key-highlights-here-190671/"
                                                       },
                                          "cand-tvk":  {
-                                                          "position":  "neutral",
+                                                          "position":  "strongly-approve",
                                                           "explanation":  {
-                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
-                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                              "en":  "Stated position (2026): ₹2,500/month cash transfer to all women (excluding government employees) until age 60 — outbids current DMK Kalaignar Magalir Urimai Thogai of ₹1,000 Past performance signal: TVK\u0027s 2026 manifesto promises ₹2,500/month for all women (excluding government employees, up to age 60) — the highest women\u0027s cash transfer offer of all three parties.",
+                                                                              "ta":  "Stated position (2026): அரசு ஊழியர்கள் அல்லாத அனைத்து பெண்களுக்கும் மாதம் ₹2,500 நேரடி பண உதவி (60 வயது வரை) — தற்போதைய DMK திட்டத்தை விட அதிகம் Past performance signal: TVK 2026: அனைத்து பெண்களுக்கும் மாதம் ₹2,500 — மூன்று கட்சிகளிலும் அதிகம். (அரசு ஊழியர்கள் தவிர, வயது 60 வரை)"
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://www.tconews.in/blog/news-2/tvk-chief-vijay-rolls-out-women-centric-welfare-promises-847"
                                                       }
                                      }
                    },
@@ -244,28 +256,28 @@
                                      },
                        "positions":  {
                                          "cand-aiadmk":  {
-                                                             "position":  "approve",
+                                                             "position":  "strongly-approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports local enterprise growth in Dindigul through job-linked training, small business support, and commerce facilitation.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "en":  "Stated position (2026): Easy loans for small traders and MSME entrepreneurs; single window for all business registrations Past performance signal: AIADMK\u0027s 2026 manifesto promises ₹2,000/month unemployment allowance for graduates and ₹1,000/month for Class 12 pass (non-graduates) who remain jobless.",
+                                                                                 "ta":  "Stated position (2026): சிறு வணிகர்களுக்கும் MSME தொழில்முனைவோருக்கும் எளிதான கடன் வசதி Past performance signal: AIADMK 2026: வேலையில்லாத பட்டதாரிகளுக்கு ₹2,000/மாதம், 12ஆம் வகுப்பு தேர்ச்சியாளர்களுக்கு ₹1,000/மாதம்."
                                                                              },
-                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                             "source":  "https://www.livechennai.com/detailnews.asp?catid=\u0026newsid=79092"
                                                          },
                                          "cand-dmk":  {
-                                                          "position":  "approve",
+                                                          "position":  "strongly-approve",
                                                           "explanation":  {
-                                                                              "en":  "Supports youth skilling and MSME support in Dindigul, linked to district-level services and manufacturing demand.",
-                                                                              "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                              "en":  "Stated position (2026): Tamil Nadu to become a $1 trillion economy by 2030 — attract ₹18 lakh crore investment, 50 lakh jobs Past performance signal: DMK\u0027s 2026 manifesto promises 50 lakh jobs over 5 years + fill 1.5 lakh government vacancies + Naan Mudhalvan with ₹1,500/month stipend. 41.38 lakh already trained — a real delivery.",
+                                                                              "ta":  "Stated position (2026): தமிழ்நாட்டை 2030-க்குள் $1 டிரில்லியன் பொருளாதாரமாக மாற்றுவோம் Past performance signal: DMK 2026: 5 ஆண்டில் 50 லட்சம் வேலைகள் + 1.5 லட்சம் அரசு காலிப்பணியிடம் + நான் முதல்வன் ₹1,500/மாதம். 41.38 லட்சம் பேர் பயிற்சி — உண்மையான சாதனை."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://www.thehindu.com/news/national/tamil-nadu/4138-lakh-students-1-lakh-teachers-trained-under-naan-mudhalvan-scheme-tn-government/article69779806.ece"
                                                       },
                                          "cand-tvk":  {
-                                                          "position":  "neutral",
+                                                          "position":  "strongly-approve",
                                                           "explanation":  {
-                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
-                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                              "en":  "Stated position (2026): Tamil Nadu Youth Advisory Council — dedicated body to give youth direct input into state policy decisions Past performance signal: TVK\u0027s 2026 manifesto promises ₹4,000/month graduate unemployment allowance + 5 lakh paid internships per year (₹10,000/month) + 75% Tamil quota in private jobs + interest-free ₹25 lakh startup loans.",
+                                                                              "ta":  "Stated position (2026): தமிழ்நாடு இளையோர் ஆலோசனை மன்றம் — அரசின் கொள்கை முடிவுகளில் இளையோருக்கு நேரடி பங்கு Past performance signal: TVK 2026: பட்டதாரிகளுக்கு ₹4,000/மாதம் + 5 லட்சம் internship/ஆண்டு (₹10,000/மாதம்) + தனியார் வேலையில் 75% TN பங்கு + ₹25 லட்சம் வட்டியில்லா தொழில் கடன்."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://thefederal.com/elections-2026/tamil-nadu-elections-2026-vijay-tvk-releases-poll-manifesto-targets-youth-voters-236677"
                                                       }
                                      }
                    },
@@ -340,5 +352,5 @@
                      ],
     "candidateSource":  "https://en.wikipedia.org/wiki/2021_Tamil_Nadu_Legislative_Assembly_election",
     "candidateSourceType":  "baseline-2021-prominent-parties-table",
-    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. TVK candidate mapped from https://tnelections2026.in/candidates.html"
+    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. TVK candidate mapped from https://tnelections2026.in/candidates.html Thesis positions enriched from https://www.tnelections.info/manifesto and party_facts (one-time run). Candidate profiles mapped from tnelections.info Supabase candidates table (one-time run)."
 }

@@ -2109,10 +2109,14 @@
           });
           debugLog('party fallback keys=' + Object.keys(partySourceMap).length);
 
-          // Build candidate profile map from optional parties[].profile links.
+          // Build candidate profile map from optional parties[].candidateProfile links.
           parties.forEach(function (party) {
             var profileUrl = '';
-            if (party.profile && typeof party.profile === 'string') {
+            if (party.candidateProfile && typeof party.candidateProfile === 'string') {
+              profileUrl = party.candidateProfile;
+            } else if (party.candidateProfile && typeof party.candidateProfile === 'object') {
+              profileUrl = party.candidateProfile[uiLang] || party.candidateProfile.en || party.candidateProfile.ta || '';
+            } else if (party.profile && typeof party.profile === 'string') {
               profileUrl = party.profile;
             } else if (party.profile && typeof party.profile === 'object') {
               profileUrl = party.profile[uiLang] || party.profile.en || party.profile.ta || '';
@@ -2139,7 +2143,13 @@
             }
 
             var meta = PARTY_META[partyTag] || null;
-            var partyWiki = meta ? meta.wiki : '';
+            var partyWiki = '';
+            if (party.partyProfile && typeof party.partyProfile === 'string') {
+              partyWiki = party.partyProfile;
+            } else if (party.partyProfile && typeof party.partyProfile === 'object') {
+              partyWiki = party.partyProfile[uiLang] || party.partyProfile.en || party.partyProfile.ta || '';
+            }
+            if (!partyWiki) partyWiki = meta ? meta.wiki : '';
             var symbolText = meta ? meta.symbol : '';
 
             if (!profileUrl && !partyWiki) return;

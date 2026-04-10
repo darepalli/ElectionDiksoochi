@@ -41,8 +41,8 @@
                                       "ta":  "ராஜேஷ் / தி.மு.க"
                                   },
                         "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Dravida_Munnetra_Kazhagam",
-                                        "ta":  "https://ta.wikipedia.org/wiki/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%9F_%E0%AE%AE%E0%AF%81%E0%AE%A9%E0%AF%8D%E0%AE%A9%E0%AF%87%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%95%E0%AF%8D_%E0%AE%95%E0%AE%B4%E0%AE%95%E0%AE%AE%E0%AF%8D"
+                                        "en":  "https://www.tnelections.info/parties#dmk",
+                                        "ta":  "https://www.tnelections.info/parties#dmk"
                                     },
                         "description":  {
                                             "en":  "Nominated by DMK. Former councillor for Ward 58. Focus areas: drainage \u0026 flooding, public health infrastructure and Chepauk stadium development.",
@@ -60,8 +60,8 @@
                                       "ta":  "பிரியா / அ.தி.மு.க"
                                   },
                         "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam",
-                                        "ta":  "https://ta.wikipedia.org/wiki/%E0%AE%85%E0%AE%A3%E0%AF%88%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%AF_%E0%AE%85%E0%AE%A3%E0%AF%8D%E0%AE%A3%E0%AE%BE_%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%9F_%E0%AE%AE%E0%AF%81%E0%AE%A9%E0%AF%8D%E0%AE%A9%E0%AF%87%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%95%E0%AF%8D_%E0%AE%95%E0%AE%B4%E0%AE%95%E0%AE%AE%E0%AF%8D"
+                                        "en":  "https://www.tnelections.info/parties#aiadmk",
+                                        "ta":  "https://www.tnelections.info/parties#aiadmk"
                                     },
                         "description":  {
                                             "en":  "Nominated by AIADMK. Social worker with 15 years of community work in Triplicane. Advocates for improved public transport connectivity and affordable housing.",
@@ -79,8 +79,8 @@
                                       "ta":  "வெங்கடேஷ் / பி.ஜே.பி"
                                   },
                         "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party",
-                                        "ta":  "https://ta.wikipedia.org/wiki/%E0%AE%AA%E0%AE%BE%E0%AE%B0%E0%AE%A4%E0%AE%BF%E0%AE%AF_%E0%AE%9C%E0%AE%A9%E0%AE%A4%E0%AE%BE_%E0%AE%95%E0%AE%9F%E0%AF%8D%E0%AE%9A%E0%AE%BF"
+                                        "en":  "https://www.tnelections.info/parties#bjp",
+                                        "ta":  "https://www.tnelections.info/parties#bjp"
                                     },
                         "description":  {
                                             "en":  "Nominated by BJP. Businessman and party district secretary. Champions Central Government welfare schemes, Kashi Tamil Sangamam ties and smart city projects.",
@@ -119,18 +119,20 @@
                                      },
                        "positions":  {
                                          "cand-dmk":  {
-                                                          "position":  "approve",
+                                                          "position":  "strongly-approve",
                                                           "explanation":  {
-                                                                              "en":  "Rajesh Kumar has already submitted a detailed project report to CMWSSB for the Chepauk drain upgrade and has committed ₹12 crore from MLALAD funds.",
-                                                                              "ta":  "ராஜேஷ் குமார் CMWSSB-க்கு விரிவான திட்ட அறிக்கையை சமர்ப்பித்துள்ளார்."
-                                                                          }
+                                                                              "en":  "Stated position (2026): 10,000 new modern buses for public transport within 5 years Past performance signal: Past performance facts were reviewed for this category.",
+                                                                              "ta":  "Stated position (2026): ஐந்து ஆண்டுகளில் 10,000 புதிய நவீன பேரந்துகள் Past performance signal: Past performance facts were reviewed for this category."
+                                                                          },
+                                                          "source":  "https://www.tnelections.info/manifesto"
                                                       },
                                          "cand-aiadmk":  {
-                                                             "position":  "approve",
+                                                             "position":  "strongly-approve",
                                                              "explanation":  {
-                                                                                 "en":  "Priya Devi has campaigned door-to-door on the flooding issue and pledges to escalate it as a priority with the state government.",
-                                                                                 "ta":  "பிரியா தேவி வெள்ள பிரச்சினையில் வீடு வீடாக பிரச்சாரம் செய்துள்ளார்."
-                                                                             }
+                                                                                 "en":  "Stated position (2026): Free bus travel for all citizens (men and women) on government buses Past performance signal: Past performance facts were reviewed for this category.",
+                                                                                 "ta":  "Stated position (2026): அரசு பேரந்துகளில் அனைத்து குடிமக்களுக்கும் இலவசப் பயணம் Past performance signal: Past performance facts were reviewed for this category."
+                                                                             },
+                                                             "source":  "https://www.tnelections.info/manifesto"
                                                          },
                                          "cand-bjp":  {
                                                           "position":  "approve",
@@ -239,18 +241,20 @@
                                      },
                        "positions":  {
                                          "cand-dmk":  {
-                                                          "position":  "approve",
+                                                          "position":  "strongly-approve",
                                                           "explanation":  {
-                                                                              "en":  "DMK\u0027s government has already added new MTC routes to the constituency; Rajesh Kumar wants electric buses prioritised.",
-                                                                              "ta":  "திமுக அரசு புதிய MTC வழிகளை தொகுதிக்கு சேர்த்துள்ளது."
-                                                                          }
+                                                                              "en":  "Stated position (2026): Olympic gold medallists to receive ₹5 crore prize; silver ₹3 crore; bronze ₹2 crore Past performance signal: Past performance facts were reviewed for this category.",
+                                                                              "ta":  "Stated position (2026): ஒலிம்பிக் தங்கப் பதக்கம் ₹5 கோடி; வெள்ளி ₹3 கோடி; வெண்கலம் ₹2 கோடி Past performance signal: Past performance facts were reviewed for this category."
+                                                                          },
+                                                          "source":  "https://www.tnelections.info/manifesto"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Priya Devi supports extended bus routes, especially for Triplicane intra-city links.",
-                                                                                 "ta":  "பிரியா தேவி திருவல்லிக்கேணி இடைக்கால இணைப்புகளுக்கு விரிவாக்கப்பட்ட பேருந்து வழிகளை ஆதரிக்கிறார்."
-                                                                             }
+                                                                                 "en":  "Stated position (2026): Promote traditional sports — Silambam, Kabaddi, Jallikattu; international competitions for Tamil Nadu Past performance signal: Past performance facts were reviewed for this category.",
+                                                                                 "ta":  "Stated position (2026): சிலம்பம், கபடி, ஜல்லிக்கட்டு போன்ற பாரம்பரிய விளையாட்டுகளை ஊக்குவிப்போம் Past performance signal: Past performance facts were reviewed for this category."
+                                                                             },
+                                                             "source":  "https://www.tnelections.info/manifesto"
                                                          },
                                          "cand-bjp":  {
                                                           "position":  "approve",
@@ -279,18 +283,20 @@
                                      },
                        "positions":  {
                                          "cand-dmk":  {
-                                                          "position":  "approve",
+                                                          "position":  "strongly-approve",
                                                           "explanation":  {
-                                                                              "en":  "Rajesh Kumar has proposed using two TNHB plots in the constituency for affordable rental housing and submitted the proposal to the housing department.",
-                                                                              "ta":  "ராஜேஷ் குமார் குறைந்த செலவு வாடகை வீட்டு வசதிக்கு TNHB நிலங்களை பயன்படுத்த முன்மொழிந்துள்ளார்."
-                                                                          }
+                                                                              "en":  "Stated position (2026): Build 5 lakh new houses in 5 years under Kalaignar Dream Home scheme; 10 lakh total new houses Past performance signal: Past performance facts were reviewed for this category.",
+                                                                              "ta":  "Stated position (2026): கலைஞர் கனவு இல்லம் திட்டத்தில் 5 ஆண்டுகளில் 5 லட்சம் வீடுகள் Past performance signal: Past performance facts were reviewed for this category."
+                                                                          },
+                                                          "source":  "https://www.tnelections.info/manifesto"
                                                       },
                                          "cand-aiadmk":  {
                                                              "position":  "approve",
                                                              "explanation":  {
-                                                                                 "en":  "Priya Devi supports affordable housing on TNHB land and promises to expedite stalled housing board projects.",
-                                                                                 "ta":  "பிரியா தேவி TNHB நிலத்தில் குறைந்த செலவு வீட்டை ஆதரிக்கிறார்."
-                                                                             }
+                                                                                 "en":  "Stated position (2026): Complete all pending housing schemes; new Amma Illam scheme for urban and rural homeless Past performance signal: Past performance facts were reviewed for this category.",
+                                                                                 "ta":  "Stated position (2026): நிலுவையில் உள்ள வீட்டு திட்டங்களை முடிப்போம்; நகர்ப்புற மற்றும் கிராமப்புறங்களில் அம்மா இல்லம் Past performance signal: Past performance facts were reviewed for this category."
+                                                                             },
+                                                             "source":  "https://www.tnelections.info/manifesto"
                                                          },
                                          "cand-bjp":  {
                                                           "position":  "approve",
@@ -343,5 +349,5 @@
                      ],
     "candidateSource":  "https://en.wikipedia.org/wiki/List_of_constituencies_of_the_Tamil_Nadu_Legislative_Assembly",
     "candidateSourceType":  "legacy-non-assembly-config",
-    "candidateSourceNote":  "This slug is not part of the 234 Tamil Nadu Assembly constituency list used for phase-1 baseline mapping; kept as legacy custom config and excluded from automated contesting-party cleanup."
+    "candidateSourceNote":  "This slug is not part of the 234 Tamil Nadu Assembly constituency list used for phase-1 baseline mapping; kept as legacy custom config and excluded from automated contesting-party cleanup. Thesis positions enriched from https://www.tnelections.info/manifesto and party_facts (one-time run)."
 }

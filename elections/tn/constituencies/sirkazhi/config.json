@@ -64,9 +64,13 @@
                                             "ta":  "Sirkazhi தொகுதிக்கான அதிமுக தற்காலிக சுயவிவரம். உண்மையான வேட்பாளர் விவரங்களால் மாற்றவும்."
                                         },
                         "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam",
-                                        "ta":  "https://en.wikipedia.org/wiki/All_India_Anna_Dravida_Munnetra_Kazhagam"
-                                    }
+                                        "en":  "https://www.tnelections.info/parties#aiadmk",
+                                        "ta":  "https://www.tnelections.info/parties#aiadmk"
+                                    },
+                        "partyProfile":  {
+                                             "en":  "https://www.tnelections.info/parties#aiadmk",
+                                             "ta":  "https://www.tnelections.info/parties#aiadmk"
+                                         }
                     },
                     {
                         "alias":  "cand-tvk",
@@ -83,9 +87,13 @@
                                             "ta":  "Public-source mapping: CS Gopinath is listed as TVK candidate for this constituency on tnelections2026.in candidates explorer."
                                         },
                         "profile":  {
-                                        "en":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam",
-                                        "ta":  "https://en.wikipedia.org/wiki/Tamilaga_Vetri_Kazhagam"
-                                    }
+                                        "en":  "https://www.tnelections.info/parties#tvk",
+                                        "ta":  "https://www.tnelections.info/parties#tvk"
+                                    },
+                        "partyProfile":  {
+                                             "en":  "https://www.tnelections.info/parties#tvk",
+                                             "ta":  "https://www.tnelections.info/parties#tvk"
+                                         }
                     }
                 ],
     "theses":  [
@@ -108,12 +116,12 @@
                                                            "source":  "https://tnelections2026.in/candidates.html"
                                                        },
                                          "cand-aiadmk":  {
-                                                             "position":  "approve",
+                                                             "position":  "strongly-approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports accelerated neighborhood roads and drainage maintenance in Sirkazhi with stronger local body execution and escalation.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "en":  "Stated position (2026): Free bus travel for all citizens (men and women) on government buses Past performance signal: Past performance facts were reviewed for this category.",
+                                                                                 "ta":  "Stated position (2026): அரசு பேரந்துகளில் அனைத்து குடிமக்களுக்கும் இலவசப் பயணம் Past performance signal: Past performance facts were reviewed for this category."
                                                                              },
-                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                             "source":  "https://www.tnelections.info/manifesto"
                                                          },
                                          "cand-tvk":  {
                                                           "position":  "neutral",
@@ -180,20 +188,20 @@
                                                            "source":  "https://tnelections2026.in/candidates.html"
                                                        },
                                          "cand-aiadmk":  {
-                                                             "position":  "approve",
+                                                             "position":  "strongly-approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports strengthening public hospital access for Sirkazhi with improved specialist availability and service reliability.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "en":  "Stated position (2026): Expansion of Amma Unavagam canteens across all districts with improved menu and quality Past performance signal: CMCHIS (covering 1.48 crore families with free treatment up to ₹5 lakh/year at 1,700+ hospitals) was launched under AIADMK — DMK retained it in 2021 acknowledging its value.",
+                                                                                 "ta":  "Stated position (2026): அம்மா உணவகங்களை அனைத்து மாவட்டங்களிலும் விரிவாக்கம்; மேம்படுத்தப்பட்ட மெனு Past performance signal: CMCHIS (AIADMK தொடங்கியது) — 1.48 கோடி குடும்பங்களுக்கு ₹5 லட்சம் வரை இலவச சிகிச்சை. DMK ஆட்சிக்கு வந்தும் இந்த திட்டத்தை தொடர்கிறது."
                                                                              },
-                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                             "source":  "https://www.cmchistn.com/"
                                                          },
                                          "cand-tvk":  {
                                                           "position":  "neutral",
                                                           "explanation":  {
-                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
-                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                              "en":  "Stated position (2026): Manifesto promise tracked for this category. Past performance signal: TVK\u0027s 2026 manifesto commits to treating healthcare as a fundamental right + \u0027Drug-Free Tamil Nadu\u0027 with anti-drug zones in all schools and colleges.",
+                                                                              "ta":  "Stated position (2026): Manifesto promise tracked for this category. Past performance signal: TVK 2026: சுகாதாரம் அடிப்படை உரிமை + அனைத்து பள்ளி-கல்லூரிகளிலும் \u0027Drug-Free Zone\u0027."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://www.newsbytesapp.com/news/politics/tvk-s-vijay-unveils-poll-manifesto/story"
                                                       }
                                      }
                    },
@@ -216,20 +224,20 @@
                                                            "source":  "https://tnelections2026.in/candidates.html"
                                                        },
                                          "cand-aiadmk":  {
-                                                             "position":  "approve",
+                                                             "position":  "strongly-approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports women-centric mobility improvements in Sirkazhi, including safer transit stops and complaint follow-through.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "en":  "Stated position (2026): Amma Two-Wheeler scheme — ₹25,000 subsidy for 5 lakh women to buy two-wheelers Past performance signal: AIADMK\u0027s 2026 manifesto promises ₹2,000/month (Kula Vilakku Scheme) to female head of every ration card family + ₹25,000 two-wheeler subsidy for working women + free refrigerator.",
+                                                                                 "ta":  "Stated position (2026): அம்மா இரு சக்கர வாகன திட்டம் — 5 லட்சம் பெண்களுக்கு ₹25,000 மானியம் Past performance signal: AIADMK 2026: குல விளக்கு திட்டம் ₹2,000/மாதம் + வேலைக்கு போகும் பெண்களுக்கு ₹25,000 இரு சக்கர மானியம் + இலவச ஃபிரிட்ஜ்."
                                                                              },
-                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                             "source":  "https://www.dtnext.in/news/politics/2026-tn-electionsaiadmk-offers-free-fridge-in-full-manifesto"
                                                          },
                                          "cand-tvk":  {
-                                                          "position":  "neutral",
+                                                          "position":  "strongly-approve",
                                                           "explanation":  {
-                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
-                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                              "en":  "Stated position (2026): ₹2,500/month cash transfer to all women (excluding government employees) until age 60 — outbids current DMK Kalaignar Magalir Urimai Thogai of ₹1,000 Past performance signal: TVK\u0027s 2026 manifesto promises ₹2,500/month for all women (excluding government employees, up to age 60) — the highest women\u0027s cash transfer offer of all three parties.",
+                                                                              "ta":  "Stated position (2026): அரசு ஊழியர்கள் அல்லாத அனைத்து பெண்களுக்கும் மாதம் ₹2,500 நேரடி பண உதவி (60 வயது வரை) — தற்போதைய DMK திட்டத்தை விட அதிகம் Past performance signal: TVK 2026: அனைத்து பெண்களுக்கும் மாதம் ₹2,500 — மூன்று கட்சிகளிலும் அதிகம். (அரசு ஊழியர்கள் தவிர, வயது 60 வரை)"
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://www.tconews.in/blog/news-2/tvk-chief-vijay-rolls-out-women-centric-welfare-promises-847"
                                                       }
                                      }
                    },
@@ -252,20 +260,20 @@
                                                            "source":  "https://tnelections2026.in/candidates.html"
                                                        },
                                          "cand-aiadmk":  {
-                                                             "position":  "approve",
+                                                             "position":  "strongly-approve",
                                                              "explanation":  {
-                                                                                 "en":  "Supports local enterprise growth in Sirkazhi through job-linked training, small business support, and commerce facilitation.",
-                                                                                 "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
+                                                                                 "en":  "Stated position (2026): Easy loans for small traders and MSME entrepreneurs; single window for all business registrations Past performance signal: AIADMK\u0027s 2026 manifesto promises ₹2,000/month unemployment allowance for graduates and ₹1,000/month for Class 12 pass (non-graduates) who remain jobless.",
+                                                                                 "ta":  "Stated position (2026): சிறு வணிகர்களுக்கும் MSME தொழில்முனைவோருக்கும் எளிதான கடன் வசதி Past performance signal: AIADMK 2026: வேலையில்லாத பட்டதாரிகளுக்கு ₹2,000/மாதம், 12ஆம் வகுப்பு தேர்ச்சியாளர்களுக்கு ₹1,000/மாதம்."
                                                                              },
-                                                             "source":  "https://tnelections2026.in/candidates.html"
+                                                             "source":  "https://www.livechennai.com/detailnews.asp?catid=\u0026newsid=79092"
                                                          },
                                          "cand-tvk":  {
-                                                          "position":  "neutral",
+                                                          "position":  "strongly-approve",
                                                           "explanation":  {
-                                                                              "en":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
-                                                                              "ta":  "TVK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                              "en":  "Stated position (2026): Tamil Nadu Youth Advisory Council — dedicated body to give youth direct input into state policy decisions Past performance signal: TVK\u0027s 2026 manifesto promises ₹4,000/month graduate unemployment allowance + 5 lakh paid internships per year (₹10,000/month) + 75% Tamil quota in private jobs + interest-free ₹25 lakh startup loans.",
+                                                                              "ta":  "Stated position (2026): தமிழ்நாடு இளையோர் ஆலோசனை மன்றம் — அரசின் கொள்கை முடிவுகளில் இளையோருக்கு நேரடி பங்கு Past performance signal: TVK 2026: பட்டதாரிகளுக்கு ₹4,000/மாதம் + 5 லட்சம் internship/ஆண்டு (₹10,000/மாதம்) + தனியார் வேலையில் 75% TN பங்கு + ₹25 லட்சம் வட்டியில்லா தொழில் கடன்."
                                                                           },
-                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                          "source":  "https://thefederal.com/elections-2026/tamil-nadu-elections-2026-vijay-tvk-releases-poll-manifesto-targets-youth-voters-236677"
                                                       }
                                      }
                    },
@@ -340,5 +348,5 @@
                      ],
     "candidateSource":  "https://en.wikipedia.org/wiki/2021_Tamil_Nadu_Legislative_Assembly_election",
     "candidateSourceType":  "baseline-2021-prominent-parties-table",
-    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. TVK candidate mapped from https://tnelections2026.in/candidates.html"
+    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. TVK candidate mapped from https://tnelections2026.in/candidates.html Thesis positions enriched from https://www.tnelections.info/manifesto and party_facts (one-time run). Candidate profiles mapped from tnelections.info Supabase candidates table (one-time run)."
 }
