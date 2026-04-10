@@ -90,38 +90,6 @@
       background: rgba(255,255,255,.22);
     }
 
-    .results-mode-switch {
-      display: inline-flex;
-      align-items: center;
-      border: 1px solid rgba(255,255,255,.45);
-      border-radius: 8px;
-      overflow: hidden;
-      min-height: 34px;
-      background: rgba(255,255,255,.08);
-    }
-
-    .results-mode-btn {
-      border: 0;
-      background: transparent;
-      color: rgba(255,255,255,.88);
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 0.3rem 0.46rem;
-      min-height: 34px;
-      min-width: 58px;
-      cursor: pointer;
-      line-height: 1.2;
-    }
-
-    .results-mode-btn + .results-mode-btn {
-      border-left: 1px solid rgba(255,255,255,.28);
-    }
-
-    .results-mode-btn.is-active {
-      color: #fff;
-      background: rgba(255,255,255,.22);
-    }
-
     .feedback-trigger {
       border: 1px solid rgba(255,255,255,.45);
       background: rgba(255,255,255,.12);
@@ -952,12 +920,6 @@
         padding: 0.28rem 0.42rem;
       }
 
-      .results-mode-btn {
-        font-size: 0.68rem;
-        min-width: 50px;
-        padding: 0.26rem 0.38rem;
-      }
-
       .oec-source-inline {
         font-size: 0.76rem;
       }
@@ -1043,10 +1005,6 @@
     <div class="language-switch" role="group" aria-label="Language selector">
       <button type="button" class="lang-btn" data-lang="en" id="lang-en">EN</button>
       <button type="button" class="lang-btn" data-lang="ta" id="lang-ta">தமிழ்</button>
-    </div>
-    <div class="results-mode-switch" role="group" aria-label="Results view mode" id="oec-top-view-switch">
-      <button type="button" class="results-mode-btn" data-view-mode="live" id="oec-mode-live">Live</button>
-      <button type="button" class="results-mode-btn" data-view-mode="tabular" id="oec-mode-tabular">Table</button>
     </div>
     <button type="button" class="feedback-trigger" id="feedback-open">Feedback</button>
   </div>
@@ -1773,13 +1731,11 @@
         ]
       };
       var GROUP_COLLAPSE_STORAGE_KEY = 'oec-profile-panel-group-collapsed-v1';
-      var RESULTS_VIEW_MODE_STORAGE_KEY = 'oec-results-view-mode-v1';
       var debugPanel = null;
       var debugLogEl = null;
       var debugLines = [];
       var profilePanelCollapsed = false;
       var allianceDisplayMap = {};
-      var resultsViewMode = 'live';
       var userResponseByThesisKey = {};
 
       function debugLog (line) {
@@ -2413,11 +2369,6 @@
           return;
         }
 
-        if (resultsViewMode !== 'tabular') {
-          if (existing && existing.parentElement) existing.parentElement.removeChild(existing);
-          return;
-        }
-
         var signature = [
           uiLang,
           String(parties.length),
@@ -2742,51 +2693,6 @@
         } catch (e) {}
       }
 
-      function readResultsViewMode() {
-        if (!window.localStorage) return 'live';
-        try {
-          var raw = window.localStorage.getItem(RESULTS_VIEW_MODE_STORAGE_KEY);
-          if (raw === 'live' || raw === 'tabular') return raw;
-        } catch (e) {}
-        return 'live';
-      }
-
-      function persistResultsViewMode(mode) {
-        var next = mode === 'live' ? 'live' : 'tabular';
-        resultsViewMode = next;
-        if (!window.localStorage) return;
-        try {
-          window.localStorage.setItem(RESULTS_VIEW_MODE_STORAGE_KEY, next);
-        } catch (e) {}
-      }
-
-      function renderResultsViewSwitcher(container, onChange) {
-        var node = document.getElementById('oec-top-view-switch');
-        if (!node) return;
-
-        var liveBtn = node.querySelector('[data-view-mode="live"]');
-        var tabBtn = node.querySelector('[data-view-mode="tabular"]');
-        if (liveBtn) liveBtn.textContent = uiLang === 'ta' ? 'நேரடி' : 'Live';
-        if (tabBtn) tabBtn.textContent = uiLang === 'ta' ? 'அட்டவணை' : 'Table';
-
-        var btns = node.querySelectorAll('.results-mode-btn');
-        btns.forEach(function (btn) {
-          var mode = btn.getAttribute('data-view-mode');
-          btn.classList.toggle('is-active', mode === resultsViewMode);
-          if (!btn.getAttribute('data-bound')) {
-            btn.setAttribute('data-bound', '1');
-            btn.addEventListener('click', function () {
-              var selected = btn.getAttribute('data-view-mode');
-              persistResultsViewMode(selected);
-              btns.forEach(function (b) {
-                b.classList.toggle('is-active', b.getAttribute('data-view-mode') === resultsViewMode);
-              });
-              if (typeof onChange === 'function') onChange(resultsViewMode);
-            });
-          }
-        });
-      }
-
       function getAllianceMetaForParty(party, partyTag) {
         var alias = String((party && party.alias) || '').toLowerCase();
         if (alias.indexOf('cand-dmk') === 0 || alias === 'dmk' || alias === 'dmk-alliance' || partyTag === 'DMK' || partyTag === 'INC' || partyTag === 'VCK' || partyTag === 'CPI' || partyTag === 'CPI(M)' || partyTag === 'CPM' || partyTag === 'MDMK') {
@@ -2976,7 +2882,6 @@
       fetch(noCacheConfigUrl, { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
         .then(function (cfg) {
-          resultsViewMode = readResultsViewMode();
           var parties = cfg.parties || [];
           var theses  = cfg.theses  || [];
           var langs   = (cfg.languages || []).map(function (l) { return l.code; });
@@ -3389,12 +3294,8 @@
             isInjecting = true;
             if (observer) observer.disconnect();
             try {
-              renderResultsViewSwitcher(container, function () {
-                scheduleInjectors();
-              });
               injectLinks();
               injectCandidateProfileLinks();
-              renderLiveComparisonDetails(container, cfg, legacyExcerptsData);
             } finally {
               if (observer) observer.observe(container, { childList: true, subtree: true });
               isInjecting = false;
