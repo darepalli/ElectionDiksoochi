@@ -2064,6 +2064,38 @@
         return party + ' official stance: ' + p;
       }
 
+      function getAllianceMemberSource(alias, partyCode) {
+        var rows = getAllianceSeatRows(alias);
+        if (!rows.length || !partyCode) return '';
+        var key = String(partyCode).toUpperCase();
+
+        for (var i = 0; i < rows.length; i++) {
+          var row = rows[i] || {};
+          var code = String(row.code || '').toUpperCase();
+          var name = String(row.name || '').toUpperCase();
+          if (code !== key && name !== key) continue;
+
+          var links = Array.isArray(row.links) ? row.links : [];
+          if (links.length) {
+            var preferred = '';
+            for (var j = 0; j < links.length; j++) {
+              var link = links[j] || {};
+              if (!link.url) continue;
+              var label = String(link.label || '').toLowerCase();
+              if (!preferred) preferred = link.url;
+              if (label.indexOf('manifesto') >= 0 || label.indexOf('website') >= 0 || label.indexOf('wikipedia') >= 0) {
+                return link.url;
+              }
+            }
+            if (preferred) return preferred;
+          }
+
+          if (row.source) return row.source;
+        }
+
+        return '';
+      }
+
       function getLegacyExcerptForParty(legacyExcerpts, thesisTitleEn, partyCode) {
         if (!legacyExcerpts || !legacyExcerpts.byTitle) return '';
         if (!thesisTitleEn || !partyCode) return '';
@@ -2086,11 +2118,13 @@
           var legacyExcerpt = getLegacyExcerptForParty(legacyExcerpts, thesisTitleEn, name);
           var memberExcerpt = legacyExcerpt || getFallbackSubpartyExcerpt(name, aligned);
           var parsedExcerpt = parsedItem && parsedItem.excerpt ? parsedItem.excerpt : '';
+          var memberSource = getAllianceMemberSource(alias, name);
           return {
             party: name,
             position: memberPos,
             excerpt: memberExcerpt,
-            parsedExcerpt: parsedExcerpt
+            parsedExcerpt: parsedExcerpt,
+            source: memberSource
           };
         });
       }
@@ -2232,6 +2266,9 @@
               if (item.excerpt) {
                 html += '<span class="oec-random-subparty-excerpt">"' + escapeHtml(item.excerpt) + '"</span>';
               }
+              if (item.source) {
+                html += '<a class="oec-random-source" href="' + escapeHtml(item.source) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(uiLang === 'ta' ? (item.party + ' ஆதாரம்') : (item.party + ' Source')) + '</a>';
+              }
             });
             if (expl) html += '<span class="oec-random-expl">' + escapeHtml(expl) + '</span>';
             if (sourceUrl) {
@@ -2332,6 +2369,9 @@
               }
               if (item.excerpt) {
                 html += '<span class="oec-random-subparty-excerpt">"' + escapeHtml(item.excerpt) + '"</span>';
+              }
+              if (item.source) {
+                html += '<a class="oec-random-source" href="' + escapeHtml(item.source) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(uiLang === 'ta' ? (item.party + ' ஆதாரம்') : (item.party + ' Source')) + '</a>';
               }
             });
             if (expl) html += '<span class="oec-random-expl">' + escapeHtml(expl) + '</span>';
@@ -2443,6 +2483,9 @@
               }
               if (item.excerpt) {
                 html += '<span class="oec-random-subparty-excerpt">"' + escapeHtml(item.excerpt) + '"</span>';
+              }
+              if (item.source) {
+                html += '<a class="oec-random-source" href="' + escapeHtml(item.source) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(uiLang === 'ta' ? (item.party + ' ஆதாரம்') : (item.party + ' Source')) + '</a>';
               }
             });
             if (expl) html += '<span class="oec-random-expl">' + escapeHtml(expl) + '</span>';
@@ -3124,13 +3167,14 @@
 
               if (!existingInfo) bubbleEl.appendChild(info);
 
-              if (explanationMeta && explanationMeta.partyAlias) {
+              var detailsAlias = (explanationMeta && explanationMeta.partyAlias) ? explanationMeta.partyAlias : partyAliasHint;
+              if (detailsAlias) {
                 var detailHtml = '';
                 var subpartyPositions = getAllianceSubpartyPositions(
-                  explanationMeta.partyAlias,
-                  explanationMeta.position,
-                  explanationMeta.explanationRaw,
-                  explanationMeta.thesisTitleEn,
+                  detailsAlias,
+                  (explanationMeta && explanationMeta.position) ? explanationMeta.position : 'neutral',
+                  (explanationMeta && explanationMeta.explanationRaw) ? explanationMeta.explanationRaw : bubbleEl.textContent,
+                  (explanationMeta && explanationMeta.thesisTitleEn) ? explanationMeta.thesisTitleEn : '',
                   legacyExcerptsData
                 );
 
@@ -3147,8 +3191,16 @@
                 subpartyPositions.forEach(function (item) {
                   var subLabel = getPositionLabel(item.position);
                   detailHtml += '<span class="oec-live-party-details__line">' + escapeHtml(item.party + ': ' + subLabel) + '</span>';
+                  if (item.parsedExcerpt) {
+                    detailHtml += '<span class="oec-live-party-details__excerpt">' + escapeHtml(uiLang === 'ta' ? ('கூட்டணி குறிப்பிலிருந்து: ' + item.parsedExcerpt) : ('From alliance note: ' + item.parsedExcerpt)) + '</span>';
+                  }
                   if (item.excerpt) {
                     detailHtml += '<span class="oec-live-party-details__excerpt">"' + escapeHtml(item.excerpt) + '"</span>';
+                  }
+                  if (item.source) {
+                    detailHtml += '<a class="oec-source-link" href="' + escapeHtml(item.source) + '" target="_blank" rel="noopener noreferrer">'
+                      + escapeHtml(uiLang === 'ta' ? (item.party + ' ஆதாரம்') : (item.party + ' Source'))
+                      + '</a>';
                   }
                 });
 
