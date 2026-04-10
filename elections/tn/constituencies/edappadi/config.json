@@ -75,6 +75,29 @@
                                              "en":  "https://www.tnelections.info/parties#aiadmk",
                                              "ta":  "https://www.tnelections.info/parties#aiadmk"
                                          }
+                    },
+                    {
+                        "alias":  "cand-ntk",
+                        "name":  {
+                                     "en":  "Priyadharshini (NTK)",
+                                     "ta":  "Priyadharshini (NTK)"
+                                 },
+                        "short":  {
+                                      "en":  "Priyadharshini / NTK",
+                                      "ta":  "Priyadharshini / NTK"
+                                  },
+                        "description":  {
+                                            "en":  "Public-source mapping: Priyadharshini is listed as NTK candidate for this constituency on tnelections2026.in candidates explorer.",
+                                            "ta":  "Public-source mapping: Priyadharshini is listed as NTK candidate for this constituency on tnelections2026.in candidates explorer."
+                                        },
+                        "profile":  {
+                                        "en":  "https://www.tnelections.info/parties#ntk",
+                                        "ta":  "https://www.tnelections.info/parties#ntk"
+                                    },
+                        "partyProfile":  {
+                                             "en":  "https://www.tnelections.info/parties#ntk",
+                                             "ta":  "https://www.tnelections.info/parties#ntk"
+                                         }
                     }
                 ],
     "theses":  [
@@ -103,7 +126,15 @@
                                                                                  "ta":  "Stated position (2026): அரசு பேரந்துகளில் அனைத்து குடிமக்களுக்கும் இலவசப் பயணம் Past performance signal: Past performance facts were reviewed for this category."
                                                                              },
                                                              "source":  "https://www.tnelections.info/manifesto"
-                                                         }
+                                                         },
+                                         "cand-ntk":  {
+                                                          "position":  "neutral",
+                                                          "explanation":  {
+                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                          },
+                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                      }
                                      }
                    },
                    {
@@ -131,7 +162,15 @@
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
                                                              "source":  "https://tnelections2026.in/candidates.html"
-                                                         }
+                                                         },
+                                         "cand-ntk":  {
+                                                          "position":  "neutral",
+                                                          "explanation":  {
+                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                          },
+                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                      }
                                      }
                    },
                    {
@@ -159,7 +198,15 @@
                                                                                  "ta":  "Stated position (2026): அம்மா உணவகங்களை அனைத்து மாவட்டங்களிலும் விரிவாக்கம்; மேம்படுத்தப்பட்ட மெனு Past performance signal: CMCHIS (AIADMK தொடங்கியது) — 1.48 கோடி குடும்பங்களுக்கு ₹5 லட்சம் வரை இலவச சிகிச்சை. DMK ஆட்சிக்கு வந்தும் இந்த திட்டத்தை தொடர்கிறது."
                                                                              },
                                                              "source":  "https://www.cmchistn.com/"
-                                                         }
+                                                         },
+                                         "cand-ntk":  {
+                                                          "position":  "neutral",
+                                                          "explanation":  {
+                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                          },
+                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                      }
                                      }
                    },
                    {
@@ -187,7 +234,15 @@
                                                                                  "ta":  "Stated position (2026): அம்மா இரு சக்கர வாகன திட்டம் — 5 லட்சம் பெண்களுக்கு ₹25,000 மானியம் Past performance signal: AIADMK 2026: குல விளக்கு திட்டம் ₹2,000/மாதம் + வேலைக்கு போகும் பெண்களுக்கு ₹25,000 இரு சக்கர மானியம் + இலவச ஃபிரிட்ஜ்."
                                                                              },
                                                              "source":  "https://www.dtnext.in/news/politics/2026-tn-electionsaiadmk-offers-free-fridge-in-full-manifesto"
-                                                         }
+                                                         },
+                                         "cand-ntk":  {
+                                                          "position":  "neutral",
+                                                          "explanation":  {
+                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                          },
+                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                      }
                                      }
                    },
                    {
@@ -215,7 +270,15 @@
                                                                                  "ta":  "Stated position (2026): சிறு வணிகர்களுக்கும் MSME தொழில்முனைவோருக்கும் எளிதான கடன் வசதி Past performance signal: AIADMK 2026: வேலையில்லாத பட்டதாரிகளுக்கு ₹2,000/மாதம், 12ஆம் வகுப்பு தேர்ச்சியாளர்களுக்கு ₹1,000/மாதம்."
                                                                              },
                                                              "source":  "https://www.livechennai.com/detailnews.asp?catid=\u0026newsid=79092"
-                                                         }
+                                                         },
+                                         "cand-ntk":  {
+                                                          "position":  "neutral",
+                                                          "explanation":  {
+                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                          },
+                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                      }
                                      }
                    },
                    {
@@ -243,7 +306,15 @@
                                                                                  "ta":  "தற்காலிக உருவாக்கப்பட்ட நிலைப்பு. அதிகாரப்பூர்வ ஆதாரங்கள் கிடைக்கும் போது புதுப்பிக்கவும்."
                                                                              },
                                                              "source":  "https://tnelections2026.in/candidates.html"
-                                                         }
+                                                         },
+                                         "cand-ntk":  {
+                                                          "position":  "neutral",
+                                                          "explanation":  {
+                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                          },
+                                                          "source":  "https://tnelections2026.in/candidates.html"
+                                                      }
                                      }
                    }
                ],
@@ -281,5 +352,5 @@
                      ],
     "candidateSource":  "https://en.wikipedia.org/wiki/2021_Tamil_Nadu_Legislative_Assembly_election",
     "candidateSourceType":  "baseline-2021-prominent-parties-table",
-    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. Alliance candidates cross-verified from https://tnelections2026.in/candidates.html Thesis positions enriched from https://www.tnelections.info/manifesto and party_facts (one-time run). Candidate profiles mapped from tnelections.info Supabase candidates table (one-time run)."
+    "candidateSourceNote":  "Candidate aliases and names are mapped to the prominent-party contesting entries for this constituency from public 2021 election records; verify and refresh for 2026 final nominations. Alliance candidates cross-verified from https://tnelections2026.in/candidates.html Thesis positions enriched from https://www.tnelections.info/manifesto and party_facts (one-time run). Candidate profiles mapped from tnelections.info Supabase candidates table (one-time run). NTK candidate mapped from https://tnelections2026.in/candidates.html"
 }

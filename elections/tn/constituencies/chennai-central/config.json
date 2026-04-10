@@ -105,6 +105,29 @@
                                             "en":  "Standing as an Independent. RTI activist and urban planning advocate who has filed multiple petitions against unregulated demolitions in Chepauk and Park Town heritage zone.",
                                             "ta":  "சுயேட்சையாக போட்டியிடுகிறார். RTI ஆர்வலர் மற்றும் நகர திட்டமிடல் ஆதரவாளர்."
                                         }
+                    },
+                    {
+                        "alias":  "cand-ntk",
+                        "name":  {
+                                     "en":  "NTK Candidate (NTK)",
+                                     "ta":  "NTK Candidate (NTK)"
+                                 },
+                        "short":  {
+                                      "en":  "NTK Candidate / NTK",
+                                      "ta":  "NTK Candidate / NTK"
+                                  },
+                        "description":  {
+                                            "en":  "Public-source mapping: NTK candidate should be verified for this constituency on tnelections2026.in candidates explorer.",
+                                            "ta":  "Public-source mapping: NTK candidate should be verified for this constituency on tnelections2026.in candidates explorer."
+                                        },
+                        "profile":  {
+                                        "en":  "https://www.tnelections.info/parties#ntk",
+                                        "ta":  "https://www.tnelections.info/parties#ntk"
+                                    },
+                        "partyProfile":  {
+                                             "en":  "https://www.tnelections.info/parties#ntk",
+                                             "ta":  "https://www.tnelections.info/parties#ntk"
+                                         }
                     }
                 ],
     "theses":  [
@@ -147,6 +170,14 @@
                                                                               "en":  "Kavitha has filed RTI petitions exposing incomplete stormwater drain work and advocates for an independent audit before new funds are allocated.",
                                                                               "ta":  "கவிதா RTI மனுக்களை தாக்கல் செய்து சரியாக செயல்படாத வடிகால் பணிகளை அம்பலப்படுத்தியுள்ளார்."
                                                                           }
+                                                      },
+                                         "cand-ntk":  {
+                                                          "position":  "neutral",
+                                                          "explanation":  {
+                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                          },
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -187,6 +218,14 @@
                                                                               "en":  "Heritage protection is Kavitha\u0027s signature campaign issue; she has filed multiple High Court PILs against illegal demolitions.",
                                                                               "ta":  "பாரம்பரிய பாதுகாப்பு கவிதாவின் முதன்மை பிரச்சார விஷயம்; சட்டவிரோத இடிப்புகளுக்கு எதிராக HC PILகள் தாக்கல் செய்துள்ளார்."
                                                                           }
+                                                      },
+                                         "cand-ntk":  {
+                                                          "position":  "neutral",
+                                                          "explanation":  {
+                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                          },
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -227,6 +266,14 @@
                                                                               "en":  "Kavitha is a strong advocate for vendor rights and has helped vendors navigate registration under the Street Vendors Act.",
                                                                               "ta":  "கவிதா வியாபாரி உரிமைகளின் உறுதியான வக்காளத்துதாரர்."
                                                                           }
+                                                      },
+                                         "cand-ntk":  {
+                                                          "position":  "neutral",
+                                                          "explanation":  {
+                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                          },
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -269,6 +316,14 @@
                                                                               "en":  "Kavitha advocates for a dedicated cycle track and pedestrianisation plan alongside bus expansion.",
                                                                               "ta":  "கவிதா பேருந்து விரிவாக்கத்துடன் சைக்கிள் பாதை மற்றும் நடைபாதை திட்டத்தை வலியுறுத்துகிறார்."
                                                                           }
+                                                      },
+                                         "cand-ntk":  {
+                                                          "position":  "neutral",
+                                                          "explanation":  {
+                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                          },
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    },
@@ -311,6 +366,14 @@
                                                                               "en":  "Kavitha insists that any new housing development must include existing slum-dwellers and not displace them.",
                                                                               "ta":  "கவிதா எந்த புதிய வீட்டு வளர்ச்சியும் ஏற்கனவே உள்ள குடிசைவாசிகளை இடம் மாற்றாமல் அவர்களை சேர்க்க வேண்டும் என வலியுறுத்துகிறார்."
                                                                           }
+                                                      },
+                                         "cand-ntk":  {
+                                                          "position":  "neutral",
+                                                          "explanation":  {
+                                                                              "en":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published.",
+                                                                              "ta":  "NTK candidate is listed in public source for this constituency. Update stance with source-backed issue statements as they are published."
+                                                                          },
+                                                          "source":  "https://tnelections2026.in/candidates.html"
                                                       }
                                      }
                    }
@@ -349,5 +412,5 @@
                      ],
     "candidateSource":  "https://en.wikipedia.org/wiki/List_of_constituencies_of_the_Tamil_Nadu_Legislative_Assembly",
     "candidateSourceType":  "legacy-non-assembly-config",
-    "candidateSourceNote":  "This slug is not part of the 234 Tamil Nadu Assembly constituency list used for phase-1 baseline mapping; kept as legacy custom config and excluded from automated contesting-party cleanup. Thesis positions enriched from https://www.tnelections.info/manifesto and party_facts (one-time run)."
+    "candidateSourceNote":  "This slug is not part of the 234 Tamil Nadu Assembly constituency list used for phase-1 baseline mapping; kept as legacy custom config and excluded from automated contesting-party cleanup. Thesis positions enriched from https://www.tnelections.info/manifesto and party_facts (one-time run). NTK candidate mapped from https://tnelections2026.in/candidates.html"
 }
