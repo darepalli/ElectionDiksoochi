@@ -740,6 +740,78 @@
                                                      "source":  "https://thefederal.com/elections-2026/tamil-nadu-elections-2026-vijay-tvk-releases-poll-manifesto-targets-youth-voters-236677"
                                                  }
                                      }
+                   },
+                   {
+                       "title":  {
+                                     "en":  "Temple Heritage and Public Management",
+                                     "ta":  "கோவில் பாரம்பரியம் மற்றும் பொது நிர்வாகம்"
+                                 },
+                       "statement":  {
+                                         "en":  "Tamil Nadu should strengthen temple heritage protection, renovation funding, and devotee services with transparent, audited public management standards.",
+                                         "ta":  "தமிழ்நாடு கோவில் பாரம்பரிய பாதுகாப்பு, புதுப்பிப்பு நிதி, பக்தர் சேவைகள் ஆகியவற்றை வலுப்படுத்தி, வெளிப்படையான கணக்காய்வு செய்யப்பட்ட பொது நிர்வாக தரநிலைகளுடன் செயல்படுத்த வேண்டும்."
+                                     },
+                       "positions":  {
+                                         "dmk-alliance":  {
+                                                              "position":  "approve",
+                                                              "explanation":  {
+                                                                                  "en":  "Stated position (2026): Kumbabishekam for 5,000 temples in 5 years; annual temple renovation fund raised from Rs 10 crore to Rs 25 crore; basic facilities for more temples. Past performance signal: promise framed as temple infrastructure and service strengthening, aligning with a supportive stance.",
+                                                                                  "ta":  "Stated position (2026): 5 ஆண்டுகளில் 5,000 கோவில்களுக்கு கும்பாபிஷேகம்; ஆண்டு கோவில் புதுப்பிப்பு நிதி Rs 10 கோடியில் இருந்து Rs 25 கோடியாக உயர்வு; அதிக கோவில்களுக்கு அடிப்படை வசதிகள். Past performance signal: கோவில் வசதி மற்றும் கட்டமைப்பு வலுப்படுத்தலை மையமாகக் கொண்ட வாக்குறுதி என்பதால் ஆதரவு நிலை காட்டப்படுகிறது."
+                                                                              },
+                                                              "source":  "https://www.tnelections.info/manifesto"
+                                                          },
+                                         "aiadmk-alliance":  {
+                                                                 "position":  "neutral",
+                                                                 "explanation":  {
+                                                                                     "en":  "Position kept neutral because the currently mapped 2026 manifesto dataset does not provide a clearly matched, quantified temple-management commitment for this exact thesis framing.",
+                                                                                     "ta":  "இத்தீஸிஸ் வடிவமைப்புக்கு நேரடியாக பொருந்தும், அளவிடக்கூடிய கோவில் நிர்வாக உறுதிப்பாடு தற்போதைய 2026 manifesto dataset-ல் தெளிவாக இல்லை என்பதால் நடுநிலை நிலை தொடர்கிறது."
+                                                                                 },
+                                                                 "source":  "https://www.tnelections.info/manifesto"
+                                                             },
+                                         "tvk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "Position kept neutral because the currently mapped 2026 manifesto dataset does not yet provide a direct, clearly matched temple-management pledge under this thesis definition.",
+                                                                         "ta":  "இந்த தீஸிஸ் வரையறைக்குள் நேரடியாக பொருந்தும் கோவில் நிர்வாக உறுதிப்பாடு தற்போதைய 2026 manifesto dataset-ல் தெளிவாக கிடைக்காததால் நடுநிலை நிலை தொடர்கிறது."
+                                                                     },
+                                                     "source":  "https://www.tnelections.info/manifesto"
+                                                 }
+                                     }
+                   },
+                   {
+                       "title":  {
+                                     "en":  "Targeted Social Support for Vulnerable Communities",
+                                     "ta":  "பாதுகாப்பு தேவைப்படும் சமூகங்களுக்கு இலக்கு நல ஆதரவு"
+                                 },
+                       "statement":  {
+                                         "en":  "Tamil Nadu should expand targeted scholarships, skills programs, and concessional loan support for vulnerable and under-served communities using transparent, rules-based eligibility.",
+                                         "ta":  "தமிழ்நாடு, பாதுகாப்பு தேவைப்படும் மற்றும் போதிய சேவைகள் இல்லாத சமூகங்களுக்கு இலக்கு கல்வி உதவித்தொகை, திறன் மேம்பாட்டு திட்டங்கள், சலுகை கடன் ஆதரவை வெளிப்படையான விதிமுறை தகுதி அடிப்படையில் விரிவுபடுத்த வேண்டும்."
+                                     },
+                       "positions":  {
+                                         "dmk-alliance":  {
+                                                              "position":  "approve",
+                                                              "explanation":  {
+                                                                                  "en":  "Stated position (2026): Skill improvement centers in minority-concentrated districts; TAMCO loan ceiling raised to Rs 30 lakh; 25,000 minority youth trained per year. Past performance signal: direct targeted welfare language supports an approve stance.",
+                                                                                  "ta":  "Stated position (2026): சிறுபான்மை அதிகமாக உள்ள மாவட்டங்களில் திறன் மேம்பாட்டு மையங்கள்; TAMCO கடன் உச்சவரம்பு Rs 30 லட்சம்; ஆண்டுக்கு 25,000 சிறுபான்மை இளைஞர்கள் பயிற்சி. Past performance signal: நேரடி இலக்கு நல ஆதரவு மொழி இருப்பதால் approve நிலை காட்டப்படுகிறது."
+                                                                              },
+                                                              "source":  "https://www.tnelections.info/manifesto"
+                                                          },
+                                         "aiadmk-alliance":  {
+                                                                 "position":  "approve",
+                                                                 "explanation":  {
+                                                                                     "en":  "Stated position (2026): Scholarships for meritorious students to study in foreign universities, alongside expanded scholarship commitments in social-support categories. Past performance signal: scholarship-oriented welfare commitments support an approve stance on this broadened thesis.",
+                                                                                     "ta":  "Stated position (2026): திறமைமிக்க மாணவர்கள் வெளிநாட்டில் படிக்க கல்வி உதவித்தொகை; சமூக நல பிரிவுகளில் விரிவான scholarship உறுதிப்பாடுகள். Past performance signal: scholarship மையப்படுத்திய நல வாக்குறுதிகள் இருப்பதால் இந்த விரிவாக்கப்பட்ட தீஸிஸில் approve நிலை காட்டப்படுகிறது."
+                                                                                 },
+                                                                 "source":  "https://www.tnelections.info/manifesto"
+                                                             },
+                                         "tvk":  {
+                                                     "position":  "neutral",
+                                                     "explanation":  {
+                                                                         "en":  "Position kept neutral because the currently mapped 2026 manifesto dataset does not yet provide a clearly matched, quantified pledge specific to this broadened targeted-support thesis.",
+                                                                         "ta":  "இந்த விரிவாக்கப்பட்ட இலக்கு நல ஆதரவு தீஸிஸுக்கு நேரடியாக பொருந்தும், அளவிடக்கூடிய உறுதிப்பாடு தற்போதைய 2026 manifesto dataset-ல் தெளிவாக இல்லை என்பதால் நடுநிலை நிலை தொடர்கிறது."
+                                                                     },
+                                                     "source":  "https://www.tnelections.info/manifesto"
+                                                 }
+                                     }
                    }
                ],
     "footer-links":  [
