@@ -106,6 +106,63 @@
       background: rgba(255,255,255,.2);
     }
 
+    .party-links-wrap {
+      position: relative;
+    }
+
+    .party-links-trigger {
+      border: 1px solid rgba(255,255,255,.45);
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      border-radius: 7px;
+      padding: 0.35rem 0.6rem;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      min-height: 34px;
+      display: none;
+    }
+
+    .party-links-trigger.is-visible {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .party-links-trigger:hover {
+      background: rgba(255,255,255,.2);
+    }
+
+    .party-links-menu {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 6px);
+      width: min(360px, calc(100vw - 20px));
+      max-height: 58vh;
+      overflow: auto;
+      z-index: 12000;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.18);
+      padding: 0.55rem 0.6rem;
+      display: none;
+    }
+
+    .party-links-menu.is-open {
+      display: block;
+    }
+
+    .party-links-menu .oec-alliance-seat-link {
+      font-size: 0.56rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      border-bottom-color: #60a5fa;
+    }
+
+    .party-links-menu .oec-alliance-seat-link:hover {
+      color: #1e40af;
+    }
+
     /* Push OEC content below the back-bar */
     #open-election-compass {
       padding-top: calc(var(--back-bar-h, 36px) + 4px);
@@ -359,6 +416,31 @@
       font-size: 0.64rem;
       line-height: 1.2;
       font-weight: 600;
+      overflow-x: auto;
+      overflow-y: hidden;
+      text-overflow: clip;
+      scrollbar-width: thin;
+    }
+
+    .oec-alliance-members-line {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 0.28rem;
+      white-space: nowrap;
+      min-width: max-content;
+    }
+
+    .oec-alliance-member-link {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .oec-alliance-member-sep {
+      color: #94a3b8;
+      font-weight: 700;
+      user-select: none;
     }
 
     .oec-profile-panel__group-head {
@@ -391,6 +473,79 @@
       margin: 0.18rem 0 0;
     }
 
+    .oec-alliance-pie-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.18rem 0 0.28rem;
+    }
+
+    .oec-alliance-pie {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 1px solid #dbe4ee;
+      flex: 0 0 64px;
+      position: relative;
+    }
+
+    .oec-alliance-pie::after {
+      content: '';
+      position: absolute;
+      inset: 13px;
+      background: #fff;
+      border-radius: 50%;
+      border: 1px solid #e5e7eb;
+    }
+
+    .oec-alliance-pie-total {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.62rem;
+      font-weight: 800;
+      color: #334155;
+      z-index: 1;
+    }
+
+    .oec-alliance-pie-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.12rem 0.34rem;
+      min-width: 0;
+      flex: 1;
+      max-height: 1.7rem;
+      overflow: hidden;
+      align-content: flex-start;
+    }
+
+    .oec-alliance-pie-legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.24rem;
+      font-size: 0.58rem;
+      color: #1f2937;
+      white-space: nowrap;
+      line-height: 1.1;
+    }
+
+    .oec-alliance-pie-dot {
+      width: 0.46rem;
+      height: 0.46rem;
+      border-radius: 999px;
+      flex: 0 0 0.46rem;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+    }
+
+    .oec-alliance-source {
+      margin-top: 0.1rem;
+      font-size: 0.62rem;
+      color: #64748b;
+      line-height: 1.2;
+    }
+
     .oec-alliance-seat-row {
       border: 1px solid color-mix(in srgb, var(--alliance-accent) 18%, #e2e8f0);
       border-radius: 6px;
@@ -403,7 +558,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 0.28rem;
-      margin-bottom: 0.12rem;
+      margin-bottom: 0;
     }
 
     .oec-alliance-seat-row__party {
@@ -413,6 +568,15 @@
       font-size: 0.66rem;
       font-weight: 700;
       color: #1f2937;
+    }
+
+    .oec-alliance-seat-swatch {
+      width: 0.42rem;
+      height: 0.42rem;
+      border-radius: 999px;
+      display: inline-block;
+      flex: 0 0 0.42rem;
+      border: 1px solid rgba(15, 23, 42, 0.1);
     }
 
     .oec-alliance-seat-row__party-symbol {
@@ -439,12 +603,7 @@
       text-decoration: underline;
     }
 
-    .oec-alliance-seat-row__bar {
-      height: 0.3rem;
-      background: #e2e8f0;
-      border-radius: 999px;
-      overflow: hidden;
-    }
+    .oec-alliance-seat-row__bar { display: none; }
 
     .oec-alliance-seat-row__fill {
       display: block;
@@ -459,7 +618,7 @@
     }
 
     .oec-alliance-seat-row__meta {
-      margin-top: 0.1rem;
+      margin-top: 0.02rem;
       color: #64748b;
       font-size: 0.6rem;
       line-height: 1.2;
@@ -681,6 +840,385 @@
       cursor: not-allowed;
     }
 
+    .oec-jump-results-btn {
+      position: fixed;
+      right: 14px;
+      bottom: 16px;
+      z-index: 13200;
+      border: 1px solid #1d4ed8;
+      background: #1d4ed8;
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(29, 78, 216, 0.28);
+      display: none;
+    }
+
+    .oec-jump-results-btn.is-visible {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .area-picker-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 13100;
+      padding: 1rem;
+    }
+
+    .area-picker-modal.is-open {
+      display: flex;
+    }
+
+    .area-picker-card {
+      width: min(760px, 96vw);
+      background: #fff;
+      border-radius: 14px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+      padding: 1rem;
+    }
+
+    .area-picker-title {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 0.25rem;
+    }
+
+    .area-picker-note {
+      font-size: 0.8rem;
+      color: #4b5563;
+      margin-bottom: 0.75rem;
+    }
+
+    .area-picker-counter {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #1d4ed8;
+      margin-bottom: 0.65rem;
+    }
+
+    .area-picker-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.55rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .area-chip {
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      background: #f8fafc;
+      color: #111827;
+      text-align: left;
+      padding: 0.55rem 0.65rem;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 700;
+      line-height: 1.3;
+      min-height: 48px;
+    }
+
+    .area-chip small {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.73rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .area-chip.is-selected {
+      border-color: #2563eb;
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+
+    .area-picker-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+
+    .area-picker-btn {
+      border: 1px solid #d1d5db;
+      background: #fff;
+      color: #111827;
+      border-radius: 8px;
+      padding: 0.45rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .area-picker-btn--primary {
+      border-color: #2563eb;
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .area-picker-btn--primary:disabled {
+      background: #93c5fd;
+      border-color: #93c5fd;
+      cursor: not-allowed;
+    }
+
+    .pagewise-shell {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 1rem 0.9rem 1.4rem;
+    }
+
+    .pagewise-header {
+      background: linear-gradient(135deg, #fff7ed, #eff6ff);
+      border: 1px solid #dbeafe;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .pagewise-header h2 {
+      font-size: 1.2rem;
+      color: #0f172a;
+      margin-bottom: 0.35rem;
+    }
+
+    .pagewise-header p {
+      font-size: 0.9rem;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    .pagewise-progress {
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      color: #475569;
+      font-weight: 700;
+    }
+
+    .pagewise-area-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.55rem;
+      margin-top: 0.8rem;
+    }
+
+    .pagewise-area-pill {
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      background: #f8fafc;
+      padding: 0.52rem 0.6rem;
+      font-size: 0.8rem;
+      color: #1e293b;
+      font-weight: 700;
+    }
+
+    .pagewise-area-pill.is-priority {
+      border-color: #2563eb;
+      background: #eff6ff;
+      color: #1d4ed8;
+    }
+
+    .pagewise-thesis-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      background: #fff;
+      padding: 0.8rem;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+    }
+
+    .pagewise-thesis-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 0.35rem;
+    }
+
+    .pagewise-thesis-statement {
+      font-size: 0.87rem;
+      color: #334155;
+      line-height: 1.45;
+      margin-bottom: 0.55rem;
+    }
+
+    .pagewise-important {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.79rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-bottom: 0.55rem;
+      user-select: none;
+    }
+
+    .pagewise-stance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+      gap: 0.45rem;
+    }
+
+    .pagewise-stance {
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      background: #f8fafc;
+      padding: 0.42rem 0.5rem;
+      font-size: 0.78rem;
+      color: #111827;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+    }
+
+    .pagewise-stance input {
+      margin: 0;
+      accent-color: #2563eb;
+    }
+
+    .pagewise-nav {
+      position: sticky;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.96);
+      border-top: 1px solid #e2e8f0;
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: space-between;
+      gap: 0.6rem;
+      padding: 0.75rem 0;
+      margin-top: 0.6rem;
+    }
+
+    .pagewise-btn {
+      border: 1px solid #cbd5e1;
+      background: #fff;
+      color: #0f172a;
+      border-radius: 8px;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      min-width: 98px;
+    }
+
+    .pagewise-btn--primary {
+      border-color: #2563eb;
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .pagewise-btn:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    .pagewise-results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 0.55rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .pagewise-result-card {
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      background: #f8fbff;
+      padding: 0.62rem;
+    }
+
+    .pagewise-result-card__name {
+      font-size: 0.84rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 0.2rem;
+    }
+
+    .pagewise-result-card__score {
+      font-size: 1.18rem;
+      color: #1d4ed8;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .pagewise-result-card__meta {
+      margin-top: 0.22rem;
+      color: #475569;
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    .pagewise-comparison-wrap {
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      background: #ffffff;
+      overflow: auto;
+      margin-top: 0.7rem;
+    }
+
+    .pagewise-comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+    }
+
+    .pagewise-comparison-table th,
+    .pagewise-comparison-table td {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 0.48rem 0.5rem;
+      vertical-align: top;
+      font-size: 0.76rem;
+      text-align: left;
+    }
+
+    .pagewise-comparison-table th {
+      background: #f8fafc;
+      color: #0f172a;
+      font-size: 0.72rem;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      font-weight: 800;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    .pagewise-cell-stance {
+      font-weight: 800;
+      color: #1e293b;
+      display: block;
+    }
+
+    .pagewise-cell-expl {
+      display: block;
+      margin-top: 0.12rem;
+      color: #475569;
+      line-height: 1.3;
+    }
+
+    .pagewise-cell-source {
+      display: inline-block;
+      margin-top: 0.2rem;
+      font-size: 0.7rem;
+      color: #1d4ed8;
+      text-decoration: none;
+      border-bottom: 1px dashed #93c5fd;
+    }
+
+    .pagewise-cell-source:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .back-bar {
         gap: 0.45rem;
@@ -767,8 +1305,32 @@
         width: 100%;
       }
 
+      .area-picker-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pagewise-shell {
+        padding-left: 0.65rem;
+        padding-right: 0.65rem;
+      }
+
+      .pagewise-stance-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pagewise-nav {
+        padding-bottom: calc(0.8rem + env(safe-area-inset-bottom, 0px));
+      }
+
       .feedback-btn {
         flex: 1;
+      }
+
+      .oec-jump-results-btn {
+        right: 8px;
+        bottom: 10px;
+        font-size: 0.73rem;
+        padding: 0.44rem 0.74rem;
       }
     }
   </style>
@@ -786,6 +1348,10 @@
     <div class="language-switch" role="group" aria-label="Language selector">
       <button type="button" class="lang-btn" data-lang="en" id="lang-en">EN</button>
       <button type="button" class="lang-btn" data-lang="ta" id="lang-ta">à®¤à®®à®¿à®´à¯</button>
+    </div>
+    <div class="party-links-wrap" id="party-links-wrap">
+      <button type="button" class="party-links-trigger" id="party-links-toggle">Party Links</button>
+      <div class="party-links-menu" id="party-links-menu" aria-hidden="true"></div>
     </div>
     <button type="button" class="feedback-trigger" id="feedback-open">Feedback</button>
   </div>
@@ -808,6 +1374,19 @@
       <div class="feedback-actions">
         <button type="button" class="feedback-btn" id="feedback-cancel">Cancel</button>
         <button type="button" class="feedback-btn feedback-btn--primary" id="feedback-submit" disabled>Post to Repo</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="area-picker-modal" id="area-picker-modal" aria-hidden="true">
+    <div class="area-picker-card" role="dialog" aria-modal="true" aria-labelledby="area-picker-title">
+      <div class="area-picker-title" id="area-picker-title">Choose Your Priority Areas</div>
+      <p class="area-picker-note" id="area-picker-note">Select 3 areas that matter most to you. We will show those theses first.</p>
+      <div class="area-picker-counter" id="area-picker-counter">0 / 3 selected</div>
+      <div class="area-picker-grid" id="area-picker-grid"></div>
+      <div class="area-picker-actions">
+        <button type="button" class="area-picker-btn" id="area-picker-skip">Use default order</button>
+        <button type="button" class="area-picker-btn area-picker-btn--primary" id="area-picker-continue" disabled>Continue</button>
       </div>
     </div>
   </div>
@@ -854,6 +1433,7 @@
       var oecEl      = document.getElementById('oec-el');
       var wrapper    = document.getElementById('open-election-compass');
       var backBar    = document.querySelector('.back-bar');
+      var pageWiseController = null;
       var langButtons = Array.prototype.slice.call(document.querySelectorAll('.lang-btn'));
       var hostName = String(window.location.hostname || '').toLowerCase();
       var isLocalhost = hostName === 'localhost' || hostName === '127.0.0.1' || hostName === '::1' || hostName === '[::1]';
@@ -991,6 +1571,189 @@
         return config;
       }
 
+      var AREA_PREF_STORAGE_KEY = 'oec-area-pref-v1';
+      var MAX_AREA_SELECTION = 3;
+      var AREA_DEFS = [
+        { key: 'economy', en: 'Economy and Jobs', ta: 'பொருளாதாரம் மற்றும் வேலைவாய்ப்பு', hintEn: 'Jobs, income, business', hintTa: 'வேலை, வருமானம், தொழில்' },
+        { key: 'welfare', en: 'Welfare and Inclusion', ta: 'நலத்திட்டங்கள் மற்றும் உட்சேர்ப்பு', hintEn: 'Schemes, support, subsidy', hintTa: 'திட்டங்கள், ஆதரவு, நலன்' },
+        { key: 'education', en: 'Education and Youth', ta: 'கல்வி மற்றும் இளைஞர்', hintEn: 'Schools, students, skills', hintTa: 'பள்ளி, மாணவர், திறன்' },
+        { key: 'health', en: 'Health and Services', ta: 'சுகாதாரம் மற்றும் சேவைகள்', hintEn: 'Hospitals, care, access', hintTa: 'மருத்துவம், சேவை, அணுகல்' },
+        { key: 'governance', en: 'Governance and Rights', ta: 'ஆட்சி மற்றும் உரிமைகள்', hintEn: 'State rights, administration', hintTa: 'ஆட்சி, மாநில உரிமைகள்' },
+        { key: 'community', en: 'Community and Culture', ta: 'சமூகம் மற்றும் கலாசாரம்', hintEn: 'Language, heritage, social harmony', hintTa: 'மொழி, பாரம்பரியம், ஒற்றுமை' }
+      ];
+
+      function normalizeAreaKey(value) {
+        return String(value || '').toLowerCase().replace(/[^a-z]/g, '');
+      }
+
+      function mapKnownAreaKey(rawKey) {
+        var key = normalizeAreaKey(rawKey);
+        if (key === 'economy' || key === 'employment' || key === 'jobs') return 'economy';
+        if (key === 'welfare' || key === 'socialwelfare' || key === 'cashbenefits') return 'welfare';
+        if (key === 'education' || key === 'youth') return 'education';
+        if (key === 'health' || key === 'healthcare' || key === 'services') return 'health';
+        if (key === 'governance' || key === 'rights' || key === 'autonomy') return 'governance';
+        if (key === 'community' || key === 'culture' || key === 'culturelanguage' || key === 'religion') return 'community';
+        return '';
+      }
+
+      function inferThesisAreaKey(thesis) {
+        if (!thesis) return 'governance';
+        var areaRaw = '';
+        if (typeof thesis.area === 'string') areaRaw = thesis.area;
+        else if (thesis.area && typeof thesis.area === 'object') areaRaw = thesis.area.en || thesis.area.ta || '';
+        var mapped = mapKnownAreaKey(areaRaw);
+        if (mapped) return mapped;
+
+        var title = '';
+        if (thesis.title) title = String(thesis.title.en || thesis.title.ta || '');
+        var statement = '';
+        if (thesis.statement) statement = String(thesis.statement.en || thesis.statement.ta || '');
+        var text = (title + ' ' + statement).toLowerCase();
+
+        if (/job|employment|econom|industry|startup|msme|invest|income|business|loan|entrepreneur/.test(text)) return 'economy';
+        if (/welfare|subsidy|cash|benefit|support|allowance|scheme|inclusion|minority|vulnerable|social/.test(text)) return 'welfare';
+        if (/school|college|education|student|neet|youth|skill|tnpsc/.test(text)) return 'education';
+        if (/health|hospital|medical|clinic|care|insurance|cmchis|disease/.test(text)) return 'health';
+        if (/state autonomy|govern|rights|federal|administration|transparency|law|police/.test(text)) return 'governance';
+        if (/tamil|language|culture|heritage|temple|community|harmony|religion/.test(text)) return 'community';
+
+        return 'governance';
+      }
+
+      function readStoredAreaSelection(configKey) {
+        try {
+          var raw = window.localStorage.getItem(AREA_PREF_STORAGE_KEY);
+          if (!raw) return [];
+          var parsed = JSON.parse(raw);
+          if (!parsed || typeof parsed !== 'object') return [];
+          var arr = parsed[configKey];
+          if (!Array.isArray(arr)) return [];
+          return arr.map(mapKnownAreaKey).filter(Boolean).slice(0, MAX_AREA_SELECTION);
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function writeStoredAreaSelection(configKey, selectedKeys) {
+        try {
+          var raw = window.localStorage.getItem(AREA_PREF_STORAGE_KEY);
+          var parsed = raw ? JSON.parse(raw) : {};
+          if (!parsed || typeof parsed !== 'object') parsed = {};
+          parsed[configKey] = selectedKeys.slice(0, MAX_AREA_SELECTION);
+          window.localStorage.setItem(AREA_PREF_STORAGE_KEY, JSON.stringify(parsed));
+        } catch (e) {}
+      }
+
+      function applyAreaPriorityToTheses(cfg, selectedKeys) {
+        if (!cfg || !Array.isArray(cfg.theses) || !Array.isArray(selectedKeys) || !selectedKeys.length) return;
+        var rank = {};
+        selectedKeys.forEach(function (k, idx) { rank[k] = idx; });
+
+        var decorated = cfg.theses.map(function (thesis, index) {
+          var areaKey = inferThesisAreaKey(thesis);
+          return {
+            thesis: thesis,
+            index: index,
+            areaKey: areaKey,
+            picked: rank.hasOwnProperty(areaKey),
+            rank: rank.hasOwnProperty(areaKey) ? rank[areaKey] : 999
+          };
+        });
+
+        decorated.sort(function (a, b) {
+          if (a.picked !== b.picked) return a.picked ? -1 : 1;
+          if (a.rank !== b.rank) return a.rank - b.rank;
+          return a.index - b.index;
+        });
+
+        cfg.theses = decorated.map(function (d) { return d.thesis; });
+      }
+
+      function askAreaPrioritySelection(cfg, configKey) {
+        if (!cfg || !Array.isArray(cfg.theses) || !cfg.theses.length) return Promise.resolve([]);
+
+        var modal = document.getElementById('area-picker-modal');
+        var grid = document.getElementById('area-picker-grid');
+        var counter = document.getElementById('area-picker-counter');
+        var continueBtn = document.getElementById('area-picker-continue');
+        var skipBtn = document.getElementById('area-picker-skip');
+        var titleEl = document.getElementById('area-picker-title');
+        var noteEl = document.getElementById('area-picker-note');
+        if (!modal || !grid || !counter || !continueBtn || !skipBtn || !titleEl || !noteEl) return Promise.resolve([]);
+
+        titleEl.textContent = 'Choose Your Priority Areas / உங்கள் முக்கிய பகுதி முன்னுரிமைகளைத் தேர்ந்தெடுக்கவும்';
+        noteEl.textContent = 'Select 3 areas that matter most to you. We will show those theses first. / உங்களுக்கு முக்கியமான 3 பகுதிகளைத் தேர்வுசெய்க. அந்த பகுதியின் தீர்மானங்கள் முதலில் காட்டப்படும்.';
+        skipBtn.textContent = selectedLang === 'ta' ? 'இயல்புநிலை வரிசை' : 'Use default order';
+        continueBtn.textContent = selectedLang === 'ta' ? 'தொடரவும்' : 'Continue';
+
+        var selected = readStoredAreaSelection(configKey);
+        if (selected.length > MAX_AREA_SELECTION) selected = selected.slice(0, MAX_AREA_SELECTION);
+
+        function isSelected(key) {
+          return selected.indexOf(key) >= 0;
+        }
+
+        function refreshCounter() {
+          counter.textContent = selected.length + ' / ' + MAX_AREA_SELECTION + ' selected / தேர்வு';
+          continueBtn.disabled = selected.length !== MAX_AREA_SELECTION;
+        }
+
+        function renderOptions() {
+          grid.innerHTML = AREA_DEFS.map(function (a) {
+            var label = a.en + ' / ' + a.ta;
+            var hint = a.hintEn + ' / ' + a.hintTa;
+            var cls = 'area-chip' + (isSelected(a.key) ? ' is-selected' : '');
+            return '<button type="button" class="' + cls + '" data-area="' + a.key + '">' + label + '<small>' + hint + '</small></button>';
+          }).join('');
+          refreshCounter();
+        }
+
+        renderOptions();
+
+        return new Promise(function (resolve) {
+          function cleanup() {
+            modal.classList.remove('is-open');
+            modal.setAttribute('aria-hidden', 'true');
+            grid.removeEventListener('click', onGridClick);
+            continueBtn.removeEventListener('click', onContinue);
+            skipBtn.removeEventListener('click', onSkip);
+          }
+
+          function onGridClick(e) {
+            var btn = e.target.closest('.area-chip');
+            if (!btn) return;
+            var key = mapKnownAreaKey(btn.getAttribute('data-area') || '');
+            if (!key) return;
+            if (isSelected(key)) {
+              selected = selected.filter(function (x) { return x !== key; });
+            } else if (selected.length < MAX_AREA_SELECTION) {
+              selected.push(key);
+            }
+            renderOptions();
+          }
+
+          function onContinue() {
+            if (selected.length !== MAX_AREA_SELECTION) return;
+            writeStoredAreaSelection(configKey, selected);
+            cleanup();
+            resolve(selected.slice());
+          }
+
+          function onSkip() {
+            cleanup();
+            resolve([]);
+          }
+
+          grid.addEventListener('click', onGridClick);
+          continueBtn.addEventListener('click', onContinue);
+          skipBtn.addEventListener('click', onSkip);
+
+          modal.classList.add('is-open');
+          modal.setAttribute('aria-hidden', 'false');
+        });
+      }
+
       function ensureOecConfigTag(configObj) {
         var existing = document.getElementById('oec-config-data');
         if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
@@ -1116,6 +1879,625 @@
         }
       }
 
+      function escapeHtml(value) {
+        return String(value || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function getLocalizedText(lang, enText, taText) {
+        return lang === 'ta' ? taText : enText;
+      }
+
+      function getLocalizedValue(lang, obj, fallback) {
+        if (!obj) return fallback || '';
+        if (typeof obj === 'string') return obj;
+        if (obj[lang]) return obj[lang];
+        if (obj.en) return obj.en;
+        if (obj.ta) return obj.ta;
+        return fallback || '';
+      }
+
+      function getPartyDisplayName(lang, party) {
+        if (!party) return 'Party';
+        return getLocalizedValue(lang, party.short, '') || getLocalizedValue(lang, party.name, '') || party.alias || 'Party';
+      }
+
+      function getResponseValue(token) {
+        if (token === 'strongly-approve') return 2;
+        if (token === 'approve') return 1;
+        if (token === 'partly') return 0.5;
+        if (token === 'neutral') return 0;
+        if (token === 'reject') return -1;
+        if (token === 'strongly-reject') return -2;
+        return 0;
+      }
+
+      function getPositionValue(position) {
+        var p = String(position || '').toLowerCase().replace(/_/g, '-').trim();
+        if (p === 'strongly-approve' || p === 'strongly agree') return 2;
+        if (p === 'approve' || p === 'agree') return 1;
+        if (p === 'partly') return 0.5;
+        if (p === 'neutral') return 0;
+        if (p === 'reject' || p === 'disagree') return -1;
+        if (p === 'strongly-reject' || p === 'strongly disagree') return -2;
+        return 0;
+      }
+
+      function getResponseLabel(lang, token) {
+        var t = String(token || '').toLowerCase();
+        if (lang === 'ta') {
+          if (t === 'strongly-approve') return 'மிகவும் ஒப்புதல்';
+          if (t === 'approve') return 'ஒப்புதல்';
+          if (t === 'partly') return 'பகுதியாக ஒப்புதல்';
+          if (t === 'neutral') return 'நடுநிலை';
+          if (t === 'reject') return 'எதிர்ப்பு';
+          if (t === 'strongly-reject') return 'கடுமையான எதிர்ப்பு';
+          return 'நடுநிலை';
+        }
+        if (t === 'strongly-approve') return 'Strongly approve';
+        if (t === 'approve') return 'Approve';
+        if (t === 'partly') return 'Partly';
+        if (t === 'neutral') return 'Neutral';
+        if (t === 'reject') return 'Reject';
+        if (t === 'strongly-reject') return 'Strongly reject';
+        return 'Neutral';
+      }
+
+      function getPositionLabel(lang, position) {
+        var p = String(position || '').toLowerCase().replace(/_/g, '-').trim();
+        return getResponseLabel(lang, p);
+      }
+
+      function extractCandidateName(rawName) {
+        var text = String(rawName || '').trim();
+        if (!text) return '';
+        var m = /^(.*?)(?:\s*\([^\)]+\))?$/.exec(text);
+        if (m && m[1]) return m[1].trim();
+        return text;
+      }
+
+      var PAGEWISE_PARTY_META = {
+        'dmk-alliance': { wiki: 'https://www.tnelections.info/parties#dmk', candidate: 'DMK Alliance' },
+        'aiadmk-alliance': { wiki: 'https://www.tnelections.info/parties#aiadmk', candidate: 'AIADMK Alliance' },
+        'tvk': { wiki: 'https://www.tnelections.info/parties#tvk', candidate: 'TVK' }
+      };
+
+      function getPagewiseAllianceUiKey(alias) {
+        var a = String(alias || '').toLowerCase();
+        if (a === 'dmk-alliance') return 'dmk';
+        if (a === 'aiadmk-alliance') return 'aiadmk';
+        if (a === 'bjp-alliance') return 'bjp';
+        return 'ind';
+      }
+
+      function normalizeSeatKey(value) {
+        return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+      }
+
+      function getAllianceSegmentColor(index, allianceUiKey) {
+        var palettes = {
+          dmk: ['#dc2626', '#ef4444', '#f97316', '#f59e0b', '#84cc16', '#22c55e', '#06b6d4'],
+          aiadmk: ['#16a34a', '#22c55e', '#84cc16', '#65a30d', '#0ea5e9', '#0284c7', '#f59e0b'],
+          bjp: ['#ea580c', '#f97316', '#fb923c', '#f59e0b', '#84cc16', '#22c55e', '#0ea5e9'],
+          ind: ['#475569', '#64748b', '#94a3b8', '#0ea5e9', '#14b8a6', '#22c55e', '#f59e0b']
+        };
+        var p = palettes[allianceUiKey] || palettes.ind;
+        return p[index % p.length];
+      }
+
+      function renderLinkedAllianceMembers(members, seatRows) {
+        if (!Array.isArray(members) || !members.length) return '';
+        var chunks = members.map(function (member, idx) {
+          var label = String(member || '').trim();
+          if (!label) return '';
+          var itemHtml = '<span class="oec-alliance-member-link">' + escapeHtml(label) + '</span>';
+          if (idx > 0) itemHtml = '<span class="oec-alliance-member-sep">•</span>' + itemHtml;
+          return itemHtml;
+        }).filter(Boolean);
+        if (!chunks.length) return '';
+        return '<span class="oec-alliance-members-line">' + chunks.join('') + '</span>';
+      }
+
+      function renderAlliancePieChart(rows, allianceUiKey) {
+        if (!Array.isArray(rows) || !rows.length) return '';
+        var total = 0;
+        rows.forEach(function (row) { total += (Number(row.seats) || 0); });
+        if (!total) return '';
+
+        var parts = [];
+        var acc = 0;
+        rows.forEach(function (row, idx) {
+          var seats = Number(row.seats) || 0;
+          if (!seats) return;
+          var color = getAllianceSegmentColor(idx, allianceUiKey);
+          var pct = (seats / total) * 100;
+          var start = acc;
+          var end = acc + pct;
+          acc = end;
+          parts.push(color + ' ' + start.toFixed(3) + '% ' + end.toFixed(3) + '%');
+        });
+
+        var pieStyle = 'background: conic-gradient(' + parts.join(',') + ');';
+        var html = '<div class="oec-alliance-pie-wrap">';
+        html += '<div class="oec-alliance-pie" style="' + pieStyle + '"><span class="oec-alliance-pie-total">234</span></div>';
+        html += '<div class="oec-alliance-pie-legend">';
+        rows.forEach(function (row, idx) {
+          var seats = Number(row.seats) || 0;
+          if (!seats) return;
+          var color = getAllianceSegmentColor(idx, allianceUiKey);
+          var symbol = row.symbol ? String(row.symbol) + ' ' : '';
+          var shortName = row.code || row.name || 'Party';
+          var links = Array.isArray(row.links) ? row.links : [];
+          var profileUrl = links.length && links[0] && links[0].url ? links[0].url : '';
+          var labelText = symbol + shortName + ' ' + seats;
+          html += '<div class="oec-alliance-pie-legend-item">'
+            + '<span class="oec-alliance-pie-dot" style="background:' + color + '"></span>'
+            + (profileUrl
+              ? ('<a class="oec-alliance-seat-link" href="' + escapeHtml(profileUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(labelText) + '</a>')
+              : ('<span>' + escapeHtml(labelText) + '</span>'))
+            + '</div>';
+        });
+        html += '</div>';
+        html += '</div>';
+        return html;
+      }
+
+      function buildPagewisePartyLinkItems(cfg) {
+        var items = [];
+        (cfg.parties || []).forEach(function (party) {
+          var candidateUrl = '';
+          if (party.candidateProfile && typeof party.candidateProfile === 'string') candidateUrl = party.candidateProfile;
+          else if (party.candidateProfile && typeof party.candidateProfile === 'object') {
+            candidateUrl = party.candidateProfile[selectedLang] || party.candidateProfile.en || party.candidateProfile.ta || '';
+          }
+
+          var partyUrl = '';
+          if (party.partyProfile && typeof party.partyProfile === 'string') partyUrl = party.partyProfile;
+          else if (party.partyProfile && typeof party.partyProfile === 'object') {
+            partyUrl = party.partyProfile[selectedLang] || party.partyProfile.en || party.partyProfile.ta || '';
+          }
+          if (!partyUrl && party.profile && typeof party.profile === 'string') partyUrl = party.profile;
+          else if (!partyUrl && party.profile && typeof party.profile === 'object') {
+            partyUrl = party.profile[selectedLang] || party.profile.en || party.profile.ta || '';
+          }
+
+          var meta = PAGEWISE_PARTY_META[String(party.alias || '').toLowerCase()] || null;
+          if (!partyUrl && meta && meta.wiki) partyUrl = meta.wiki;
+
+          var displayName = getPartyDisplayName(selectedLang, party);
+          var candidateName = extractCandidateName(getLocalizedValue(selectedLang, party.name, displayName));
+          if (!candidateName && meta && meta.candidate) candidateName = meta.candidate;
+
+          if (!candidateUrl && !partyUrl) {
+            // Keep a row visible so users can still see alliance names even without links.
+            items.push({
+              displayName: displayName,
+              candidateName: candidateName || displayName,
+              candidateUrl: '',
+              partyUrl: ''
+            });
+            return;
+          }
+
+          items.push({
+            displayName: displayName,
+            candidateName: candidateName || displayName,
+            candidateUrl: candidateUrl,
+            partyUrl: partyUrl
+          });
+        });
+        return items;
+      }
+
+      function mountPagewiseProfilePanel(cfg) {
+        var existing = document.getElementById('oec-pagewise-profile-panel');
+        if (existing && existing.parentNode) existing.parentNode.removeChild(existing);
+
+        var wrap = document.getElementById('party-links-wrap');
+        var toggleBtn = document.getElementById('party-links-toggle');
+        var menu = document.getElementById('party-links-menu');
+        if (!wrap || !toggleBtn || !menu) return;
+
+        var title = getLocalizedText(selectedLang, 'Party Links', 'கட்சி இணைப்புகள்');
+        toggleBtn.textContent = title;
+        toggleBtn.classList.add('is-visible');
+
+        var html = '';
+        html += '<div class="oec-profile-panel__header">';
+        html += '<h4 class="oec-profile-panel__title">' + escapeHtml(title) + '</h4>';
+        html += '</div>';
+        html += '<div class="oec-profile-panel__body">';
+
+        var metadata = (cfg && cfg.allianceMetadata && typeof cfg.allianceMetadata === 'object') ? cfg.allianceMetadata : {};
+        var seatMap = (cfg && cfg.alliancePartnerSeats && typeof cfg.alliancePartnerSeats === 'object') ? cfg.alliancePartnerSeats : {};
+        var alliances = (cfg.parties || []).filter(function (p) { return !!p && !!p.alias; });
+        alliances.forEach(function (party) {
+          var alias = String(party.alias || '');
+          var allianceUiKey = getPagewiseAllianceUiKey(alias);
+          var displayLabel = getPartyDisplayName(selectedLang, party);
+          var md = metadata[alias] || {};
+          var members = (md.displayMembers && (md.displayMembers[selectedLang] || md.displayMembers.en || md.displayMembers.ta)) || [];
+          var membersHtml = renderLinkedAllianceMembers(members, seatMap[alias] || []);
+          var seatRows = seatMap[alias] || [];
+          var allianceSource = '';
+          for (var sr = 0; sr < seatRows.length; sr++) {
+            if (seatRows[sr] && seatRows[sr].source) {
+              allianceSource = seatRows[sr].source;
+              break;
+            }
+          }
+
+          html += '<div class="oec-profile-panel__group" data-alliance="' + escapeHtml(allianceUiKey) + '">';
+          html += '<div class="oec-profile-panel__group-head">';
+          html += '<h5 class="oec-profile-panel__group-title"><span class="oec-alliance-dot" data-alliance="' + escapeHtml(allianceUiKey) + '"></span>' + escapeHtml(displayLabel) + '</h5>';
+          html += '</div>';
+          if (membersHtml) {
+            html += '<p class="oec-profile-panel__group-members">' + membersHtml + '</p>';
+          }
+          if (allianceSource) {
+            html += '<p class="oec-alliance-source"><a class="oec-alliance-seat-link" href="' + escapeHtml(allianceSource) + '" target="_blank" rel="noopener noreferrer">'
+              + escapeHtml(getLocalizedText(selectedLang, 'Seat-share source', 'இருக்கை பகிர்வு மூலம்'))
+              + '</a></p>';
+          }
+          html += renderAlliancePieChart(seatRows, allianceUiKey);
+          html += '</div>';
+        });
+
+        html += '</div>';
+
+        menu.innerHTML = html;
+
+        if (!toggleBtn.dataset.bound) {
+          toggleBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var open = menu.classList.toggle('is-open');
+            menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+          });
+          document.addEventListener('click', function (e) {
+            if (!wrap.contains(e.target)) {
+              menu.classList.remove('is-open');
+              menu.setAttribute('aria-hidden', 'true');
+            }
+          });
+          toggleBtn.dataset.bound = '1';
+        }
+      }
+
+      function buildComparisonTableHtml(rows, parties, thesisStateMap) {
+        if (!rows.length) {
+          return '<p>' + escapeHtml(getLocalizedText(selectedLang, 'No theses available in this area.', 'இந்த பகுதியில் தீர்மானங்கள் இல்லை.')) + '</p>';
+        }
+
+        var thHeaders = parties.map(function (party) {
+          return '<th>' + escapeHtml(getPartyDisplayName(selectedLang, party)) + '</th>';
+        }).join('');
+
+        var bodyRows = rows.map(function (row) {
+          var title = getLocalizedValue(selectedLang, row.thesis.title, 'Thesis ' + (row.idx + 1));
+          var userState = thesisStateMap[row.id] || { response: 'neutral', important: false };
+          var userLabel = getResponseLabel(selectedLang, userState.response || 'neutral');
+
+          var partyCells = parties.map(function (party) {
+            var pos = row.thesis.positions && row.thesis.positions[party.alias];
+            if (!pos) return '<td><span class="pagewise-cell-stance">' + escapeHtml(getLocalizedText(selectedLang, 'No data', 'தரவு இல்லை')) + '</span></td>';
+
+            var stance = getPositionLabel(selectedLang, pos.position);
+            var explanation = getLocalizedValue(selectedLang, pos.explanation, '');
+            var sourceHtml = '';
+            if (pos.source) {
+              sourceHtml = '<a class="pagewise-cell-source" href="' + escapeHtml(pos.source) + '" target="_blank" rel="noopener noreferrer">'
+                + escapeHtml(getLocalizedText(selectedLang, 'Source', 'ஆதாரம்')) + '</a>';
+            }
+
+            return '<td>'
+              + '<span class="pagewise-cell-stance">' + escapeHtml(stance) + '</span>'
+              + (explanation ? '<span class="pagewise-cell-expl">' + escapeHtml(explanation) + '</span>' : '')
+              + sourceHtml
+              + '</td>';
+          }).join('');
+
+          return '<tr>'
+            + '<td>' + escapeHtml(title) + '</td>'
+            + '<td><span class="pagewise-cell-stance">' + escapeHtml(userLabel) + '</span></td>'
+            + partyCells
+            + '</tr>';
+        }).join('');
+
+        return ''
+          + '<div class="pagewise-comparison-wrap">'
+          + '<table class="pagewise-comparison-table">'
+          + '<thead><tr><th>' + escapeHtml(getLocalizedText(selectedLang, 'Thesis', 'தீர்மானம்')) + '</th><th>' + escapeHtml(getLocalizedText(selectedLang, 'Your response', 'உங்கள் பதில்')) + '</th>' + thHeaders + '</tr></thead>'
+          + '<tbody>' + bodyRows + '</tbody>'
+          + '</table>'
+          + '</div>';
+      }
+
+      function getAreaLabelByKey(lang, key) {
+        for (var i = 0; i < AREA_DEFS.length; i++) {
+          if (AREA_DEFS[i].key === key) return lang === 'ta' ? AREA_DEFS[i].ta : AREA_DEFS[i].en;
+        }
+        return key;
+      }
+
+      function getOrderedAreaKeys(theses, selectedAreas) {
+        var areaSet = {};
+        (theses || []).forEach(function (thesis) {
+          areaSet[inferThesisAreaKey(thesis)] = true;
+        });
+
+        var selected = (selectedAreas || []).filter(Boolean);
+        var out = [];
+        selected.forEach(function (k) {
+          if (areaSet[k] && out.indexOf(k) < 0) out.push(k);
+        });
+        AREA_DEFS.forEach(function (a) {
+          if (areaSet[a.key] && out.indexOf(a.key) < 0) out.push(a.key);
+        });
+        Object.keys(areaSet).forEach(function (k) {
+          if (out.indexOf(k) < 0) out.push(k);
+        });
+        return out;
+      }
+
+      function computePagewiseScores(cfg, thesisStateMap) {
+        var parties = cfg.parties || [];
+        var theses = cfg.theses || [];
+        return parties.map(function (party) {
+          var total = 0;
+          var weightTotal = 0;
+          var compared = 0;
+          theses.forEach(function (thesis, idx) {
+            var key = 't' + idx;
+            var state = thesisStateMap[key] || { response: 'neutral', important: false };
+            var pos = thesis.positions && thesis.positions[party.alias];
+            if (!pos) return;
+            var userValue = getResponseValue(state.response);
+            var partyValue = getPositionValue(pos.position);
+            var similarity = 1 - (Math.abs(userValue - partyValue) / 4);
+            var weight = state.important ? 2 : 1;
+            total += Math.max(0, similarity) * weight;
+            weightTotal += weight;
+            compared += 1;
+          });
+          return {
+            party: party,
+            compared: compared,
+            score: weightTotal ? Math.round((total / weightTotal) * 100) : 0
+          };
+        }).sort(function (a, b) { return b.score - a.score; });
+      }
+
+      function renderPageWiseCompass(cfg, selectedAreas) {
+        var theses = cfg.theses || [];
+        var parties = cfg.parties || [];
+        if (!theses.length || !parties.length) return false;
+
+        wrapper.setAttribute('data-mode', 'pagewise');
+        mountPagewiseProfilePanel(cfg);
+
+        var areaOrder = getOrderedAreaKeys(theses, selectedAreas);
+        var thesesByArea = {};
+        areaOrder.forEach(function (k) { thesesByArea[k] = []; });
+
+        theses.forEach(function (thesis, idx) {
+          var areaKey = inferThesisAreaKey(thesis);
+          if (!thesesByArea[areaKey]) {
+            thesesByArea[areaKey] = [];
+            areaOrder.push(areaKey);
+          }
+          thesesByArea[areaKey].push({ id: 't' + idx, thesis: thesis, idx: idx, areaKey: areaKey });
+        });
+
+        var thesisStateMap = {};
+        theses.forEach(function (thesis, idx) {
+          var id = 't' + idx;
+          var areaKey = inferThesisAreaKey(thesis);
+          var isPriority = (selectedAreas || []).indexOf(areaKey) >= 0;
+          thesisStateMap[id] = {
+            response: isPriority ? '' : 'neutral',
+            important: isPriority
+          };
+        });
+
+        var pages = [{ type: 'overview', key: 'overview' }];
+        areaOrder.forEach(function (key) {
+          if ((thesesByArea[key] || []).length) pages.push({ type: 'area', key: key });
+        });
+        pages.push({ type: 'results', key: 'results' });
+
+        var stanceOptions = [
+          { token: 'strongly-approve', en: 'Strongly approve', ta: 'மிகவும் ஒப்புதல்' },
+          { token: 'approve', en: 'Approve', ta: 'ஒப்புதல்' },
+          { token: 'partly', en: 'Partly', ta: 'பகுதியாக ஒப்புதல்' },
+          { token: 'neutral', en: 'Neutral', ta: 'நடுநிலை' },
+          { token: 'reject', en: 'Reject', ta: 'எதிர்ப்பு' },
+          { token: 'strongly-reject', en: 'Strongly reject', ta: 'கடுமையான எதிர்ப்பு' }
+        ];
+
+        var currentPageIndex = 0;
+
+        function renderOverviewPage() {
+          var overviewTitle = getLocalizedText(selectedLang, 'How This Compass Works', 'இந்த காம்பஸ் எப்படி செயல்படுகிறது');
+          var overviewBody = getLocalizedText(
+            selectedLang,
+            'You will now answer area by area. Each area is shown on one page with all its theses together. Use Next and Previous to navigate pages.',
+            'இப்போது நீங்கள் பகுதி வாரியாக பதிலளிப்பீர்கள். ஒவ்வொரு பகுதியும் அந்த பகுதியில் உள்ள அனைத்து தீர்மானங்களுடன் ஒரே பக்கத்தில் காட்டப்படும். பக்கங்களுக்கு இடையில் செல்ல Next மற்றும் Previous ஐ பயன்படுத்தவும்.'
+          );
+
+          var areaPills = areaOrder.map(function (k) {
+            var isPriority = (selectedAreas || []).indexOf(k) >= 0;
+            var cls = 'pagewise-area-pill' + (isPriority ? ' is-priority' : '');
+            return '<div class="' + cls + '">' + escapeHtml(getAreaLabelByKey(selectedLang, k)) + '</div>';
+          }).join('');
+
+          return ''
+            + '<section class="pagewise-header">'
+            + '<h2>' + escapeHtml(overviewTitle) + '</h2>'
+            + '<p>' + escapeHtml(overviewBody) + '</p>'
+            + '<div class="pagewise-area-list">' + areaPills + '</div>'
+            + '</section>';
+        }
+
+        function renderAreaPage(page) {
+          var areaKey = page.key;
+          var rows = thesesByArea[areaKey] || [];
+          var areaTitle = getAreaLabelByKey(selectedLang, areaKey);
+          var cards = rows.map(function (row) {
+            var title = getLocalizedValue(selectedLang, row.thesis.title, 'Thesis ' + (row.idx + 1));
+            var statement = getLocalizedValue(selectedLang, row.thesis.statement, '');
+            var state = thesisStateMap[row.id] || { response: '', important: false };
+            var stanceHtml = stanceOptions.map(function (opt) {
+              var label = selectedLang === 'ta' ? opt.ta : opt.en;
+              var checked = state.response === opt.token ? ' checked' : '';
+              return ''
+                + '<label class="pagewise-stance">'
+                + '<input type="radio" name="resp-' + row.id + '" data-thesis-id="' + row.id + '" value="' + opt.token + '"' + checked + '>'
+                + '<span>' + escapeHtml(label) + '</span>'
+                + '</label>';
+            }).join('');
+
+            return ''
+              + '<article class="pagewise-thesis-card">'
+              + '<div class="pagewise-thesis-title">' + escapeHtml(title) + '</div>'
+              + '<div class="pagewise-thesis-statement">' + escapeHtml(statement) + '</div>'
+              + '<label class="pagewise-important">'
+              + '<input type="checkbox" data-important-id="' + row.id + '"' + (state.important ? ' checked' : '') + '>'
+              + '<span>' + escapeHtml(getLocalizedText(selectedLang, 'Important to me', 'எனக்கு முக்கியம்')) + '</span>'
+              + '</label>'
+              + '<div class="pagewise-stance-grid">' + stanceHtml + '</div>'
+              + '</article>';
+          }).join('');
+
+          return ''
+            + '<section class="pagewise-header">'
+            + '<h2>' + escapeHtml(areaTitle) + '</h2>'
+            + '<p>' + escapeHtml(getLocalizedText(
+              selectedLang,
+              'Answer all theses in this area on this page. You can move back later and revise any response.',
+              'இந்த பகுதியில் உள்ள அனைத்து தீர்மானங்களுக்கும் இதே பக்கத்தில் பதிலளிக்கவும். பின்னர் திரும்பி பதில்களை மாற்றலாம்.'
+            )) + '</p>'
+            + '</section>'
+            + cards;
+        }
+
+        function renderResultsPage() {
+          var scored = computePagewiseScores(cfg, thesisStateMap);
+          var allRows = [];
+          areaOrder.forEach(function (k) {
+            var rows = thesesByArea[k] || [];
+            for (var i = 0; i < rows.length; i++) allRows.push(rows[i]);
+          });
+          var cards = scored.map(function (row) {
+            return ''
+              + '<article class="pagewise-result-card">'
+              + '<div class="pagewise-result-card__name">' + escapeHtml(getPartyDisplayName(selectedLang, row.party)) + '</div>'
+              + '<div class="pagewise-result-card__score">' + row.score + '%</div>'
+              + '<div class="pagewise-result-card__meta">' + escapeHtml(getLocalizedText(selectedLang, 'Theses compared: ', 'ஒப்பிடப்பட்ட தீர்மானங்கள்: ')) + row.compared + '</div>'
+              + '</article>';
+          }).join('');
+
+          return ''
+            + '<section class="pagewise-header">'
+            + '<h2>' + escapeHtml(getLocalizedText(selectedLang, 'Your Result', 'உங்கள் முடிவு')) + '</h2>'
+            + '<p>' + escapeHtml(getLocalizedText(
+              selectedLang,
+              'Match percentage across parties, based on your responses and higher weight for theses marked important.',
+              'நீங்கள் அளித்த பதில்கள் மற்றும் முக்கியம் என குறித்த தீர்மானங்களுக்கு கூடுதல் நிறை வழங்கி கட்சிகளுடன் ஒப்புமை சதவீதம் கணக்கிடப்பட்டது.'
+            )) + '</p>'
+            + '</section>'
+            + '<section class="pagewise-results-grid">' + cards + '</section>'
+            + '<section class="pagewise-header">'
+            + '<h2>' + escapeHtml(getLocalizedText(selectedLang, 'Overall Comparison', 'முழு ஒப்பீடு')) + '</h2>'
+            + '<p>' + escapeHtml(getLocalizedText(
+              selectedLang,
+              'Includes your response, each party position, explanations, and source links.',
+              'உங்கள் பதில், ஒவ்வொரு கட்சியின் நிலைப்பாடு, விளக்கம் மற்றும் ஆதார இணைப்புகள் இதில் உள்ளன.'
+            )) + '</p>'
+            + '</section>'
+            + buildComparisonTableHtml(allRows, parties, thesisStateMap);
+        }
+
+        function navLabelForNext(pageIndex) {
+          if (pages[pageIndex + 1] && pages[pageIndex + 1].type === 'results') {
+            return getLocalizedText(selectedLang, 'See Results', 'முடிவுகளை காண்க');
+          }
+          return getLocalizedText(selectedLang, 'Next', 'அடுத்து');
+        }
+
+        function renderCurrentPage() {
+          var page = pages[currentPageIndex];
+          var headerText = getLocalizedText(selectedLang, 'Page ', 'பக்கம் ');
+          var content = '';
+          if (page.type === 'overview') content = renderOverviewPage();
+          else if (page.type === 'area') content = renderAreaPage(page);
+          else content = renderResultsPage();
+
+          var prevDisabled = currentPageIndex === 0 ? ' disabled' : '';
+          var nextDisabled = currentPageIndex === pages.length - 1 ? ' disabled' : '';
+
+          wrapper.innerHTML = ''
+            + '<div class="pagewise-shell">'
+            + '<div class="pagewise-progress">' + escapeHtml(headerText) + (currentPageIndex + 1) + ' / ' + pages.length + '</div>'
+            + content
+            + '<div class="pagewise-nav">'
+            + '<button type="button" class="pagewise-btn" id="pagewise-prev"' + prevDisabled + '>' + escapeHtml(getLocalizedText(selectedLang, 'Previous', 'முந்தையது')) + '</button>'
+            + '<button type="button" class="pagewise-btn pagewise-btn--primary" id="pagewise-next"' + nextDisabled + '>' + escapeHtml(navLabelForNext(currentPageIndex)) + '</button>'
+            + '</div>'
+            + '</div>';
+
+          var prevBtn = document.getElementById('pagewise-prev');
+          var nextBtn = document.getElementById('pagewise-next');
+          if (prevBtn) {
+            prevBtn.addEventListener('click', function () {
+              if (currentPageIndex > 0) {
+                currentPageIndex -= 1;
+                renderCurrentPage();
+              }
+            });
+          }
+          if (nextBtn) {
+            nextBtn.addEventListener('click', function () {
+              if (currentPageIndex < pages.length - 1) {
+                currentPageIndex += 1;
+                renderCurrentPage();
+              }
+            });
+          }
+
+          var importantInputs = wrapper.querySelectorAll('input[data-important-id]');
+          for (var i = 0; i < importantInputs.length; i++) {
+            importantInputs[i].addEventListener('change', function (e) {
+              var id = e.target.getAttribute('data-important-id') || '';
+              if (!id || !thesisStateMap[id]) return;
+              thesisStateMap[id].important = !!e.target.checked;
+            });
+          }
+
+          var responseInputs = wrapper.querySelectorAll('input[data-thesis-id]');
+          for (var j = 0; j < responseInputs.length; j++) {
+            responseInputs[j].addEventListener('change', function (e) {
+              var id = e.target.getAttribute('data-thesis-id') || '';
+              if (!id || !thesisStateMap[id]) return;
+              thesisStateMap[id].response = e.target.value || 'neutral';
+            });
+          }
+        }
+
+        renderCurrentPage();
+        pageWiseController = {
+          setLanguage: function (lang) {
+            selectedLang = normalizeLang(lang);
+            mountPagewiseProfilePanel(cfg);
+            renderCurrentPage();
+          }
+        };
+        return true;
+      }
+
       var selectedLang = getSelectedLang();
 
       function syncBackBarHeight () {
@@ -1145,26 +2527,47 @@
       setLangUi(selectedLang);
       persistLang(selectedLang);
 
+      var partyPositionsQuery = getParam('partypositions') === '1';
+      var pageWiseQuery = getParam('pagewise');
+      var pageWiseEnabled = !randomResultsQuery && !partyPositionsQuery && pageWiseQuery !== '0';
+
       langButtons.forEach(function (btn) {
         btn.addEventListener('click', function () {
           selectedLang = normalizeLang(btn.getAttribute('data-lang'));
           setLangUi(selectedLang);
           persistLang(selectedLang);
+          if (pageWiseEnabled && pageWiseController && typeof pageWiseController.setLanguage === 'function') {
+            pageWiseController.setLanguage(selectedLang);
+            return;
+          }
           setOecLanguage(selectedLang);
           forceOecRemount(selectedLang);
         });
       });
 
-      var langApplyAttempts = 0;
-      var langTimer = window.setInterval(function () {
-        langApplyAttempts++;
-        if (tryApplyLanguageInOec(selectedLang) || langApplyAttempts > 30) {
-          window.clearInterval(langTimer);
+      if (!pageWiseEnabled) {
+        var topLinksBtn = document.getElementById('party-links-toggle');
+        var topLinksMenu = document.getElementById('party-links-menu');
+        if (topLinksBtn) topLinksBtn.classList.remove('is-visible');
+        if (topLinksMenu) {
+          topLinksMenu.classList.remove('is-open');
+          topLinksMenu.setAttribute('aria-hidden', 'true');
+          topLinksMenu.innerHTML = '';
         }
-      }, 350);
+      }
+
+      if (!pageWiseEnabled) {
+        var langApplyAttempts = 0;
+        var langTimer = window.setInterval(function () {
+          langApplyAttempts++;
+          if (tryApplyLanguageInOec(selectedLang) || langApplyAttempts > 30) {
+            window.clearInterval(langTimer);
+          }
+        }, 350);
+      }
 
       applyTamilUiLabelTranslations(document);
-      if (window.MutationObserver) {
+      if (window.MutationObserver && !pageWiseEnabled) {
         var oecRootNode = document.getElementById('open-election-compass');
         if (oecRootNode) {
           var uiLabelObserver = new MutationObserver(function () {
@@ -1198,11 +2601,28 @@
           return r.json();
         })
         .then(function (cfg) {
-          ensureOecConfigTag(injectTamilOverwrites(cfg));
+          var prepared = injectTamilOverwrites(cfg);
+          var canUseAreaPicker = !randomResultsQuery && !partyPositionsQuery;
+          if (!canUseAreaPicker) return { cfg: prepared, selectedAreas: [] };
+          return askAreaPrioritySelection(prepared, configPath).then(function (selectedAreas) {
+            applyAreaPriorityToTheses(prepared, selectedAreas);
+            return { cfg: prepared, selectedAreas: selectedAreas };
+          });
+        })
+        .then(function (payload) {
+          var preparedCfg = payload.cfg;
+          var selectedAreas = payload.selectedAreas || [];
+          pageWiseController = null;
+          if (pageWiseEnabled && renderPageWiseCompass(preparedCfg, selectedAreas)) {
+            return;
+          }
+          wrapper.setAttribute('data-mode', 'oec');
+          ensureOecConfigTag(preparedCfg);
           ensureOecScriptLoaded();
         })
         .catch(function () {
           // Fallback to plain load-url mode if config fetch fails.
+          wrapper.setAttribute('data-mode', 'oec');
           ensureOecScriptLoaded();
         });
     }());
@@ -1294,6 +2714,20 @@
      * Adds source details directly inside compare explanation bubbles.
      */
     (function () {
+      function getParam(name) {
+        if (window.URLSearchParams) {
+          return new URLSearchParams(window.location.search).get(name) || '';
+        }
+        var match = new RegExp('[?&]' + name + '=([^&#]*)').exec(window.location.search);
+        return match ? decodeURIComponent(match[1].replace(/\+/g, ' ')) : '';
+      }
+
+      var sourceRandomResultsQuery = getParam('randomresults') === '1';
+      var sourcePartyPositionsQuery = getParam('partypositions') === '1';
+      var sourcePageWiseQuery = getParam('pagewise');
+      var sourcePageWiseEnabled = !sourceRandomResultsQuery && !sourcePartyPositionsQuery && sourcePageWiseQuery !== '0';
+      if (sourcePageWiseEnabled) return;
+
       var configPath = '';
       var oecEl = document.getElementById('oec-el');
       if (oecEl) configPath = oecEl.getAttribute('load-url') || '';
@@ -1373,6 +2807,15 @@
       var profilePanelCollapsed = false;
       var allianceDisplayMap = {};
       var userResponseByThesisKey = {};
+      var AREA_PREF_STORAGE_KEY = 'oec-area-pref-v1';
+      var MAX_AUTO_ADVANCE_STEPS = 48;
+      var thesisLookupToCanonicalKey = {};
+      var canonicalToAreaKey = {};
+      var importantCanonicalKeys = {};
+      var autoImportantMarked = {};
+      var autoNeutralMarked = {};
+      var jumpResultsBtn = null;
+      var jumpInProgress = false;
 
       function debugLog (line) {
         if (!debugMode) return;
@@ -1475,6 +2918,251 @@
           if (token) return getPositionLabel(token);
         }
         return getPositionLabel('neutral');
+      }
+
+      function getCanonicalThesisKey(thesis, idx) {
+        var title = thesis && thesis.title ? (thesis.title[uiLang] || thesis.title.en || thesis.title.ta || '') : '';
+        var k = normalizeText(title);
+        if (!k) k = 'thesis-' + (idx + 1);
+        return k;
+      }
+
+      function normalizeAreaKey(value) {
+        return String(value || '').toLowerCase().replace(/[^a-z]/g, '');
+      }
+
+      function mapKnownAreaKey(rawKey) {
+        var key = normalizeAreaKey(rawKey);
+        if (key === 'economy' || key === 'employment' || key === 'jobs') return 'economy';
+        if (key === 'welfare' || key === 'socialwelfare' || key === 'cashbenefits') return 'welfare';
+        if (key === 'education' || key === 'youth') return 'education';
+        if (key === 'health' || key === 'healthcare' || key === 'services') return 'health';
+        if (key === 'governance' || key === 'rights' || key === 'autonomy') return 'governance';
+        if (key === 'community' || key === 'culture' || key === 'culturelanguage' || key === 'religion') return 'community';
+        return '';
+      }
+
+      function inferThesisAreaKey(thesis) {
+        if (!thesis) return 'governance';
+        var areaRaw = '';
+        if (typeof thesis.area === 'string') areaRaw = thesis.area;
+        else if (thesis.area && typeof thesis.area === 'object') areaRaw = thesis.area.en || thesis.area.ta || '';
+        var mapped = mapKnownAreaKey(areaRaw);
+        if (mapped) return mapped;
+
+        var title = thesis.title ? String(thesis.title.en || thesis.title.ta || '') : '';
+        var statement = thesis.statement ? String(thesis.statement.en || thesis.statement.ta || '') : '';
+        var text = (title + ' ' + statement).toLowerCase();
+        if (/job|employment|econom|industry|startup|msme|invest|income|business|loan|entrepreneur/.test(text)) return 'economy';
+        if (/welfare|subsidy|cash|benefit|support|allowance|scheme|inclusion|minority|vulnerable|social/.test(text)) return 'welfare';
+        if (/school|college|education|student|neet|youth|skill|tnpsc/.test(text)) return 'education';
+        if (/health|hospital|medical|clinic|care|insurance|cmchis|disease/.test(text)) return 'health';
+        if (/state autonomy|govern|rights|federal|administration|transparency|law|police/.test(text)) return 'governance';
+        if (/tamil|language|culture|heritage|temple|community|harmony|religion/.test(text)) return 'community';
+        return 'governance';
+      }
+
+      function readStoredAreaSelection(configKey) {
+        try {
+          var raw = window.localStorage.getItem(AREA_PREF_STORAGE_KEY);
+          if (!raw) return [];
+          var parsed = JSON.parse(raw);
+          if (!parsed || typeof parsed !== 'object') return [];
+          var arr = parsed[configKey];
+          if (!Array.isArray(arr)) return [];
+          return arr.map(mapKnownAreaKey).filter(Boolean);
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function registerThesisPriorityMap(theses) {
+        thesisLookupToCanonicalKey = {};
+        canonicalToAreaKey = {};
+        importantCanonicalKeys = {};
+
+        var safePath = getConfigPathForQuery(configPath) || stripQueryAndHash(configPath);
+        var selectedAreas = readStoredAreaSelection(safePath).slice(0, 3);
+
+        (theses || []).forEach(function (thesis, idx) {
+          var canonical = getCanonicalThesisKey(thesis, idx);
+          var areaKey = inferThesisAreaKey(thesis);
+          canonicalToAreaKey[canonical] = areaKey;
+          if (selectedAreas.indexOf(areaKey) >= 0) importantCanonicalKeys[canonical] = true;
+
+          var keys = getThesisLookupKeys(thesis, idx);
+          keys.push(canonical);
+          keys.forEach(function (k) {
+            var key = normalizeText(k);
+            if (key) thesisLookupToCanonicalKey[key] = canonical;
+          });
+        });
+      }
+
+      function resolveCanonicalFromMarker(marker) {
+        var key = normalizeText(marker);
+        if (!key) return '';
+        if (thesisLookupToCanonicalKey[key]) return thesisLookupToCanonicalKey[key];
+        for (var lookup in thesisLookupToCanonicalKey) {
+          if (key.indexOf(lookup) >= 0 || lookup.indexOf(key) >= 0) {
+            return thesisLookupToCanonicalKey[lookup];
+          }
+        }
+        return '';
+      }
+
+      function clickBestTarget(el) {
+        if (!el) return false;
+        var direct = el.matches && el.matches('button, [role="button"], label, input, .party-item__button');
+        var target = direct ? el : (el.querySelector && el.querySelector('button, [role="button"], label, input, .party-item__button'));
+        if (!target) target = el;
+        try {
+          target.click();
+          return true;
+        } catch (e) {
+          try {
+            target.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+            return true;
+          } catch (e2) {
+            return false;
+          }
+        }
+      }
+
+      function getActiveQuestionScope(scopeContainer) {
+        var roots = queryAllInRoots(scopeContainer, '.compare-section, [class*="compare"], [class*="thesis"], [class*="question"]');
+        for (var i = 0; i < roots.length; i++) {
+          if (isVisible(roots[i])) return roots[i];
+        }
+        return scopeContainer;
+      }
+
+      function findVisibleControl(scopeContainer, regex) {
+        var activeScope = getActiveQuestionScope(scopeContainer);
+        var controls = queryAllInRoots(activeScope, 'button, [role="button"], label, input, .party-item__button');
+        for (var i = 0; i < controls.length; i++) {
+          var el = controls[i];
+          if (!isVisible(el)) continue;
+          var txt = getControlText(el);
+          if (regex.test(txt)) return el;
+        }
+        // Fallback to full container if not found in active scope.
+        if (activeScope !== scopeContainer) {
+          controls = queryAllInRoots(scopeContainer, 'button, [role="button"], label, input, .party-item__button');
+          for (var j = 0; j < controls.length; j++) {
+            var el2 = controls[j];
+            if (!isVisible(el2)) continue;
+            var txt2 = getControlText(el2);
+            if (regex.test(txt2)) return el2;
+          }
+        }
+        return null;
+      }
+
+      function getAnsweredImportantCount() {
+        var answered = 0;
+        for (var canonical in importantCanonicalKeys) {
+          var has = false;
+          for (var key in userResponseByThesisKey) {
+            if (thesisLookupToCanonicalKey[key] === canonical && userResponseByThesisKey[key]) {
+              has = true;
+              break;
+            }
+          }
+          if (has) answered++;
+        }
+        return answered;
+      }
+
+      function ensureJumpResultsButton() {
+        if (jumpResultsBtn) return jumpResultsBtn;
+        jumpResultsBtn = document.createElement('button');
+        jumpResultsBtn.type = 'button';
+        jumpResultsBtn.className = 'oec-jump-results-btn';
+        jumpResultsBtn.id = 'oec-jump-results-btn';
+        jumpResultsBtn.textContent = uiLang === 'ta' ? 'முடிவுக்கு செல்லவும்' : 'Jump to Results';
+        jumpResultsBtn.addEventListener('click', function () {
+          if (jumpInProgress) return;
+          jumpInProgress = true;
+          var scopeContainer = document.getElementById('open-election-compass');
+          var step = 0;
+          var timer = setInterval(function () {
+            var resultBtn = findVisibleControl(scopeContainer, /see your result|result|முடிவு|உங்கள் முடிவை பார்க்க/i);
+            if (resultBtn) {
+              clearInterval(timer);
+              clickBestTarget(resultBtn);
+              jumpInProgress = false;
+              return;
+            }
+            var nextBtn = findVisibleControl(scopeContainer, /proceed to the next thesis|next thesis|next|அடுத்த தீர்மான|அடுத்து/i);
+            if (nextBtn) {
+              clickBestTarget(nextBtn);
+            } else {
+              clearInterval(timer);
+              jumpInProgress = false;
+            }
+            if (++step > MAX_AUTO_ADVANCE_STEPS) {
+              clearInterval(timer);
+              jumpInProgress = false;
+            }
+          }, 220);
+        });
+        document.body.appendChild(jumpResultsBtn);
+        return jumpResultsBtn;
+      }
+
+      function refreshJumpResultsState() {
+        var totalImportant = Object.keys(importantCanonicalKeys).length;
+        var answeredImportant = getAnsweredImportantCount();
+        var btn = ensureJumpResultsButton();
+        if (totalImportant > 0 && answeredImportant >= totalImportant) {
+          btn.classList.add('is-visible');
+        } else {
+          btn.classList.remove('is-visible');
+        }
+      }
+
+      function applyAdaptiveThesisFlow(scopeContainer) {
+        var marker = getStepMarker(scopeContainer);
+        if (!marker) {
+          refreshJumpResultsState();
+          return;
+        }
+
+        var canonical = resolveCanonicalFromMarker(marker);
+        if (!canonical) {
+          canonical = normalizeText(marker);
+        }
+        if (!canonical) {
+          refreshJumpResultsState();
+          return;
+        }
+
+        var markerKey = normalizeText(marker);
+        var existingToken = userResponseByThesisKey[markerKey] || '';
+
+        var isPrioritized = !!importantCanonicalKeys[canonical];
+
+        if (isPrioritized && !autoImportantMarked[canonical]) {
+          var importantBtn = findVisibleControl(scopeContainer, /important to me|எனக்கு முக்கியம்/i);
+          if (importantBtn) {
+            if (clickBestTarget(importantBtn)) {
+              autoImportantMarked[canonical] = true;
+            }
+          }
+        }
+
+        if (!isPrioritized && !existingToken && !autoNeutralMarked[canonical]) {
+          var neutralBtn = findVisibleControl(scopeContainer, /(^|\s)neutral(\s|$)|நடுநிலை|remain neutral/i);
+          if (neutralBtn) {
+            if (clickBestTarget(neutralBtn)) {
+              userResponseByThesisKey[markerKey] = 'neutral';
+              autoNeutralMarked[canonical] = true;
+            }
+          }
+        }
+
+        refreshJumpResultsState();
       }
 
       function normalizePositionValue(position) {
@@ -2083,6 +3771,7 @@
             });
           }
           debugLog('config loaded: theses=' + theses.length + ', parties=' + parties.length);
+          registerThesisPriorityMap(theses);
 
           // Build a default source map per party alias for fallback matching.
           var aliasSource = {};
@@ -2507,6 +4196,7 @@
             try {
               injectLinks();
               injectCandidateProfileLinks();
+              applyAdaptiveThesisFlow(container);
             } finally {
               if (observer) observer.observe(container, { childList: true, subtree: true });
               isInjecting = false;
@@ -2545,6 +4235,7 @@
             if (!key) return;
 
             userResponseByThesisKey[key] = token;
+            refreshJumpResultsState();
           }, true);
 
           runInjectors(); // catch anything already rendered
