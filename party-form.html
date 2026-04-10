@@ -26,6 +26,51 @@
     a.back-link { color: rgba(255,255,255,.85); font-size: .82rem; font-weight: 600; text-decoration: none; padding: .25rem .5rem; border: 1px solid rgba(255,255,255,.3); border-radius: 5px; }
     a.back-link:hover { background: rgba(255,255,255,.15); }
 
+    .site-menu-wrap { position: relative; }
+    .site-menu-trigger {
+      border: 1px solid rgba(255,255,255,.45);
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      border-radius: 7px;
+      padding: .3rem .6rem;
+      font-size: .78rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .site-menu-trigger:hover { background: rgba(255,255,255,.2); }
+    .site-menu-list {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 6px);
+      min-width: 230px;
+      z-index: 100;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.18);
+      padding: .4rem;
+      display: none;
+    }
+    .site-menu-list.is-open { display: block; }
+    .site-menu-list .site-menu-link {
+      display: block;
+      text-decoration: none;
+      color: #1e3a8a !important;
+      font-size: .72rem;
+      font-weight: 700;
+      line-height: 1.25;
+      padding: .44rem .58rem;
+      border-radius: 7px;
+      border-bottom: 1px dashed #60a5fa;
+      opacity: 1;
+      -webkit-text-fill-color: #1e3a8a;
+    }
+    .site-menu-list .site-menu-link:hover {
+      background: #eff6ff;
+      color: #1e40af !important;
+      -webkit-text-fill-color: #1e40af;
+    }
+
     /* ── Progress ── */
     .progress-wrap { background: var(--primary-dk); padding-bottom: .3rem; }
     .progress-bar { height: 4px; background: #60a5fa; width: 0%; transition: width .35s; }
@@ -133,6 +178,7 @@
     @media (max-width: 480px) {
       .page-card { padding: 1rem; }
       .pos-btn { font-size: .78rem; padding: .3rem .7rem; }
+      .site-menu-list { min-width: 205px; }
     }
   </style>
 </head>
@@ -145,6 +191,15 @@
         <div class="header-text" style="flex:1">
           <h1>Submit Party / Candidate Positions</h1>
           <p id="election-title-sub">Loading election data…</p>
+        </div>
+        <div class="site-menu-wrap" id="site-menu-wrap">
+          <button type="button" class="site-menu-trigger" id="site-menu-toggle" aria-expanded="false" aria-controls="site-menu-list">Menu</button>
+          <div class="site-menu-list" id="site-menu-list" aria-hidden="true">
+            <a class="site-menu-link" href="index.html">Home</a>
+            <a class="site-menu-link" href="about.html">About</a>
+            <a class="site-menu-link" href="resources.html">Methodology &amp; Sources</a>
+            <a class="site-menu-link" href="https://github.com/darepalli/ElectionDiksoochi" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
         </div>
         <a href="index.html" class="back-link">← All Elections</a>
       </div>
@@ -271,8 +326,39 @@
     var electionPath   = '';
     var SAFE_RE        = /^elections\/[a-z]{2,}\/[a-z0-9._\/-]+\/config\.json$/;
 
+    function setupSiteMenu() {
+      var wrap = document.getElementById('site-menu-wrap');
+      var toggleBtn = document.getElementById('site-menu-toggle');
+      var menu = document.getElementById('site-menu-list');
+      if (!wrap || !toggleBtn || !menu) return;
+
+      toggleBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = menu.classList.toggle('is-open');
+        menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+        toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!wrap.contains(e.target)) {
+          menu.classList.remove('is-open');
+          menu.setAttribute('aria-hidden', 'true');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          menu.classList.remove('is-open');
+          menu.setAttribute('aria-hidden', 'true');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
     /* ── Bootstrap ── */
     (function init() {
+      setupSiteMenu();
       var p = new URLSearchParams(location.search).get('election') || '';
       if (p) {
         loadElection(p);

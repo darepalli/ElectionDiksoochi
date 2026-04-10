@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About India Election Compass: what it does, why it exists, and how to use it responsibly." />
+  <title>About | India Election Compass</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="assets/hub.css" />
+  <style>
+    .site-menu-wrap {
+      position: relative;
+      margin-left: auto;
+    }
+
+    .site-menu-trigger {
+      border: 1px solid rgba(255,255,255,.45);
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      border-radius: 8px;
+      padding: 0.36rem 0.64rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .site-menu-trigger:hover {
+      background: rgba(255,255,255,.2);
+    }
+
+    .site-menu-list {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 6px);
+      min-width: 230px;
+      z-index: 100;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.18);
+      padding: 0.4rem;
+      display: none;
+    }
+
+    .site-menu-list.is-open {
+      display: block;
+    }
+
+    .site-menu-list .site-menu-link {
+      display: block;
+      text-decoration: none;
+      color: #1e3a8a !important;
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1.25;
+      padding: 0.44rem 0.58rem;
+      border-radius: 7px;
+      border-bottom: 1px dashed #60a5fa;
+      opacity: 1;
+      -webkit-text-fill-color: #1e3a8a;
+    }
+
+    .site-menu-list .site-menu-link:hover {
+      background: #eff6ff;
+      color: #1e40af !important;
+      -webkit-text-fill-color: #1e40af;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="site-logo">🧭</div>
+      <div>
+        <h1 class="site-title">About India Election Compass</h1>
+        <p class="site-tagline">What this civic tool does and why it exists</p>
+      </div>
+      <div class="site-menu-wrap" id="site-menu-wrap">
+        <button type="button" class="site-menu-trigger" id="site-menu-toggle" aria-expanded="false" aria-controls="site-menu-list">Menu</button>
+        <div class="site-menu-list" id="site-menu-list" aria-hidden="true">
+          <a class="site-menu-link" href="index.html">Home</a>
+          <a class="site-menu-link" href="about.html">About</a>
+          <a class="site-menu-link" href="resources.html">Methodology &amp; Sources</a>
+          <a class="site-menu-link" href="https://github.com/darepalli/ElectionDiksoochi" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="how-section" style="margin-top:2rem">
+      <h3>Purpose</h3>
+      <p class="disclaimer" style="font-style:normal;border-top:none;padding-top:0">
+        India Election Compass is a non-partisan civic information project that helps voters compare their policy preferences
+        with publicly stated positions of parties, alliances, or candidates.
+      </p>
+      <p class="disclaimer" style="font-style:normal;border-top:none;padding-top:0">
+        The goal is to make policy comparison easier, transparent, and source-linked, so users can form their own view with
+        less noise and more evidence.
+      </p>
+    </section>
+
+    <section class="how-section">
+      <h3>How To Use The Compass</h3>
+      <ul class="compat-list">
+        <li>Select an election (state-level or constituency-level compass).</li>
+        <li>Answer each policy thesis with approve, neutral, or reject.</li>
+        <li>Mark issue importance where available.</li>
+        <li>Review match output and compare explanations with source links.</li>
+      </ul>
+    </section>
+
+    <section class="how-section">
+      <h3>What This Site Is For</h3>
+      <ul class="compat-list">
+        <li>Policy literacy before voting.</li>
+        <li>Quick side-by-side comparison of public stances.</li>
+        <li>Traceable public-source evidence for mapped positions.</li>
+        <li>Open contribution and correction workflow for source-backed updates.</li>
+      </ul>
+    </section>
+
+    <section class="how-section">
+      <h3>What This Site Is Not</h3>
+      <ul class="compat-list">
+        <li>Not a voting recommendation engine.</li>
+        <li>Not affiliated with any party, alliance, candidate, or government.</li>
+        <li>Not a replacement for reading full manifestos and official statements.</li>
+      </ul>
+    </section>
+
+    <section class="how-section">
+      <h3>Transparency and Privacy</h3>
+      <p class="disclaimer" style="font-style:normal;border-top:none;padding-top:0">
+        Compass responses are processed in-browser for result calculation. The project does not intend to collect or sell
+        personal response data.
+      </p>
+      <p class="disclaimer" style="font-style:normal;border-top:none;padding-top:0">
+        For evidence links and source methodology, see <a href="resources.html">Methodology &amp; Sources</a>.
+      </p>
+    </section>
+
+    <section class="how-section">
+      <h3>Open Source and Contributions</h3>
+      <p class="disclaimer" style="font-style:normal;border-top:none;padding-top:0">
+        The project is maintained openly on GitHub. If you find a mismatch, share a correction with documentary evidence.
+      </p>
+      <p>
+        <a href="https://github.com/darepalli/ElectionDiksoochi" target="_blank" rel="noopener">Project Repository</a>
+        · <a href="party-form.html">Submit Position Updates</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        India Election Compass &nbsp;·&nbsp;
+        Open Source &amp; Non-Partisan &nbsp;·&nbsp;
+        <a href="index.html">Home</a> &nbsp;·&nbsp;
+        <a href="resources.html">Methodology &amp; Sources</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function setupSiteMenu() {
+      var wrap = document.getElementById('site-menu-wrap');
+      var toggleBtn = document.getElementById('site-menu-toggle');
+      var menu = document.getElementById('site-menu-list');
+      if (!wrap || !toggleBtn || !menu) return;
+
+      toggleBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = menu.classList.toggle('is-open');
+        menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+        toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!wrap.contains(e.target)) {
+          menu.classList.remove('is-open');
+          menu.setAttribute('aria-hidden', 'true');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          menu.classList.remove('is-open');
+          menu.setAttribute('aria-hidden', 'true');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

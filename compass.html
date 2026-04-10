@@ -106,6 +106,64 @@
       background: rgba(255,255,255,.2);
     }
 
+    .site-menu-wrap {
+      position: relative;
+    }
+
+    .site-menu-trigger {
+      border: 1px solid rgba(255,255,255,.45);
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      border-radius: 7px;
+      padding: 0.35rem 0.6rem;
+      font-size: 0.76rem;
+      font-weight: 700;
+      cursor: pointer;
+      min-height: 34px;
+    }
+
+    .site-menu-trigger:hover {
+      background: rgba(255,255,255,.2);
+    }
+
+    .site-menu-list {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 6px);
+      min-width: 230px;
+      z-index: 12010;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.18);
+      padding: 0.4rem;
+      display: none;
+    }
+
+    .site-menu-list.is-open {
+      display: block;
+    }
+
+    .site-menu-list .site-menu-link {
+      display: block;
+      text-decoration: none;
+      color: #1e3a8a !important;
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1.25;
+      padding: 0.44rem 0.58rem;
+      border-radius: 7px;
+      border-bottom: 1px dashed #60a5fa;
+      opacity: 1;
+      -webkit-text-fill-color: #1e3a8a;
+    }
+
+    .site-menu-list .site-menu-link:hover {
+      background: #eff6ff;
+      color: #1e40af !important;
+      -webkit-text-fill-color: #1e40af;
+    }
+
     .party-links-wrap {
       position: relative;
     }
@@ -1311,6 +1369,15 @@
         padding: .3rem .55rem;
       }
 
+      .site-menu-trigger {
+        font-size: .72rem;
+        padding: .3rem .55rem;
+      }
+
+      .site-menu-list {
+        min-width: 205px;
+      }
+
       .lang-btn {
         font-size: 0.71rem;
         min-width: 42px;
@@ -1461,6 +1528,10 @@
     <span class="sep">|</span>
     <span class="current-label" id="back-label">Election Compass</span>
     <span class="spacer"></span>
+    <div class="site-menu-wrap" id="site-menu-wrap">
+      <button type="button" class="site-menu-trigger" id="site-menu-toggle" aria-expanded="false" aria-controls="site-menu-list">Menu</button>
+      <div class="site-menu-list" id="site-menu-list" aria-hidden="true"></div>
+    </div>
     <div class="language-switch" role="group" aria-label="Language selector">
       <button type="button" class="lang-btn" data-lang="en" id="lang-en">EN</button>
       <button type="button" class="lang-btn" data-lang="ta" id="lang-ta">&#2980;&#2990;&#3007;&#2996;&#3021;</button>
@@ -1594,6 +1665,71 @@
           url.searchParams.set('lang', lang);
           window.history.replaceState({}, '', url.toString());
         } catch (e) {}
+      }
+
+      function setupSiteMenu(lang) {
+        var wrap = document.getElementById('site-menu-wrap');
+        var toggleBtn = document.getElementById('site-menu-toggle');
+        var menu = document.getElementById('site-menu-list');
+        if (!wrap || !toggleBtn || !menu) return;
+
+        var menuLabel = getLocalizedText(lang, 'Menu', 'மெனு');
+        toggleBtn.textContent = menuLabel;
+        toggleBtn.setAttribute('aria-label', menuLabel);
+
+        var links = [
+          {
+            href: 'index.html',
+            label: getLocalizedText(lang, 'Home', 'முகப்பு')
+          },
+          {
+            href: 'about.html',
+            label: getLocalizedText(lang, 'About', 'பற்றி')
+          },
+          {
+            href: 'resources.html',
+            label: getLocalizedText(lang, 'Methodology & Sources', 'முறையியல் மற்றும் ஆதாரங்கள்')
+          },
+          {
+            href: 'https://github.com/darepalli/ElectionDiksoochi',
+            label: getLocalizedText(lang, 'GitHub', 'GitHub'),
+            external: true
+          }
+        ];
+
+        menu.innerHTML = links.map(function (item) {
+          var attrs = item.external
+            ? ' target="_blank" rel="noopener noreferrer"'
+            : '';
+          return '<a class="site-menu-link" href="' + escapeHtml(item.href) + '"' + attrs + '>' + escapeHtml(item.label) + '</a>';
+        }).join('');
+
+        if (!toggleBtn.dataset.bound) {
+          toggleBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var open = menu.classList.toggle('is-open');
+            menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+            toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          });
+
+          document.addEventListener('click', function (e) {
+            if (!wrap.contains(e.target)) {
+              menu.classList.remove('is-open');
+              menu.setAttribute('aria-hidden', 'true');
+              toggleBtn.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+              menu.classList.remove('is-open');
+              menu.setAttribute('aria-hidden', 'true');
+              toggleBtn.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          toggleBtn.dataset.bound = '1';
+        }
       }
 
       function setOecLanguage(lang) {
@@ -2796,6 +2932,7 @@
 
       setLangUi(selectedLang);
       persistLang(selectedLang);
+      setupSiteMenu(selectedLang);
 
       var partyPositionsQuery = getParam('partypositions') === '1';
       var pageWiseQuery = getParam('pagewise');
@@ -2806,6 +2943,7 @@
           selectedLang = normalizeLang(btn.getAttribute('data-lang'));
           setLangUi(selectedLang);
           persistLang(selectedLang);
+          setupSiteMenu(selectedLang);
           if (pageWiseEnabled && pageWiseController && typeof pageWiseController.setLanguage === 'function') {
             pageWiseController.setLanguage(selectedLang);
             return;

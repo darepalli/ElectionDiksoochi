@@ -7,6 +7,65 @@
   <title>Methodology & Sources | India Election Compass</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="assets/hub.css" />
+  <style>
+    .site-menu-wrap {
+      position: relative;
+      margin-left: auto;
+    }
+
+    .site-menu-trigger {
+      border: 1px solid rgba(255,255,255,.45);
+      background: rgba(255,255,255,.12);
+      color: #fff;
+      border-radius: 8px;
+      padding: 0.36rem 0.64rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .site-menu-trigger:hover {
+      background: rgba(255,255,255,.2);
+    }
+
+    .site-menu-list {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 6px);
+      min-width: 230px;
+      z-index: 100;
+      border: 1px solid #dbeafe;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.18);
+      padding: 0.4rem;
+      display: none;
+    }
+
+    .site-menu-list.is-open {
+      display: block;
+    }
+
+    .site-menu-list .site-menu-link {
+      display: block;
+      text-decoration: none;
+      color: #1e3a8a !important;
+      font-size: 0.72rem;
+      font-weight: 700;
+      line-height: 1.25;
+      padding: 0.44rem 0.58rem;
+      border-radius: 7px;
+      border-bottom: 1px dashed #60a5fa;
+      opacity: 1;
+      -webkit-text-fill-color: #1e3a8a;
+    }
+
+    .site-menu-list .site-menu-link:hover {
+      background: #eff6ff;
+      color: #1e40af !important;
+      -webkit-text-fill-color: #1e40af;
+    }
+  </style>
 </head>
 <body>
 
@@ -16,6 +75,15 @@
       <div>
         <h1 class="site-title">Methodology & Sources</h1>
         <p class="site-tagline">India Election Compass Transparency Page</p>
+      </div>
+      <div class="site-menu-wrap" id="site-menu-wrap">
+        <button type="button" class="site-menu-trigger" id="site-menu-toggle" aria-expanded="false" aria-controls="site-menu-list">Menu</button>
+        <div class="site-menu-list" id="site-menu-list" aria-hidden="true">
+          <a class="site-menu-link" href="index.html">Home</a>
+          <a class="site-menu-link" href="about.html">About</a>
+          <a class="site-menu-link" href="resources.html">Methodology &amp; Sources</a>
+          <a class="site-menu-link" href="https://github.com/darepalli/ElectionDiksoochi" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
       </div>
     </div>
   </header>
@@ -69,6 +137,26 @@
         Use official party websites, manifesto PDFs, press releases, and verified social media handles as primary
         references. Prefer direct documents over commentary whenever possible.
       </p>
+      <ul class="compat-list">
+        <li><a href="https://tnelections2026.in/candidates.html" target="_blank" rel="noopener">TN Elections 2026 Candidate Explorer</a> (candidate mapping by constituency)</li>
+        <li><a href="https://www.tnelections.info/manifesto" target="_blank" rel="noopener">TN Elections Manifesto Tracker</a> (baseline thesis enrichment)</li>
+        <li><a href="https://www.tnelections.info/parties" target="_blank" rel="noopener">TN Elections Parties Directory</a> (party profile links)</li>
+      </ul>
+    </section>
+
+    <section class="how-section">
+      <h3>Recently Added Sources (2026 Updates)</h3>
+      <p class="disclaimer" style="font-style:normal;border-top:none;padding-top:0">
+        The latest constituency-level NTK candidate and thesis refinement pass used the following public references.
+      </p>
+      <ul class="compat-list">
+        <li><a href="https://makkalarasu.in/assets/NTK-2026-Manifesto.pdf" target="_blank" rel="noopener">NTK 2026 Manifesto (PDF)</a></li>
+        <li><a href="https://www.naamtamilar.org/policies/" target="_blank" rel="noopener">Naam Tamilar - Policy Page</a></li>
+        <li><a href="https://www.naamtamilar.org/2025/02/pass-resolution-no-fund-no-tax-unless-the-indian-union-govt-releases-fund-for-tn-school-children-seeman-urges-dmk-govt/" target="_blank" rel="noopener">NTK Statement on State Rights / Fiscal Autonomy</a></li>
+        <li><a href="https://www.naamtamilar.org/2026/03/%e0%ae%aa%e0%af%86%e0%ae%a3%e0%af%8d-%e0%ae%95%e0%af%81%e0%ae%b4%e0%ae%a8%e0%af%8d%e0%ae%a4%e0%af%88%e0%ae%95%e0%ae%b3%e0%af%88%e0%ae%aa%e0%af%8d-%e0%ae%aa%e0%ae%be%e0%ae%b2%e0%ae%bf%e0%ae%af%e0%ae%b2/" target="_blank" rel="noopener">NTK Statement on Women Safety Enforcement</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/2026_Tamil_Nadu_Legislative_Assembly_election" target="_blank" rel="noopener">Tamil Nadu 2026 Election Reference (Alliance context)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/2021_Tamil_Nadu_Legislative_Assembly_election" target="_blank" rel="noopener">Tamil Nadu 2021 Election Reference (baseline candidate mapping context)</a></li>
+      </ul>
     </section>
 
     <section class="how-section">
@@ -115,6 +203,38 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    (function setupSiteMenu() {
+      var wrap = document.getElementById('site-menu-wrap');
+      var toggleBtn = document.getElementById('site-menu-toggle');
+      var menu = document.getElementById('site-menu-list');
+      if (!wrap || !toggleBtn || !menu) return;
+
+      toggleBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = menu.classList.toggle('is-open');
+        menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+        toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!wrap.contains(e.target)) {
+          menu.classList.remove('is-open');
+          menu.setAttribute('aria-hidden', 'true');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          menu.classList.remove('is-open');
+          menu.setAttribute('aria-hidden', 'true');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>
