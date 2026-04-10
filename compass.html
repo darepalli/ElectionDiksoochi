@@ -886,6 +886,9 @@
       border: 1px solid #e5e7eb;
       box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
       padding: 1rem;
+      max-height: calc(100vh - 2rem);
+      max-height: calc(100dvh - 2rem);
+      overflow-y: auto;
     }
 
     .area-picker-title {
@@ -947,6 +950,12 @@
       display: flex;
       justify-content: flex-end;
       gap: 0.5rem;
+      position: sticky;
+      bottom: 0;
+      background: #fff;
+      padding-top: 0.55rem;
+      margin-top: 0.15rem;
+      border-top: 1px solid #e5e7eb;
     }
 
     .area-picker-btn {
@@ -1269,6 +1278,17 @@
         width: calc(100vw - 16px);
       }
 
+      .area-picker-modal {
+        align-items: flex-start;
+        overflow-y: auto;
+        padding-top: max(0.8rem, env(safe-area-inset-top, 0px));
+        padding-bottom: max(0.8rem, env(safe-area-inset-bottom, 0px));
+      }
+
+      .area-picker-card {
+        width: min(760px, 100%);
+      }
+
 
     }
 
@@ -1308,6 +1328,15 @@
 
       .area-picker-grid {
         grid-template-columns: 1fr;
+      }
+
+      .area-picker-actions {
+        flex-wrap: wrap;
+      }
+
+      .area-picker-btn {
+        flex: 1;
+        min-height: 42px;
       }
 
       .pagewise-shell {
