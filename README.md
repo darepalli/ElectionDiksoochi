@@ -12,7 +12,7 @@ Answer policy questions and discover which party or candidate best represents yo
 India Election Compass presents policy theses — clear, testable statements on governance, health, education, economy, language, and more. Users rate each thesis and the tool calculates which party or candidate position set is the closest match.
 
 - No personal data is collected or stored — all scoring is done in-browser
-- Bilingual: English + Tamil (தமிழ்), with more languages planned
+- Multilingual by election config: currently English + Tamil (TN), and English + Bengali (WB preview)
 - Alliance-aware: sub-party positions within an alliance can be shown individually
 - Source citations are displayed inline for every position statement
 
@@ -24,6 +24,7 @@ India Election Compass presents policy theses — clear, testable statements on 
 |---|---|---|
 | Tamil Nadu | State Assembly 2026 | ✅ Live |
 | Tamil Nadu | All 234 Constituencies | 🔜 Coming Soon |
+| West Bengal | State Assembly 2026 (Preview) | 🧪 Preview Live |
 
 ---
 
@@ -48,13 +49,16 @@ india-election-compass/
 │   └── favicon.svg
 │
 ├── elections/
-│   └── tn/
-│       ├── 2026-state/
-│       │   └── config.json     TN 2026 State Assembly election data
-│       └── constituencies/
-│           ├── index.html      Constituency list / preview page
-│           ├── constituencies.json
-│           └── {name}/         One directory per constituency (234 total)
+│   ├── tn/
+│   │   ├── 2026-state/
+│   │   │   └── config.json     TN 2026 State Assembly election data
+│   │   └── constituencies/
+│   │       ├── index.html      Constituency list / preview page
+│   │       ├── constituencies.json
+│   │       └── {name}/         One directory per constituency (234 total)
+│   └── wb/
+│       └── 2026-state/
+│           └── config.json     WB 2026 State Assembly preview data
 │
 ├── _templates/
 │   ├── config-state.json       Annotated template for a new state-level election
@@ -75,7 +79,9 @@ The compass is a static site with no backend. The flow is:
 2. They are redirected to `compass.html?config=elections/{state}/{election}/config.json`
 3. `compass.html` fetches the config JSON, passes it to the embedded [OpenElectionCompass](https://open-election-compass.com) library, and adds a custom UI layer on top
 4. The user answers policy theses and gets a match result
-5. A **Parties & Links** panel appears (top-right) listing each alliance with candidate/wiki links and a **Party Positions** link to a full tabular view
+5. In pagewise mode, users can choose up to 3 priority areas directly on Page 1 (no popup), then continue to area-by-area response pages
+6. A **Party Links** panel appears (top-right/menu) with alliance or party links and seat-share visual context when applicable; if all listed groups contest the full seat count, seat numbers/sources are intentionally hidden for cleaner display
+7. Users can also open **Party Positions** for a full issue-by-issue tabular view
 
 ---
 
@@ -86,6 +92,9 @@ No build step required — this is a plain static site.
 ```bash
 # Python
 python -m http.server 8080
+
+# Windows (Python launcher)
+py -m http.server 8080
 
 # Node.js
 npx serve .
@@ -102,7 +111,7 @@ Then open `http://localhost:8080` in your browser.
 | Parameter | Values | Description |
 |---|---|---|
 | `config` | `elections/tn/2026-state/config.json` | Load a specific election config |
-| `lang` | `en` · `ta` | Set UI language (persisted in localStorage) |
+| `lang` | `en` · `ta` · `bn` | Set UI language (persisted in localStorage; available languages depend on election config) |
 | `partypositions` | `1` | Show full issue-by-issue party positions table |
 | `viewmode` | `tabular` | Used alongside `partypositions=1` |
 | `debug` | `1` | Show debug log panel (any host) |
@@ -150,6 +159,8 @@ To collect positions from parties or campaigns:
 2. They fill in party/candidate details and rate each thesis with a position + explanation
 3. They download a `.json` file and email it to the admin
 4. Admin opens **`admin/review.html`**, loads the submission JSON alongside the current config, reviews/edits positions inline, then downloads the merged config for deployment
+
+The election selector in `party-form.html` includes both TN and WB state-level entries, plus live TN constituency entries.
 
 ---
 
@@ -220,7 +231,7 @@ Party positions always use `approve` / `neutral` / `reject` regardless of the us
 | Custom layer | Vanilla JS + CSS in `compass.html` |
 | Dev tools | `assets/compass-devtools.js` — debug panel, random-results & party-positions renderers |
 | Hosting | GitHub Pages via GitHub Actions (`deploy-pages.yml`) |
-| Languages | English, Tamil; architecture supports any BCP-47 language |
+| Languages | English, Tamil, Bengali (config-driven; architecture supports any BCP-47 language) |
 | Dependencies | None — no npm, no bundler, no build step |
 
 ---
