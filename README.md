@@ -1,4 +1,4 @@
-# India Election Compass · இந்தியா தேர்தல் திசைகாட்டி
+# India Election Compass
 
 A non-partisan, open-source voter information tool for Indian elections.  
 Answer policy questions and discover which party or candidate best represents your views.
@@ -15,6 +15,11 @@ India Election Compass presents policy theses — clear, testable statements on 
 - Multilingual by election config: currently English + Tamil (TN), and English + Bengali (WB preview)
 - Alliance-aware: sub-party positions within an alliance can be shown individually
 - Source citations are displayed inline for every position statement
+
+### Data Sourcing Transparency
+
+Current `config.json` mappings are compiled from cited public resources (official party pages, manifestos, election references, and public reporting where needed).
+The extraction, drafting, and normalization workflow is assisted by agentic AI, with final curation and publication decisions maintained in-repo by project maintainers.
 
 ---
 
