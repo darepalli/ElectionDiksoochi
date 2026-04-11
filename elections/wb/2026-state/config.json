@@ -1,0 +1,546 @@
+{
+  "version": "1",
+  "algorithm": "hybrid",
+  "languages": [
+    {
+      "name": "English",
+      "code": "en"
+    },
+    {
+      "name": "বাংলা",
+      "code": "bn"
+    }
+  ],
+  "title": {
+    "en": "West Bengal Election Compass 2026",
+    "bn": "পশ্চিমবঙ্গ নির্বাচন দিকনির্দেশক ২০২৬"
+  },
+  "subtitle": {
+    "en": "State-level preview: compare major parties on key West Bengal policy questions",
+    "bn": "রাজ্য-স্তরের প্রিভিউ: পশ্চিমবঙ্গের গুরুত্বপূর্ণ নীতি প্রশ্নে প্রধান দলগুলির অবস্থান তুলনা করুন"
+  },
+  "introduction": {
+    "heading": {
+      "en": "Welcome to the West Bengal Election Compass",
+      "bn": "পশ্চিমবঙ্গ নির্বাচন দিকনির্দেশকে স্বাগতম"
+    },
+    "text": {
+      "en": "This is a state-level pilot for West Bengal. Positions are mapped from public party statements and election references, and will be refined with additional official sources as the 2026 cycle progresses.",
+      "bn": "এটি পশ্চিমবঙ্গের জন্য রাজ্য-স্তরের একটি পাইলট সংস্করণ। দলগুলির অবস্থান প্রকাশ্য বিবৃতি ও নির্বাচন-সংক্রান্ত তথ্যসূত্র থেকে ম্যাপ করা হয়েছে; ২০২৬ নির্বাচন প্রক্রিয়া এগোলে আরও সরকারি উৎস যুক্ত করে এটি পরিমার্জিত হবে।"
+    }
+  },
+  "parties": [
+    {
+      "alias": "tmc",
+      "name": {
+        "en": "All India Trinamool Congress",
+        "bn": "অল ইন্ডিয়া তৃণমূল কংগ্রেস"
+      },
+      "short": {
+        "en": "TMC",
+        "bn": "তৃণমূল"
+      },
+      "description": {
+        "en": "State-level position profile for TMC.",
+        "bn": "তৃণমূল কংগ্রেসের রাজ্য-স্তরের অবস্থান প্রোফাইল।"
+      },
+      "profile": {
+        "en": "https://en.wikipedia.org/wiki/All_India_Trinamool_Congress",
+        "bn": "https://bn.wikipedia.org/wiki/অল_ইন্ডিয়া_তৃণমূল_কংগ্রেস"
+      }
+    },
+    {
+      "alias": "bjp",
+      "name": {
+        "en": "Bharatiya Janata Party",
+        "bn": "ভারতীয় জনতা পার্টি"
+      },
+      "short": {
+        "en": "BJP",
+        "bn": "বিজেপি"
+      },
+      "description": {
+        "en": "State-level position profile for BJP.",
+        "bn": "বিজেপির রাজ্য-স্তরের অবস্থান প্রোফাইল।"
+      },
+      "profile": {
+        "en": "https://www.bjp.org/",
+        "bn": "https://bn.wikipedia.org/wiki/ভারতীয়_জনতা_পার্টি"
+      }
+    },
+    {
+      "alias": "left-front",
+      "name": {
+        "en": "Left Front",
+        "bn": "বামফ্রন্ট"
+      },
+      "short": {
+        "en": "Left Front",
+        "bn": "বামফ্রন্ট"
+      },
+      "description": {
+        "en": "State-level combined profile for Left Front parties.",
+        "bn": "বামফ্রন্টভুক্ত দলগুলির রাজ্য-স্তরের যৌথ প্রোফাইল।"
+      },
+      "profile": {
+        "en": "https://en.wikipedia.org/wiki/Left_Front_(West_Bengal)",
+        "bn": "https://bn.wikipedia.org/wiki/বামফ্রন্ট_(পশ্চিমবঙ্গ)"
+      }
+    },
+    {
+      "alias": "inc",
+      "name": {
+        "en": "Indian National Congress",
+        "bn": "ইন্ডিয়ান ন্যাশনাল কংগ্রেস"
+      },
+      "short": {
+        "en": "INC",
+        "bn": "কংগ্রেস"
+      },
+      "description": {
+        "en": "State-level position profile for INC.",
+        "bn": "কংগ্রেসের রাজ্য-স্তরের অবস্থান প্রোফাইল।"
+      },
+      "profile": {
+        "en": "https://www.inc.in/",
+        "bn": "https://bn.wikipedia.org/wiki/ইন্ডিয়ান_ন্যাশনাল_কংগ্রেস"
+      }
+    }
+  ],
+  "theses": [
+    {
+      "title": {
+        "en": "State Autonomy and Federal Rights",
+        "bn": "রাজ্যের স্বায়ত্তশাসন ও ফেডারেল অধিকার"
+      },
+      "statement": {
+        "en": "West Bengal should seek stronger fiscal and administrative autonomy from the Union Government.",
+        "bn": "পশ্চিমবঙ্গের উচিত কেন্দ্রীয় সরকারের তুলনায় আর্থিক ও প্রশাসনিক স্বায়ত্তশাসন আরও জোরদার করা।"
+      },
+      "positions": {
+        "tmc": {
+          "position": "approve",
+          "explanation": {
+            "en": "Public statements from TMC leadership often emphasize stronger state rights within the federal structure.",
+            "bn": "তৃণমূল নেতৃত্বের বিভিন্ন প্রকাশ্য বিবৃতিতে ফেডারেল কাঠামোর মধ্যে রাজ্যের অধিক অধিকারকে গুরুত্ব দেওয়া হয়।"
+          },
+          "source": "https://en.wikipedia.org/wiki/All_India_Trinamool_Congress"
+        },
+        "bjp": {
+          "position": "neutral",
+          "explanation": {
+            "en": "BJP messaging balances state development demands with a stronger Union-wide governance framework.",
+            "bn": "বিজেপির বক্তব্যে রাজ্যের উন্নয়নের দাবি এবং শক্তিশালী সর্বভারতীয় শাসন কাঠামো—দুটি দিকই থাকে।"
+          },
+          "source": "https://www.bjp.org/"
+        },
+        "left-front": {
+          "position": "approve",
+          "explanation": {
+            "en": "Left Front politics in West Bengal has historically emphasized federal rights and protection of state powers.",
+            "bn": "পশ্চিমবঙ্গে বাম রাজনীতিতে ঐতিহাসিকভাবে ফেডারেল অধিকার ও রাজ্যের ক্ষমতা রক্ষার প্রশ্ন গুরুত্ব পেয়েছে।"
+          },
+          "source": "https://en.wikipedia.org/wiki/Left_Front_(West_Bengal)"
+        },
+        "inc": {
+          "position": "neutral",
+          "explanation": {
+            "en": "INC generally supports cooperative federalism; this mapping is marked neutral pending WB-specific 2026 commitments.",
+            "bn": "কংগ্রেস সাধারণভাবে সমবায় ফেডারেলিজমের পক্ষে; পশ্চিমবঙ্গ-নির্দিষ্ট ২০২৬ প্রতিশ্রুতি স্পষ্ট হলে এই মানচিত্র আপডেট হবে।"
+          },
+          "source": "https://www.inc.in/"
+        }
+      }
+    },
+    {
+      "title": {
+        "en": "Industrial Jobs and Investment",
+        "bn": "শিল্পে কর্মসংস্থান ও বিনিয়োগ"
+      },
+      "statement": {
+        "en": "West Bengal should accelerate industrial investment with job-linked incentives for local youth.",
+        "bn": "পশ্চিমবঙ্গে স্থানীয় যুবকদের কর্মসংস্থানের সঙ্গে যুক্ত প্রণোদনা দিয়ে শিল্প বিনিয়োগ দ্রুত বাড়ানো উচিত।"
+      },
+      "positions": {
+        "tmc": {
+          "position": "approve",
+          "explanation": {
+            "en": "TMC public messaging supports industry and employment growth with social safeguards.",
+            "bn": "তৃণমূলের প্রকাশ্য অবস্থানে সামাজিক সুরক্ষার সঙ্গে শিল্প ও কর্মসংস্থান বৃদ্ধির কথা বলা হয়।"
+          },
+          "source": "https://en.wikipedia.org/wiki/All_India_Trinamool_Congress"
+        },
+        "bjp": {
+          "position": "approve",
+          "explanation": {
+            "en": "BJP has consistently advocated stronger investment-led job growth in West Bengal.",
+            "bn": "পশ্চিমবঙ্গে বিনিয়োগ-নির্ভর কর্মসংস্থান বৃদ্ধির পক্ষে বিজেপি নিয়মিতভাবে কথা বলে।"
+          },
+          "source": "https://www.bjp.org/"
+        },
+        "left-front": {
+          "position": "neutral",
+          "explanation": {
+            "en": "Left Front positions generally support employment growth while stressing labour safeguards and equity concerns.",
+            "bn": "বামফ্রন্ট সাধারণত কর্মসংস্থান বৃদ্ধিকে সমর্থন করে, তবে শ্রমিক সুরক্ষা ও সাম্যের প্রশ্নে জোর দেয়।"
+          },
+          "source": "https://en.wikipedia.org/wiki/Left_Front_(West_Bengal)"
+        },
+        "inc": {
+          "position": "approve",
+          "explanation": {
+            "en": "INC policy framing generally supports growth-oriented investment with social protection measures.",
+            "bn": "কংগ্রেসের নীতিগত কাঠামো সাধারণত সামাজিক সুরক্ষার সঙ্গে প্রবৃদ্ধিমুখী বিনিয়োগকে সমর্থন করে।"
+          },
+          "source": "https://www.inc.in/"
+        }
+      }
+    },
+    {
+      "title": {
+        "en": "Public Health Strengthening",
+        "bn": "জনস্বাস্থ্য ব্যবস্থা শক্তিশালীকরণ"
+      },
+      "statement": {
+        "en": "West Bengal should increase state public health spending to strengthen district hospitals and primary care.",
+        "bn": "জেলা হাসপাতাল ও প্রাথমিক স্বাস্থ্যব্যবস্থা মজবুত করতে পশ্চিমবঙ্গের জনস্বাস্থ্য ব্যয় বাড়ানো উচিত।"
+      },
+      "positions": {
+        "tmc": {
+          "position": "approve",
+          "explanation": {
+            "en": "TMC governance messaging highlights public welfare and service delivery, including healthcare expansion.",
+            "bn": "তৃণমূলের শাসন-বার্তায় স্বাস্থ্যসহ জনকল্যাণ ও পরিষেবা সম্প্রসারণকে গুরুত্ব দেওয়া হয়।"
+          },
+          "source": "https://en.wikipedia.org/wiki/All_India_Trinamool_Congress"
+        },
+        "bjp": {
+          "position": "approve",
+          "explanation": {
+            "en": "BJP policy narratives include strengthening public services and healthcare access.",
+            "bn": "বিজেপির নীতিগত বক্তব্যে জনপরিষেবা ও স্বাস্থ্যসেবার প্রবেশাধিকার জোরদারের কথা থাকে।"
+          },
+          "source": "https://www.bjp.org/"
+        },
+        "left-front": {
+          "position": "approve",
+          "explanation": {
+            "en": "Left policy orientation generally favors stronger public health provisioning.",
+            "bn": "বামপন্থী নীতিগত অভিমুখ সাধারণত শক্তিশালী সরকারি স্বাস্থ্যব্যবস্থার পক্ষে।"
+          },
+          "source": "https://en.wikipedia.org/wiki/Left_Front_(West_Bengal)"
+        },
+        "inc": {
+          "position": "approve",
+          "explanation": {
+            "en": "INC policy framing generally supports expanded public health access and services.",
+            "bn": "কংগ্রেসের নীতিগত অবস্থান সাধারণত সরকারি স্বাস্থ্যসেবা বিস্তারের পক্ষে।"
+          },
+          "source": "https://www.inc.in/"
+        }
+      }
+    },
+    {
+      "title": {
+        "en": "Education and School Quality",
+        "bn": "শিক্ষা ও বিদ্যালয়ের মানোন্নয়ন"
+      },
+      "statement": {
+        "en": "West Bengal should prioritize government school quality, teacher support and digital learning access.",
+        "bn": "সরকারি স্কুলের মান, শিক্ষক সহায়তা এবং ডিজিটাল শিক্ষার সুযোগ বাড়ানো পশ্চিমবঙ্গের অগ্রাধিকার হওয়া উচিত।"
+      },
+      "positions": {
+        "tmc": {
+          "position": "approve",
+          "explanation": {
+            "en": "TMC public messaging generally supports expanded access to education and welfare-linked learning support.",
+            "bn": "তৃণমূলের প্রকাশ্য বার্তায় সাধারণত শিক্ষায় প্রবেশাধিকার ও সহায়তামূলক কল্যাণমূলক ব্যবস্থার পক্ষে অবস্থান দেখা যায়।"
+          },
+          "source": "https://en.wikipedia.org/wiki/All_India_Trinamool_Congress"
+        },
+        "bjp": {
+          "position": "approve",
+          "explanation": {
+            "en": "BJP policy narratives support school quality and skills-oriented learning expansion.",
+            "bn": "বিজেপির নীতিগত বক্তব্যে স্কুলশিক্ষার মান এবং দক্ষতাভিত্তিক শিক্ষার প্রসারের কথা থাকে।"
+          },
+          "source": "https://www.bjp.org/"
+        },
+        "left-front": {
+          "position": "approve",
+          "explanation": {
+            "en": "Left Front policy framing in the state context traditionally supports stronger public education systems.",
+            "bn": "রাজ্য-প্রেক্ষিতে বামফ্রন্টের নীতিগত কাঠামো ঐতিহ্যগতভাবে শক্তিশালী সরকারি শিক্ষাব্যবস্থার পক্ষে।"
+          },
+          "source": "https://en.wikipedia.org/wiki/Left_Front_(West_Bengal)"
+        },
+        "inc": {
+          "position": "approve",
+          "explanation": {
+            "en": "INC generally supports improved school quality and wider educational access.",
+            "bn": "কংগ্রেস সাধারণভাবে বিদ্যালয়ের মানোন্নয়ন এবং শিক্ষায় বৃহত্তর প্রবেশাধিকারকে সমর্থন করে।"
+          },
+          "source": "https://www.inc.in/"
+        }
+      }
+    },
+    {
+      "title": {
+        "en": "Women Safety and Legal Protection",
+        "bn": "নারী সুরক্ষা ও আইনি সুরক্ষা"
+      },
+      "statement": {
+        "en": "West Bengal should expand women safety infrastructure, legal response speed, and survivor support systems.",
+        "bn": "নারী সুরক্ষা অবকাঠামো, দ্রুত আইনি প্রতিক্রিয়া এবং বেঁচে যাওয়া ব্যক্তিদের সহায়তা ব্যবস্থা পশ্চিমবঙ্গে আরও প্রসারিত করা উচিত।"
+      },
+      "positions": {
+        "tmc": {
+          "position": "approve",
+          "explanation": {
+            "en": "Public statements place emphasis on women-focused schemes and protection mechanisms.",
+            "bn": "প্রকাশ্য বক্তব্যে নারী-কেন্দ্রিক প্রকল্প ও সুরক্ষা ব্যবস্থার ওপর জোর দেওয়া হয়।"
+          },
+          "source": "https://en.wikipedia.org/wiki/All_India_Trinamool_Congress"
+        },
+        "bjp": {
+          "position": "approve",
+          "explanation": {
+            "en": "BJP public narratives frequently call for stronger law-and-order responses on women safety issues.",
+            "bn": "নারী সুরক্ষার প্রশ্নে কড়া আইন-শৃঙ্খলা প্রতিক্রিয়ার দাবি বিজেপির বক্তব্যে প্রায়ই উঠে আসে।"
+          },
+          "source": "https://www.bjp.org/"
+        },
+        "left-front": {
+          "position": "approve",
+          "explanation": {
+            "en": "Left groups in the state context advocate legal protection and social safeguards for women.",
+            "bn": "রাজ্য-প্রেক্ষিতে বাম শক্তিগুলি নারীদের জন্য আইনি সুরক্ষা ও সামাজিক নিরাপত্তার পক্ষে সওয়াল করে।"
+          },
+          "source": "https://en.wikipedia.org/wiki/Left_Front_(West_Bengal)"
+        },
+        "inc": {
+          "position": "approve",
+          "explanation": {
+            "en": "INC generally supports stronger legal and institutional protections for women.",
+            "bn": "কংগ্রেস সাধারণভাবে নারীদের জন্য আরও শক্তিশালী আইনি ও প্রাতিষ্ঠানিক সুরক্ষাকে সমর্থন করে।"
+          },
+          "source": "https://www.inc.in/"
+        }
+      }
+    },
+    {
+      "title": {
+        "en": "Bangla Language and Cultural Policy",
+        "bn": "বাংলা ভাষা ও সাংস্কৃতিক নীতি"
+      },
+      "statement": {
+        "en": "West Bengal should prioritize Bangla language and regional cultural programs in state institutions.",
+        "bn": "রাজ্যের প্রতিষ্ঠানগুলিতে বাংলা ভাষা ও আঞ্চলিক সংস্কৃতিভিত্তিক কর্মসূচিকে অগ্রাধিকার দেওয়া উচিত।"
+      },
+      "positions": {
+        "tmc": {
+          "position": "strongly-approve",
+          "explanation": {
+            "en": "TMC public positioning strongly emphasizes Bangla identity and state cultural priorities.",
+            "bn": "তৃণমূলের প্রকাশ্য অবস্থানে বাংলা পরিচয় ও রাজ্যের সাংস্কৃতিক অগ্রাধিকারে জোরালো গুরুত্ব দেখা যায়।"
+          },
+          "source": "https://en.wikipedia.org/wiki/All_India_Trinamool_Congress"
+        },
+        "bjp": {
+          "position": "neutral",
+          "explanation": {
+            "en": "BJP messaging combines national integration themes with regional language commitments; mapped neutral in this pilot.",
+            "bn": "বিজেপির বক্তব্যে জাতীয় সংহতির সঙ্গে আঞ্চলিক ভাষার প্রতিশ্রুতিও থাকে; এই পাইলটে এটিকে নিরপেক্ষ ধরা হয়েছে।"
+          },
+          "source": "https://www.bjp.org/"
+        },
+        "left-front": {
+          "position": "approve",
+          "explanation": {
+            "en": "Left politics in the state context traditionally supports language and cultural rights.",
+            "bn": "রাজ্য-প্রেক্ষিতে বাম রাজনীতি ঐতিহ্যগতভাবে ভাষা ও সাংস্কৃতিক অধিকারের পক্ষে।"
+          },
+          "source": "https://en.wikipedia.org/wiki/Left_Front_(West_Bengal)"
+        },
+        "inc": {
+          "position": "approve",
+          "explanation": {
+            "en": "INC generally supports regional language and cultural promotion within constitutional frameworks.",
+            "bn": "সাংবিধানিক কাঠামোর মধ্যে আঞ্চলিক ভাষা ও সংস্কৃতি উন্নয়নকে কংগ্রেস সাধারণভাবে সমর্থন করে।"
+          },
+          "source": "https://www.inc.in/"
+        }
+      }
+    },
+    {
+      "title": {
+        "en": "Targeted Welfare Delivery",
+        "bn": "লক্ষ্যভিত্তিক সামাজিক সুরক্ষা বিতরণ"
+      },
+      "statement": {
+        "en": "The state should prioritize targeted welfare delivery for economically vulnerable households.",
+        "bn": "অর্থনৈতিকভাবে ঝুঁকিপূর্ণ পরিবারগুলির জন্য লক্ষ্যভিত্তিক সামাজিক সুরক্ষা বিতরণে রাজ্যের অগ্রাধিকার থাকা উচিত।"
+      },
+      "positions": {
+        "tmc": {
+          "position": "approve",
+          "explanation": {
+            "en": "TMC governance messaging prominently includes welfare-oriented delivery models.",
+            "bn": "তৃণমূলের শাসন-সংক্রান্ত বক্তব্যে কল্যাণমুখী পরিষেবা বিতরণকে গুরুত্ব দেওয়া হয়।"
+          },
+          "source": "https://en.wikipedia.org/wiki/All_India_Trinamool_Congress"
+        },
+        "bjp": {
+          "position": "approve",
+          "explanation": {
+            "en": "BJP policy narratives support welfare delivery with beneficiary targeting and administrative efficiency.",
+            "bn": "বিজেপির নীতিগত বক্তব্যে লক্ষ্যভিত্তিক সুবিধাভোগী বাছাই ও প্রশাসনিক দক্ষতার সঙ্গে কল্যাণমূলক বিতরণকে সমর্থন করা হয়।"
+          },
+          "source": "https://www.bjp.org/"
+        },
+        "left-front": {
+          "position": "approve",
+          "explanation": {
+            "en": "Left policy framing supports social protection and redistribution for vulnerable groups.",
+            "bn": "বাম নীতিগত কাঠামো ঝুঁকিপূর্ণ জনগোষ্ঠীর জন্য সামাজিক সুরক্ষা ও পুনর্বণ্টনকে সমর্থন করে।"
+          },
+          "source": "https://en.wikipedia.org/wiki/Left_Front_(West_Bengal)"
+        },
+        "inc": {
+          "position": "approve",
+          "explanation": {
+            "en": "INC generally supports targeted social support and welfare access for vulnerable communities.",
+            "bn": "ঝুঁকিপূর্ণ সম্প্রদায়ের জন্য লক্ষ্যভিত্তিক সামাজিক সুরক্ষা ও কল্যাণ পরিষেবার প্রবেশাধিকারকে কংগ্রেস সাধারণভাবে সমর্থন করে।"
+          },
+          "source": "https://www.inc.in/"
+        }
+      }
+    },
+    {
+      "title": {
+        "en": "CAA/NRC Implementation in West Bengal",
+        "bn": "পশ্চিমবঙ্গে সিএএ/এনআরসি প্রয়োগ"
+      },
+      "statement": {
+        "en": "CAA/NRC-related implementation should be actively pursued in West Bengal.",
+        "bn": "পশ্চিমবঙ্গে সিএএ/এনআরসি-সংক্রান্ত প্রয়োগ সক্রিয়ভাবে এগিয়ে নেওয়া উচিত।"
+      },
+      "positions": {
+        "tmc": {
+          "position": "reject",
+          "explanation": {
+            "en": "TMC leadership has publicly opposed CAA/NRC implementation in the state context.",
+            "bn": "রাজ্য-প্রেক্ষিতে তৃণমূল নেতৃত্ব প্রকাশ্যে সিএএ/এনআরসি প্রয়োগের বিরোধিতা করেছে।"
+          },
+          "source": "https://en.wikipedia.org/wiki/All_India_Trinamool_Congress"
+        },
+        "bjp": {
+          "position": "approve",
+          "explanation": {
+            "en": "BJP public position has generally supported CAA implementation and related citizenship documentation measures.",
+            "bn": "বিজেপির প্রকাশ্য অবস্থান সাধারণত সিএএ প্রয়োগ ও সংশ্লিষ্ট নাগরিকত্ব নথিভুক্তিকরণ ব্যবস্থাকে সমর্থন করে।"
+          },
+          "source": "https://www.bjp.org/"
+        },
+        "left-front": {
+          "position": "reject",
+          "explanation": {
+            "en": "Left parties in West Bengal have generally opposed CAA/NRC-style implementation.",
+            "bn": "পশ্চিমবঙ্গে বাম দলগুলি সাধারণভাবে সিএএ/এনআরসি ধরনের প্রয়োগের বিরোধিতা করেছে।"
+          },
+          "source": "https://en.wikipedia.org/wiki/Left_Front_(West_Bengal)"
+        },
+        "inc": {
+          "position": "reject",
+          "explanation": {
+            "en": "INC public stance has generally opposed coercive or exclusionary CAA/NRC implementation approaches.",
+            "bn": "কংগ্রেসের প্রকাশ্য অবস্থান সাধারণত জবরদস্তিমূলক বা বর্জনমূলক সিএএ/এনআরসি প্রয়োগ পদ্ধতির বিরোধিতা করে।"
+          },
+          "source": "https://www.inc.in/"
+        }
+      }
+    }
+  ],
+  "alliancePartnerSeats": {
+    "tmc": [
+      {
+        "code": "TMC",
+        "name": "All India Trinamool Congress",
+        "symbol": "🌼",
+        "seats": 294,
+        "flagColor": "#1d4ed8",
+        "links": [
+          {
+            "label": "Official",
+            "url": "https://aitcofficial.org/"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/All_India_Trinamool_Congress"
+          }
+        ],
+        "source": "https://en.wikipedia.org/wiki/2026_West_Bengal_Legislative_Assembly_election"
+      }
+    ],
+    "bjp": [
+      {
+        "code": "BJP",
+        "name": "Bharatiya Janata Party",
+        "symbol": "🪷",
+        "seats": 294,
+        "flagColor": "#d97706",
+        "links": [
+          {
+            "label": "Official",
+            "url": "https://www.bjp.org/"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Bharatiya_Janata_Party"
+          }
+        ],
+        "source": "https://en.wikipedia.org/wiki/2026_West_Bengal_Legislative_Assembly_election"
+      }
+    ],
+    "left-front": [
+      {
+        "code": "Left Front",
+        "name": "Left Front",
+        "symbol": "🚩",
+        "seats": 294,
+        "flagColor": "#be123c",
+        "links": [
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Left_Front_(West_Bengal)"
+          }
+        ],
+        "source": "https://en.wikipedia.org/wiki/2026_West_Bengal_Legislative_Assembly_election"
+      }
+    ],
+    "inc": [
+      {
+        "code": "INC",
+        "name": "Indian National Congress",
+        "symbol": "✋",
+        "seats": 294,
+        "flagColor": "#047857",
+        "links": [
+          {
+            "label": "Official",
+            "url": "https://www.inc.in/"
+          },
+          {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Indian_National_Congress"
+          }
+        ],
+        "source": "https://en.wikipedia.org/wiki/2026_West_Bengal_Legislative_Assembly_election"
+      }
+    ]
+  },
+  "sourcePolicy": {
+    "en": "West Bengal 2026 state configuration is a starter baseline and should be refined with additional official manifesto and speech sources before final publication.",
+    "bn": "পশ্চিমবঙ্গ ২০২৬ রাজ্য কনফিগারেশনটি একটি প্রাথমিক বেসলাইন; চূড়ান্ত প্রকাশের আগে আরও সরকারি ইস্তেহার ও বক্তৃতার উৎস যোগ করে এটি পরিমার্জিত করা উচিত।"
+  }
+}
