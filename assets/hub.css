@@ -115,6 +115,58 @@ a:hover { color: var(--primary-dk); }
   margin: 0 auto .5rem;
 }
 
+.share-strip {
+  margin: 0 0 1.6rem;
+  padding: 1rem 1rem .95rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.share-strip h3 {
+  font-size: .95rem;
+  color: var(--primary);
+  margin-bottom: .2rem;
+}
+
+.share-strip p {
+  font-size: .82rem;
+  color: var(--muted);
+  margin-bottom: .55rem;
+}
+
+.share-strip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+
+.share-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: .34rem .64rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #1e293b;
+  text-decoration: none;
+  font-size: .75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.share-chip:hover {
+  border-color: #93c5fd;
+  background: #eff6ff;
+  color: #1e3a8a;
+}
+
+.share-chip-btn {
+  font-family: inherit;
+}
+
 /* ─── State Sections ─────────────────────────────────────────── */
 .state-section {
   margin: 2rem 0;

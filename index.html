@@ -44,6 +44,17 @@
       </p>
     </section>
 
+    <section class="share-strip" aria-label="Share this page">
+      <h3>Share This Compass</h3>
+      <p>Help more voters discover policy-first comparison.</p>
+      <div class="share-strip-actions">
+        <a id="share-wa" class="share-chip" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a id="share-tg" class="share-chip" href="#" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a id="share-x" class="share-chip" href="#" target="_blank" rel="noopener noreferrer">X</a>
+        <button id="share-copy" type="button" class="share-chip share-chip-btn">Copy Link</button>
+      </div>
+    </section>
+
     <!-- ── Tamil Nadu ─────────────────────────────────────────── -->
     <section class="state-section">
       <h3 class="state-heading">
@@ -228,6 +239,38 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    (function setupShareStrip() {
+      var wa = document.getElementById('share-wa');
+      var tg = document.getElementById('share-tg');
+      var x = document.getElementById('share-x');
+      var copyBtn = document.getElementById('share-copy');
+      if (!wa || !tg || !x || !copyBtn) return;
+
+      var url = window.location.href;
+      var text = 'Try this India Election Compass (about 5-8 minutes): ' + url;
+      var encodedText = encodeURIComponent(text);
+      var encodedUrl = encodeURIComponent(url);
+
+      wa.href = 'https://wa.me/?text=' + encodedText;
+      tg.href = 'https://t.me/share/url?url=' + encodedUrl + '&text=' + encodeURIComponent('India Election Compass');
+      x.href = 'https://x.com/intent/tweet?text=' + encodedText;
+
+      copyBtn.addEventListener('click', function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(function () {
+            copyBtn.textContent = 'Copied';
+            setTimeout(function () { copyBtn.textContent = 'Copy Link'; }, 1400);
+          }).catch(function () {
+            window.prompt('Copy this link:', url);
+          });
+          return;
+        }
+        window.prompt('Copy this link:', url);
+      });
+    })();
+  </script>
 
 </body>
 </html>

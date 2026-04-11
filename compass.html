@@ -1855,6 +1855,10 @@
           + '</div>';
 
         var partyHtml = '';
+        var shareHtml = ''
+          + '<button type="button" class="site-menu-action" data-menu-action="share-page">'
+          + escapeHtml(getLocalizedText(lang, 'Share this page', 'இந்தப் பக்கத்தை பகிர்'))
+          + '</button>';
         if (partyVisible) {
           partyHtml = ''
             + '<button type="button" class="site-menu-action" data-menu-action="party-links">'
@@ -1862,7 +1866,7 @@
             + '</button>';
         }
 
-        menu.innerHTML = navHtml + langHtml + partyHtml;
+        menu.innerHTML = navHtml + langHtml + shareHtml + partyHtml;
 
         function closeSiteMenu() {
           menu.classList.remove('is-open');
@@ -1901,6 +1905,12 @@
             }
 
             var actionBtn = e.target.closest && e.target.closest('[data-menu-action]');
+            if (actionBtn && actionBtn.getAttribute('data-menu-action') === 'share-page') {
+              shareCurrentPage();
+              closeSiteMenu();
+              return;
+            }
+
             if (actionBtn && actionBtn.getAttribute('data-menu-action') === 'party-links') {
               if (partyBtn && partyBtn.classList.contains('is-visible')) {
                 partyBtn.click();
@@ -1917,6 +1927,25 @@
 
           toggleBtn.dataset.bound = '1';
         }
+      }
+
+      function shareCurrentPage() {
+        var shareUrl = window.location.href;
+        var shareTitle = 'India Election Compass';
+        var shareText = 'Try this election compass page (about 5-8 minutes).';
+        if (navigator.share) {
+          navigator.share({ title: shareTitle, text: shareText, url: shareUrl }).catch(function () {});
+          return;
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(shareUrl).then(function () {
+            window.alert(getLocalizedText(selectedLang, 'Link copied', 'இணைப்பு நகலெடுக்கப்பட்டது'));
+          }).catch(function () {
+            window.prompt('Copy this link:', shareUrl);
+          });
+          return;
+        }
+        window.prompt('Copy this link:', shareUrl);
       }
 
       function setOecLanguage(lang) {
