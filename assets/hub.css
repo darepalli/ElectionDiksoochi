@@ -24,6 +24,41 @@ body {
   line-height: 1.6;
 }
 
+.top-bar {
+  background: rgba(150, 40, 27, 0.95);
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.22);
+}
+
+.top-bar-inner {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  flex-wrap: wrap;
+  padding-top: .28rem;
+  padding-bottom: .28rem;
+}
+
+.top-bar-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: .78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  opacity: .94;
+}
+
+.top-bar-link:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.top-bar-sep {
+  color: rgba(255,255,255,.6);
+  font-size: .76rem;
+}
+
 a { color: var(--primary); }
 a:hover { color: var(--primary-dk); }
 
@@ -78,11 +113,6 @@ a:hover { color: var(--primary-dk); }
   color: var(--muted);
   max-width: 600px;
   margin: 0 auto .5rem;
-}
-
-.hero-ta {
-  font-size: .875rem;
-  color: var(--muted);
 }
 
 /* ─── State Sections ─────────────────────────────────────────── */
@@ -354,6 +384,9 @@ a:hover { color: var(--primary-dk); }
 
 /* ─── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 480px) {
+  .top-bar-inner { gap: .45rem; }
+  .top-bar-link { font-size: .74rem; }
+  .top-bar-sep { display: none; }
   .hero h2 { font-size: 1.5rem; }
   .compass-grid { grid-template-columns: 1fr; }
 }
