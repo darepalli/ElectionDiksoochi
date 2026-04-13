@@ -1620,11 +1620,25 @@
     <div class="feedback-card" role="dialog" aria-modal="true" aria-labelledby="feedback-title">
       <div class="feedback-title" id="feedback-title">Send Feedback</div>
       <p class="feedback-note">Feedback will open as a public GitHub issue in this project. Please avoid personal or sensitive information.</p>
+      <p class="feedback-note">Compass responses are not stored by this form. Feedback you submit will be publicly visible on GitHub.</p>
       <select class="feedback-field" id="feedback-type" aria-label="Feedback type">
         <option value="General">General</option>
-        <option value="Source Correction">Source Correction</option>
+        <option value="UI/UX">UI/UX</option>
+        <option value="Thesis Wording">Thesis Wording</option>
+        <option value="Party Position Accuracy">Party Position Accuracy</option>
+        <option value="Source/Citation Correction">Source/Citation Correction</option>
+        <option value="Language/Translation">Language/Translation</option>
         <option value="Bug">Bug</option>
-        <option value="Mobile UX">Mobile UX</option>
+        <option value="Feature Request">Feature Request</option>
+        <option value="Other">Other</option>
+      </select>
+      <select class="feedback-field" id="feedback-rating" aria-label="Experience rating">
+        <option value="">Rate experience (optional)</option>
+        <option value="5">5 - Excellent</option>
+        <option value="4">4 - Good</option>
+        <option value="3">3 - Average</option>
+        <option value="2">2 - Needs improvement</option>
+        <option value="1">1 - Poor</option>
       </select>
       <textarea class="feedback-field feedback-field--textarea" id="feedback-text" maxlength="300" placeholder="Write feedback (max 300 characters)..."></textarea>
       <div class="feedback-meta">
@@ -3115,10 +3129,20 @@
         }
 
         function navLabelForNext(pageIndex) {
+          if (pages[pageIndex] && pages[pageIndex].type === 'results') {
+            return getLocalizedText(selectedLang, 'Give Feedback', 'கருத்து தெரிவிக்க');
+          }
           if (pages[pageIndex + 1] && pages[pageIndex + 1].type === 'results') {
             return getLocalizedText(selectedLang, 'See Results', 'முடிவுகளை காண்க');
           }
           return getLocalizedText(selectedLang, 'Next', 'அடுத்து');
+        }
+
+        function navLabelForPrev(pageIndex) {
+          if (pageIndex === 0) {
+            return getLocalizedText(selectedLang, 'Back to Home', 'முகப்பிற்கு திரும்பு');
+          }
+          return getLocalizedText(selectedLang, 'Previous', 'முந்தையது');
         }
 
         function renderCurrentPage() {
@@ -3130,15 +3154,15 @@
           else if (page.type === 'all') content = renderAllThesesPage();
           else content = renderResultsPage();
 
-          var prevDisabled = currentPageIndex === 0 ? ' disabled' : '';
-          var nextDisabled = currentPageIndex === pages.length - 1 ? ' disabled' : '';
+          var prevDisabled = '';
+          var nextDisabled = '';
 
           wrapper.innerHTML = ''
             + '<div class="pagewise-shell">'
             + '<div class="pagewise-progress">' + escapeHtml(headerText) + (currentPageIndex + 1) + ' / ' + pages.length + '</div>'
             + content
             + '<div class="pagewise-nav">'
-            + '<button type="button" class="pagewise-btn" id="pagewise-prev"' + prevDisabled + '>' + escapeHtml(getLocalizedText(selectedLang, 'Previous', 'முந்தையது')) + '</button>'
+            + '<button type="button" class="pagewise-btn" id="pagewise-prev"' + prevDisabled + '>' + escapeHtml(navLabelForPrev(currentPageIndex)) + '</button>'
             + '<button type="button" class="pagewise-btn pagewise-btn--primary" id="pagewise-next"' + nextDisabled + '>' + escapeHtml(navLabelForNext(currentPageIndex)) + '</button>'
             + '</div>'
             + '</div>';
@@ -3147,6 +3171,10 @@
           var nextBtn = document.getElementById('pagewise-next');
           if (prevBtn) {
             prevBtn.addEventListener('click', function () {
+              if (currentPageIndex === 0) {
+                window.location.href = 'index.html';
+                return;
+              }
               if (currentPageIndex > 0) {
                 currentPageIndex -= 1;
                 renderCurrentPage();
@@ -3155,6 +3183,11 @@
           }
           if (nextBtn) {
             nextBtn.addEventListener('click', function () {
+              if (pages[currentPageIndex] && pages[currentPageIndex].type === 'results') {
+                var feedbackOpenBtn = document.getElementById('feedback-open');
+                if (feedbackOpenBtn) feedbackOpenBtn.click();
+                return;
+              }
               if (pages[currentPageIndex] && pages[currentPageIndex].type === 'overview') {
                 writeStoredAreaSelection(configPath, currentSelectedAreas);
                 Object.keys(thesisStateMap).forEach(function (id) {
@@ -3382,8 +3415,9 @@
       var textEl = document.getElementById('feedback-text');
       var typeEl = document.getElementById('feedback-type');
       var countEl = document.getElementById('feedback-count');
+      var ratingEl = document.getElementById('feedback-rating');
 
-      if (!modal || !openBtn || !cancelBtn || !submitBtn || !textEl || !typeEl || !countEl) return;
+      if (!modal || !openBtn || !cancelBtn || !submitBtn || !textEl || !typeEl || !countEl || !ratingEl) return;
 
       function openModal () {
         modal.classList.add('is-open');
@@ -3404,13 +3438,17 @@
 
       function buildIssueUrl () {
         var kind = typeEl.value || 'General';
+        var rating = ratingEl.value || '';
         var feedback = textEl.value.trim();
         var title = '[Feedback][' + kind + '] ' + pageContext;
+        var labelKind = kind.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
         var body = [
           '### Feedback',
           feedback,
           '',
           '### Context',
+          '- Category: ' + kind,
+          '- Rating: ' + (rating ? (rating + '/5') : 'Not provided'),
           '- Page: ' + pageContext,
           '- URL: ' + window.location.href,
           '- User Agent: ' + navigator.userAgent,
@@ -3420,7 +3458,7 @@
         ].join('\n');
 
         var issueUrl = 'https://github.com/' + owner + '/' + repo + '/issues/new';
-        issueUrl += '?labels=' + encodeURIComponent('feedback,' + kind.toLowerCase().replace(/\s+/g, '-'));
+        issueUrl += '?labels=' + encodeURIComponent('feedback,' + labelKind);
         issueUrl += '&title=' + encodeURIComponent(title);
         issueUrl += '&body=' + encodeURIComponent(body);
         return issueUrl;

@@ -11,7 +11,8 @@ Answer policy questions and discover which party or candidate best represents yo
 
 India Election Compass presents policy theses — clear, testable statements on governance, health, education, economy, language, and more. Users rate each thesis and the tool calculates which party or candidate position set is the closest match.
 
-- No personal data is collected or stored — all scoring is done in-browser
+- Compass response selections are not stored by the site — scoring is done in-browser
+- In-app feedback is submitted as public GitHub issues; do not include personal or sensitive information
 - Multilingual by election config: currently English + Tamil (TN), and English + Bengali (WB preview)
 - Alliance-aware: sub-party positions within an alliance can be shown individually
 - Source citations are displayed inline for every position statement
