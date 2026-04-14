@@ -13,6 +13,7 @@ India Election Compass presents policy theses — clear, testable statements on 
 
 - Compass response selections are not stored by the site — scoring is done in-browser
 - In-app feedback is submitted as public GitHub issues; do not include personal or sensitive information
+- Page visits are tracked via Google Analytics 4 (IP-anonymized); no compass response data is linked to analytics
 - Multilingual by election config: currently English + Tamil (TN), and English + Bengali (WB preview)
 - Alliance-aware: sub-party positions within an alliance can be shown individually
 - Source citations are displayed inline for every position statement
