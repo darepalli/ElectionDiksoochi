@@ -11,6 +11,7 @@
   --text:        #1a1a2e;
   --muted:       #6b7280;
   --live:        #16a34a;
+  --archive:     #475569;
   --soon:        #d97706;
   --radius:      12px;
   --shadow:      0 2px 12px rgba(0,0,0,.08);
@@ -115,6 +116,39 @@ a:hover { color: var(--primary-dk); }
   margin: 0 auto .5rem;
 }
 
+.update-strip {
+  display: flex;
+  align-items: flex-start;
+  gap: .8rem;
+  margin: 0 0 1.4rem;
+  padding: 1rem 1rem .95rem;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.update-strip p {
+  font-size: .88rem;
+  color: #7c2d12;
+}
+
+.update-pill {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 28px;
+  padding: .2rem .6rem;
+  border-radius: 999px;
+  background: #ea580c;
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
 .share-strip {
   margin: 0 0 1.6rem;
   padding: 1rem 1rem .95rem;
@@ -216,6 +250,16 @@ a:hover { color: var(--primary-dk); }
   border-color: var(--primary);
 }
 
+.compass-card--archive {
+  border-color: rgba(71, 85, 105, .45);
+}
+
+.compass-card--archive:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--archive);
+}
+
 .compass-card--soon {
   opacity: .75;
   cursor: default;
@@ -248,6 +292,12 @@ a:hover { color: var(--primary-dk); }
   background: rgba(217,119,6,.12);
   color: var(--soon);
   border: 1px solid rgba(217,119,6,.3);
+}
+
+.card-badge--archive {
+  background: rgba(71,85,105,.12);
+  color: var(--archive);
+  border: 1px solid rgba(71,85,105,.3);
 }
 
 .card-icon { font-size: 2rem; }
@@ -440,5 +490,9 @@ a:hover { color: var(--primary-dk); }
   .top-bar-link { font-size: .74rem; }
   .top-bar-sep { display: none; }
   .hero h2 { font-size: 1.5rem; }
+  .update-strip {
+    flex-direction: column;
+    gap: .55rem;
+  }
   .compass-grid { grid-template-columns: 1fr; }
 }
